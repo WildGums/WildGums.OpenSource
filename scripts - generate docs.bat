@@ -3,5 +3,6 @@ REM tools\docnet\docnet.exe "%%p"
 REM )
 
 tools\docnet\docnet.exe src
+copy .\Home.htm .\index.htm
 
 pause
