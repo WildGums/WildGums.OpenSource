@@ -4,7 +4,7 @@
     "Destination" : "./..",
     "IncludeSource": "Includes",
     "Theme" : "WildGums",
-    //"SourceFoldersToCopy" : ["folder1", "foldern"],
+    "SourceFoldersToCopy" : ["images", "orchestra/images"],
     "Footer" : "",
     "Pages" : 
     {
