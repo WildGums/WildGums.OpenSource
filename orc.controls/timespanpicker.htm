@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Introduction - WildGums open source center</title>
+    <title>TimeSpanPicker - WildGums open source center</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
@@ -47,7 +47,7 @@
 <li class="tocentry">
 <ul>
 <li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcControls.htm">Orc.Controls</a></span></li>
-<li class="tocentry current"><a class="current" href="../orc.controls/introduction.htm">Introduction</a>
+<li class="tocentry"><a href="../orc.controls/introduction.htm">Introduction</a>
 </li>
 <li class="tocentry"><a href="../orc.controls/animatedgif.htm">AnimatedGif</a>
 </li>
@@ -99,8 +99,13 @@
 </li>
 <li class="tocentry"><a href="../orc.controls/tabcontrol.htm">TabControl</a>
 </li>
-<li class="tocentry"><a href="../orc.controls/timespanpicker.htm">TimeSpanPicker</a>
-</li>
+<li class="tocentry current"><a class="current" href="../orc.controls/timespanpicker.htm">TimeSpanPicker</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#properties">Properties</a></li>
+<li class="tocentry"><a href="#events">Events</a></li>
+<li class="tocentry"><a href="#methods">Methods</a></li>
+<li class="tocentry"><a href="#how-to-use-timespan">How to use TimeSpan</a></li>
+</ul>
 <li class="tocentry"><a href="../orc.controls/validationcontextcontrol.htm">ValidationContextControl</a>
 </li>
 <li class="tocentry"><a href="../orc.controls/watermarktextbox.htm">WatermarkTextBox</a>
@@ -211,37 +216,66 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcControls.htm">Orc.Controls</a></li> / <li><a href="../orc.controls/introduction.htm">Introduction</a></li></ul>
+<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcControls.htm">Orc.Controls</a></li> / <li><a href="../orc.controls/timespanpicker.htm">TimeSpanPicker</a></li></ul>
 
                     </div>
                     <hr />
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="orc.controls">Orc.Controls<a class="headerlink" href="#orc.controls" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h1 id="timespanpicker">TimeSpanPicker<a class="headerlink" href="#timespanpicker" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>This control is used to display and edit TimeSpan values. 
+By default it will display the value using the <em>dd.hh:mm:ss</em> format.</p>
+<p><img src="../images/orc.controls/timespanpicker/TimeSpan_01.png" alt="TimeSpan 01" width="134" height="36" /> </p>
+<p><img src="../images/orc.controls/timespanpicker/TimeSpan_02.png" alt="TimeSpan 02" width="263" height="116" /></p>
+<p>When hovering over the control, the tooltip will display the timespan in total 
+number of days, hours and minutes.</p>
+<p>Double click on any of the <em>d</em>, <em>h</em>, <em>m</em> or <em>s</em> letters, to edit the TimeSpan value 
+with the specified unit of measure. (i.e. days, hours, minutes, seconds)</p>
+<p><img src="../images/orc.controls/timespanpicker/TimeSpan_03.png" alt="TimeSpan 03" width="134" height="39" /> </p>
+<p><img src="../images/orc.controls/timespanpicker/TimeSpan_04.png" alt="TimeSpan 04" width="136" height="36" /> </p>
+<p><img src="../images/orc.controls/timespanpicker/TimeSpan_05.png" alt="TimeSpan 05" width="136" height="35" /></p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Property name</th>
+	<th>Description</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-	<td>Chat</td>
-	<td><a href="https://gitter.im/WildGums/Orc.Controls?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Controls" /></a></td>
-</tr>
-<tr>
-	<td>Downloads</td>
-	<td><img src="https://img.shields.io/nuget/dt/orc.controls.svg" alt="NuGet downloads" /></td>
-</tr>
-<tr>
-	<td>Stable version</td>
-	<td><img src="https://img.shields.io/nuget/v/orc.controls.svg" alt="Version" /></td>
-</tr>
-<tr>
-	<td>Unstable version</td>
-	<td><img src="https://img.shields.io/nuget/vpre/orc.controls.svg" alt="Pre-release version" /></td>
+	<td>Value</td>
+	<td>The TimeSpan value</td>
 </tr>
 </tbody>
 </table>
-<p>Run the demo project to see the controls in action:</p>
-<p><img src="../images/orc.controls/introduction/Orc.Controls.Demo.png" alt="Orc.Controls demo" width="607" height="391" /></p>
-
+<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Event name</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Method name</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="how-to-use-timespan">How to use TimeSpan<a class="headerlink" href="#how-to-use-timespan" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Bind a <code>TimeSpan</code> value to the <code>Value</code> property:</p>
+<pre class="nocode">    &lt;orc:TimeSpanPicker Value=&quot;{Binding TimeSpanValue}&quot;/&gt;
+</pre>
                     </div>
                 </div>
                 <footer>
@@ -249,7 +283,7 @@
                     <div role="contentinfo">
 
                       <p>
-					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.controls/introduction.md" target="_blank">contribute</a>!
+					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.controls/timespanpicker.md" target="_blank">contribute</a>!
 					  </p>
 					  <p>
 					    Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
@@ -260,8 +294,8 @@
 					   <div id="disqus_thread"></div>
 					   <script>
 					   var disqus_config = function () {
-					   this.page.url = 'http://opensource.wildgums.com/orc.controls/introduction.htm';
-					   this.page.identifier = 'src/orc.controls/introduction.md';
+					   this.page.url = 'http://opensource.wildgums.com/orc.controls/timespanpicker.htm';
+					   this.page.identifier = 'src/orc.controls/timespanpicker.md';
 					   };
 					   (function() { // DON'T EDIT BELOW THIS LINE
 					   var d = document, s = d.createElement('script');
