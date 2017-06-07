@@ -65,6 +65,14 @@
 <li class="tocentry"><a href="#repositories">Repositories</a></li>
 <li class="tocentry"><a href="#unit-of-work">Unit of Work</a></li>
 </ul>
+<li class="tocentry"><a href="../orc.entityframework/using-the-dbcontextmanager.htm">Using the DbContextManager</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-repositories-and-unit-of-work.htm">Using the repositories & unit of work</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-stored-procedures-and-functions.htm">Using stored procedures & functions</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.htm">Using the ModelBase as base class for code-first entities</a>
+</li>
 
 </ul>
 </li>
@@ -282,10 +290,8 @@ serviceLocator.RegisterType&lt;IFamilyRepository, FamilyRepository&gt;();
 }
 </code></pre>
 
-<blockquote>
-<p>Catel will automatically take care of scoping of the DbContext when using unit of work and  repositories</p>
-</blockquote>
-<h3 id="saving-data">Saving data<a class="headerlink" href="#saving-data" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>Catel will automatically take care of scoping of the DbContext when using unit of work and  repositories</p>
+</div><h3 id="saving-data">Saving data<a class="headerlink" href="#saving-data" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>To save data, the entities must be updated in the repositories and then saved in the unit of work. Below is an example, assuming the list of families contains updated entities:</p>
 <pre><code>using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
 {

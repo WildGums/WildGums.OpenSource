@@ -61,8 +61,10 @@ To activate a view into a specific region, use the following code:
 	var dependencyResolver = this.GetDependencyResolver();
 	var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>();
 	uiCompositionService.Activate(viewModel, "MainRegion");
- 
-> Since Catel 4.0 *UICompositionService* is available for Prism. Use this service instead *UIVisualizerService* extension methods.
+
+@alert important
+Since Catel 4.0 *UICompositionService* is available for Prism. Use this service instead of the *UIVisualizerService* extension methods.
+@end
 
 But if the context allows you to know the instance of the view model of the view owner of the region where you will inject a view, is strongly recommended use the Activate overload that allows you to specify the parent view-model. This call will enforce the view models parent-child relationship:
 uiCompositionService.Activate(viewModel, this, "MainRegion");

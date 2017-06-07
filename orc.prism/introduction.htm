@@ -106,6 +106,14 @@
 <li class="tocentry"><a href="#deactivating-a-view">Deactivating a view</a></li>
 <li class="tocentry"><a href="#deactivating-a-view-automatically">Deactivating a view automatically</a></li>
 </ul>
+<li class="tocentry"><a href="../orc.prism/using-the-bootstrapper.htm">Using the bootstrapper</a>
+</li>
+<li class="tocentry"><a href="../orc.prism/declaring-modules.htm">Declaring modules</a>
+</li>
+<li class="tocentry"><a href="../orc.prism/module-catalogs.htm">Module catalogs</a>
+</li>
+<li class="tocentry"><a href="../orc.prism/translating-or-customizing.htm">Translating or customizing</a>
+</li>
 
 </ul>
 </li>
@@ -247,11 +255,8 @@ var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&g
 uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
 </code></pre>
 
-<p> </p>
-<blockquote>
-<p>Since Catel 4.0 <em>UICompositionService</em> is available for Prism. Use this service instead <em>UIVisualizerService</em> extension methods.</p>
-</blockquote>
-<p>But if the context allows you to know the instance of the view model of the view owner of the region where you will inject a view, is strongly recommended use the Activate overload that allows you to specify the parent view-model. This call will enforce the view models parent-child relationship:
+<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>Since Catel 4.0 <em>UICompositionService</em> is available for Prism. Use this service instead of the <em>UIVisualizerService</em> extension methods.</p>
+</div><p>But if the context allows you to know the instance of the view model of the view owner of the region where you will inject a view, is strongly recommended use the Activate overload that allows you to specify the parent view-model. This call will enforce the view models parent-child relationship:
 uiCompositionService.Activate(viewModel, this, &quot;MainRegion&quot;);</p>
 <p>Assume that this references an instance of the view-model of a view with MainRegion region specified, so this is used as parent view model reference in the previous call.</p>
 <h2 id="dealing-with-more-than-one-and-only-one-shell">Dealing with more than one and only one shell<a class="headerlink" href="#dealing-with-more-than-one-and-only-one-shell" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>

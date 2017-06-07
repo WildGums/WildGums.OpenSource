@@ -10,7 +10,9 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.dy
 
 In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time. 
 
-> For more information about dynamic programming, see [MSDN](http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx).
+@alert info
+For more information about dynamic programming, see [MSDN](http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx).
+@end
 
 ## Creating dynamic objects
 
@@ -28,7 +30,9 @@ Then the dynamic model can be used like this:
 	 
 	Console.WriteLine(model.NonExistingProperty);
 
-> It is important to know that you must use the keyword *dynamic* to instantiate the type.
+@alert important
+It is important to know that you must use the keyword *dynamic* to instantiate the type.
+@end
 
 ## Using ModelBase functionality
 

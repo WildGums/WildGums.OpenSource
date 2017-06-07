@@ -44,6 +44,10 @@
 		"Orc.EntityFramework" : 
 		{
 			"Introduction": "orc.entityframework/introduction.md",
+			"Using the DbContextManager": "orc.entityframework/using-the-dbcontextmanager.md",
+			"Using the repositories & unit of work": "orc.entityframework/using-the-repositories-and-unit-of-work.md",
+			"Using stored procedures & functions": "orc.entityframework/using-stored-procedures-and-functions.md",
+			"Using the ModelBase as base class for code-first entities": "orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.md",
 		},
 		"Orc.Extensibility" : 
 		{
@@ -96,6 +100,10 @@
 		"Orc.Prism" : 
 		{
 			"Introduction": "orc.prism/introduction.md",
+			"Using the bootstrapper": "orc.prism/using-the-bootstrapper.md",
+			"Declaring modules": "orc.prism/declaring-modules.md",
+			"Module catalogs": "orc.prism/module-catalogs.md",
+			"Translating or customizing": "orc.prism/translating-or-customizing.md",
 		},
 		"Orc.ProjectManagement" : 
 		{

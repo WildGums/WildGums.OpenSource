@@ -101,7 +101,9 @@ To retrieve data inside a transaction, you can use the UnitOfWork. Inside a met
 	    // TODO: Do something with all families
 	}
 
-> Catel will automatically take care of scoping of the DbContext when using unit of work and  repositories
+@alert info
+Catel will automatically take care of scoping of the DbContext when using unit of work and  repositories
+@end
 
 ### Saving data
 

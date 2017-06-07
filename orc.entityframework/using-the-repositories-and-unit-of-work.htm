@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Introduction - WildGums open source center</title>
+    <title>Using the repositories & unit of work - WildGums open source center</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
@@ -54,19 +54,28 @@
 <span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDependencyGraph.htm">Orc.DependencyGraph</a></span>
 </li>
 <li class="tocentry">
-<ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></span></li>
-<li class="tocentry current"><a class="current" href="../orc.dynamicobjects/introduction.htm">Introduction</a>
-<ul class="currentrelative">
-<li class="tocentry"><a href="#creating-dynamic-objects">Creating dynamic objects</a></li>
-<li class="tocentry"><a href="#using-modelbase-functionality">Using ModelBase functionality</a></li>
-<li class="tocentry"><a href="#supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</a></li>
-</ul>
-
-</ul>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></span>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></span>
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></span></li>
+<li class="tocentry"><a href="../orc.entityframework/introduction.htm">Introduction</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-dbcontextmanager.htm">Using the DbContextManager</a>
+</li>
+<li class="tocentry current"><a class="current" href="../orc.entityframework/using-the-repositories-and-unit-of-work.htm">Using the repositories & unit of work</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#overview-of-unit-of-work-and-repositories">Overview of Unit of Work and repositories</a></li>
+<li class="tocentry"><a href="#creating-a-unit-of-work">Creating a Unit of Work</a></li>
+<li class="tocentry"><a href="#creating-a-repository">Creating a repository</a></li>
+<li class="tocentry"><a href="#retrieving-repositories-from-a-unit-of-work">Retrieving repositories from a Unit of Work</a></li>
+</ul>
+<li class="tocentry"><a href="../orc.entityframework/using-stored-procedures-and-functions.htm">Using stored procedures & functions</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.htm">Using the ModelBase as base class for code-first entities</a>
+</li>
+
+</ul>
 </li>
 <li class="tocentry">
 <span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcExtensibility.htm">Orc.Extensibility</a></span>
@@ -159,81 +168,75 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></li> / <li><a href="../orc.dynamicobjects/introduction.htm">Introduction</a></li></ul>
+<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></li> / <li><a href="../orc.entityframework/using-the-repositories-and-unit-of-work.htm">Using the repositories & unit of work</a></li></ul>
 
                     </div>
                     <hr />
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="orc.dynamicobjects">Orc.DynamicObjects<a class="headerlink" href="#orc.dynamicobjects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<table class="table table-bordered-all table-responsive">
-<tbody>
-<tr>
-	<td>Chat</td>
-	<td><a href="https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects" /></a></td>
-</tr>
-<tr>
-	<td>Downloads</td>
-	<td><img src="https://img.shields.io/nuget/dt/orc.dynamicobjects.svg" alt="NuGet downloads" /></td>
-</tr>
-<tr>
-	<td>Stable version</td>
-	<td><img src="https://img.shields.io/nuget/v/orc.dynamicobjects.svg" alt="Version" /></td>
-</tr>
-<tr>
-	<td>Unstable version</td>
-	<td><img src="https://img.shields.io/nuget/vpre/orc.dynamicobjects.svg" alt="Pre-release version" /></td>
-</tr>
-</tbody>
-</table>
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time. </p>
-<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>For more information about dynamic programming, see <a href="http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx" target="_blank">MSDN</a>.</p>
-</div><h2 id="creating-dynamic-objects">Creating dynamic objects<a class="headerlink" href="#creating-dynamic-objects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>Creating a dynamic object with full Catel functionality is easy. Just add the <em>Orc.DynamicObjects</em> reference via NuGet and create a class that derives from <em>DynamicModelBase</em>:</p>
-<pre><code>public class DynamicModel : DynamicModelBase
+<h1 id="using-the-repositories-and-unit-of-work">Using the repositories and unit of work<a class="headerlink" href="#using-the-repositories-and-unit-of-work" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>The Repository and Unit of Work (UoW) pattern are very useful patterns to create an abstraction level over the <em>DbContext</em> that is provided by Entity Framework. A much heard excuse not to use repositories is that EF itself already works with repositories (the <em>DbContext</em>) and a UoW (in the SaveChanges method). Below are a few examples why it is a good thing to create repositories:</p>
+<ul>
+<li>Abstract away some of the more complex features of Entity Framework that the end-developer should not be bothered with</li>
+<li>Hide the actual <em>DbContext</em> (make it internal) to prevent misuse</li>
+<li>Keep security checks and saving and rollback in a single location</li>
+<li>Force the use of the <em>Specification</em> pattern on queries</li>
+</ul>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>Note that repositories and UoW should not be used to abstract away the ORM tool because that is just another abstraction layer which is not required. Use it for the advantages mentioned above</p>
+</div><p>A Unit of Work (UoW) is a a combination of several actions that will be grouped into a transaction. This means that either all actions inside a UoW are committed or rolled back. The advantage of using a UoW is that multiple save actions to multiple Repositories can be grouped as a unit.</p>
+<p>A repository is a class or service responsible for providing objects and allowing end-developers to query data. Instead of querying the DbContext directly, the DbContext can be abstracted away to provide default queries and force required functionality to all end-developers of the DbContext.</p>
+<h2 id="overview-of-unit-of-work-and-repositories">Overview of Unit of Work and repositories<a class="headerlink" href="#overview-of-unit-of-work-and-repositories" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>There are different interpretations of how repositories should be used in combination with unit of work. Let's start with an overview how the DbContext, Repositories and Unit of Work relate to each other. The image below represents an overview of the situation as Catel deals with the DbContext, Repositories and Unit of Work:</p>
+<p>[image here]</p>
+<p>The image above shows that the Unit of Work is the top-level component to be used. Each UoW contains its own <em>DbContext</em> instance. The <em>DbContext</em> can either be injected or will be created on the fly. Then the UoW also contains repositories which always get the <em>DbContext</em> injected. This way, all repositories inside a UoW share the same <em>DbContext</em>.</p>
+<h2 id="creating-a-unit-of-work">Creating a Unit of Work<a class="headerlink" href="#creating-a-unit-of-work" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>A UoW can be created by simply instantiating it. The end-developer has the option to either inject the <em>DbContext</em> or let the <em>DbContextManager</em> take care of it automatically.</p>
+<pre><code>using (var uow = new UnitOfWork&lt;MyDbContext&gt;())
 {
-    // TODO: Add custom functionality if required
+    // get repositories and query away
 }
 </code></pre>
 
-<p>Then the dynamic model can be used like this:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
- 
-Console.WriteLine(model.NonExistingProperty);
-</code></pre>
-
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>It is important to know that you must use the keyword <em>dynamic</em> to instantiate the type.</p>
-</div><h2 id="using-modelbase-functionality">Using ModelBase functionality<a class="headerlink" href="#using-modelbase-functionality" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>The <em>DynamicModelBase</em> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <em>ModelBase</em> functionality, cast it to the right type:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
- 
-// Note: the Validate method is available on the ModelBase
-var modelBase = (ModelBase)model;
-modelBase.Validate();
-</code></pre>
-
-<h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects<a class="headerlink" href="#supporting-serialization-of-dynamic-objects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
-
-var serializer = SerializationFactory.GetXmlSerializer();
-
-using (var memoryStream = new MemoryStream())
+<h2 id="creating-a-repository">Creating a repository<a class="headerlink" href="#creating-a-repository" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>A repository can be created very easily by deriving from the <em>EntityRepositoryBase</em> class. Below is an example of a customer repository:</p>
+<pre><code>public class CustomerRepository : EntityRepositoryBase&lt;Customer, int&gt;, ICustomerRepository
 {
-    var dynamicModel = (DynamicModel)model;
-    serializer.Serialize(dynamicModel, memoryStream);
+    public CustomerRepository(DbContext dbContext)
+        : base(dbContext)
+    {
+    }
+}
+ 
+public interface ICustomerRepository : IEntityRepository&lt;Customer, int&gt;
+{
+}
+</code></pre>
 
-    memoryStream.Position = 0L;
+<h2 id="retrieving-repositories-from-a-unit-of-work">Retrieving repositories from a Unit of Work<a class="headerlink" href="#retrieving-repositories-from-a-unit-of-work" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Once a UoW is created, it can be used to resolve repositories. To retrieve a repository from the UoW, the following conditions must be met:</p>
+<ol>
+<li>The repository must be registered in the ServiceLocator as Transient type. If the repository is declared as non-transient, it will be instantiated as new instance anyway.</li>
+<li>The repository must have a constructor accepting a DbContext instance</li>
+</ol>
+<p>To retrieve a new repository from the UoW, use the following code:</p>
+<pre><code>using (var uow = new UnitOfWork&lt;MyDbContext&gt;())
+{
+    var customerRepository = uow.GetRepository&lt;ICustomerRepository&gt;();
+ 
+    // all interaction with the customer repository is applied to the unit of work
+}
+</code></pre>
 
-    dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
-    var deserializedDynamicModel = (DynamicModel) deserializedModel;
-
-    // deserializedDynamicModel is now a dynamically deserialized object
+<h3 id="saving-a-unit-of-work">Saving a Unit of Work<a class="headerlink" href="#saving-a-unit-of-work" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>It is very important to save a Unit of Work. Once the Unit of Work gets out of scope (outside the using), all changes will be discarded if not explicitly saved.</p>
+<pre><code>using (var uow = new UnitOfWork&lt;MyDbContext&gt;())
+{
+    var customerRepository = uow.GetRepository&lt;ICustomerRepository&gt;();
+ 
+    // all interaction with the customer repository is applied to the unit of work
+ 
+    uow.SaveChanges();
 }
 </code></pre>
 
@@ -245,7 +248,7 @@ using (var memoryStream = new MemoryStream())
                     <div role="contentinfo">
 
                       <p>
-					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.dynamicobjects/introduction.md" target="_blank">contribute</a>!
+					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.entityframework/using-the-repositories-and-unit-of-work.md" target="_blank">contribute</a>!
 					  </p>
 					  <p>
 					    Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
@@ -256,8 +259,8 @@ using (var memoryStream = new MemoryStream())
 					   <div id="disqus_thread"></div>
 					   <script>
 					   var disqus_config = function () {
-					   this.page.url = 'http://opensource.wildgums.com/orc.dynamicobjects/introduction.htm';
-					   this.page.identifier = 'src/orc.dynamicobjects/introduction.md';
+					   this.page.url = 'http://opensource.wildgums.com/orc.entityframework/using-the-repositories-and-unit-of-work.htm';
+					   this.page.identifier = 'src/orc.entityframework/using-the-repositories-and-unit-of-work.md';
 					   };
 					   (function() { // DON'T EDIT BELOW THIS LINE
 					   var d = document, s = d.createElement('script');

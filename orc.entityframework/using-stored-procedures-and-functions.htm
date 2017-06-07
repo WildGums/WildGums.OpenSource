@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Introduction - WildGums open source center</title>
+    <title>Using stored procedures & functions - WildGums open source center</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
@@ -54,19 +54,23 @@
 <span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDependencyGraph.htm">Orc.DependencyGraph</a></span>
 </li>
 <li class="tocentry">
-<ul>
-<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></span></li>
-<li class="tocentry current"><a class="current" href="../orc.dynamicobjects/introduction.htm">Introduction</a>
-<ul class="currentrelative">
-<li class="tocentry"><a href="#creating-dynamic-objects">Creating dynamic objects</a></li>
-<li class="tocentry"><a href="#using-modelbase-functionality">Using ModelBase functionality</a></li>
-<li class="tocentry"><a href="#supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</a></li>
-</ul>
-
-</ul>
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></span>
 </li>
 <li class="tocentry">
-<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></span>
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></span></li>
+<li class="tocentry"><a href="../orc.entityframework/introduction.htm">Introduction</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-dbcontextmanager.htm">Using the DbContextManager</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-repositories-and-unit-of-work.htm">Using the repositories & unit of work</a>
+</li>
+<li class="tocentry current"><a class="current" href="../orc.entityframework/using-stored-procedures-and-functions.htm">Using stored procedures & functions</a>
+</li>
+<li class="tocentry"><a href="../orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.htm">Using the ModelBase as base class for code-first entities</a>
+</li>
+
+</ul>
 </li>
 <li class="tocentry">
 <span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcExtensibility.htm">Orc.Extensibility</a></span>
@@ -159,81 +163,19 @@
             <div class="nav-content">
                 <div role="navigation" aria-label="breadcrumbs navigation">
                     <div class="breadcrumbs">
-<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></li> / <li><a href="../orc.dynamicobjects/introduction.htm">Introduction</a></li></ul>
+<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></li> / <li><a href="../orc.entityframework/using-stored-procedures-and-functions.htm">Using stored procedures & functions</a></li></ul>
 
                     </div>
                     <hr />
                 </div>
                 <div role="main">
                     <div class="section">
-<h1 id="orc.dynamicobjects">Orc.DynamicObjects<a class="headerlink" href="#orc.dynamicobjects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<table class="table table-bordered-all table-responsive">
-<tbody>
-<tr>
-	<td>Chat</td>
-	<td><a href="https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects" /></a></td>
-</tr>
-<tr>
-	<td>Downloads</td>
-	<td><img src="https://img.shields.io/nuget/dt/orc.dynamicobjects.svg" alt="NuGet downloads" /></td>
-</tr>
-<tr>
-	<td>Stable version</td>
-	<td><img src="https://img.shields.io/nuget/v/orc.dynamicobjects.svg" alt="Version" /></td>
-</tr>
-<tr>
-	<td>Unstable version</td>
-	<td><img src="https://img.shields.io/nuget/vpre/orc.dynamicobjects.svg" alt="Pre-release version" /></td>
-</tr>
-</tbody>
-</table>
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time. </p>
-<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>For more information about dynamic programming, see <a href="http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx" target="_blank">MSDN</a>.</p>
-</div><h2 id="creating-dynamic-objects">Creating dynamic objects<a class="headerlink" href="#creating-dynamic-objects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>Creating a dynamic object with full Catel functionality is easy. Just add the <em>Orc.DynamicObjects</em> reference via NuGet and create a class that derives from <em>DynamicModelBase</em>:</p>
-<pre><code>public class DynamicModel : DynamicModelBase
+<h1 id="using-stored-procedures-and-functions">Using stored procedures and functions<a class="headerlink" href="#using-stored-procedures-and-functions" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>Sometimes it's required to use stored procedures or functions. This is still possible with Catel. Below is an example on how to call a stored procedure:</p>
+<pre><code>using (var dbContextManager = DbContextManager&lt;MyEntities&gt;.GetManager())
 {
-    // TODO: Add custom functionality if required
-}
-</code></pre>
-
-<p>Then the dynamic model can be used like this:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
- 
-Console.WriteLine(model.NonExistingProperty);
-</code></pre>
-
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>It is important to know that you must use the keyword <em>dynamic</em> to instantiate the type.</p>
-</div><h2 id="using-modelbase-functionality">Using ModelBase functionality<a class="headerlink" href="#using-modelbase-functionality" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>The <em>DynamicModelBase</em> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <em>ModelBase</em> functionality, cast it to the right type:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
- 
-// Note: the Validate method is available on the ModelBase
-var modelBase = (ModelBase)model;
-modelBase.Validate();
-</code></pre>
-
-<h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects<a class="headerlink" href="#supporting-serialization-of-dynamic-objects" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
-<pre><code>dynamic model = new DynamicModel();
-model.NonExistingProperty = &quot;a dynamic value&quot;;
-
-var serializer = SerializationFactory.GetXmlSerializer();
-
-using (var memoryStream = new MemoryStream())
-{
-    var dynamicModel = (DynamicModel)model;
-    serializer.Serialize(dynamicModel, memoryStream);
-
-    memoryStream.Position = 0L;
-
-    dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
-    var deserializedDynamicModel = (DynamicModel) deserializedModel;
-
-    // deserializedDynamicModel is now a dynamically deserialized object
+����var dbContext = dbContextManager.DbContext;
+����var result = dbContext.Database.SqlQuery&lt;ReturnType&gt;(&quot;storedProcedureName&quot;, params);
 }
 </code></pre>
 
@@ -245,7 +187,7 @@ using (var memoryStream = new MemoryStream())
                     <div role="contentinfo">
 
                       <p>
-					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.dynamicobjects/introduction.md" target="_blank">contribute</a>!
+					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.entityframework/using-stored-procedures-and-functions.md" target="_blank">contribute</a>!
 					  </p>
 					  <p>
 					    Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
@@ -256,8 +198,8 @@ using (var memoryStream = new MemoryStream())
 					   <div id="disqus_thread"></div>
 					   <script>
 					   var disqus_config = function () {
-					   this.page.url = 'http://opensource.wildgums.com/orc.dynamicobjects/introduction.htm';
-					   this.page.identifier = 'src/orc.dynamicobjects/introduction.md';
+					   this.page.url = 'http://opensource.wildgums.com/orc.entityframework/using-stored-procedures-and-functions.htm';
+					   this.page.identifier = 'src/orc.entityframework/using-stored-procedures-and-functions.md';
 					   };
 					   (function() { // DON'T EDIT BELOW THIS LINE
 					   var d = document, s = d.createElement('script');
