@@ -8,7 +8,7 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orches
 
 Orchestra is a composable WPF shell and framework built on top of [Catel](http://www.catelproject.com).
 
-It has been in active development for over 4 years (initial commit 2012/06/18) and is used in numerous Line of Business (LOB) applications on a daily basis.
+It has been in active development for over 5 years (initial commit 2012/06/18) and is used in numerous Line of Business (LOB) applications on a daily basis.
 
 Orchestra consists of a main shell including an SDK with services that allow developers to communicate with the shell.
 
@@ -27,11 +27,11 @@ Orchestra provides support for two different shells:
 
 |  Fluent ribbon shell                                       | MahApps shell                                   |
 |------------------------------------------------------------|-------------------------------------------------|
-| ![Fluent Ribbon 01](images/shell_fluentribbon_01.png)  | ![MahApps 01](images/shell_mahapps_01.png)  |
-| ![Fluent Ribbon 02](images/shell_fluentribbon_02.png)  |                                                 |
+| ![Fluent Ribbon 01](../images/orchestra/introduction/shell_fluentribbon_01.png)  | ![MahApps 01](../images/orchestra/introduction/shell_mahapps_01.png)  |
+| ![Fluent Ribbon 02](../images/orchestra/introduction/shell_fluentribbon_02.png)  |                                                 |
 
 
-## Nuget packages
+## NuGet packages
 
 - [Orchestra.Core](https://www.nuget.org/packages/Orchestra.Core)
 - [Orchestra.Shell.Ribbon.Fluent](https://www.nuget.org/packages/Orchestra.Shell.Ribbon.Fluent)

@@ -2,24 +2,144 @@
     "Name" : "WildGums open source center",
     "Source" : ".",
     "Destination" : "./..",
-    "IncludeSource": "Includes",
+    "IncludeSource": "includes",
     "Theme" : "WildGums",
-    "SourceFoldersToCopy" : ["images", "orchestra/images"],
+    "SourceFoldersToCopy" : ["images"],
     "Footer" : "",
     "Pages" : 
     {
-        //"__index" : "index.md",
 		"Introduction" : "introduction.md",
-		"Orchestra" : "orchestra/index.md",
-		"Orc.CsvHelper" : "orc.csvhelper/index.md",
-        //"5.0": "5.0/index.md", 
-		//"4.5": "4.5/index.md", 
-        //"Title Page 2": "filename_page2.md",
-        //"Sub Header 1": 
-        //{
-        //    "__index" : "index.md",
-        //    "Title Page 3" : "filename_page3.md",
-        //    "Title Page 4" : "filename_page4.md"
-        //}
+		"Orchestra" : 
+		{
+			"Introduction": "orchestra/introduction.md",
+		},
+		"Orc.Analytics" : 
+		{
+			"Introduction": "orc.analytics/introduction.md",
+		},		
+		"Orc.AutomaticSupport" : 
+		{
+			"Introduction": "orc.automaticsupport/introduction.md",
+		},
+		"Orc.CommandLine" : 
+		{
+			"Introduction": "orc.commandline/introduction.md",
+		},
+		"Orc.Controls" : 
+		{
+			"Introduction": "orc.controls/introduction.md",
+		},
+		"Orc.CsvHelper" : 
+		{
+			"Introduction": "orc.csvhelper/introduction.md",
+		},
+		"Orc.DependencyGraph" : 
+		{
+			"Introduction": "orc.dependencygraph/introduction.md",
+		},
+		"Orc.DynamicObjects" : 
+		{
+			"Introduction": "orc.dynamicobjects/introduction.md",
+		},
+		"Orc.EntityFramework" : 
+		{
+			"Introduction": "orc.entityframework/introduction.md",
+		},
+		"Orc.Extensibility" : 
+		{
+			"Introduction": "orc.extensibility/introduction.md",
+		},
+		"Orc.Feedback" : 
+		{
+			"Introduction": "orc.feedback/introduction.md",
+		},
+		"Orc.FileAssociation" : 
+		{
+			"Introduction": "orc.fileassociation/introduction.md",
+		},
+		"Orc.FileSystem" : 
+		{
+			"Introduction": "orc.filesystem/introduction.md",
+		},
+		"Orc.FilterBuilder" : 
+		{
+			"Introduction": "orc.filterbuilder/introduction.md",
+		},
+		"Orc.FluentValidation" : 
+		{
+			"Introduction": "orc.fluentvalidation/introduction.md",
+		},
+		"Orc.LicenseManager" : 
+		{
+			"Introduction": "orc.licensemanager/introduction.md",
+		},
+		"Orc.LogViewer" : 
+		{
+			"Introduction": "orc.logviewer/introduction.md",
+		},
+		"Orc.Memento" : 
+		{
+			"Introduction": "orc.memento/introduction.md",
+		},
+		"Orc.Metadata" : 
+		{
+			"Introduction": "orc.metadata/introduction.md",
+		},
+		"Orc.Notifications" : 
+		{
+			"Introduction": "orc.notifications/introduction.md",
+		},
+		"Orc.NuGetExplorer" : 
+		{
+			"Introduction": "orc.nugetexplorer/introduction.md",
+		},
+		"Orc.Prism" : 
+		{
+			"Introduction": "orc.prism/introduction.md",
+		},
+		"Orc.ProjectManagement" : 
+		{
+			"Introduction": "orc.projectmanagement/introduction.md",
+		},
+		"Orc.Scheduling" : 
+		{
+			"Introduction": "orc.scheduling/introduction.md",
+		},
+		"Orc.Search" : 
+		{
+			"Introduction": "orc.search/introduction.md",
+		},
+		"Orc.Skia" : 
+		{
+			"Introduction": "orc.skia/introduction.md",
+		},
+		"Orc.Snapshots" : 
+		{
+			"Introduction": "orc.snapshots/introduction.md",
+		},
+		"Orc.Sort" : 
+		{
+			"Introduction": "orc.sort/introduction.md",
+		},
+		"Orc.Squirrel" : 
+		{
+			"Introduction": "orc.squirrel/introduction.md",
+		},
+		"Orc.SupportPackage" : 
+		{
+			"Introduction": "orc.supportpackage/introduction.md",
+		},
+		"Orc.SystemInfo" : 
+		{
+			"Introduction": "orc.systeminfo/introduction.md",
+		},
+		"Orc.Wizard" : 
+		{
+			"Introduction": "orc.wizard/introduction.md",
+		},
+		"Orc.WorkspaceManagement" : 
+		{
+			"Introduction": "orc.workspacemanagement/introduction.md",
+		},
     }
 }
