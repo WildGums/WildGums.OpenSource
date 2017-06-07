@@ -1,19 +1,21 @@
 # Orc.Prism
 
-[![Join the chat at https://gitter.im/WildGums/Orc.Prism](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.Prism?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+--|--
+Chat|[![Join the chat at https://gitter.im/WildGums/Orc.Prism](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.NuGetExplorer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-![License](https://img.shields.io/github/license/WildGums/Orc.Prism.svg)
+** Prism 5 **
 
-**Prism 5**
+--|--
+Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.prism5.svg)
+Stable version|![Version](https://img.shields.io/nuget/v/orc.prism5.svg)
+Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.prism5.svg)
 
-![Version](https://img.shields.io/nuget/v/Orc.Prism5.svg)
-![Pre-release version](https://img.shields.io/nuget/vpre/Orc.Prism5.svg)
+** Prism 6 **
 
-
-**Prism 6**
-
-![Version](https://img.shields.io/nuget/v/Orc.Prism6.svg)
-![Pre-release version](https://img.shields.io/nuget/vpre/Orc.Prism6.svg)
+--|--
+Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.prism6.svg)
+Stable version|![Version](https://img.shields.io/nuget/v/orc.prism6.svg)
+Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.prism6.svg)
 
 # Introduction
 

@@ -1,11 +1,10 @@
 # Orc.Memento
 
-[![Join the chat at https://gitter.im/WildGums/Orc.Memento](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.Memento?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-![License](https://img.shields.io/github/license/WildGums/Orc.Memento.svg)
-![NuGet downloads](https://img.shields.io/nuget/dt/Orc.Memento.svg)
-![Version](https://img.shields.io/nuget/v/Orc.Memento.svg)
-![Pre-release version](https://img.shields.io/nuget/vpre/Orc.Memento.svg)
+--|--
+Chat|[![Join the chat at https://gitter.im/WildGums/Orc.Memento](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.Memento?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.memento.svg)
+Stable version|![Version](https://img.shields.io/nuget/v/orc.memento.svg)
+Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.memento.svg)
 
 # Introduction
 

@@ -1,10 +1,10 @@
 # Orc.DynamicObjects
 
-[![Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-![License](https://img.shields.io/github/license/WildGums/Orc.DynamicObjects.svg)
-![Version](https://img.shields.io/nuget/v/[NUGET.PACKAGENAME].svg)
-![Pre-release version](https://img.shields.io/nuget/vpre/Orc.DynamicObjects.svg)
+--|--
+Chat|[![Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.dynamicobjects.svg)
+Stable version|![Version](https://img.shields.io/nuget/v/orc.dynamicobjects.svg)
+Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.dynamicobjects.svg)
 
 # Introduction
 
