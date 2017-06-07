@@ -174,8 +174,8 @@
 <p>Sometimes it's required to use stored procedures or functions. This is still possible with Catel. Below is an example on how to call a stored procedure:</p>
 <pre><code>using (var dbContextManager = DbContextManager&lt;MyEntities&gt;.GetManager())
 {
-����var dbContext = dbContextManager.DbContext;
-����var result = dbContext.Database.SqlQuery&lt;ReturnType&gt;(&quot;storedProcedureName&quot;, params);
+    var dbContext = dbContextManager.DbContext;
+    var result = dbContext.Database.SqlQuery&lt;ReturnType&gt;(&quot;storedProcedureName&quot;, params);
 }
 </code></pre>
 

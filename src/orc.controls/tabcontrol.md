@@ -1,36 +1,40 @@
 TabControl
 ==========
 
-@alert important
-This documentation needs to be written
-@end
+The regular `TabControl` in WPF only supports lazy-loading of the views inside the tabs. The `TabControl` provided
+by this library supports lots of different options:
 
-[Introduction]
-
-[Screenshots]
+Option|Description
+-|-
+LazyLoading|Load all tabs using lazy loading, but keeps the tabs in memory afterwards.
+LazyLoadingUnloadOthers|Load all tabs using lazy loading. As soon as a tab is loaded, all other loaded tabs will be unloaded.
+EagerLoading|Load all tabs as soon as the tab control is loaded.
+EagerLoadingOnFirstUse|Load all tabs when any of the tabs is used for the first time.
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
+
 
 ## Events
 
 Event name|Description
 -|-
-Event 1|Some description
+
 
 ## Methods
 
 Method name|Description
 -|-
-Method 1|Some description
+
 
 ## How to use
 
-[Description]
-
 ```
-[Example code]
+<orc:TabControl LoadBehavior="EagerLoading">
+  <TabItem ... />
+  <TabItem ... />
+  <TabItem ... />
+</orc:TabControl>
 ```
