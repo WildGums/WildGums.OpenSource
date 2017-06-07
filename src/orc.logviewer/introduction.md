@@ -10,25 +10,25 @@ An advanced log viewer for WPF applications.
 
 Run the demo project to see the control in action:
 
-![Orc.LogViewer demo](doc/images/Orc.LogViewer.Demo.png)
+![Orc.LogViewer demo](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.png)
 
 Use level toggle buttons to show/hide log records:
 
-![Level toggle buttons](doc/images/Orc.LogViewer.Demo.LevelToggleButtons.png)
+![Level toggle buttons](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.LevelToggleButtons.png)
 
 Start typing in filter box to filter log records:  
 
-![Filtering](doc/images/Orc.LogViewer.Demo.FilterBox.png)
+![Filtering](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.FilterBox.png)
 
 Select a type name in combobox to filter log records by type name:
 
-![Type names](doc/images/Orc.LogViewer.Demo.TypeNames1.png)
+![Type names](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.TypeNames1.png)
 
-![Type names](doc/images/Orc.LogViewer.Demo.TypeNames.png)
+![Type names](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.TypeNames.png)
 
 Use Time stamp toggle button to show/hide timestamps:
 
-![Time stamps](doc/images/Orc.LogViewer.Demo.TimeStamps.png)
+![Time stamps](../images/orc.logviewer/introduction/Orc.LogViewer.Demo.TimeStamps.png)
 
 ### How to use LogViewer
 

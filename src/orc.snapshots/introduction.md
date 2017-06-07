@@ -8,7 +8,7 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.sn
 
 Manage snapshots the easy way using this library.
 
-![](doc/images/orc_snapshots.gif)
+![](../images/orc.snapshots/introduction/orc_snapshots.gif)
 
 # Quick introduction
 

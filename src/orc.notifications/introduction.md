@@ -11,7 +11,7 @@ This library is used to create and display desktop notifications. Notification l
 
 Notifications can be used to briefly display important information to the user.
 
-![Notification](doc/images/Notification.gif)
+![Notification](../images/orc.notifications/introduction/notifications.gif)
 
 In order to create notifications in your application use IOC with the *INotificationService* interface.
 

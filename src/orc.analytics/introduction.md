@@ -8,7 +8,7 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.an
 
 This library makes it very easy to integration Google Analytics with Catel projects.
 
-![Google Analytics](doc/images/google_analytics.png)
+![Google Analytics](../images/orc.analytics/introduction/google_analytics.png)
 
 # Initializing the service
 

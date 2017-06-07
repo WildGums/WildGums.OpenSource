@@ -9,7 +9,7 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.wi
 
 Easily create beautifully looking wizards for WPF using MVVM.
 
-![Wizard page](doc/images/wizard_01.png)
+![Wizard page](../images/orc.wizard/introduction/wizard_01.png)
 
 # Quick introduction
 
@@ -147,7 +147,7 @@ Using the wizard can be done via the `IWizardService`. Below is an example on ho
 
 # Enjoying the wizard
 
-![Wizard page](doc/images/wizard.gif)
+![Wizard page](../images/orc.wizard/introduction/wizard.gif)
 
 # Troubleshooting
 

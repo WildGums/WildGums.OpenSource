@@ -37,15 +37,15 @@ Screenshots
 
 Packages available: 
 
-![NuGetExplorer 01](doc/images/NuGetExplorer_01.png)
+![NuGetExplorer 01](../images/orc.nugetexplorer/introduction/nuget1.png)
 
 Available updates:
 
-![NuGetExplorer 02](doc/images/NuGetExplorer_02.png)
+![NuGetExplorer 02](../images/orc.nugetexplorer/introduction/nuget2.png)
 
 Recommended updates:
 
-![NuGetExplorer 03](doc/images/NuGetExplorer_03.png)
+![NuGetExplorer 03](../images/orc.nugetexplorer/introduction/nuget3.png)
 
 How to use
 ------------

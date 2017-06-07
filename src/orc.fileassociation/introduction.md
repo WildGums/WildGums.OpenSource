@@ -67,11 +67,11 @@ _fileAssociationService.AssociateFilesWithApplication(applicationInfo.Name);
 
 This repository contains an example application that allows developers to test the logic and see how the library should be used. Below are a few screenshots:
 
-![Example application](doc/images/example_app.png)
+![Example application](../images/orc.fileassociation/introduction/example_app.png)
 
-![Windows 10 default apps](doc/images/windows_10_001.png)
+![Windows 10 default apps](../images/orc.fileassociation/introduction/windows_10_001.png)
 
-![Windows 10 default apps](doc/images/windows_10_002.png)
+![Windows 10 default apps](../images/orc.fileassociation/introduction/windows_10_002.png)
 
 # Additional notes / credits
 

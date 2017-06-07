@@ -21,7 +21,7 @@ Below is an overview of the most important components:
 - **IWorkspaceManager** => the workspace manager with events and management methods
 - **IWorkspaceInitializer** => allows customization of initial settings of a workspace
 
-![Managing workspaces the easy way](doc/images/workspace_handling.gif)  
+![Managing workspaces the easy way](../images/orc.workspacemanagement/introduction/workspace_handling.gif)  
 
 -- 
  

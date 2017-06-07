@@ -77,7 +77,6 @@
 <li class="tocentry current"><a class="current" href="../orc.filterbuilder/introduction.htm">Introduction</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="#usage">Usage</a></li>
-<li class="tocentry"><a href="#links">Links</a></li>
 </ul>
 
 </ul>
@@ -187,7 +186,7 @@
 </tbody>
 </table>
 <p>FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.</p>
-<p><img src="img/1.png" alt="Filter Builder component main screen" /> </p>
+<p><img src="../images/orc.filterbuilder/introduction/1.png" alt="Filter Builder component main screen" width="1169" height="757" /> </p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>FilterBuilder is developer-friendly component which allows easy integration of complex data filtering functionality with new and existing enterprise applications. The component implementation only requires three steps.</p>
 <ol>
@@ -207,7 +206,7 @@ public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; 
 <h3 id="adding-component-to-your-application">Adding component to your application<a class="headerlink" href="#adding-component-to-your-application" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>The control includes two Views (<em>FilterBuilderControl</em> and <em>EditFilterView</em>). 
 <em>FilterBuilderControl</em> is responsible for invocation of <em>EditFilter</em> window and for implementing filtering of the main collection. </p>
-<p><img src="img/filter_builder.png" alt="Filter Builder window" />  </p>
+<p><img src="../images/orc.filterbuilder/introduction/filter_builder.png" alt="Filter Builder window" width="354" height="59" />  </p>
 <p>Prior to using the component add the <em>FilterBuilder</em> namespace to your View:</p>
 <pre><code>xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
 </code></pre>
@@ -219,7 +218,7 @@ public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; 
 </code></pre>
 
 <p>The <em>EditFilterView</em> is located in FilterBuilder project. It will show the filtering options window to the end user.</p>
-<p><img src="img/2.png" alt="Filter Builder component filter screen" /> </p>
+<p><img src="../images/orc.filterbuilder/introduction/2.png" alt="Filter Builder component filter screen" width="690" height="473" /> </p>
 <p><strong>Note:</strong>
 Before using the control please add Catel and Catel MVVM libraries to the project via nugget.</p>
 <pre><code>Install-Package Catel.Core -Pre
@@ -228,9 +227,9 @@ Install-Package Catel.MVVM -Pre
 
 <h3 id="customizing-component-ui">Customizing component UI<a class="headerlink" href="#customizing-component-ui" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>The UI can easily be adjusted to any design. For example we will demonstrate how to apply the Metro UI theme.</p>
-<p><img src="img/metro_1.png" alt="Filter Builder component Metro UI main screen" /> </p>
+<p><img src="../images/orc.filterbuilder/introduction/metro_1.png" alt="Filter Builder component Metro UI main screen" width="1440" height="790" /> </p>
 <p>Install the appropriate packages via nugget manager.</p>
-<p><img src="img/mahapps_1.png" alt="Nuget Manager" />  </p>
+<p><img src="../images/orc.filterbuilder/introduction/mahapps_1.png" alt="Nuget Manager" width="900" height="600" />  </p>
 <p>Or, through Package Manager Console using bellow commands:</p>
 <pre><code>Install-Package MahApps.Metro –Pre
 Install-Package  MahApps.Metro.Resources.Standalone
@@ -260,7 +259,7 @@ Install-Package  MahApps.Metro.Resources.Standalone
 
 <p>Compile the sample project and you should see the basic Metro UI style applied to your application.</p>
 <p>To customize the FilterBuilder Controller, reference the above libraries in the Orc.FilterBuilder project. </p>
-<p><img src="img/solution_explorer.png" alt="FilterBuilder project" />  </p>
+<p><img src="../images/orc.filterbuilder/introduction/solution_explorer.png" alt="FilterBuilder project" width="383" height="553" />  </p>
 <p>Add Resources folder along with necessary files to the Control project.
 Also, in the <em>EditFilterView.xaml</em> modify the ResourceDictionary section as follows:</p>
 <pre><code>&lt;ResourceDictionary&gt;
@@ -286,10 +285,8 @@ Also, in the <em>EditFilterView.xaml</em> modify the ResourceDictionary section 
 &lt;/Button&gt;
 </code></pre>
 
-<p><img src="img/metro_2.png" alt="FilterBuilder project" />  </p>
+<p><img src="../images/orc.filterbuilder/introduction/metro_2.png" alt="FilterBuilder project" width="675" height="547" />  </p>
 <p>Compile the project, and enjoy!</p>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>FilterBuilder is part of the <a href="https://github.com/WildGums/Orchestra" target="_blank">Orchestra</a> family of controls.</p>
 
                     </div>
                 </div>

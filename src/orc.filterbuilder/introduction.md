@@ -8,7 +8,7 @@ Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.fi
 
 FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.
 
-![Filter Builder component main screen](img/1.png) 
+![Filter Builder component main screen](../images/orc.filterbuilder/introduction/1.png) 
 
 ## Usage
 
@@ -37,7 +37,7 @@ Two data collection should be created: one for input and one for filtered output
 The control includes two Views (*FilterBuilderControl* and *EditFilterView*). 
 *FilterBuilderControl* is responsible for invocation of *EditFilter* window and for implementing filtering of the main collection. 
 
-![Filter Builder window](img/filter_builder.png)  
+![Filter Builder window](../images/orc.filterbuilder/introduction/filter_builder.png)  
 
 Prior to using the component add the *FilterBuilder* namespace to your View:
 
@@ -51,7 +51,7 @@ Next include the actual component to your View using the following code:
 
 The *EditFilterView* is located in FilterBuilder project. It will show the filtering options window to the end user.
 
-![Filter Builder component filter screen](img/2.png) 
+![Filter Builder component filter screen](../images/orc.filterbuilder/introduction/2.png) 
 
 
 **Note:**
@@ -65,11 +65,11 @@ Before using the control please add Catel and Catel MVVM libraries to the projec
 
 The UI can easily be adjusted to any design. For example we will demonstrate how to apply the Metro UI theme.
 
-![Filter Builder component Metro UI main screen](img/metro_1.png) 
+![Filter Builder component Metro UI main screen](../images/orc.filterbuilder/introduction/metro_1.png) 
 
 Install the appropriate packages via nugget manager.
 
-![Nuget Manager](img/mahapps_1.png)  
+![Nuget Manager](../images/orc.filterbuilder/introduction/mahapps_1.png)  
 
 Or, through Package Manager Console using bellow commands:
 
@@ -103,7 +103,7 @@ Compile the sample project and you should see the basic Metro UI style applied t
 
 To customize the FilterBuilder Controller, reference the above libraries in the Orc.FilterBuilder project. 
 
-![FilterBuilder project](img/solution_explorer.png)  
+![FilterBuilder project](../images/orc.filterbuilder/introduction/solution_explorer.png)  
 
 Add Resources folder along with necessary files to the Control project.
 Also, in the *EditFilterView.xaml* modify the ResourceDictionary section as follows:
@@ -131,10 +131,6 @@ To customize the style of the buttons add the *MetroCircleButtonStyle* and appro
     	</Rectangle>
 	</Button>
 
-![FilterBuilder project](img/metro_2.png)  
+![FilterBuilder project](../images/orc.filterbuilder/introduction/metro_2.png)  
 
 Compile the project, and enjoy!
-
-## Links
-
-FilterBuilder is part of the [Orchestra](https://github.com/WildGums/Orchestra) family of controls.
