@@ -61,6 +61,14 @@
 		{
 			"Introduction": "orc.csvhelper/introduction.md",
 		},
+		"Orc.CsvTextEditor" : 
+		{
+			"Introduction": "orc.csvtexteditor/introduction.md",
+		},
+		"Orc.DbToCsv" : 
+		{
+			"Introduction": "orc.dbtocsv/introduction.md",
+		},
 		"Orc.DependencyGraph" : 
 		{
 			"Introduction": "orc.dependencygraph/introduction.md",

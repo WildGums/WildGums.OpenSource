@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction - WildGums open source center</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles/vs.css">
+    <link rel="stylesheet" href="../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="/index.htm"><i class="fa fa-home"></i> WildGums open source center</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../Home.htm">Home</a>
+</li>
+<li class="tocentry"><a href="../introduction.htm">Introduction</a>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../Orchestra.htm">Orchestra</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcAnalytics.htm">Orc.Analytics</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcAutomaticSupport.htm">Orc.AutomaticSupport</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcCommandLine.htm">Orc.CommandLine</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcControls.htm">Orc.Controls</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcCsvHelper.htm">Orc.CsvHelper</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcCsvTextEditor.htm">Orc.CsvTextEditor</a></span>
+</li>
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../OrcDbToCsv.htm">Orc.DbToCsv</a></span></li>
+<li class="tocentry current"><a class="current" href="../orc.dbtocsv/introduction.htm">Introduction</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#usage">Usage</a></li>
+<li class="tocentry"><a href="#command-line-utility-orc.dbtocsv.console">Command line utility (Orc.DbToCsv.Console)</a></li>
+<li class="tocentry"><a href="#task-runner">Task Runner</a></li>
+</ul>
+
+</ul>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDependencyGraph.htm">Orc.DependencyGraph</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcDynamicObjects.htm">Orc.DynamicObjects</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcEntityFramework.htm">Orc.EntityFramework</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcExtensibility.htm">Orc.Extensibility</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcFeedback.htm">Orc.Feedback</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcFileAssociation.htm">Orc.FileAssociation</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcFileSystem.htm">Orc.FileSystem</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcFilterBuilder.htm">Orc.FilterBuilder</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcFluentValidation.htm">Orc.FluentValidation</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcLicenseManager.htm">Orc.LicenseManager</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcLogViewer.htm">Orc.LogViewer</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcMemento.htm">Orc.Memento</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcMetadata.htm">Orc.Metadata</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcNotifications.htm">Orc.Notifications</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcNuGetExplorer.htm">Orc.NuGetExplorer</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcPrism.htm">Orc.Prism</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcProjectManagement.htm">Orc.ProjectManagement</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcScheduling.htm">Orc.Scheduling</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSearch.htm">Orc.Search</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSkia.htm">Orc.Skia</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSnapshots.htm">Orc.Snapshots</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSort.htm">Orc.Sort</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSquirrel.htm">Orc.Squirrel</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSupportPackage.htm">Orc.SupportPackage</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcSystemInfo.htm">Orc.SystemInfo</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcWizard.htm">Orc.Wizard</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../OrcWorkspaceManagement.htm">Orc.WorkspaceManagement</a></span>
+</li>
+
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../index.htm">WildGums open source center</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../Home.htm">Home</a></li> / <li><a href="../OrcDbToCsv.htm">Orc.DbToCsv</a></li> / <li><a href="../orc.dbtocsv/introduction.htm">Introduction</a></li></ul>
+
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="orc.dbtocsv">Orc.DbToCsv<a class="headerlink" href="#orc.dbtocsv" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Name</th>
+	<th>Badge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>Chat</td>
+	<td><a href="https://gitter.im/WildGums/Orc.DbToCsv?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.DbToCsv" /></a></td>
+</tr>
+<tr>
+	<td>Downloads</td>
+	<td><img src="https://img.shields.io/nuget/dt/orc.dbtocsv.svg" alt="NuGet downloads" /></td>
+</tr>
+<tr>
+	<td>Stable version</td>
+	<td><img src="https://img.shields.io/nuget/v/orc.dbtocsv.svg" alt="Version" /></td>
+</tr>
+<tr>
+	<td>Unstable version</td>
+	<td><img src="https://img.shields.io/nuget/vpre/orc.dbtocsv.svg" alt="Pre-release version" /></td>
+</tr>
+</tbody>
+</table>
+<p>This library's sole purpose is to extract data from a MS SQL database into csv files. Each table or view will have a corresponding csv file.</p>
+<p>The repository contains a library, a command line utility and a task runner</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>In order to extract the data the library needs a project file.
+A project file is simply an xml file with an &quot;.iprj&quot; extension, and looks like:</p>
+<pre><code class="xml">&lt;Project xmlns=&quot;http://wildgums/2015&quot;&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLExpress;Initial Catalog=MyDbName;Integrated Security=True;Pooling=False&lt;/ConnectionString&gt;
+  &lt;MaximumRowsInTable&gt;500&lt;/MaximumRowsInTable&gt;
+  &lt;OutputFolder&gt;C:\Temp\CustomPath&lt;/OutputFolder&gt;
+  
+  &lt;Project.Tables&gt;
+    &lt;Table Name=&quot;MyTable1&quot;/&gt;
+    &lt;Table Name=&quot;MyTable2&quot; Csv=&quot;Table2.csv&quot;/&gt;
+    &lt;Table Name=&quot;MyTable3&quot; Csv=&quot;Table3.csv&quot; Output=&quot;C:\Temp&quot;/&gt;
+  &lt;/Project.Tables&gt;
+&lt;/Project&gt;
+</code></pre>
+
+<p>There are four important tags:</p>
+<ul>
+<li>ConnectionString: Standard connection string to connect to the database table.</li>
+<li>MaximumRowsInTable: Will specify the number of rows to retrieve from each table. <strong>If the tag is missing or the value is 0 or less, then all rows will be retrieved.</strong></li>
+<li>OutputFolder: Specify the folder the files will be saved to. If left blank the files will be created in the direcotry the console or task runner were executed from.</li>
+<li>Tables: Specify the name of each table (or view) you want to extract. If left emtpy, all tables will be extracted.</li>
+</ul>
+<p><strong>Note</strong>: 
+- You can specify the csv file name for each table/view using the Csv attribute.
+- If the Csv attribute is left blank or does not exist the default file name will be the table name (except white spaces will be replaced with an underscore.)
+- You can specify a different output directory for each file. If left blank or does not exist the file will be saved in the &quot;OutputFolder&quot;.</p>
+<p>Once the project file is setup you can create the csv files using the following command:</p>
+<pre><code class="C">#
+public static void ProcessProject(string projectFilePath, string outputFolderPath, ILogWriter logWriter)
+</code></pre>
+
+<p>Example:</p>
+<pre><code class="C">#
+Importer.ProcessProject(projectFilePath, outputFolderPath, new ConsoleWriter());
+</code></pre>
+
+<p>The parameters are:</p>
+<ul>
+<li>projectFilePath: The path to the .iprj file</li>
+<li>outputFolderPath: The folder path you want to save the csv files to</li>
+<li>logWriter: A log writer object</li>
+</ul>
+<h2 id="command-line-utility-orc.dbtocsv.console">Command line utility (Orc.DbToCsv.Console)<a class="headerlink" href="#command-line-utility-orc.dbtocsv.console" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Orc.DbToCsv.Console is a simple command line utility.</p>
+<p>There are two possible command line options:</p>
+<ul>
+<li>-p or -project path to .iprj file. If the option is not defined the utility will try and find a valid project file in the current folder.</li>
+<li>-o or -output path to the output directory where the csv files will be saved to.</li>
+</ul>
+<p>Example:</p>
+<pre class="nocode">Orc.DbToCsv.Console.exe -p E:\sample1.iprj -o D:\output
+</pre><h2 id="task-runner">Task Runner<a class="headerlink" href="#task-runner" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><img src="../images/orc.dbtocsv/introduction/taskrunner.png" alt="TaskRunner" width="684" height="820" /></p>
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+
+                      <p>
+					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.dbtocsv/introduction.md" target="_blank">contribute</a>!
+					  </p>
+					  <p>
+					    Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+					  </p>
+					  <hr />
+					  <p>
+					    <h2>Discussion</h2>
+					   <div id="disqus_thread"></div>
+					   <script>
+					   var disqus_config = function () {
+					   this.page.url = 'http://opensource.wildgums.com/orc.dbtocsv/introduction.htm';
+					   this.page.identifier = 'src/orc.dbtocsv/introduction.md';
+					   };
+					   (function() { // DON'T EDIT BELOW THIS LINE
+					   var d = document, s = d.createElement('script');
+					   s.src = 'https://wildgums-opensource.disqus.com/embed.js';
+					   s.setAttribute('data-timestamp', +new Date());
+					   (d.head || d.body).appendChild(s);
+					   })();
+					   </script>
+					   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					  </p>
+					</div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-54671533-18', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+</body>
+</html>
