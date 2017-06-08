@@ -164,6 +164,12 @@
                     <div class="section">
 <h1 id="orc.commandline">Orc.CommandLine<a class="headerlink" href="#orc.commandline" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Name</th>
+	<th>Badge</th>
+</tr>
+</thead>
 <tbody>
 <tr>
 	<td>Chat</td>
@@ -184,62 +190,7 @@
 </tbody>
 </table>
 <p>Use command line the easy way.</p>
-<h1 id="quick-introduction">Quick introduction<a class="headerlink" href="#quick-introduction" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>Using this library is easy:</p>
-<pre><code>public class MyContext : ContextBase
-{
-    [Option(' ', &quot;&quot;, HelpText = &quot;The file name to start with&quot;)]
-    public string FileName { get; set; }
-
-    [Option('b', &quot;bool&quot;, AcceptsValue = false, HelpText = &quot;Some boolean switch&quot;)]
-    public bool BooleanSwitch { get; set; }
-
-    [Option('i', &quot;int&quot;, HelpText = &quot;Some integer switch&quot;)]
-    public int IntegerSwitch { get; set; }
-
-    [Option('s', &quot;string&quot;, HelpText = &quot;Some string switch&quot;)]
-    public string StringSwitch { get; set; }
-}
-</code></pre>
-
-<p>Then use this code:</p>
-<pre><code>// Environment.CommandLine also contains current application path, it is removed with this extension method
-var commandLine = Environment.CommandLine.GetCommandLine(true);
-var context = new MyContext();
-
-var validationContext = commandLineParser.Parse(commandLine, context);
-if (validationContext.HasErrors)
-{
-    // something bad happened
-    return;
-}
-
-if (context.IsHelp)
-{
-    // Use the IHelpWriterService to output the help
-    var helpContent = helpWriterService.ConvertToString(context);
-    // TODO: write to console or show as a message box
-    return;
-}
-
-// Handle the context here
-</code></pre>
-
-<p>This will successfully parse a command line like this:</p>
-<pre><code>myapp.exe somefile /b -string somestring /i 42
-</code></pre>
-
-<h1 id="allowed-switches">Allowed switches<a class="headerlink" href="#allowed-switches" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>The library supports 2 types of switches, / and -. For example:</p>
-<ul>
-<li>-b</li>
-<li>-string</li>
-<li>/b</li>
-<li>/string</li>
-</ul>
-<p>An option definition has a short and long name. Both can be used as a switch.</p>
-<h1 id="accepts-value">Accepts value<a class="headerlink" href="#accepts-value" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>The <em>AcceptsValue</em> property should only be used on boolean properties. When they are specified, they are assumed to be <em>true</em> (defaulting to <em>false</em>). </p>
+<p>For documentation, please visit the <a href="http://opensource.wildgums.com" target="_blank">documentation portal</a></p>
 
                     </div>
                 </div>
