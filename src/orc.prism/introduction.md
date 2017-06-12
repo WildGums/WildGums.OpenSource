@@ -21,6 +21,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.prism6.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.prism6.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.prism6.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Prism](https://github.com/WildGums/Orc.Prism)
+
 # Introduction
 
 Orc.Prism empowers users to combine both Catel and Prism. The best way to do this is to use the MVVM functionality from Catel and the modularity / UI composition from Prism. 

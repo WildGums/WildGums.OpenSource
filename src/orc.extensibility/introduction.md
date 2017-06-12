@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.extensibility.s
 Stable version|![Version](https://img.shields.io/nuget/v/orc.extensibility.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.extensibility.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Extensibility](https://github.com/WildGums/Orc.Extensibility)
+
 This library provides classes to support pluggable components inside applications (discovery, instantation, etc).
 
 @alert info

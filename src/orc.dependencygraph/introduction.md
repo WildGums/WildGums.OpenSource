@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.dependencygraph
 Stable version|![Version](https://img.shields.io/nuget/v/orc.dependencygraph.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.dependencygraph.svg)
 
+Find the source at [https://github.com/WildGums/Orc.DependencyGraph](https://github.com/WildGums/Orc.DependencyGraph)
+
 ## Introduction
 This library will help **navigate** a directed acyclic graph (DAG).
 

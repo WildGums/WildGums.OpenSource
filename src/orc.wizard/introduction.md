@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.wizard.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.wizard.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.wizard.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Wizard](https://github.com/WildGums/Orc.Wizard)
+
 Easily create beautifully looking wizards for WPF using MVVM.
 
 ![Wizard page](../images/orc.wizard/introduction/wizard_01.png)

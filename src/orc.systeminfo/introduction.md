@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.systeminfo.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.systeminfo.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.systeminfo.svg)
 
+Find the source at [https://github.com/WildGums/Orc.SystemInfo](https://github.com/WildGums/Orc.SystemInfo)
+
 This library is used to retrieve the system information details from a computer.
 
 Use the `GetSystemInfo()` method or the `ISystemInfoService` to get the system information details.

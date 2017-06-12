@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.filterbuilder.s
 Stable version|![Version](https://img.shields.io/nuget/v/orc.filterbuilder.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.filterbuilder.svg)
 
+Find the source at [https://github.com/WildGums/Orc.FilterBuilder](https://github.com/WildGums/Orc.FilterBuilder)
+
 FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.
 
 ![Filter Builder component main screen](../images/orc.filterbuilder/introduction/1.png) 

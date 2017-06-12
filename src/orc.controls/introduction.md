@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.controls.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.controls.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.controls.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Controls](https://github.com/WildGums/Orc.Controls)
+
 Run the demo project to see the controls in action:
 
 ![Orc.Controls demo](../images/orc.controls/introduction/Orc.Controls.Demo.png)

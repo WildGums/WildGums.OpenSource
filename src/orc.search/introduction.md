@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.search.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.search.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.search.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Search](https://github.com/WildGums/Orc.Search)
+
 Easily add searching to any application.
 
 Uses [Lucene](http://lucenenet.apache.org/) in the background.

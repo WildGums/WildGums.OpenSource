@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.fileassociation
 Stable version|![Version](https://img.shields.io/nuget/v/orc.fileassociation.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.fileassociation.svg)
 
+Find the source at [https://github.com/WildGums/Orc.FileAssociation](https://github.com/WildGums/Orc.FileAssociation)
+
 Makes it easy to associate files with your application.
 
 # Quick introduction

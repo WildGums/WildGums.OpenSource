@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.scheduling.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.scheduling.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.scheduling.svg)
 
+Find the source at [https://github.com/WildGums/Orc.Scheduling](https://github.com/WildGums/Orc.Scheduling)
+
 Allows easily scheduling of (recurring) tasks inside applications.
 
 # Quick introduction

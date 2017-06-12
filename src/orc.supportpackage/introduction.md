@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.supportpackage.
 Stable version|![Version](https://img.shields.io/nuget/v/orc.supportpackage.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.supportpackage.svg)
 
+Find the source at [https://github.com/WildGums/Orc.SupportPackage](https://github.com/WildGums/Orc.SupportPackage)
+
 Creates support packages of software by gathering relevant information.
 
 # Quick introduction

@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.automaticsuppor
 Stable version|![Version](https://img.shields.io/nuget/v/orc.automaticsupport.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.automaticsupport.svg)
 
+Find the source at [https://github.com/WildGums/Orc.AutomaticSupport](https://github.com/WildGums/Orc.AutomaticSupport)
+
 Allows the user to easily download a remote file that will validate and provide automatic support to the end-user.
 
 ## Initializing the service

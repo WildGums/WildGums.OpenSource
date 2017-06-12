@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.logviewer.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.logviewer.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.logviewer.svg)
 
+Find the source at [https://github.com/WildGums/Orc.LogViewer](https://github.com/WildGums/Orc.LogViewer)
+
 An advanced log viewer for WPF applications.
 
 Run the demo project to see the control in action:

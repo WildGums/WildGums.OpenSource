@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.workspacemanage
 Stable version|![Version](https://img.shields.io/nuget/v/orc.workspacemanagement.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.workspacemanagement.svg)
 
+Find the source at [https://github.com/WildGums/Orc.WorkspaceManagement](https://github.com/WildGums/Orc.WorkspaceManagement)
+
 Manage workspaces the easy way using this library.
 
 # Quick introduction

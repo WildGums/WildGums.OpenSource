@@ -21,6 +21,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.entityframework
 Stable version|![Version](https://img.shields.io/nuget/v/orc.entityframework6.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.entityframework6.svg)
 
+Find the source at [https://github.com/WildGums/Orc.EntityFramework](https://github.com/WildGums/Orc.EntityFramework)
+
 # Introduction
 
 This library contains services to work with EntityFramework using repositories and Unit of Work (UoW).

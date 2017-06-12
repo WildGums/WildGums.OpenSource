@@ -8,4 +8,6 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.csvtexteditor.s
 Stable version|![Version](https://img.shields.io/nuget/v/orc.csvtexteditor.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.csvtexteditor.svg)
 
+Find the source at [https://github.com/WildGums/Orc.CsvTextEditor](https://github.com/WildGums/Orc.CsvTextEditor)
+
 Csv text editor component based on AvalonEdit.

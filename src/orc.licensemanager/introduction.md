@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.licensemanager.
 Stable version|![Version](https://img.shields.io/nuget/v/orc.licensemanager.client.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.licensemanager.client.svg)
 
+Find the source at [https://github.com/WildGums/Orc.LicenseManager](https://github.com/WildGums/Orc.LicenseManager)
+
 This library makes it very easy to manage licenses for commercial software.
 
 # Client validation

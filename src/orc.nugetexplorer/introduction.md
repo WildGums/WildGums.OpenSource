@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.nugetexplorer.s
 Stable version|![Version](https://img.shields.io/nuget/v/orc.nugetexplorer.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.nugetexplorer.svg)
 
+Find the source at [https://github.com/WildGums/Orc.NuGetExplorer](https://github.com/WildGums/Orc.NuGetExplorer)
+
 This library provides everything you need to explore and download packages from the NuGet gallery as well as any private feed.
 
 It can be used as part of a plugin system for your application.

@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.fluentvalidatio
 Stable version|![Version](https://img.shields.io/nuget/v/orc.fluentvalidation.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.fluentvalidation.svg)
 
+Find the source at [https://github.com/WildGums/Orc.FluentValidation](https://github.com/WildGums/Orc.FluentValidation)
+
 The validation in Catel is extremely flexible, at this point you must already know it, but sometimes it is just not enough or you are forced to use external validators.
 
 **Note that the FluentValidation extension can be used in combination with Catel.Core only, so it is not required to combine it with the MVVM framework**

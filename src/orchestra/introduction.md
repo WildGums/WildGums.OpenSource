@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orchestra.core.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orchestra.core.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orchestra.core.svg)
 
+Find the source at [https://github.com/WildGums/Orchestra](https://github.com/WildGums/Orchestra)
+
 Orchestra is a composable WPF shell and framework built on top of [Catel](http://www.catelproject.com).
 
 It has been in active development for over 5 years (initial commit 2012/06/18) and is used in numerous Line of Business (LOB) applications on a daily basis.

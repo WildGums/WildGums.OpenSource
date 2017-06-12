@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.dbtocsv.svg)
 Stable version|![Version](https://img.shields.io/nuget/v/orc.dbtocsv.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.dbtocsv.svg)
 
+Find the source at [https://github.com/WildGums/Orc.DbToCsv](https://github.com/WildGums/Orc.DbToCsv)
+
 This library's sole purpose is to extract data from a MS SQL database into csv files. Each table or view will have a corresponding csv file.
 
 The repository contains a library, a command line utility and a task runner

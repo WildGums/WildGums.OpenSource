@@ -8,6 +8,8 @@ Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.projectmanageme
 Stable version|![Version](https://img.shields.io/nuget/v/orc.projectmanagement.svg)
 Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.projectmanagement.svg)
 
+Find the source at [https://github.com/WildGums/Orc.ProjectManagement](https://github.com/WildGums/Orc.ProjectManagement)
+
 Manage projects the easy way using this library.
 
 # Quick introduction
