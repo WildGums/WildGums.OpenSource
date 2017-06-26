@@ -7,13 +7,13 @@ This documentation needs to be written
 
 [Introduction]
 
-[Screenshots]
+![ColorLegend 01](../images/orc.controls/colorlegend/colorlegend_01.png)
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
+AllowColorEditing|Gets or sets a value indicating whether color can be edited or not.
 
 ## Events
 
@@ -30,7 +30,6 @@ Method 1|Some description
 ## How to use
 
 [Description]
-
 ```
 [Example code]
 ```
