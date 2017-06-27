@@ -2,8 +2,9 @@ AnimatedGif
 ===========
 
 This is simple control infinitely animate `GIF` images on its surface without blocking main UI thread.
+Inherited from [Image][1].
 
-This control is very helpful to use in wait dialogs.
+This control is very useful in wait dialogs.
 
 ## Properties
 
@@ -20,5 +21,7 @@ Just place the AnimatedGif control on the parent, then specify GifSource.
                  Width="16" 
                  Height="16" 
                  HorizontalAlignment="Center"
-                 GifSource="/Resources/Images/Loading.gif" Margin="5" />
+                 GifSource="/Resources/Images/Loading.gif" 
+                 Margin="5" />
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.image(v=vs.110).aspx
