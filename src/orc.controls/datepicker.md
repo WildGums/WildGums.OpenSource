@@ -37,5 +37,5 @@ Bind a `DateTime` value to the `Value` property:
 ```
     <orc:DatePicker Value="{Binding DateValue}" />
 ```
-[1] https://catelproject.atlassian.net/wiki/display/CTL/UserControl
-[2] ../images/orc.controls/datepicker/DatePicker_01.png
+[1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
+[2]: ../images/orc.controls/datepicker/DatePicker_01.png
