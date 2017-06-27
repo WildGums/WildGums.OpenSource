@@ -25,9 +25,9 @@ ShowColorVisibilityControls|Gets or sets a value indicating whether visibility c
 ShowSearchBox|Gets or sets a value indicating whether search box is shown or not.
 ShowSettingsBox|Gets or sets a value indicating whether settings button is shown or not.
 ShowToolBox|Gets or sets a value indicating whether tool box is shown or not.
-OperationColorAttribute **Obsolete in v2.0!**|Gets or sets the operation color attribute.
-ShowSettings **Obsolete in v2.0!**|Gets or sets a value indicating whether settings button is shown or not.
-UseRegexFiltering **Obsolete in v2.0!**|Gets or sets a value indicating whether regex is used when search is performed.
+OperationColorAttribute **Will be removed in v2.0!**|Gets or sets the operation color attribute.
+ShowSettings **Will be removed in v2.0!**|Gets or sets a value indicating whether settings button is shown or not.
+UseRegexFiltering **Will be removed in v2.0!**|Gets or sets a value indicating whether regex is used when search is performed.
 
 ## Events
 
