@@ -14,7 +14,7 @@ GifSource|Gets or sets gif image path
 
 ## How to use
 
-Place the AnimatedGif control on the parent, then specify GifSource.
+Place the AnimatedGif control on the parent content control, then specify GifSource.
 
 ```
 <orc:AnimatedGif x:Name="LoadingGif" 
