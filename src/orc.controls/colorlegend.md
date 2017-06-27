@@ -34,7 +34,7 @@ SelectionChanged|Occurs when selected color item changed
 
 ## How to use
 
-When using the ColorLegend in data binding scenarios, bind your color items collection to `ItemsSource` property. You can show/hide `ToolBox`, `BottomToolBox`, `ColorVisibilityControls`, `SearchBox`, `SettingsBox` by setting the appropriate flags. You can also bind to `SelectedColorItems` property to get current selection.
+When using the ColorLegend in data binding scenarios, bind your color items collection to `ItemsSource` property. You can show/hide `ToolBox`, `BottomToolBox`, `ColorVisibilityControls`, `SearchBox`, `SettingsBox` by setting the appropriate flags. Bind to `SelectedColorItems` property to get current selection.
 Because the `ColorLegend` is inherited from the `HeaderedContentControl` you can specify its header as shown in the example.
 
 ```
