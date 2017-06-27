@@ -13,9 +13,9 @@ Click on a letter to display a drop down list to choose from.
 ## Properties
 
 Property name|Description
-
+AccentColorBrush|Gets or sets accent color
+ShowOptionsButton|Gets or sets value indicating whether options button is shown or not.
 Value|Gets or sets present `DateTime` value
-
 
 
 ## Events
@@ -37,5 +37,5 @@ Bind a `DateTime` value to the `Value` property:
 ```
     <orc:DatePicker Value="{Binding DateValue}" />
 ```
-[1] 
+[1] https://catelproject.atlassian.net/wiki/display/CTL/UserControl
 [2] ../images/orc.controls/datepicker/DatePicker_01.png
