@@ -25,7 +25,7 @@ Method name|Description
 
 ## How to use
 
-For binding data to the `BindableRichTextBox`, use the `BindableDocument` property  (the type is [FlowDocument][2]
+For binding data to the `BindableRichTextBox`, use the `BindableDocument` property  (the type is [FlowDocument][2])
 
 ```
     <orc:BindableRichTextBox BindableDocument="{Binding FlowDoc}" />

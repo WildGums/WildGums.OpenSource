@@ -1,36 +1,24 @@
 AnimatedGif
 ===========
 
-@alert important
-This documentation needs to be written
-@end
+This is simple control infinitely animate `GIF` images on its surface without blocking main UI thread.
 
-[Introduction]
-
-[Screenshots]
+This control is very helpful to use in wait dialogs.
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
-
-## Events
-
-Event name|Description
--|-
-Event 1|Some description
-
-## Methods
-
-Method name|Description
--|-
-Method 1|Some description
+GifSource|Gets or sets gif image path
 
 ## How to use
 
-[Description]
+Just place the AnimatedGif control on the parent, then specify GifSource.
 
 ```
-[Example code]
+<orc:AnimatedGif x:Name="LoadingGif" 
+                 Width="16" 
+                 Height="16" 
+                 HorizontalAlignment="Center"
+                 GifSource="/Resources/Images/Loading.gif" Margin="5" />
 ```
