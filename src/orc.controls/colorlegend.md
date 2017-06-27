@@ -1,7 +1,7 @@
 ColorLegend
 ===========
 
-This control helps to hide/show, select and change colors collection.
+This control helps hide/show, select and change colors collection.
 
 ![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
 
@@ -32,14 +32,19 @@ Event name|Description
 -|-
 SelectionChanged|Occurs when selected color item changed
 
-## Methods
-
-Method name|Description
--|-
-
 ## How to use
 
-[Description]
+When using the ColorLegend in data binding scenarios, bind your color items collection to `ItemsSource` property. You can show/hide `ToolBox`, `BottomToolBox`, `ColorVisibilityControls`, `SearchBox`, `SettingsBox` by setting the appropriate flags. You can also bind to `SelectedColorItems` property to get current selection.
+Because the `ColorLegend` is inherited from the `HeaderedContentControl` you can specify its header as shown in the example.
+
 ```
-[Example code]
+<orc:ColorLegend ItemsSource="{Binding ColorItems}"
+                 AllowColorEditing="True"
+                 ShowColorVisibilityControls="True"
+                 ShowSettingsBox="False"
+                 SelectedColorItems="{Binding SelectedColorItems}">
+    <orc:ColorLegend.Header>
+        <orc:HeaderBar Header="This is ColorLegend"/>
+    </orc:ColorLegend.Header>
+</orc:ColorLegend>
 ```
