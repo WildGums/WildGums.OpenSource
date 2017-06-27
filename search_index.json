@@ -51,7 +51,7 @@
     {
       "location": "orc.controls/colorlegend.htm",
       "breadcrumbs": "Home / Orc.Controls / ColorLegend",
-      "keywords": "01 1 a alert AllowColorEditing be can code color colorlegend ColorLegend colorlegend_01 controls description Description documentation edited end Event Events Example Gets How images important indicating Introduction Method Methods name needs not or orc png Properties Property sets Some This to use value whether written",
+      "keywords": "01 1 a AllowColorEditing and be can change code collection color colorlegend ColorLegend ColorLegend_01 colors control controls description Description edited Event Events Example Gets helps hide How images indicating Method Methods name not or orc png Properties Property select sets show Some This to use value whether",
       "title": "ColorLegend"
     },
     {
@@ -83,12 +83,6 @@
       "breadcrumbs": "Home / Orc.Controls / DateRangePicker",
       "keywords": "1 alert be code DateRangePicker description Description documentation end Event Events Example How important Introduction Method Methods name needs Properties Property Screenshots Some This to use written",
       "title": "DateRangePicker"
-    },
-    {
-      "location": "orc.controls/daterangepicker.htm",
-      "breadcrumbs": "Home / Orc.Controls / ColorLegend",
-      "keywords": "01 ColorLegend_01",
-      "title": "ColorLegend"
     },
     {
       "location": "orc.controls/datetimepicker.htm",
