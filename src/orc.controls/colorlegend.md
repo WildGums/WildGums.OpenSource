@@ -2,8 +2,9 @@ ColorLegend
 ===========
 
 This control manages color collection. It can hide/show, select and change colors.
+Inherits from [System.Windows.Controls.HeaderedContentControl][1]
 
-![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
+![ColorLegend 01][2]
 
 ## Properties
 
@@ -38,7 +39,7 @@ SelectionChanged|Occurs when selected color item changed
 ## How to use
 
 When using the ColorLegend in data binding scenarios, bind your color items collection to `ItemsSource` property. You can show/hide `ToolBox`, `BottomToolBox`, `ColorVisibilityControls`, `SearchBox`, `SettingsBox` by setting the appropriate flags. Bind to `SelectedColorItems` property to get current selection.
-Because the `ColorLegend` is inherited from the `HeaderedContentControl` you can specify its header as shown in the example.
+Because the `ColorLegend` is inherits from the `HeaderedContentControl` you can specify its header as shown in the example.
 
 ```
 <orc:ColorLegend ItemsSource="{Binding ColorItems}"
@@ -51,3 +52,5 @@ Because the `ColorLegend` is inherited from the `HeaderedContentControl` you can
     </orc:ColorLegend.Header>
 </orc:ColorLegend>
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.headeredcontentcontrol(v=vs.110).aspx
+[2]: ../images/orc.controls/colorlegend/ColorLegend_01.png
