@@ -1,13 +1,9 @@
 ColorLegend
 ===========
 
-@alert important
-This documentation needs to be written
-@end
+This control helps to hide/show, select and change colors collection.
 
-[Introduction]
-
-![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
+![ColorLegend 01](../images/orc.controls/datepicker/DatePicker_01.png)
 
 ## Properties
 
