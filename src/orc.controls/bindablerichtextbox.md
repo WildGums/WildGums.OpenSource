@@ -10,7 +10,7 @@ It is very useful to use with the MVVM pattern.
 
 Property name|Description
 -|-
-BindableDocument|The bindable `FlowDocument`
+BindableDocument|Gets or sets bindable `FlowDocument`
 
 ## How to use
 

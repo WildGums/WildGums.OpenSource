@@ -1,36 +1,26 @@
 CulturePicker
 =============
 
-@alert important
-This documentation needs to be written
-@end
+This control allows to pick culture from [System.Globalization.CultureTypes.AllCultures][1] list.
+<br />Inherits from [Catel.Windows.Controls.UserControl][1]
 
-[Introduction]
+It looks like ordinary combobox populated with list of [CultureInfo][2].
 
-[Screenshots]
+![CulturePicker 01][3]
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
-
-## Events
-
-Event name|Description
--|-
-Event 1|Some description
-
-## Methods
-
-Method name|Description
--|-
-Method 1|Some description
+SelectedCulture|Gets or sets selected culture (of type [System.Globalization.CultureInfo][2])
 
 ## How to use
 
-[Description]
+Put it on parent control and bind `SelectedCulture` property.
 
 ```
-[Example code]
+<orc:CulturePicker SelectedCulture="{Binding Culture}"/>
 ```
+[1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
+[2]: https://msdn.microsoft.com/ru-ru/library/system.globalization.cultureinfo(v=vs.110).aspx
+[3]: ../images/orc.controls/culturepicker/CulturePicker_01.png

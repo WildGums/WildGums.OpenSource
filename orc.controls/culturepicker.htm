@@ -62,8 +62,6 @@
 <li class="tocentry current"><a class="current" href="../orc.controls/culturepicker.htm">CulturePicker</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
-<li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/datepicker.htm">DatePicker</a>
@@ -230,9 +228,10 @@
                 <div role="main">
                     <div class="section">
 <h1 id="culturepicker">CulturePicker<a class="headerlink" href="#culturepicker" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>This documentation needs to be written</p>
-</div><p>[Introduction]</p>
-<p>[Screenshots]</p>
+<p>This control allows to pick culture from <a href="https://catelproject.atlassian.net/wiki/display/CTL/UserControl" target="_blank">System.Globalization.CultureTypes.AllCultures</a> list.
+<br />Inherits from <a href="https://catelproject.atlassian.net/wiki/display/CTL/UserControl" target="_blank">Catel.Windows.Controls.UserControl</a></p>
+<p>It looks like ordinary combobox populated with list of <a href="https://msdn.microsoft.com/ru-ru/library/system.globalization.cultureinfo(v=vs.110).aspx" target="_blank">CultureInfo</a>.</p>
+<p><img src="../images/orc.controls/culturepicker/CulturePicker_01.png" alt="CulturePicker 01" width="646" height="428" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -243,44 +242,14 @@
 </thead>
 <tbody>
 <tr>
-	<td>Property 1</td>
-	<td>Some description</td>
-</tr>
-</tbody>
-</table>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Event name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Event 1</td>
-	<td>Some description</td>
-</tr>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Method name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Method 1</td>
-	<td>Some description</td>
+	<td>SelectedCulture</td>
+	<td>Gets or sets selected culture (of type <a href="https://msdn.microsoft.com/ru-ru/library/system.globalization.cultureinfo(v=vs.110).aspx" target="_blank">System.Globalization.CultureInfo</a>)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>[Description]</p>
-<pre class="nocode">[Example code]
+<p>Put it on parent control and bind <code>SelectedCulture</code> property.</p>
+<pre class="nocode">&lt;orc:CulturePicker SelectedCulture=&quot;{Binding Culture}&quot;/&gt;
 </pre>
                     </div>
                 </div>
