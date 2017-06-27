@@ -1,7 +1,7 @@
 ColorLegend
 ===========
 
-This control helps hide/show, select and change colors collection.
+This control manages color collection. It can hide/show, select and change colors.
 
 ![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
 
@@ -47,7 +47,7 @@ Because the `ColorLegend` is inherited from the `HeaderedContentControl` you can
                  ShowSettingsBox="False"
                  SelectedColorItems="{Binding SelectedColorItems}">
     <orc:ColorLegend.Header>
-        <orc:HeaderBar Header="This is ColorLegend"/>
+        <orc:HeaderBar Header="This is ColorLegend header"/>
     </orc:ColorLegend.Header>
 </orc:ColorLegend>
 ```
