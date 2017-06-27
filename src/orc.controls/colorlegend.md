@@ -7,7 +7,7 @@ This documentation needs to be written
 
 [Introduction]
 
-![ColorLegend 01](../images/orc.controls/colorlegend/colorlegend_01.png)
+![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
 
 ## Properties
 
