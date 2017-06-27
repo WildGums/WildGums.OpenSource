@@ -3,7 +3,7 @@ ColorLegend
 
 This control helps to hide/show, select and change colors collection.
 
-![ColorLegend 01](../images/orc.controls/datepicker/DatePicker_01.png)
+![ColorLegend 01](../images/orc.controls/colorlegend/ColorLegend_01.png)
 
 ## Properties
 
