@@ -2,7 +2,7 @@ ColorLegend
 ===========
 
 This control manages color collection. It can hide/show, select and change colors.
-Inherits from [System.Windows.Controls.HeaderedContentControl][1]
+<br />Inherits from [System.Windows.Controls.HeaderedContentControl][1]
 
 ![ColorLegend 01][2]
 

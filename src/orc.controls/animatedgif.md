@@ -2,7 +2,7 @@ AnimatedGif
 ===========
 
 This is simple control infinitely animate `GIF` images on its surface without blocking main UI thread.
-Inherits from [System.Windows.Controls.Image][1].
+<br />Inherits from [System.Windows.Controls.Image][1].
 
 This control is very useful in wait dialogs.
 

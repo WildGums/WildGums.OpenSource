@@ -2,7 +2,7 @@ ColorPicker
 ===========
 
 This control allows user to choose a color. 
-Inherits from [System.Windows.Controls.Control][1].
+<br />Inherits from [System.Windows.Controls.Control][1].
 
 ![ColorPicker 01][2]
 

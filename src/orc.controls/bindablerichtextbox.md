@@ -2,7 +2,7 @@ BindableRichTextBox
 ===================
 
 The control can be used as a regular [RichTextBox][1] with one added advantage. It can be bound to a [FlowDocument][2]. 
-Inherits from [System.Windows.Controls.RichTextBox][1].
+<br />Inherits from [System.Windows.Controls.RichTextBox][1].
 
 It is very useful to use with the MVVM pattern.
 
