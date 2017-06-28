@@ -1,36 +1,23 @@
 DbProviderPicker
 ================
 
-@alert important
-This documentation needs to be written
-@end
+This control allows user to pick database provider from list of providers formed by function: [DbProviderFactories.GetFactoryClasses()][1].
+<br />Inherits from [Catel.Windows.Controls.UserControl][2].
 
-[Introduction]
-
-[Screenshots]
+![DbProviderPicker 01][3]
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
-
-## Events
-
-Event name|Description
--|-
-Event 1|Some description
-
-## Methods
-
-Method name|Description
--|-
-Method 1|Some description
+DbProvider|Gets or sets picked database provider.
 
 ## How to use
 
-[Description]
-
+Bind a `DbProvider` value to the `DbProvider` property:
 ```
-[Example code]
+<controls:DbProviderPicker DbProvider="{Binding DbProvider, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
 ```
+[1]: https://msdn.microsoft.com/ru-ru/library/system.data.common.dbproviderfactories.getfactoryclasses(v=vs.110).aspx
+[2]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
+[3]: ../images/orc.controls/dbproviderpicker/DbProviderPicker_01.png
