@@ -4,7 +4,7 @@ ConnectionStringBuilder
 This control allows user to build connection string for remote and local data sources.
 <br />Inherits from [Catel.Windows.Controls.UserControl][1]
 
-It works like it shown below.
+It works as shown below.
 ![ConnectionStringBuilder 01][2]
 
 ## Properties
@@ -25,4 +25,4 @@ Put control on a parent conten control and bind to `ConnectionString` property.
                              ConnectionString="{Binding ConnectionString}"/>
 ```
 [1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
-[2]: ../images/orc.controls/datepicker/ConnectionStringBuilder_01.png
+[2]: ../images/orc.controls/connectionstringbuilder/ConnectionStringBuilder_01.png
