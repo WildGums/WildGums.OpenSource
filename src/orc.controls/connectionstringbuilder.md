@@ -1,36 +1,28 @@
 ConnectionStringBuilder
 =======================
 
-@alert important
-This documentation needs to be written
-@end
+This control allows user to build connection string for remote and local data sources.
+<br />Inherits from [Catel.Windows.Controls.UserControl][1]
 
-[Introduction]
-
-[Screenshots]
+It works like it shown below.
+![ConnectionStringBuilder 01][2]
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
-
-## Events
-
-Event name|Description
--|-
-Event 1|Some description
-
-## Methods
-
-Method name|Description
--|-
-Method 1|Some description
+AccentColorBrush|Gets or sets accent color.
+ConnectionState|Gets or sets value indicating the state of connection (`not tested`, `invalid` or `valid`).
+ConnectionString|Gets or sets connection string.
+IsInEditMode|Gets or sets value indicating whether is connection string properties dialog is shown or not.
 
 ## How to use
 
-[Description]
+Put control on a parent conten control and bind to `ConnectionString` property.
 
 ```
-[Example code]
+<orc:ConnectionStringBuilder x:Name="ConnectionStringBuilderControl"
+                             ConnectionString="{Binding ConnectionString}"/>
 ```
+[1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
+[2]: ../images/orc.controls/datepicker/ConnectionStringBuilder_01.png

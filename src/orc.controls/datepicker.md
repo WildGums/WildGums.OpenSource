@@ -27,7 +27,7 @@ Value|Gets or sets current `DateTime` value
 
 Bind a `DateTime` value to the `Value` property:
 
-``` //
+```
     <orc:DatePicker Value="{Binding DateValue}" />
 ```
 [1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
