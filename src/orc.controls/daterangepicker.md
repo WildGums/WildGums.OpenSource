@@ -27,7 +27,7 @@ StartDate|Gets or sets start date.
 
 ## How to use
 
-Bind a `TimeSpan` value to the `Span` property, also specify `Ranges`, `Format`. 
+Bind a `TimeSpan` value to the `Span` property, also specify `Ranges`, `Format`.
 To get/set End and Start date bind to `StartDate` and `EndDate` properties.
 
 ```
@@ -38,7 +38,7 @@ To get/set End and Start date bind to `StartDate` and `EndDate` properties.
                      Format="yyyy-MM-dd HH:mm:ss"/>
 ```
 [1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
-[2]: ../datetimepicker.htm
-[3]: ../timespanpicker.htm
+[2]: ../orc.controls/datetimepicker.htm
+[3]: ../orc.controls/timespanpicker.htm
 [4]: ../images/orc.controls/daterangepicker/DateRangePicker_01.png
 [5]: https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx
