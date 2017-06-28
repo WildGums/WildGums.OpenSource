@@ -18,6 +18,6 @@ Bind a `DbProvider` value to the `DbProvider` property:
 ```
 <controls:DbProviderPicker DbProvider="{Binding DbProvider, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
 ```
-[1]: https://msdn.microsoft.com/ru-ru/library/system.data.common.dbproviderfactories.getfactoryclasses(v=vs.110).aspx
+[1]: https://msdn.microsoft.com/en-us/library/system.data.common.dbproviderfactories.getfactoryclasses(v=vs.110).aspx
 [2]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
 [3]: ../images/orc.controls/dbproviderpicker/DbProviderPicker_01.png
