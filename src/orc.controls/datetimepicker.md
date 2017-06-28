@@ -18,7 +18,7 @@ AccentColorBrush|Gets or sets accent color
 AllowNull|Gets or sets value indicating whether null `Value` is allowed or not.
 AllowCopyPaste|Gets or sets value indicating whether `Value` copy/paste is allowed or not.
 Format|Gets or sets `DateTime` `Value` format.
-HideSeconds|Gets or sets value indication whether sections of `DateTime` `Value` visible or not.
+HideSeconds|Gets or sets value indication whether seconds of `DateTime` `Value` visible or not.
 HideTime|Gets or sets value indicating whether time section of `DateTime` `Value` visible or not.
 IsAmPmShortFormat|Gets indicating whether Am Pm in short format (`t`) or not.
 IsHour12Format|Get value indicating whether time is in 12 hours format or not.

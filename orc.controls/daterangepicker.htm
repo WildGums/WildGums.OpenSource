@@ -66,8 +66,6 @@
 <li class="tocentry current"><a class="current" href="../orc.controls/daterangepicker.htm">DateRangePicker</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
-<li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/datetimepicker.htm">DateTimePicker</a>
@@ -230,9 +228,11 @@
                 <div role="main">
                     <div class="section">
 <h1 id="daterangepicker">DateRangePicker<a class="headerlink" href="#daterangepicker" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>This documentation needs to be written</p>
-</div><p>[Introduction]</p>
-<p>[Screenshots]</p>
+<p>This control is used to display and edit date range quickly.
+<br />Inherits from <a href="https://catelproject.atlassian.net/wiki/display/CTL/UserControl" target="_blank">Catel.Windows.Controls.UserControl</a>.</p>
+<p>DateRangePicker consist of two <a href="../datetimepicker.htm">DateTimePickers</a> to specify start end date of date range
+and one <a href="../timespanpicker.htm">TimeSpanPicker</a> to display range itself.</p>
+<p><img src="../images/orc.controls/daterangepicker/DateRangePicker_01.png" alt="DateRangePicker_01" width="514" height="324" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -243,44 +243,59 @@
 </thead>
 <tbody>
 <tr>
-	<td>Property 1</td>
-	<td>Some description</td>
+	<td>AllowCopyPaste</td>
+	<td>Gets or sets value indicating whether copy/paste is allowed or not.</td>
 </tr>
-</tbody>
-</table>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Event name</th>
-	<th>Description</th>
+	<td>EndDate</td>
+	<td>Gets or sets end date.</td>
 </tr>
-</thead>
-<tbody>
 <tr>
-	<td>Event 1</td>
-	<td>Some description</td>
+	<td>Format</td>
+	<td>Gets or sets <code>DateTime</code> format for start and end dates of range.</td>
 </tr>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Method name</th>
-	<th>Description</th>
+	<td>HideSeconds</td>
+	<td>Gets or sets value indication whether seconds of start and end <a href="../datetimepicker.htm">DateTimePickers</a> visible or not.</td>
 </tr>
-</thead>
-<tbody>
 <tr>
-	<td>Method 1</td>
-	<td>Some description</td>
+	<td>HideTime</td>
+	<td>Gets or sets value indicating whether time section of start and end <a href="../datetimepicker.htm">DateTimePickers</a> visible or not.</td>
+</tr>
+<tr>
+	<td>IsReadOnly</td>
+	<td>Gets or sets value indication whether <code>Span</code> readonly or not.</td>
+</tr>
+<tr>
+	<td>Ranges</td>
+	<td>Gets or sets collection of <code>DateRanges</code> presented on <code>Ranges combobox</code>.</td>
+</tr>
+<tr>
+	<td>SelectedRange</td>
+	<td>Gets or sets <code>DateRange</code> selected on <code>Ranges combobox</code>.</td>
+</tr>
+<tr>
+	<td>ShowOptionsButton</td>
+	<td>Gets or sets value indicating whether options button of start and end <a href="../datetimepicker.htm">DateTimePickers</a> is shown or not.</td>
+</tr>
+<tr>
+	<td>Span</td>
+	<td>Get or sets result date range (of type <a href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx" target="_blank">System.TimeSpan</a>)</td>
+</tr>
+<tr>
+	<td>StartDate</td>
+	<td>Gets or sets start date.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>[Description]</p>
-<pre class="nocode">[Example code]
+<p>Bind a <code>TimeSpan</code> value to the <code>Span</code> property, also specify <code>Ranges</code>, <code>Format</code>. 
+To get/set End and Start date bind to <code>StartDate</code> and <code>EndDate</code> properties.</p>
+<pre class="nocode">&lt;orc:DateRangePicker Span=&quot;{Binding Span}&quot;
+                     StartDate=&quot;{Binding StartDate}&quot;
+                     EndDate=&quot;{Binding EndDate}&quot;
+                     Ranges=&quot;{Binding Ranges}&quot;
+                     Format=&quot;yyyy-MM-dd HH:mm:ss&quot;/&gt;
 </pre>
                     </div>
                 </div>
