@@ -2,7 +2,7 @@ DatePicker
 ==========
 
 This control looks like a regular DatePicker but allows you to edit a date quickly.
-<br />Inherits from [Catel.Windows.Controls.UserControl][1]
+<br />Inherits from [Catel.Windows.Controls.UserControl][1].
 
 ![DatePicker 01][2]
 

@@ -3,28 +3,19 @@ WatermarkTextBox
 
 This control will display a watermark in a textbox control when no value is assigned to it.
 As soon as the user starts typing in the textbox the watermark will disappear.
+<br />Inherits from [System.Windows.Controls.TextBox][1].
 
 This control is useful to add hints.
 
 A watermark can contain text or any other control such as images:
 
-![WatermarkTextBox 02](../images/orc.controls/watermarktextbox/WatermarkTextBox_02.png)
+![WatermarkTextBox 02][2]
 
 ## Properties
 
 Property name|Description
 -|-
 Watermark|The watermark to show, can be either a string or a template
-
-## Events
-
-Event name|Description
--|-
-
-## Methods
-
-Method name|Description
--|-
 
 ## How to use
 
@@ -46,3 +37,5 @@ In order to add controls or images to the watermark you can define a watermark v
     </orc:WatermarkTextBox.Watermark>
 </orc:WatermarkTextBox>
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox(v=vs.110).aspx
+[2]: ../images/orc.controls/watermarktextbox/WatermarkTextBox_02.png

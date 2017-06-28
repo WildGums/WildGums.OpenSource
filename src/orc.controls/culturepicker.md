@@ -2,7 +2,7 @@ CulturePicker
 =============
 
 This control allows to pick culture from [System.Globalization.CultureTypes.AllCultures][1] list.
-<br />Inherits from [Catel.Windows.Controls.UserControl][2]
+<br />Inherits from [Catel.Windows.Controls.UserControl][2].
 
 It looks like ordinary combobox populated with list of [CultureInfo][3].
 

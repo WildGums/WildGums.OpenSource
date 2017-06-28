@@ -2,7 +2,7 @@ ConnectionStringBuilder
 =======================
 
 This control allows user to build connection string for remote and local data sources.
-<br />Inherits from [Catel.Windows.Controls.UserControl][1]
+<br />Inherits from [Catel.Windows.Controls.UserControl][1].
 
 It works as shown below.
 ![ConnectionStringBuilder 01][2]
@@ -18,7 +18,7 @@ IsInEditMode|Gets or sets value indicating whether is connection string properti
 
 ## How to use
 
-Put control on a parent conten control and bind to `ConnectionString` property.
+Put control on a parent content control and bind to `ConnectionString` property.
 
 ```
 <orc:ConnectionStringBuilder x:Name="ConnectionStringBuilderControl"
