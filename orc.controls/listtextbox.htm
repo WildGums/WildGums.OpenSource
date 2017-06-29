@@ -87,7 +87,6 @@
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
 <li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/logviewer.htm">LogViewer</a>
@@ -230,9 +229,8 @@
                 <div role="main">
                     <div class="section">
 <h1 id="listtextbox">ListTextBox<a class="headerlink" href="#listtextbox" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>This documentation needs to be written</p>
-</div><p>[Introduction]</p>
-<p>[Screenshots]</p>
+<p>This textbox will automaticaly complete user input from specified list.
+<br />Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox(v=vs.110).aspx" target="_blank">System.Windows.Controls.TextBox</a>.</p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -243,8 +241,12 @@
 </thead>
 <tbody>
 <tr>
-	<td>Property 1</td>
-	<td>Some description</td>
+	<td>ListOfValues</td>
+	<td>Gets or sets list of suggested values.</td>
+</tr>
+<tr>
+	<td>Value</td>
+	<td>Gets or sets current text value.</td>
 </tr>
 </tbody>
 </table>
@@ -258,29 +260,33 @@
 </thead>
 <tbody>
 <tr>
-	<td>Event 1</td>
-	<td>Some description</td>
+	<td>RightBoundReached</td>
+	<td>Occurs when caret reached end of text.</td>
 </tr>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Method name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Method 1</td>
-	<td>Some description</td>
+	<td>LeftBoundReached</td>
+	<td>Occurs when caret reached text start.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>[Description]</p>
-<pre class="nocode">[Example code]
+<p>Bind to text value to <code>Value</code> property and specify <code>ListOfValues</code>.</p>
+<pre class="nocode">&lt;orc:ListTextBox x:Name=&quot;MinorGuitarChordsList&quot;
+                 Value=&quot;{Binding SelectedChord}&quot;&gt;
+    &lt;orc:ListTextBox.ListOfValues&gt;
+        &lt;x:Array Type=&quot;sys:String&quot;
+                 xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+                 xmlns:sys=&quot;clr-namespace:System;assembly=mscorlib&quot;&gt;
+            &lt;sys:String&gt;Am&lt;/sys:String&gt;
+            &lt;sys:String&gt;Bm&lt;/sys:String&gt;
+            &lt;sys:String&gt;Cm&lt;/sys:String&gt;
+            &lt;sys:String&gt;Dm&lt;/sys:String&gt;
+            &lt;sys:String&gt;Em&lt;/sys:String&gt;
+            &lt;sys:String&gt;Fm&lt;/sys:String&gt;
+            &lt;sys:String&gt;Gm&lt;/sys:String&gt;
+        &lt;/x:Array&gt;
+    &lt;/orc:ListTextBox.ListOfValues&gt;
+&lt;/orc:ListTextBox&gt;
 </pre>
                     </div>
                 </div>

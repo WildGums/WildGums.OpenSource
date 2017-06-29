@@ -1,7 +1,7 @@
 LinkLabel
 =========
 
-This control is a label which looks and bahaves like a hyperlink.
+This control is a label which looks and behaves like a hyperlink.
 <br />Inherits from [System.Windows.Controls.Label][1].
 
 ![LinkLabel 01][2]
