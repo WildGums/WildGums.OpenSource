@@ -10,7 +10,7 @@ This control allows user to choose an existing file directory.
 
 Property name|Description
 -|-
-BaseDirectory|Gets or sets directory in which the file is searched.
+BaseDirectory|Gets or sets file searc directory.
 Filter|Gets or sets file filter.
 LabelWidth|Gets or sets label width.
 LabelText|Gets or sets label content.
@@ -20,7 +20,11 @@ SelectedFile|Gets or sets selected file path.
 
 Specify label text and width and bind a file path to the `SelectedFile` property. Also you can specify file filer.
 ```
-<orc:OpenFilePicker LabelText="OpenFilePicker control" LabelWidth="150" />
+<orc:OpenFilePicker LabelText="OpenFilePicker control"
+                    LabelWidth="150"
+                    SelectedFile="{Binding SelectedFile}"
+                    BaseDirectory="C:\"
+                    Filter="Image files (*.bmp, *.jpg)|*.bmp;*.jpg|All files (*.*)|*.*" />
 ```
 [1]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
 [2]: ../images/orc.controls/openfilepicker/OpenFilePicker_01.png

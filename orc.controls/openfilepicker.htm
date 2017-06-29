@@ -242,7 +242,7 @@
 <tbody>
 <tr>
 	<td>BaseDirectory</td>
-	<td>Gets or sets directory in which the file is searched.</td>
+	<td>Gets or sets file searc directory.</td>
 </tr>
 <tr>
 	<td>Filter</td>
@@ -264,7 +264,11 @@
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>Specify label text and width and bind a file path to the <code>SelectedFile</code> property. Also you can specify file filer.</p>
-<pre class="nocode">&lt;orc:OpenFilePicker LabelText=&quot;OpenFilePicker control&quot; LabelWidth=&quot;150&quot; /&gt;
+<pre class="nocode">&lt;orc:OpenFilePicker LabelText=&quot;OpenFilePicker control&quot;
+                    LabelWidth=&quot;150&quot;
+                    SelectedFile=&quot;{Binding SelectedFile}&quot;
+                    BaseDirectory=&quot;C:\&quot;
+                    Filter=&quot;Image files (*.bmp, *.jpg)|*.bmp;*.jpg|All files (*.*)|*.*&quot; /&gt;
 </pre>
                     </div>
                 </div>
