@@ -11,7 +11,7 @@ This control allows user to choose an existing file directory.
 Property name|Description
 -|-
 BaseDirectory|Gets or sets directory in which the file is searched.
-Filter|Gets or sets file filter (e.g `Image files (*.bmp, *.jpg)|*.bmp;*.jpg`).
+Filter|Gets or sets file filter.
 LabelWidth|Gets or sets label width.
 LabelText|Gets or sets label content.
 SelectedFile|Gets or sets selected file path.
