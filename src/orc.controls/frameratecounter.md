@@ -1,36 +1,18 @@
 FramerateCounter
 ================
 
-@alert important
-This documentation needs to be written
-@end
-
-[Introduction]
-
-[Screenshots]
+A counter to show the frame rate inside an application.
+<br />Inherits from [System.Windows.Controls.TextBlock][1].
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
-
-## Events
-
-Event name|Description
--|-
-Event 1|Some description
-
-## Methods
-
-Method name|Description
--|-
-Method 1|Some description
+Prefix|Gets or sets prefix for application frame rate.
 
 ## How to use
 
-[Description]
-
 ```
-[Example code]
+<orc:FrameRateCounter Prefix="Frame rate: "/>
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock(v=vs.110).aspx

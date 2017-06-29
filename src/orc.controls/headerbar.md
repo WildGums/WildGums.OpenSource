@@ -19,4 +19,4 @@ Header|Gets or sets header text.
 ```
 [1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.headeredcontentcontrol(v=vs.110).aspx
 [2]: https://msdn.microsoft.com/en-us/library/system.windows.controls.control(v=vs.110).aspx
-[3]: ../images/orc.controls/headerbar/HeaderBar_01.png
+[3]: ../images/orc.controls/headerbar/Headerbar_01.png
