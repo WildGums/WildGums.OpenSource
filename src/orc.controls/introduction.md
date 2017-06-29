@@ -13,4 +13,3 @@ Find the source at [https://github.com/WildGums/Orc.Controls](https://github.com
 Run the demo project to see the controls in action:
 
 ![Orc.Controls demo](../images/orc.controls/introduction/Orc.Controls.Demo.png)
-

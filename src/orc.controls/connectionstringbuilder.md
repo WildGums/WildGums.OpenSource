@@ -14,7 +14,7 @@ Property name|Description
 AccentColorBrush|Gets or sets accent color.
 ConnectionState|Gets or sets the state of connection (`not tested`, `invalid` or `valid`).
 ConnectionString|Gets or sets connection string.
-IsInEditMode|Gets or set whether is connection string properties dialog is visible.
+IsInEditMode|Gets or set whether connection string properties dialog is visible.
 
 ## How to use
 

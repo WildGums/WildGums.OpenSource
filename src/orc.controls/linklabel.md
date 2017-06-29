@@ -2,33 +2,30 @@ LinkLabel
 =========
 
 This control is a label which looks and bahaves like a hyperlink.
+<br />Inherits from [System.Windows.Controls.Label][1].
 
-![LinkLabel 01](../images/orc.controls/linklabel/LinkLabel_01.png)
+![LinkLabel 01][2]
 
 ## Properties
 
 Property name|Description
 -|-
-Url|The URL
-HyperlinkStyle|The hyperlink style
-HoverForeground|The hover foreground
-LinkLabelBehavior|The link label behavior. Can be SystemDefault, AlwaysUnderline, HoverUnderline, NeverUnderline
-ClickBehavior|The click behavior. Can be OpenUrlInBrowser or Undefined
-Command|The command
-CommandParameter|The command parameter
-CommandTarget|The command target
+ClickBehavior|Gets or sets click behavior. Can be OpenUrlInBrowser or Undefined.
+Command|Gets or sets command.
+CommandParameter|Gets or sets command parameter.
+CommandTarget|Gets or sets command target.
+HasUrl|Get whether url has a value.
+HoverForeground|Gets or sets hover foreground.
+HyperlinkStyle|Gets or sets the hyperlink style.
+LinkLabelBehavior|Gets or sets link label behavior. Can be SystemDefault, AlwaysUnderline, HoverUnderline, NeverUnderline.
+Url|Get or sets the URL.
 
 ## Events
 
 Event name|Description
 -|-
-
-
-## Methods
-
-Method name|Description
--|-
-
+Click|Occurs on click.
+RequestNavigate|Occurs on request navigate.
 
 ## How to use LinkLabel
 
@@ -37,3 +34,5 @@ Method name|Description
                HoverForeground="Orange" Url="http://catelproject.com"
                ClickBehavior="OpenUrlInBrowser"/>
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.label(v=vs.110).aspx
+[2]: ../images/orc.controls/linklabel/LinkLabel_01.png
