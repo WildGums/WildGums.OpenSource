@@ -28,4 +28,4 @@ Bind `IValidationContext` value to `ValidationContext` property of control.
 ```
 [1]: https://catelproject.atlassian.net/wiki/display/CTL/Using+the+validation+context
 [2]: https://catelproject.atlassian.net/wiki/display/CTL/UserControl
-[3]: ../images/orc.controls/validationcontextcontrol/ValidationContextControl_01.png
+[3]: ../images/orc.controls/validationcontextcontrol/ValidationContextControl.png

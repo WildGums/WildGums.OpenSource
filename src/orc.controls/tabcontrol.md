@@ -5,7 +5,7 @@ The regular `TabControl` in WPF only supports lazy-loading of the views inside t
 by this library supports lots of different options.
 <br />Inherits from [System.Windows.Controls.TabControl][1].
 
-`TabControl`'s option|Description
+Option|Description
 -|-
 LazyLoading|Load all tabs using lazy loading, but keeps the tabs in memory afterwards.
 LazyLoadingUnloadOthers|Load all tabs using lazy loading. As soon as a tab is loaded, all other loaded tabs will be unloaded.
