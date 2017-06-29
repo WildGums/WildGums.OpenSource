@@ -1,6 +1,6 @@
 NumericTextBox
 ==============
-This text box for numeric, percentage, or currency input.
+This text box for numeric, percentage or currency input.
 <br />Inherits from [System.Windows.Controls.TextBox][1].
 
 ## Properties
