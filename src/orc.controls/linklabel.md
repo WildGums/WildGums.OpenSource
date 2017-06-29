@@ -27,7 +27,7 @@ Event name|Description
 Click|Occurs on click.
 RequestNavigate|Occurs on request navigate.
 
-## How to use LinkLabel
+## How to use
 
 ```
 <orc:LinkLabel Content="Action" ToolTip="Action" Command="{Binding DefaultAction}"
