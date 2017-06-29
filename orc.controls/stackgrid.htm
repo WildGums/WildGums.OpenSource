@@ -97,9 +97,6 @@
 </li>
 <li class="tocentry current"><a class="current" href="../orc.controls/stackgrid.htm">StackGrid</a>
 <ul class="currentrelative">
-<li class="tocentry"><a href="#properties">Properties</a></li>
-<li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/tabcontrol.htm">TabControl</a>
@@ -230,8 +227,9 @@
                 <div role="main">
                     <div class="section">
 <h1 id="stackgrid">StackGrid<a class="headerlink" href="#stackgrid" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>Ever got tired of specifying the <code>Grid.Row</code> and <code>Grid.Column</code> properties on a lot of controls inside a <code>Grid</code>? The <code>StackGrid</code> 
-does the counting for you and takes away this pain.</p>
+<p>Ever got tired of specifying the <code>Grid.Row</code> and <code>Grid.Column</code> properties on a lot of controls inside a <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.grid(v=vs.110).aspx" target="_blank">Grid</a>? The <code>StackGrid</code> 
+does the counting for you and takes away this pain.
+<br />Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.grid(v=vs.110).aspx" target="_blank">System.Windows.Controls.Grid</a>.</p>
 <p>The Grid is an excellent control to show several controls in a nice layout on the screen. However, it happens a lot that a grid 
 consists of only 2 or 3 columns, and the first column is for all the labels, and the second one is for controls such as textboxes. 
 You correctly implement all the windows and controls of your application based on user requirements, and then the user decides that 
@@ -243,39 +241,6 @@ No problem, you can use the EmptyRow class to fill up a row for you. You want a 
 Grid.Column attached property and the StackGrid will automatically handle this for you.</p>
 <p>The StackGrid internally uses a Grid to measure the layout. However, it dynamically loops through its children, and then assigns 
 the Grid.Row and Grid.Column attached properties for the user.</p>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Property name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Event name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Method name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <pre class="nocode">&lt;catel:StackGrid&gt;
     &lt;!-- Row definitions --&gt;

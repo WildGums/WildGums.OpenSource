@@ -1,8 +1,9 @@
 StackGrid
 =========
 
-Ever got tired of specifying the `Grid.Row` and `Grid.Column` properties on a lot of controls inside a `Grid`? The `StackGrid` 
+Ever got tired of specifying the `Grid.Row` and `Grid.Column` properties on a lot of controls inside a [Grid][1]? The `StackGrid` 
 does the counting for you and takes away this pain.
+<br />Inherits from [System.Windows.Controls.Grid][1].
 
 The Grid is an excellent control to show several controls in a nice layout on the screen. However, it happens a lot that a grid 
 consists of only 2 or 3 columns, and the first column is for all the labels, and the second one is for controls such as textboxes. 
@@ -17,24 +18,6 @@ Grid.Column attached property and the StackGrid will automatically handle this f
 
 The StackGrid internally uses a Grid to measure the layout. However, it dynamically loops through its children, and then assigns 
 the Grid.Row and Grid.Column attached properties for the user.
-
-## Properties
-
-Property name|Description
--|-
-
-
-## Events
-
-Event name|Description
--|-
-
-
-## Methods
-
-Method name|Description
--|-
-
 
 ## How to use
 
@@ -66,3 +49,4 @@ Method name|Description
      </WrapPanel>
 </catel:StackGrid>
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.grid(v=vs.110).aspx

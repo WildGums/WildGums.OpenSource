@@ -10,15 +10,15 @@ This control allows user to choose an existing file directory.
 
 Property name|Description
 -|-
-BaseDirectory|Gets or sets file searc directory.
-Filter|Gets or sets file filter.
+BaseDirectory|Gets or sets directory path that will be displayed when open file dialog open.
+Filter|Gets or sets filter string that determines what types of files are displayed from the open file dialog.
 LabelWidth|Gets or sets label width.
 LabelText|Gets or sets label content.
 SelectedFile|Gets or sets selected file path.
 
 ## How to use
 
-Specify label text and width and bind a file path to the `SelectedFile` property. Also you can specify file filer.
+Specify label text and width and bind a file path to the `SelectedFile` property. Also you can specify file filter.
 ```
 <orc:OpenFilePicker LabelText="OpenFilePicker control"
                     LabelWidth="150"

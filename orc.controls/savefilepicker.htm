@@ -96,8 +96,6 @@
 <li class="tocentry current"><a class="current" href="../orc.controls/savefilepicker.htm">SaveFilePicker</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
-<li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/stackgrid.htm">StackGrid</a>
@@ -230,8 +228,9 @@
                 <div role="main">
                     <div class="section">
 <h1 id="savefilepicker">SaveFilePicker<a class="headerlink" href="#savefilepicker" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>This control allows user to choose a directory where a file will be saved.</p>
-<p><img src="../images/orc.controls/savefilepicker/SaveFilePicker_01.png" alt="SaveFilePickerView 01" width="637" height="59" /></p>
+<p>This control allows user to choose a directory where a file will be saved.
+<br />Inherits from <a href="https://catelproject.atlassian.net/wiki/display/CTL/UserControl" target="_blank">Catel.Windows.Controls.UserControl</a>.</p>
+<p><img src="../images/orc.controls/savefilepicker/SaveFilePicker_01.png" alt="SaveFilePickerView 01" width="658" height="112" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -242,47 +241,28 @@
 </thead>
 <tbody>
 <tr>
+	<td>Filter</td>
+	<td>Gets or sets filter string that determines what types of files are displayed from the save file dialog.</td>
+</tr>
+<tr>
 	<td>LabelWidth</td>
-	<td>The label width</td>
+	<td>Gets or sets label width.</td>
 </tr>
 <tr>
 	<td>LabelText</td>
-	<td>The label content</td>
+	<td>Gets or sets label content.</td>
 </tr>
 <tr>
 	<td>SelectedFile</td>
-	<td>The selected file path</td>
+	<td>Gets or sets selected file path.</td>
 </tr>
-<tr>
-	<td>Filter</td>
-	<td>The filter string that determines what types of files are displayed from the save file dialog</td>
-</tr>
-</tbody>
-</table>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Event name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
-<tr>
-	<th>Method name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<pre class="nocode">&lt;orc:SaveFilePicker LabelText=&quot;SaveFilePicker control&quot; LabelWidth=&quot;150&quot; /&gt;
+<pre class="nocode">&lt;orc:SaveFilePicker LabelText=&quot;SaveFilePicker control&quot;           
+                    LabelWidth=&quot;150&quot;
+                    SelectedFile=&quot;{Binding SelectedFile}&quot;
+                    Filter=&quot;Image files (*.bmp, *.jpg)|*.bmp;*.jpg|All files (*.*)|*.*&quot; /&gt;
 </pre>
                     </div>
                 </div>
