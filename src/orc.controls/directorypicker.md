@@ -11,7 +11,7 @@ This control allows users to choose a directory.
 Property name|Description
 -|-
 LabelWidth|Gets or sets the label width
-LabelText|gets or sets the label content
+LabelText|Gets or sets the label content
 SelectedDirectory|Gets or sets the selected directory
 
 ## How to use

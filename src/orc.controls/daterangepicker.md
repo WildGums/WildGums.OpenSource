@@ -5,7 +5,7 @@ This control is used to display and edit date range quickly.
 <br />Inherits from [Catel.Windows.Controls.UserControl][1].
 
 DateRangePicker consist of two [DateTimePickers][2] to specify start end date of date range
-and one [TimeSpanPicker][3] to display range itself.
+and one [TimeSpanPicker][3] to display/change range itself.
 
 ![DateRangePicker_01][4]
 
