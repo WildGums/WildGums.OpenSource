@@ -12,7 +12,7 @@ Property name|Description
 -|-
 Color|Gets or sets picked color.
 CurrentColor|Get or sets current color.
-IsDropDownOpen|Gets or sets a value indicating whether is popup visible.
+IsDropDownOpen|Gets or sets whether is popup visible.
 PopupPlacement|Gets or sets the select color popup placement.
 
 ## Events

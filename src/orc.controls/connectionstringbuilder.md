@@ -12,9 +12,9 @@ It works as shown below.
 Property name|Description
 -|-
 AccentColorBrush|Gets or sets accent color.
-ConnectionState|Gets or sets value indicating the state of connection (`not tested`, `invalid` or `valid`).
+ConnectionState|Gets or sets the state of connection (`not tested`, `invalid` or `valid`).
 ConnectionString|Gets or sets connection string.
-IsInEditMode|Gets or sets value indicating whether is connection string properties dialog is shown or not.
+IsInEditMode|Gets or set whether is connection string properties dialog is visible.
 
 ## How to use
 

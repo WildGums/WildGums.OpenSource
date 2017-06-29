@@ -1,19 +1,13 @@
 Expander
 ========
 
-@alert important
-This documentation needs to be written
-@end
-
-[Introduction]
-
-[Screenshots]
+<br />Inherits from [System.Windows.Controls.HeaderedContentControl][1].
 
 ## Properties
 
 Property name|Description
 -|-
-Property 1|Some description
+IsExpanded|Gets or sets whether the `Expander` content window is visible.
 
 ## Events
 
@@ -34,3 +28,4 @@ Method 1|Some description
 ```
 [Example code]
 ```
+[1]: https://msdn.microsoft.com/en-us/library/system.windows.controls.headeredcontentcontrol(v=vs.110).aspx

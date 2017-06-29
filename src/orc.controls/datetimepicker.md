@@ -15,16 +15,16 @@ Click on a letter to display a drop down list to choose from.
 Property name|Description
 -|-
 AccentColorBrush|Gets or sets accent color
-AllowNull|Gets or sets value indicating whether null `Value` is allowed or not.
-AllowCopyPaste|Gets or sets value indicating whether `Value` copy/paste is allowed or not.
+AllowNull|Gets or sets whether `Value` can be `null`.
+AllowCopyPaste|Gets or sets whether `Value` can be copy/paste.
 Format|Gets or sets `DateTime` `Value` format.
-HideSeconds|Gets or sets value indication whether seconds of `DateTime` `Value` visible or not.
-HideTime|Gets or sets value indicating whether time section of `DateTime` `Value` visible or not.
-IsAmPmShortFormat|Gets indicating whether Am Pm in short format (`t`) or not.
-IsHour12Format|Get value indicating whether time is in 12 hours format or not.
-IsReadOnly|Gets or sets value indicating whether `Value` is only for read or not.
-IsYearShortFormat|Gets value indicating whether year in short format or not.
-ShowOptionsButton|Gets or sets value indicating whether options button is shown or not.
+HideSeconds|Gets or sets whether seconds section [DateTimePickers][2] is visible.
+HideTime|Gets or sets whether time section [DateTimePickers][2] is visible.
+IsAmPmShortFormat|Gets whether Am Pm section is in short format (`t`).
+IsHour12Format|Get whether time section is in 12 hours format.
+IsReadOnly|Gets or sets whether `Value` is only for read.
+IsYearShortFormat|Gets whether year section in short format.
+ShowOptionsButton|Gets or sets whether options button is visible.
 Value|Gets or sets current `DateTime` value
 
 ## How to use

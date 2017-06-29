@@ -15,12 +15,12 @@ Click on a letter to display a drop down list to choose from.
 Property name|Description
 -|-
 AccentColorBrush|Gets or sets accent color
-AllowNull|Gets or sets value indicating whether null `Value` is allowed or not.
-AllowCopyPaste|Gets or sets value indicating whether `Value` copy/paste is allowed or not.
+AllowNull|Gets or sets whether `Value` can be `null`.
+AllowCopyPaste|Gets or sets whether `Value` can be copy/paste.
 Format|Gets or sets `DateTime` `Value` format.
-IsReadOnly|Gets or sets value indicating whether `Value` is only for read or not.
-IsYearShortFormat|Gets value indicating whether year in short format or not.
-ShowOptionsButton|Gets or sets value indicating whether options button is shown or not.
+IsReadOnly|Gets or sets whether `Value` is only for read.
+IsYearShortFormat|Gets whether year in short format.
+ShowOptionsButton|Gets or sets whether options button is visible.
 Value|Gets or sets current `DateTime` value
 
 ## How to use

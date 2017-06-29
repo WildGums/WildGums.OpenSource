@@ -15,9 +15,9 @@ ArrowLocation|Gets or sets arrow location (`Left`, `Top`, `Right` or `Bottom`).
 ArrowMargin|Gets or sets arrow margin.
 Command|Gets or sets the command to execute when the button itself is clicked.
 DropDown|Gets or sets the drop down content (e.g. context menu).
-EnableTransparentBackground|Gets or sets value indicating whether transparency enabled or not.
+EnableTransparentBackground|Gets or sets whether transparency enabled.
 Header|Gets or sets button caption.
-ShowDefaultButton|Gets or sets value indicating whether arrow button has default view or not.
+ShowDefaultButton|Gets or sets whether arrow button has default view.
 
 ## How to use
 

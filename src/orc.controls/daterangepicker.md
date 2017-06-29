@@ -13,15 +13,15 @@ and one [TimeSpanPicker][3] to display/change range itself.
 
 Property name|Description
 -|-
-AllowCopyPaste|Gets or sets value indicating whether copy/paste is allowed or not.
+AllowCopyPaste|Gets or sets whether copy/paste is allowed.
 EndDate|Gets or sets end date.
 Format|Gets or sets `DateTime` format for start and end dates of range.
-HideSeconds|Gets or sets value indication whether seconds of start and end [DateTimePickers][2] visible or not.
-HideTime|Gets or sets value indicating whether time section of start and end [DateTimePickers][2] visible or not.
-IsReadOnly|Gets or sets value indication whether `Span` readonly or not.
+HideSeconds|Gets or sets whether seconds section of start and end [DateTimePickers][2] is visible.
+HideTime|Gets or sets whether time section of start and end [DateTimePickers][2] is visible.
+IsReadOnly|Gets or sets whether `Span` readonly.
 Ranges|Gets or sets collection of `DateRanges` presented on `Ranges combobox`.
 SelectedRange|Gets or sets `DateRange` selected on `Ranges combobox`.
-ShowOptionsButton|Gets or sets value indicating whether options button of start and end [DateTimePickers][2] is shown or not.
+ShowOptionsButton|Gets or sets whether options button of start and end [DateTimePickers][2] is visible.
 Span|Get or sets result date range (of type [System.TimeSpan][5])
 StartDate|Gets or sets start date.
 
