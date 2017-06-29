@@ -74,8 +74,6 @@
 <li class="tocentry current"><a class="current" href="../orc.controls/dropdownbutton.htm">DropDownButton</a>
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
-<li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/expander.htm">Expander</a>
@@ -230,8 +228,9 @@
                 <div role="main">
                     <div class="section">
 <h1 id="dropdownbutton">DropDownButton<a class="headerlink" href="#dropdownbutton" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<p>The control is made up of two buttons side by side. The First button works as a regular button and the second one will display a customizable drop down menu under the control. </p>
-<p><img src="../images/orc.controls/dropdownbutton/DropDownButton_01.png" alt="DropDownButton 01" width="143" height="106" /></p>
+<p>The control is made up of two buttons side by side. The First button works as a regular button and the second one will display a customizable drop down menu under the control. 
+<br />Inherits from <a href="https://catelproject.atlassian.net/wiki/display/CTL/UserControl" target="_blank">Catel.Windows.Controls.UserControl</a>.</p>
+<p><img src="../images/orc.controls/dropdownbutton/DropDownButton_01.png" alt="DropDownButton 01" width="488" height="634" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <table class="table table-bordered-all table-responsive">
 <thead>
@@ -242,42 +241,41 @@
 </thead>
 <tbody>
 <tr>
-	<td>Header</td>
-	<td>Caption of the button</td>
+	<td>AccentColorBrush</td>
+	<td>Gets or sets accent color.</td>
+</tr>
+<tr>
+	<td>ArrowLocation</td>
+	<td>Gets or sets arrow location (<code>Left</code>, <code>Top</code>, <code>Right</code> or <code>Bottom</code>).</td>
+</tr>
+<tr>
+	<td>ArrowMargin</td>
+	<td>Gets or sets arrow margin.</td>
 </tr>
 <tr>
 	<td>Command</td>
-	<td>The command to execute when the button itself is clicked</td>
+	<td>Gets or sets the command to execute when the button itself is clicked.</td>
 </tr>
 <tr>
 	<td>DropDown</td>
-	<td>The drop down content (e.g. context menu)</td>
+	<td>Gets or sets the drop down content (e.g. context menu).</td>
 </tr>
-</tbody>
-</table>
-<h2 id="events">Events<a class="headerlink" href="#events" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Event name</th>
-	<th>Description</th>
+	<td>EnableTransparentBackground</td>
+	<td>Gets or sets value indicating whether transparency enabled or not.</td>
 </tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Method name</th>
-	<th>Description</th>
+	<td>Header</td>
+	<td>Gets or sets button caption.</td>
 </tr>
-</thead>
-<tbody>
+<tr>
+	<td>ShowDefaultButton</td>
+	<td>Gets or sets value indicating whether arrow button has default view or not.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Specify <code>Header</code> and <code>DropDown</code>. If you need to handle button click itself bind to <code>Command</code> property.</p>
 <pre class="nocode">&lt;orc:DropDownButton Header=&quot;Action&quot; Command=&quot;{Binding DefaultAction}&quot;&gt;
     &lt;orc:DropDownButton.DropDown&gt;
         &lt;ContextMenu&gt;
