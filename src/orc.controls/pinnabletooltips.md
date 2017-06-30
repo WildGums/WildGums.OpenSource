@@ -1,9 +1,11 @@
 PinnableTooltips
 ================
 
-This control like 
-Hover the controls to see the tool tips. Move them to automatically pin the tool tips.
+This is `ToolTip` that can be pinned by user.
 <br />Inherits from [System.Windows.Controls.ContentControl][1].
+
+Hover the owner control to see the tool tips. Move tool tip to automatically pin it.
+`PinnableToolTip` works with asistance of `PinnableToolTipService` that exposes attached properties to attach tool tips to controls.
 
 ![PinnableTooltip 01][2]
 
@@ -14,11 +16,11 @@ Hover the controls to see the tool tips. Move them to automatically pin the tool
 Property name|Description
 -|-
 InitialShowDelay|Uses to set initial popup show delay.
+IsToolTipOwner|Uses to set tool tip owner.
 Placement|Uses to set tooltip [Placement][3].
 PlacementTarget|Uses to set tooltip placement target.
 ShowDuration|Uses to set tooltip duration.
 ToolTip|Uses to attach tooltip to parent control.
-IsToolTipOwner|
 
 **PinnableToolTip**
 
@@ -34,7 +36,6 @@ Owner|Gets or sets `ToolTip` owner control.
 ResizeMode|Gets or sets tool tip [resize mode][4].
 VerticalOffset|Gets or sets tool tip vertical offset.
 
-
 ## Events
 
 Event name|Description
@@ -44,7 +45,7 @@ IsPinnedChanged|Occurs when tool tip is pinned/unpinned.
 
 ## How to use
 
-
+Use `PinnableToolTipService` to attach tool tip to owner control.
 ```
 <Border BorderThickness="1"  Width="150">
     <TextBlock Text="{Binding}" Margin="5"/>
