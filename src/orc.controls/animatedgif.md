@@ -4,7 +4,7 @@ AnimatedGif
 This is simple control infinitely animate `GIF` images on its surface without blocking main UI thread.
 <br />Inherits from [System.Windows.Controls.Image][1].
 
-This control is very useful in wait dialogs.
+This control is very useful for wait dialogs.
 
 ## Properties
 

@@ -95,7 +95,6 @@
 <ul class="currentrelative">
 <li class="tocentry"><a href="#properties">Properties</a></li>
 <li class="tocentry"><a href="#events">Events</a></li>
-<li class="tocentry"><a href="#methods">Methods</a></li>
 <li class="tocentry"><a href="#how-to-use">How to use</a></li>
 </ul>
 <li class="tocentry"><a href="../orc.controls/savefilepicker.htm">SaveFilePicker</a>
@@ -230,10 +229,12 @@
                 <div role="main">
                     <div class="section">
 <h1 id="pinnabletooltips">PinnableTooltips<a class="headerlink" href="#pinnabletooltips" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
-<div class="alert alert-warning"><span class="alert-title"><i class="fa fa-warning"></i> Important!</span><p>This documentation needs to be written</p>
-</div><p>[Introduction]</p>
-<p>[Screenshots]</p>
+<p>This control like 
+Hover the controls to see the tool tips. Move them to automatically pin the tool tips.
+<br />Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.contentcontrol(v=vs.110).aspx" target="_blank">System.Windows.Controls.ContentControl</a>.</p>
+<p><img src="../images/orc.controls/pinnabletooltips/PinnableToolTips_01.png" alt="PinnableTooltip 01" width="318" height="180" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><strong>PinnableToolTipService attached properties</strong></p>
 <table class="table table-bordered-all table-responsive">
 <thead>
 <tr>
@@ -243,8 +244,75 @@
 </thead>
 <tbody>
 <tr>
-	<td>Property 1</td>
-	<td>Some description</td>
+	<td>InitialShowDelay</td>
+	<td>Uses to set initial popup show delay.</td>
+</tr>
+<tr>
+	<td>Placement</td>
+	<td>Uses to set tooltip <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.primitives.placementmode(v=vs.110).aspx" target="_blank">Placement</a>.</td>
+</tr>
+<tr>
+	<td>PlacementTarget</td>
+	<td>Uses to set tooltip placement target.</td>
+</tr>
+<tr>
+	<td>ShowDuration</td>
+	<td>Uses to set tooltip duration.</td>
+</tr>
+<tr>
+	<td>ToolTip</td>
+	<td>Uses to attach tooltip to parent control.</td>
+</tr>
+<tr>
+	<td>IsToolTipOwner</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PinnableToolTip</strong></p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Property name</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>AccentColorBrush</td>
+	<td>Gets or sets accent color.</td>
+</tr>
+<tr>
+	<td>AllowCloseByUser</td>
+	<td>Gets or sets value indicating whether tool tip can be closed by user.</td>
+</tr>
+<tr>
+	<td>GripColor</td>
+	<td>Gets or sets tool tip grip color.</td>
+</tr>
+<tr>
+	<td>HorizontalOffset</td>
+	<td>Gets or sets tool tip horizontal offset.</td>
+</tr>
+<tr>
+	<td>IsOpen</td>
+	<td>Gets value indicating whether tool tip is opened.</td>
+</tr>
+<tr>
+	<td>IsPinned</td>
+	<td>Gets or sets value whether tool tip is pinned.</td>
+</tr>
+<tr>
+	<td>Owner</td>
+	<td>Gets or sets <code>ToolTip</code> owner control.</td>
+</tr>
+<tr>
+	<td>ResizeMode</td>
+	<td>Gets or sets tool tip <a href="https://msdn.microsoft.com/en-us/library/system.windows.window.resizemode(v=vs.110).aspx" target="_blank">resize mode</a>.</td>
+</tr>
+<tr>
+	<td>VerticalOffset</td>
+	<td>Gets or sets tool tip vertical offset.</td>
 </tr>
 </tbody>
 </table>
@@ -258,29 +326,45 @@
 </thead>
 <tbody>
 <tr>
-	<td>Event 1</td>
-	<td>Some description</td>
+	<td>IsOpenChanged</td>
+	<td>Occurs when tool tip is opened/closed.</td>
 </tr>
-</tbody>
-</table>
-<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<table class="table table-bordered-all table-responsive">
-<thead>
 <tr>
-	<th>Method name</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>Method 1</td>
-	<td>Some description</td>
+	<td>IsPinnedChanged</td>
+	<td>Occurs when tool tip is pinned/unpinned.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>[Description]</p>
-<pre class="nocode">[Example code]
+<pre class="nocode">&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+    &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
+    &lt;orc:PinnableToolTipService.ToolTip&gt;
+        &lt;orc:PinnableToolTip AllowCloseByUser=&quot;True&quot; ResizeMode=&quot;CanResize&quot; MinWidth=&quot;100&quot; MinHeight=&quot;100&quot;
+                             HorizontalOffset=&quot;-12&quot; VerticalOffset=&quot;-12&quot;&gt;
+            &lt;!-- Using a content template allows to delay loading of the inner visual tree, which is much faster --&gt;
+            &lt;orc:PinnableToolTip.ContentTemplate&gt;
+                &lt;DataTemplate&gt;
+                    &lt;StackPanel&gt;
+                        &lt;Label Content=&quot;this is tool tip&quot; /&gt;
+                        &lt;Border Margin=&quot;5&quot; Width=&quot;50&quot; 
+                                Height=&quot;50&quot; Background=&quot;{Binding}&quot; /&gt;
+                    &lt;/StackPanel&gt;
+                 &lt;/DataTemplate&gt;
+            &lt;/orc:PinnableToolTip.ContentTemplate&gt;
+        &lt;/orc:PinnableToolTip&gt;
+    &lt;/orc:PinnableToolTipService.ToolTip&gt;
+&lt;/Border&gt;
+</pre><p>If you pass any control as <code>ToolTip</code> to <code>PinnableToolTipService</code> it will be wrapped by <code>PinnableToolTip</code>.</p>
+<pre class="nocode">&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+    &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
+    &lt;orc:PinnableToolTipService.ToolTip&gt;
+        &lt;StackPanel&gt;
+            &lt;Label Content=&quot;this is tool tip&quot; /&gt;
+            &lt;Border Margin=&quot;5&quot; Width=&quot;50&quot;
+                    Height=&quot;50&quot; Background=&quot;{Binding}&quot; /&gt;
+        &lt;/StackPanel&gt;
+    &lt;/orc:PinnableToolTipService.ToolTip&gt;
+&lt;/Border&gt;
 </pre>
                     </div>
                 </div>
