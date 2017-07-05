@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction - WildGums open source center</title>
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/styles/vs.css">
+    <link rel="stylesheet" href="../../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="/index.htm"><i class="fa fa-home"></i> WildGums open source center</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../../home.htm">Home</a>
+</li>
+<li class="tocentry"><a href="../../introduction/">Introduction</a>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orchestra/">Orchestra</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-analytics/">Orc.Analytics</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-automaticsupport/">Orc.AutomaticSupport</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-commandline/">Orc.CommandLine</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-controls/">Orc.Controls</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-csvhelper/">Orc.CsvHelper</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-csvtexteditor/">Orc.CsvTextEditor</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-dbtocsv/">Orc.DbToCsv</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-dependencygraph/">Orc.DependencyGraph</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-dynamicobjects/">Orc.DynamicObjects</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-entityframework/">Orc.EntityFramework</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-extensibility/">Orc.Extensibility</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-feedback/">Orc.Feedback</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-fileassociation/">Orc.FileAssociation</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-filesystem/">Orc.FileSystem</a></span>
+</li>
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../../orc-filterbuilder/">Orc.FilterBuilder</a></span></li>
+<li class="tocentry current"><a class="current" href="../../orc-filterbuilder/introduction/">Introduction</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#usage">Usage</a></li>
+<li class="tocentry">
+<ul class="currentrelative">
+<li class="tocentry"><a href="#adding-component-project-to-your-application">Adding component project to your application</a></li>
+
+<li class="tocentry"><a href="#create-data-collections">Create data collections</a></li>
+
+<li class="tocentry"><a href="#adding-component-to-your-application">Adding component to your application</a></li>
+
+<li class="tocentry"><a href="#customizing-component-ui">Customizing component UI</a></li>
+
+
+</ul>
+</li>
+
+
+
+</ul>
+
+</ul>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-fluentvalidation/">Orc.FluentValidation</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-licensemanager/">Orc.LicenseManager</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-logviewer/">Orc.LogViewer</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-memento/">Orc.Memento</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-metadata/">Orc.Metadata</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-notifications/">Orc.Notifications</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-nugetexplorer/">Orc.NuGetExplorer</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-prism/">Orc.Prism</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-projectmanagement/">Orc.ProjectManagement</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-scheduling/">Orc.Scheduling</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-search/">Orc.Search</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-skia/">Orc.Skia</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-snapshots/">Orc.Snapshots</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-sort/">Orc.Sort</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-squirrel/">Orc.Squirrel</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-supportpackage/">Orc.SupportPackage</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-systeminfo/">Orc.SystemInfo</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-wizard/">Orc.Wizard</a></span>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../orc-workspacemanagement/">Orc.WorkspaceManagement</a></span>
+</li>
+
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../../index.htm">WildGums open source center</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../../home.htm">Home</a></li> / <li><a href="../../orc-filterbuilder/index.htm">Orc.FilterBuilder</a></li> / <li><a href="../../orc-filterbuilder/introduction/index.htm">Introduction</a></li></ul>
+
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="orc.filterbuilder">Orc.FilterBuilder<a class="headerlink" href="#orc.filterbuilder" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Name</th>
+	<th>Badge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>Chat</td>
+	<td><a href="https://gitter.im/WildGums/Orc.FilterBuilder?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FilterBuilder" /></a></td>
+</tr>
+<tr>
+	<td>Downloads</td>
+	<td><img src="https://img.shields.io/nuget/dt/orc.filterbuilder.svg" alt="NuGet downloads" /></td>
+</tr>
+<tr>
+	<td>Stable version</td>
+	<td><img src="https://img.shields.io/nuget/v/orc.filterbuilder.svg" alt="Version" /></td>
+</tr>
+<tr>
+	<td>Unstable version</td>
+	<td><img src="https://img.shields.io/nuget/vpre/orc.filterbuilder.svg" alt="Pre-release version" /></td>
+</tr>
+</tbody>
+</table>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FilterBuilder" target="_blank">https://github.com/WildGums/Orc.FilterBuilder</a></p>
+<p>FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.</p>
+<p><img src="../../images/orc.filterbuilder/introduction/1.png" alt="Filter Builder component main screen" width="1169" height="757" /> </p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>FilterBuilder is developer-friendly component which allows easy integration of complex data filtering functionality with new and existing enterprise applications. The component implementation only requires three steps.</p>
+<ol>
+<li>Include the components project to your application</li>
+<li>Create two object collections (input and output) </li>
+<li>Add FilterBuilder component to your application </li>
+</ol>
+<p>The component will automatically recognize the objects property types and provide the appropriate filtering options.</p>
+<h3 id="adding-component-project-to-your-application">Adding component project to your application<a class="headerlink" href="#adding-component-project-to-your-application" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Before starting using the FilterBuilder please add the <em>Orc.FilterBuilder</em> project to your application.</p>
+<h3 id="create-data-collections">Create data collections<a class="headerlink" href="#create-data-collections" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Two data collection should be created: one for input and one for filtered output:</p>
+<pre><code>public ObservableCollection&lt;TestEntity&gt; RawItems { get; private set; }
+public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; }
+</code></pre>
+
+<h3 id="adding-component-to-your-application">Adding component to your application<a class="headerlink" href="#adding-component-to-your-application" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>The control includes two Views (<em>FilterBuilderControl</em> and <em>EditFilterView</em>). 
+<em>FilterBuilderControl</em> is responsible for invocation of <em>EditFilter</em> window and for implementing filtering of the main collection. </p>
+<p><img src="../../images/orc.filterbuilder/introduction/filter_builder.png" alt="Filter Builder window" width="354" height="59" />  </p>
+<p>Prior to using the component add the <em>FilterBuilder</em> namespace to your View:</p>
+<pre><code>xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
+</code></pre>
+
+<p>Next include the actual component to your View using the following code:</p>
+<pre><code>&lt;net401:FilterBuilderControl 
+            RawCollection=&quot;{Binding RawItems}&quot;
+            FilteredCollection=&quot;{Binding FilteredItems}&quot;/&gt;
+</code></pre>
+
+<p>The <em>EditFilterView</em> is located in FilterBuilder project. It will show the filtering options window to the end user.</p>
+<p><img src="../../images/orc.filterbuilder/introduction/2.png" alt="Filter Builder component filter screen" width="690" height="473" /> </p>
+<p><strong>Note:</strong>
+Before using the control please add Catel and Catel MVVM libraries to the project via nugget.</p>
+<pre><code>Install-Package Catel.Core -Pre
+Install-Package Catel.MVVM -Pre
+</code></pre>
+
+<h3 id="customizing-component-ui">Customizing component UI<a class="headerlink" href="#customizing-component-ui" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>The UI can easily be adjusted to any design. For example we will demonstrate how to apply the Metro UI theme.</p>
+<p><img src="../../images/orc.filterbuilder/introduction/metro_1.png" alt="Filter Builder component Metro UI main screen" width="1440" height="790" /> </p>
+<p>Install the appropriate packages via nugget manager.</p>
+<p><img src="../../images/orc.filterbuilder/introduction/mahapps_1.png" alt="Nuget Manager" width="900" height="600" />  </p>
+<p>Or, through Package Manager Console using bellow commands:</p>
+<pre><code>Install-Package MahApps.Metro –Pre
+Install-Package  MahApps.Metro.Resources.Standalone
+</code></pre>
+
+<p>First, modify the test project (<em>Orc.FilterBuilder.Test</em>) by adding the following code to the MainWindow.xaml header:</p>
+<pre><code>&lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Test.NET40.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
+        xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
+</code></pre>
+
+<p>Also, reference the Styles in the App.xaml file:</p>
+<pre><code>&lt;Application.Resources&gt;
+    &lt;ResourceDictionary&gt;
+        &lt;ResourceDictionary.MergedDictionaries&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;
+        &lt;/ResourceDictionary.MergedDictionaries&gt;
+    &lt;/ResourceDictionary&gt;
+&lt;/Application.Resources&gt;
+</code></pre>
+
+<p>Compile the sample project and you should see the basic Metro UI style applied to your application.</p>
+<p>To customize the FilterBuilder Controller, reference the above libraries in the Orc.FilterBuilder project. </p>
+<p><img src="../../images/orc.filterbuilder/introduction/solution_explorer.png" alt="FilterBuilder project" width="383" height="553" />  </p>
+<p>Add Resources folder along with necessary files to the Control project.
+Also, in the <em>EditFilterView.xaml</em> modify the ResourceDictionary section as follows:</p>
+<pre><code>&lt;ResourceDictionary&gt;
+    &lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
+    &lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
+    &lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
+    &lt;ResourceDictionary.MergedDictionaries&gt;
+        &lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
+    &lt;/ResourceDictionary.MergedDictionaries&gt;
+&lt;/ResourceDictionary&gt;
+</code></pre>
+
+<p>To customize the style of the buttons add the <em>MetroCircleButtonStyle</em> and appropriate icon reference from the specified StaticResource (<em>appbar_add</em>) :</p>
+<pre><code>&lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
+                                    Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
+                                    CommandParameter=&quot;{Binding}&quot;
+                                    Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;
+    &lt;Rectangle Width=&quot;20&quot; Height=&quot;20&quot;&gt;
+        &lt;Rectangle.Fill&gt;
+            &lt;VisualBrush Stretch=&quot;Fill&quot; Visual=&quot;{StaticResource appbar_add}&quot; /&gt;
+        &lt;/Rectangle.Fill&gt;
+    &lt;/Rectangle&gt;
+&lt;/Button&gt;
+</code></pre>
+
+<p><img src="../../images/orc.filterbuilder/introduction/metro_2.png" alt="FilterBuilder project" width="675" height="547" />  </p>
+<p>Compile the project, and enjoy!</p>
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+
+                      <p>
+					    Is this section not up-to-date or found an issue? Please <a href="https://github.com/wildgums/wildgums.opensource/blob/master/src/orc.filterbuilder/introduction.md" target="_blank">contribute</a>!
+					  </p>
+					  <p>
+					    Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+					  </p>
+					  <hr />
+					  <p>
+					    <h2>Discussion</h2>
+					   <div id="disqus_thread"></div>
+					   <script>
+					   var disqus_config = function () {
+					   this.page.url = 'http://opensource.wildgums.com/orc-filterbuilder/introduction/index.htm';
+					   this.page.identifier = 'src/orc.filterbuilder/introduction.md';
+					   };
+					   (function() { // DON'T EDIT BELOW THIS LINE
+					   var d = document, s = d.createElement('script');
+					   s.src = 'https://wildgums-opensource.disqus.com/embed.js';
+					   s.setAttribute('data-timestamp', +new Date());
+					   (d.head || d.body).appendChild(s);
+					   })();
+					   </script>
+					   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					  </p>
+					</div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/modernizr-2.8.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/theme.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-54671533-18', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+</body>
+</html>

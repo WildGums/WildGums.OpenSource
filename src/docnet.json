@@ -4,8 +4,13 @@
     "Destination" : "./..",
     "IncludeSource": "includes",
     "Theme" : "WildGums",
+    "ConvertLocalLinks" : true,
     "SourceFoldersToCopy" : ["images"],
     "Footer" : "",
+    "PathSpecification": "RelativeAsFolder",
+    "UrlFormatting": "Dashes",
+    "MaxLevelInToC": "3",
+    "StripIndexHtm": true,
     "Pages" : 
     {
 		"Introduction" : "introduction.md",
