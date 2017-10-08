@@ -1,0 +1,5 @@
+#body img, #body .video-container {
+    margin: 0px auto !important;
+    display: block;
+    text-align: center;
+}
