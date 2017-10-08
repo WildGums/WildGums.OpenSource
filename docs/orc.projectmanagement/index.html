@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="description" content="">
+
+
+    <title>Orc.ProjectManagement :: WildGums open source center</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/auto-complete.css" rel="stylesheet">
+    
+    <link href="/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-25600919-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/orc.projectmanagement/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"> 
+	<p>WildGums open source center</p>
+ 
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "http:\/\/opensource.wildgums.com\/";
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/orc.analytics/" class="dd-item">
+      <a href="/orc.analytics/">
+        <span>Orc.Analytics</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.automaticsupport/" class="dd-item">
+      <a href="/orc.automaticsupport/">
+        <span>Orc.AutomaticSupport</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.commandline/" class="dd-item">
+      <a href="/orc.commandline/">
+        <span>Orc.CommandLine</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/" class="dd-item">
+      <a href="/orc.controls/">
+        <span>Orc.Controls</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/orc.controls/animatedgif/" class="dd-item">
+      <a href="/orc.controls/animatedgif/">
+        <span>AnimatedGif</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/bindablerichtextbox/" class="dd-item">
+      <a href="/orc.controls/bindablerichtextbox/">
+        <span>BindableRichTextBox</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/colorlegend/" class="dd-item">
+      <a href="/orc.controls/colorlegend/">
+        <span>ColorLegend</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/colorpicker/" class="dd-item">
+      <a href="/orc.controls/colorpicker/">
+        <span>ColorPicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/connectionstringbuilder/" class="dd-item">
+      <a href="/orc.controls/connectionstringbuilder/">
+        <span>ConnectionStringBuilder</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/culturepicker/" class="dd-item">
+      <a href="/orc.controls/culturepicker/">
+        <span>CulturePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/datepicker/" class="dd-item">
+      <a href="/orc.controls/datepicker/">
+        <span>DatePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/daterangepicker/" class="dd-item">
+      <a href="/orc.controls/daterangepicker/">
+        <span>DateRangePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/datetimepicker/" class="dd-item">
+      <a href="/orc.controls/datetimepicker/">
+        <span>DateTimePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/dbproviderpicker/" class="dd-item">
+      <a href="/orc.controls/dbproviderpicker/">
+        <span>DbProviderPicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/directorypicker/" class="dd-item">
+      <a href="/orc.controls/directorypicker/">
+        <span>DirectoryPicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/dropdownbutton/" class="dd-item">
+      <a href="/orc.controls/dropdownbutton/">
+        <span>DropDownButton</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/expander/" class="dd-item">
+      <a href="/orc.controls/expander/">
+        <span>Expander</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/filterbox/" class="dd-item">
+      <a href="/orc.controls/filterbox/">
+        <span>FilterBox</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/frameratecounter/" class="dd-item">
+      <a href="/orc.controls/frameratecounter/">
+        <span>FramerateCounter</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/headerbar/" class="dd-item">
+      <a href="/orc.controls/headerbar/">
+        <span>HeaderBar</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/linklabel/" class="dd-item">
+      <a href="/orc.controls/linklabel/">
+        <span>LinkLabel</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/listtextbox/" class="dd-item">
+      <a href="/orc.controls/listtextbox/">
+        <span>ListTextBox</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/logviewer/" class="dd-item">
+      <a href="/orc.controls/logviewer/">
+        <span>LogViewer</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/numerictextbox/" class="dd-item">
+      <a href="/orc.controls/numerictextbox/">
+        <span>NumericTextBox</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/openfilepicker/" class="dd-item">
+      <a href="/orc.controls/openfilepicker/">
+        <span>OpenFilePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/pinnabletooltips/" class="dd-item">
+      <a href="/orc.controls/pinnabletooltips/">
+        <span>PinnableTooltips</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/savefilepicker/" class="dd-item">
+      <a href="/orc.controls/savefilepicker/">
+        <span>SaveFilePicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/stackgrid/" class="dd-item">
+      <a href="/orc.controls/stackgrid/">
+        <span>StackGrid</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/tabcontrol/" class="dd-item">
+      <a href="/orc.controls/tabcontrol/">
+        <span>TabControl</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/timespanpicker/" class="dd-item">
+      <a href="/orc.controls/timespanpicker/">
+        <span>TimeSpanPicker</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/validationcontextcontrol/" class="dd-item">
+      <a href="/orc.controls/validationcontextcontrol/">
+        <span>ValidationContextControl</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.controls/watermarktextbox/" class="dd-item">
+      <a href="/orc.controls/watermarktextbox/">
+        <span>WatermarkTextBox</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/orc.csvhelper/" class="dd-item">
+      <a href="/orc.csvhelper/">
+        <span>Orc.CsvHelper</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.csvtexteditor/" class="dd-item">
+      <a href="/orc.csvtexteditor/">
+        <span>Orc.CsvTextEditor</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.dbtocsv/" class="dd-item">
+      <a href="/orc.dbtocsv/">
+        <span>Orc.DbToCsv</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.dependencygraph/" class="dd-item">
+      <a href="/orc.dependencygraph/">
+        <span>Orc.DependencyGraph</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.dynamicobjects/" class="dd-item">
+      <a href="/orc.dynamicobjects/">
+        <span>Orc.DynamicObjects</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.entityframework/" class="dd-item">
+      <a href="/orc.entityframework/">
+        <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
+        <a href="/orc.entityframework/using-the-dbcontextmanager/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
+        <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/orc.extensibility/" class="dd-item">
+      <a href="/orc.extensibility/">
+        <span>Orc.Extensibility</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.feedback/" class="dd-item">
+      <a href="/orc.feedback/">
+        <span>Orc.Feedback</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.fileassociation/" class="dd-item">
+      <a href="/orc.fileassociation/">
+        <span>Orc.FileAssociation</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.filesystem/" class="dd-item">
+      <a href="/orc.filesystem/">
+        <span>Orc.FileSystem</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.filterbuilder/" class="dd-item">
+      <a href="/orc.filterbuilder/">
+        <span>Orc.FilterBuilder</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.fluentvalidation/" class="dd-item">
+      <a href="/orc.fluentvalidation/">
+        <span>Orc.FluentValidation</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.licensemanager/" class="dd-item">
+      <a href="/orc.licensemanager/">
+        <span>Orc.LicenseManager</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.logviewer/" class="dd-item">
+      <a href="/orc.logviewer/">
+        <span>Orc.LogViewer</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.memento/" class="dd-item">
+      <a href="/orc.memento/">
+        <span>Orc.Memento</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.metadata/" class="dd-item">
+      <a href="/orc.metadata/">
+        <span>Orc.Metadata</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.notifications/" class="dd-item">
+      <a href="/orc.notifications/">
+        <span>Orc.Notifications</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.nugetexplorer/" class="dd-item">
+      <a href="/orc.nugetexplorer/">
+        <span>Orc.NuGetExplorer</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.prism/" class="dd-item">
+      <a href="/orc.prism/">
+        <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
+        <a href="/orc.prism/translating-or-customizing/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span></span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/orc.projectmanagement/" class="dd-item parent active">
+      <a href="/orc.projectmanagement/">
+        <span>Orc.ProjectManagement</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.scheduling/" class="dd-item">
+      <a href="/orc.scheduling/">
+        <span>Orc.Scheduling</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.search/" class="dd-item">
+      <a href="/orc.search/">
+        <span>Orc.Search</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.skia/" class="dd-item">
+      <a href="/orc.skia/">
+        <span>Orc.Skia</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.snapshots/" class="dd-item">
+      <a href="/orc.snapshots/">
+        <span>Orc.Snapshots</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.sort/" class="dd-item">
+      <a href="/orc.sort/">
+        <span>Orc.Sort</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.squirrel/" class="dd-item">
+      <a href="/orc.squirrel/">
+        <span>Orc.Squirrel</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.supportpackage/" class="dd-item">
+      <a href="/orc.supportpackage/">
+        <span>Orc.SupportPackage</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.systeminfo/" class="dd-item">
+      <a href="/orc.systeminfo/">
+        <span>Orc.SystemInfo</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.wizard/" class="dd-item">
+      <a href="/orc.wizard/">
+        <span>Orc.Wizard</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orc.workspacemanagement/" class="dd-item">
+      <a href="/orc.workspacemanagement/">
+        <span>Orc.WorkspaceManagement</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/orchestra/" class="dd-item">
+      <a href="/orchestra/">
+        <span>Orchestra</span><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+    </li>
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/wildgums/wildgums.opensource" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+        </section>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+    </ul>
+
+
+    <section id="footer"><center>
+
+<a class="github-button" href="https://github.com/catel/catel/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Catel on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/catel/catel" data-icon="octicon-star" data-show-count="false" aria-label="Star Catel on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/catel/catel/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Catel on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/wildgums/wildgums.opensource/edit/master/src/content/orc.projectmanagement/_index.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+ <a href='/'>WildGums open source center</a> > Orc.ProjectManagement
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#quick-introduction">Quick introduction</a></li>
+<li><a href="#creating-a-project">Creating a project</a></li>
+<li><a href="#creating-a-project-initializer">Creating a project initializer</a></li>
+<li><a href="#creating-a-project-validator">Creating a project validator</a></li>
+<li><a href="#creating-a-project-reader-service">Creating a project reader service</a></li>
+<li><a href="#creating-a-project-writer-service">Creating a project writer service</a></li>
+<li><a href="#initializing-the-project-manager">Initializing the project manager</a></li>
+<li><a href="#retrieving-a-typed-instance-of-the-project">Retrieving a typed instance of the project</a></li>
+<li><a href="#detecting-project-refreshes-in-the-source">Detecting project refreshes in the source</a>
+<ul>
+<li><a href="#creating-a-project-refresher-selector">Creating a project refresher selector</a></li>
+<li><a href="#creating-a-project-refresher">Creating a project refresher</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Orc.ProjectManagement</h1>
+          
+
+
+
+
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Badge</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.ProjectManagement?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.ProjectManagement" /></a></td>
+</tr>
+
+<tr>
+<td>Downloads</td>
+<td><img src="https://img.shields.io/nuget/dt/orc.projectmanagement.svg" alt="NuGet downloads" /></td>
+</tr>
+
+<tr>
+<td>Stable version</td>
+<td><img src="https://img.shields.io/nuget/v/orc.projectmanagement.svg" alt="Version" /></td>
+</tr>
+
+<tr>
+<td>Unstable version</td>
+<td><img src="https://img.shields.io/nuget/vpre/orc.projectmanagement.svg" alt="Pre-release version" /></td>
+</tr>
+</tbody>
+</table>
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.ProjectManagement">https://github.com/WildGums/Orc.ProjectManagement</a></p>
+
+<p>Manage projects the easy way using this library.</p>
+
+<h1 id="quick-introduction">Quick introduction</h1>
+
+<p>The project management library makes it easy to manage projects. The main component is the <code>IProjectManager</code> that contains the current project and allows to load or save a project. Note that this library does not force you to use a specific project location of any sort, so it can even be a database or server call to read / write the project.</p>
+
+<p>Below is an overview of the most important components:</p>
+
+<ul>
+<li><code>IProject</code> =&gt; the actual project object</li>
+<li><code>IProjectManager</code> =&gt; the project manager with events and management methods</li>
+<li><code>IProjectInitializer</code> =&gt; allows customization of initial settings of a project</li>
+<li><code>IProjectReader</code> =&gt; reads a project from a location</li>
+<li><code>IProjectWriter</code> =&gt; writes a project to a location</li>
+</ul>
+
+<h1 id="creating-a-project">Creating a project</h1>
+
+<p>A project is a model that can be implemented by the developer and must implement the <code>IProject</code> interface. The most convenient way to implement a project is by deriving from the <em>ProjectBase</em> class:</p>
+
+<pre><code>    public class MyProject : ProjectBase
+    {
+        public Project(string title)
+            : base(title)
+        {
+        }
+        
+        public string FirstName { get; private set; }
+        
+        public string LastName { get; private set; }
+    }
+</code></pre>
+
+<h1 id="creating-a-project-initializer">Creating a project initializer</h1>
+
+<p>When a project manager is created, it doesn&rsquo;t contain anything. The <code>IProjectInitializer</code> interface allows the customization of that state.</p>
+
+<p>By default the following initializers are available:</p>
+
+<ul>
+<li><code>EmptyProjectInitializer</code> =&gt; initializes nothing, this is the default</li>
+<li><code>DirectoryProjectInitializer</code> =&gt; First checks if there is an app config setting called <code>DataLocation</code>. If so, it will use that. If not, it will fall back to <em>%AppData%\[assembly company]\[assembly product]\data</em>. Then it will also check if a command line directory is passed (first argument). If so, all previous will be overriden by the command line directory.</li>
+<li><code>FileProjectInitializer</code> =&gt; This will check if a command line file is passed (first argument). If so, it will be used as initial project. Otherwise no project will be loaded.</li>
+</ul>
+
+<p>To create a custom project initializer, see the example below:</p>
+
+<p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
+</code></pre>
+
+<p><strong>Make sure to register the service before instantiating the <code>IProjectManager</code> because it will be injected</strong></p>
+
+<h1 id="creating-a-project-validator">Creating a project validator</h1>
+
+<p>Sometimes it is possible to check on forehand if it&rsquo;s even possible to load a project. This is implemented via the <code>IProjectValidator</code> interface. By default there is no validation, but this can be implemented. For example when a project represents a folder on disk, the validator can check if the directory exists:</p>
+
+<pre><code>    public class DirectoryExistsProjectValidator : IProjectValidator
+    {
+        #region IProjectValidator Members
+        public async bool CanStartLoadingProject(string location)
+        {
+            return Directory.Exists(location);
+        }
+        #endregion
+    }
+</code></pre>
+
+<p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectValidator, DirectoryExistsProjectValidator&gt;();
+</code></pre>
+
+<h1 id="creating-a-project-reader-service">Creating a project reader service</h1>
+
+<p>Projects must be read via the <code>IProjectReaderService</code>. The project manager automatically knows when to read a project. First, one must create a project reader as shown in the example below:</p>
+
+<pre><code>    public class ProjectReader : ProjectReaderBase
+    {
+        protected override async Task&lt;IProject&gt; ReadAsync(string location)
+        {
+            var project = new MyProject(location);
+
+            // TODO: Read from a file / directory / database / anything
+
+            return project;
+        }
+    }
+</code></pre>
+
+<p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
+</code></pre>
+
+<h1 id="creating-a-project-writer-service">Creating a project writer service</h1>
+
+<pre><code>    public class ProjectWriter : ProjectWriterBase&lt;MyProject&gt;
+    {
+        protected override async Task WriteAsync(MyProject project, string location)
+        {
+            // TODO: Write to a file / directory / database / anything
+        }
+    }
+</code></pre>
+
+<p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
+</code></pre>
+
+<h1 id="initializing-the-project-manager">Initializing the project manager</h1>
+
+<p>Because the project manager is using async, the initialization is a separate method. This gives the developer the option to load the project whenever it is required. To (optionally) initialize the project manager, use the code below:</p>
+
+<pre><code>    await projectManager.Initialize(); 
+</code></pre>
+
+<h1 id="retrieving-a-typed-instance-of-the-project">Retrieving a typed instance of the project</h1>
+
+<p>The library contains extension methods for the <code>IProjectManager</code> to retrieve a typed instance:</p>
+
+<pre><code>    var myProject = projectManager.GetProject&lt;MyProject&gt;();
+</code></pre>
+
+<h1 id="detecting-project-refreshes-in-the-source">Detecting project refreshes in the source</h1>
+
+<p>The library can automatically detect whether the source has changed and the project requires a refresh. It does this using the <code>IProjectRefresher</code> interface.</p>
+
+<h2 id="creating-a-project-refresher-selector">Creating a project refresher selector</h2>
+
+<pre><code>    public class ProjectRefresherSelector : IProjectSelector
+    {
+        public IProjectRefresher GetProjectRefresher(string location)
+        {
+            // TODO: Determine what refresher to use, in this case a file refresher
+            return new FileProjectRefresher(location);
+        }
+    } 
+</code></pre>
+
+<p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
+</code></pre>
+
+<p><strong>Note that you can also use the <code>DefaultProjectRefresherSelector</code>, which will return the <code>IProjectRefresher</code> that is registered in the ServiceLocator</strong></p>
+
+<h2 id="creating-a-project-refresher">Creating a project refresher</h2>
+
+<p>The library providers a few default implementations:</p>
+
+<ul>
+<li>DirectoryProjectRefresher</li>
+<li>FileProjectRefresher</li>
+</ul>
+
+<p>If your projects are a file or a directory of files, it should be sufficient to register it in the service locator:</p>
+
+<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectRefresher, FileProjectRefresher&gt;();
+</code></pre>
+
+<p>If a custom refresher is required, simply implement it as show in the example below:</p>
+
+<pre><code>    public class DirectoryProjectRefresher : ProjectRefresherBase
+    {
+        private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+
+        public DirectoryProjectRefresher(string location) 
+            : base(location)
+        {
+        }
+
+        protected override void SubscribeToLocation(string location)
+        {
+            // TODO: subscribe to changes here
+        }
+
+        protected override void UnsubscribeFromLocation(string location)
+        {
+            // TODO: unsubscribe from changes here
+        }
+    }
+</code></pre>
+
+<p>Then register it in the ServiceLocator or return it in the custom <code>ProjectRefresherSelector</code>.</p>
+
+
+<hr />
+<p>
+Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+</p>
+<hr />
+<p>
+<h2>Discussion</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+
+this.page.url = 'http://opensource.wildgums.com/\/orc.projectmanagement\/';
+
+this.page.identifier = 'orc.projectmanagement\\_index.md';
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wildgums-opensource.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/learn.js"></script>
+<script src="/js/hugo-learn.js"></script>
+
+
+<link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
