@@ -5,12 +5,12 @@ description = ""
 
 # WildGums open source center
 
-Welcome to the open-source center of WildGums!
+Welcome to the WildGums open-source center!
 
-Imagine yourself in a candy shop. Everywhere you look, there is the candy you were looking for! That's what this centre appears to be for WPF developers. 
-A list of high-quality, free and open source components. Each library can be used on its own, but this set of libraries is built to work seamingless together as well.
+Imagine being in a candy shop. Everywhere you look, there is candy you were looking for! That's what this centre aims to be for WPF developers.
+A list of mature, high-quality, free and open source components. Each library can be used on its own, but were designed to work seamingless together as well.
 
-The libraries are being maintained / developed very actively (new prereleases on a daily basis, stable versions on a monthly basis).
+The libraries are actively maintained and developed (new prereleases on a daily basis, stable versions on a monthly basis).
 
 The following platforms are supported:
 
@@ -20,16 +20,21 @@ The following platforms are supported:
 
 ## Vision
 
-WildGums is a company that develops WPF and web based professional, great looking software. While developing the software, we are constantly looking for the best 
-frameworks and components out there. A lot of components are hyped, but seem to provide very little added value. One of the frameworks that did deliver its promise 
-is Catel. It's a very mature, well documented, well maintained and feature-rich application development platform.
+WildGums is a company that develops professional WPF and web based applications that look good. When developing software, we are constantly looking out for the best 
+frameworks and components available. A lot of components are hyped, but seem to provide very little added value when digging deeper. One framework that did deliver on its promise 
+is [Catel](http://catelproject.com/). It's a very mature, well documented, well maintained and feature-rich application development platform.
 
-After we found our core platform to build applications, we were still having problems finding high-quality libraries. We have tried several commercial vendors, 
-but support was slow (or lacking). This was the moment we decided it was time for a change. We were going to develop our own components, giving us control over 
-the quality and throughput. 
+Once we found the core platform to build our applications on, we were still having problems finding high-quality libraries. We have tried several commercial vendors, 
+but found the support to be slow (or lacking). This made us decide it was time for a change... We were going to develop our own components, giving us control over 
+the quality and throughput.
 
-Since we started the development, it has only confirmed our believe in open source software. It's a great way to get feedback from other developers. Even better, 
-they can contribute to the components as well to improve the components in ways we might not even have thought of.
+Since we started development, it has only confirmed our belief in open source software. It's a great way to get feedback from other developers, allow them to contribute and improve the components in ways we might not even have thought of.
+
+## Goal
+
+Our goal is to develop standard compliant, high quality libraries that will allow us and other developers to build applications quickly. (i.e within days, not weeks or months.)
+
+To this end we also maintain and develop a WPF/XAML shell called [Orchestra](https://github.com/WildGums/Orchestra), which allows developers to focus on the business logic and less on scaffolding.
 
 ## Release cycle
 
@@ -46,8 +51,9 @@ Here are some examples of applications built with Orchestra and other Orc.* libr
 | ![Log Viewer](../images/introduction/LogViewer.png)                                            |![Gantt Chart](../images/introduction/Rantt.png)    |![CsvTextEditor](../images/introduction/CsvTextEditor.png)    |![FlexGrid](../images/introduction/FlexGrid.png)   |
 |   |   |   |   |
 
-[LogViewer](https://github.com/WildGums/LogViewer) and [CsvTextEditor](https://github.com/WildGums/CsvTextEditor) are open source projects hosted on Github. 
+[LogViewer](https://github.com/WildGums/LogViewer) and [CsvTextEditor](https://github.com/WildGums/CsvTextEditor) are open source projects hosted on Github.
 
+Other commercial applications can be found on our official website [WildGums.com](http://www.wildgums.com).
 
 ## Contributions
 
@@ -63,4 +69,4 @@ Please feel free to contribute, either by:
 If you need help building a new desktop application (whether for internal use within your organization or to release to the public)
 or need to setup a complete dev ops environment (which will allow you to commit your code and have an new version of your plugin ready for consumption within minutes and automatically applied to your application), please send us an email: contact@wildgums.com
 
-It took us a lot of time to get this right. What initially seems like a simple and quick task can end up taking months, so benefit from our experience and save yourself a lot of time and money by letting us show you how to release a desktop application within weeks.
+It took us a lot of time to get this right. What initially seems like a simple and quick task can end up taking months, so benefit from our experience and save yourself a lot of time, money and frustration.
