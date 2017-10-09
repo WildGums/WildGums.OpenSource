@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -529,7 +529,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Snapshots?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Snapshots" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Snapshots?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Snapshots" /></a></td>
 </tr>
 
 <tr>
@@ -549,7 +549,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Snapshots">https://github.com/WildGums/Orc.Snapshots</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Snapshots" target="_blank">https://github.com/WildGums/Orc.Snapshots</a></p>
 
 <p>Manage snapshots the easy way using this library.</p>
 
@@ -619,7 +619,7 @@
 
 <p>Because the snapshot manager is using async, the initialization is a separate method. This gives the developer the option to load the snapshots whenever it is required. To load the stored snapshots from disk, use the code below:</p>
 
-<pre><code>    await snapshotManager.LoadAsync(); 
+<pre><code>	await snapshotManager.LoadAsync(); 
 </code></pre>
 
 <h1 id="retrieving-a-list-of-all-snapshots">Retrieving a list of all snapshots</h1>
@@ -646,14 +646,14 @@
 
 <p>Register the provider in the manager for it to take effect:</p>
 
-<pre><code>    snapshotManager.AddProvider(myProvider);
+<pre><code>	snapshotManager.AddProvider(myProvider);
 </code></pre>
 
 <h1 id="registering-a-snapshot-and-saving-all-snapshots-to-disk">Registering a snapshot and saving all snapshots to disk</h1>
 
 <p>To register a snapshot with the manager, use the code below:</p>
 
-<pre><code>    await snapshotManager.AddAsync(snapshot);
+<pre><code>	await snapshotManager.AddAsync(snapshot);
 </code></pre>
 
 <p>To save all snapshots, use the code below:</p>

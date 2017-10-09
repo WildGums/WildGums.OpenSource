@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -531,7 +531,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.FilterBuilder?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FilterBuilder" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.FilterBuilder?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FilterBuilder" /></a></td>
 </tr>
 
 <tr>
@@ -551,7 +551,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.FilterBuilder">https://github.com/WildGums/Orc.FilterBuilder</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FilterBuilder" target="_blank">https://github.com/WildGums/Orc.FilterBuilder</a></p>
 
 <p>FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.</p>
 
@@ -630,24 +630,24 @@ Install-Package Catel.MVVM -Pre
 <p>First, modify the test project (<code>Orc.FilterBuilder.Test</code>) by adding the following code to the <code>MainWindow.xaml</code> header:</p>
 
 <pre><code>    &lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Test.NET40.MainWindow&quot;
-            xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-            xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-            xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
-            xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
+    		xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+			xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+    		xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
+    		xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
 </code></pre>
 
 <p>Also, reference the Styles in the <code>App.xaml</code> file:</p>
 
 <pre><code>    &lt;Application.Resources&gt;
-        &lt;ResourceDictionary&gt;
-            &lt;ResourceDictionary.MergedDictionaries&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;
-            &lt;/ResourceDictionary.MergedDictionaries&gt;
-        &lt;/ResourceDictionary&gt;
+    	&lt;ResourceDictionary&gt;
+    		&lt;ResourceDictionary.MergedDictionaries&gt;
+    		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
+    		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;
+    		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;
+    		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;
+    		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;
+    		&lt;/ResourceDictionary.MergedDictionaries&gt;
+    	&lt;/ResourceDictionary&gt;
     &lt;/Application.Resources&gt;
 </code></pre>
 
@@ -661,27 +661,27 @@ Install-Package Catel.MVVM -Pre
 Also, in the <code>EditFilterView.xaml</code> modify the ResourceDictionary section as follows:</p>
 
 <pre><code>    &lt;ResourceDictionary&gt;
-        &lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
-        &lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
-        &lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
-        &lt;ResourceDictionary.MergedDictionaries&gt;
-            &lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
-        &lt;/ResourceDictionary.MergedDictionaries&gt;
+    	&lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
+    	&lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
+    	&lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
+    	&lt;ResourceDictionary.MergedDictionaries&gt;
+    		&lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
+    	&lt;/ResourceDictionary.MergedDictionaries&gt;
     &lt;/ResourceDictionary&gt;
 </code></pre>
 
 <p>To customize the style of the buttons add the <code>MetroCircleButtonStyle</code> and appropriate icon reference from the specified StaticResource (<code>appbar_add</code>) :</p>
 
 <pre><code>    &lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
-                                        Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
-                                        CommandParameter=&quot;{Binding}&quot;
-                                        Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;
-        &lt;Rectangle Width=&quot;20&quot; Height=&quot;20&quot;&gt;
-            &lt;Rectangle.Fill&gt;
-                &lt;VisualBrush Stretch=&quot;Fill&quot; Visual=&quot;{StaticResource appbar_add}&quot; /&gt;
-            &lt;/Rectangle.Fill&gt;
-        &lt;/Rectangle&gt;
-    &lt;/Button&gt;
+    									Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
+    									CommandParameter=&quot;{Binding}&quot;
+     									Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;
+    	&lt;Rectangle Width=&quot;20&quot; Height=&quot;20&quot;&gt;
+    		&lt;Rectangle.Fill&gt;
+    			&lt;VisualBrush Stretch=&quot;Fill&quot; Visual=&quot;{StaticResource appbar_add}&quot; /&gt;
+    		&lt;/Rectangle.Fill&gt;
+    	&lt;/Rectangle&gt;
+	&lt;/Button&gt;
 </code></pre>
 
 <p><img src="../images/orc.filterbuilder/metro_2.png" alt="FilterBuilder project" /></p>

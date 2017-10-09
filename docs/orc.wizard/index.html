@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -535,7 +535,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Wizard?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Wizard" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Wizard?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Wizard" /></a></td>
 </tr>
 
 <tr>
@@ -555,7 +555,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Wizard">https://github.com/WildGums/Orc.Wizard</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Wizard" target="_blank">https://github.com/WildGums/Orc.Wizard</a></p>
 
 <p>Easily create beautifully looking wizards for WPF using MVVM.</p>
 
@@ -582,123 +582,123 @@
 
 <p>The wizard model will hold all the information of the wizard page and return the summary (which is optional).</p>
 
-<pre><code>    public class PersonWizardPage : WizardPageBase
-    {
-        public PersonWizardPage()
-        {
-            Title = &quot;Person&quot;;
-            Description = &quot;Enter the details of the person&quot;;
-        }
-    
-        public string FirstName { get; set; }
-    
-        public string LastName { get; set; }
-    
-        public override ISummaryItem GetSummary()
-        {
-            return new SummaryItem
-            {
-                Title = &quot;Person&quot;,
-                Summary = string.Format(&quot;{0} {1}&quot;, FirstName, LastName)
-            };
-        }
-    }
+<pre><code>	public class PersonWizardPage : WizardPageBase
+	{
+	    public PersonWizardPage()
+	    {
+	        Title = &quot;Person&quot;;
+	        Description = &quot;Enter the details of the person&quot;;
+	    }
+	
+	    public string FirstName { get; set; }
+	
+	    public string LastName { get; set; }
+	
+	    public override ISummaryItem GetSummary()
+	    {
+	        return new SummaryItem
+	        {
+	            Title = &quot;Person&quot;,
+	            Summary = string.Format(&quot;{0} {1}&quot;, FirstName, LastName)
+	        };
+	    }
+	}
 </code></pre>
 
 <h2 id="creating-the-wizard-page-view-model">Creating the wizard page view model</h2>
 
 <p>The view model is responsible for the actual view logic. There can be a lot of stuff in here that is view-specific, as long as the results are stored into the model. This example uses the <code>ViewModelToModel</code> feature of Catel to automatically map the values between the view model and model. As you can see this example even contains validation, so users cannot continue to the next page when the validation does not succeed.</p>
 
-<pre><code>    public class PersonWizardPageViewModel : WizardPageViewModelBase&lt;PersonWizardPage&gt;
-    {
-        public PersonWizardPageViewModel(PersonWizardPage wizardPage)
-            : base(wizardPage)
-        {
-        }
-    
-        [ViewModelToModel]
-        public string FirstName { get; set; }
-    
-        [ViewModelToModel]
-        public string LastName { get; set; }
-    
-        protected override void ValidateFields(List&lt;IFieldValidationResult&gt; validationResults)
-        {
-            base.ValidateFields(validationResults);
-    
-            if (string.IsNullOrWhiteSpace(FirstName))
-            {
-                validationResults.Add(FieldValidationResult.CreateError(&quot;FirstName&quot;, &quot;First name is required&quot;));
-            }
-    
-            if (string.IsNullOrWhiteSpace(LastName))
-            {
-                validationResults.Add(FieldValidationResult.CreateError(&quot;LastName&quot;, &quot;Last name is required&quot;));
-            }
-        }
-    }
+<pre><code>	public class PersonWizardPageViewModel : WizardPageViewModelBase&lt;PersonWizardPage&gt;
+	{
+	    public PersonWizardPageViewModel(PersonWizardPage wizardPage)
+	        : base(wizardPage)
+	    {
+	    }
+	
+	    [ViewModelToModel]
+	    public string FirstName { get; set; }
+	
+	    [ViewModelToModel]
+	    public string LastName { get; set; }
+	
+	    protected override void ValidateFields(List&lt;IFieldValidationResult&gt; validationResults)
+	    {
+	        base.ValidateFields(validationResults);
+	
+	        if (string.IsNullOrWhiteSpace(FirstName))
+	        {
+	            validationResults.Add(FieldValidationResult.CreateError(&quot;FirstName&quot;, &quot;First name is required&quot;));
+	        }
+	
+	        if (string.IsNullOrWhiteSpace(LastName))
+	        {
+	            validationResults.Add(FieldValidationResult.CreateError(&quot;LastName&quot;, &quot;Last name is required&quot;));
+	        }
+	    }
+	}
 </code></pre>
 
 <h2 id="creating-the-wizard-page-view">Creating the wizard page view</h2>
 
 <p>Below is the xaml view for the wizard page. Note that it&rsquo;s just an ordinary Catel UserControl.</p>
 
-<pre><code>    &lt;catel:UserControl x:Class=&quot;Orc.Wizard.Example.Wizard.Views.PersonWizardPageView&quot;
-                       xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-                       xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-                       xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; 
-                       xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
-                       xmlns:catel=&quot;http://schemas.catelproject.com&quot;
-                       mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;300&quot; d:DesignWidth=&quot;300&quot;&gt;
-    
-        &lt;catel:StackGrid&gt;
-            &lt;Grid.ColumnDefinitions&gt;
-                &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
-                &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
-            &lt;/Grid.ColumnDefinitions&gt;
-            
-            &lt;Grid.RowDefinitions&gt;
-                &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
-                &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
-                &lt;RowDefinition Height=&quot;*&quot; /&gt;
-            &lt;/Grid.RowDefinitions&gt;
-    
-            &lt;Label Content=&quot;First name&quot; /&gt;
-            &lt;TextBox Text=&quot;{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
-            
-            &lt;Label Content=&quot;Last name&quot; /&gt;
-            &lt;TextBox Text=&quot;{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
-            
-        &lt;/catel:StackGrid&gt;
-        
-    &lt;/catel:UserControl&gt;
+<pre><code>	&lt;catel:UserControl x:Class=&quot;Orc.Wizard.Example.Wizard.Views.PersonWizardPageView&quot;
+					   xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+					   xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+					   xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; 
+					   xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+					   xmlns:catel=&quot;http://schemas.catelproject.com&quot;
+					   mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;300&quot; d:DesignWidth=&quot;300&quot;&gt;
+	
+		&lt;catel:StackGrid&gt;
+			&lt;Grid.ColumnDefinitions&gt;
+				&lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
+				&lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+			&lt;/Grid.ColumnDefinitions&gt;
+			
+			&lt;Grid.RowDefinitions&gt;
+				&lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+				&lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+				&lt;RowDefinition Height=&quot;*&quot; /&gt;
+			&lt;/Grid.RowDefinitions&gt;
+	
+			&lt;Label Content=&quot;First name&quot; /&gt;
+			&lt;TextBox Text=&quot;{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+			
+			&lt;Label Content=&quot;Last name&quot; /&gt;
+			&lt;TextBox Text=&quot;{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+			
+		&lt;/catel:StackGrid&gt;
+		
+	&lt;/catel:UserControl&gt;
 </code></pre>
 
 <h1 id="creating-the-wizard">Creating the wizard</h1>
 
 <p>Once all the wizard pages have been created, it&rsquo;s time to wrap it inside an actual wizard. Below is an example:</p>
 
-<pre><code>    public class ExampleWizard : WizardBase
-    {
-        public ExampleWizard(ITypeFactory typeFactory)
-            : base(typeFactory)
-        {
-            Title = &quot;Orc.Wizard example&quot;; 
-    
-            this.AddPage&lt;PersonWizardPage&gt;();
-            this.AddPage&lt;AgeWizardPage&gt;();
-            this.AddPage&lt;SkillsWizardPage&gt;();
-            this.AddPage&lt;ComponentsWizardPage&gt;();
-            this.AddPage&lt;SummaryWizardPage&gt;();
-        }
-    }
+<pre><code>	public class ExampleWizard : WizardBase
+	{
+	    public ExampleWizard(ITypeFactory typeFactory)
+	        : base(typeFactory)
+	    {
+	        Title = &quot;Orc.Wizard example&quot;; 
+	
+	        this.AddPage&lt;PersonWizardPage&gt;();
+	        this.AddPage&lt;AgeWizardPage&gt;();
+	        this.AddPage&lt;SkillsWizardPage&gt;();
+	        this.AddPage&lt;ComponentsWizardPage&gt;();
+	        this.AddPage&lt;SummaryWizardPage&gt;();
+	    }
+	}
 </code></pre>
 
 <h1 id="using-the-wizard">Using the wizard</h1>
 
 <p>Using the wizard can be done via the <code>IWizardService</code>. Below is an example on how to show a wizard:</p>
 
-<pre><code>    await _wizardService.ShowWizardAsync&lt;ExampleWizard&gt;();
+<pre><code>	await _wizardService.ShowWizardAsync&lt;ExampleWizard&gt;();
 </code></pre>
 
 <h1 id="enjoying-the-wizard">Enjoying the wizard</h1>
@@ -711,10 +711,10 @@
 
 <p>When you obtain a service object from the service locator, you will write code such as the following:</p>
 
-<pre><code>    var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
+<pre><code>	var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
 </code></pre>
 
-<p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>
+<p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup" target="_blank">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>
 
 <p>Background information: The reason for the <code>TypeNotRegisteredException</code> probably is that you are only using interfaces from this component or Catel.MVVM at this stage. For the .NET runtime, using an interface is not sufficient to load an assembly (such as this component or any of the Catel libraries) into the AppDomain. This means that the assemblies don&rsquo;t get a chance to register their services into the service locator.</p>
 

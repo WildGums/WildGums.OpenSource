@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -528,7 +528,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.CommandLine?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.CommandLine" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.CommandLine?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.CommandLine" /></a></td>
 </tr>
 
 <tr>
@@ -548,7 +548,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.CommandLine">https://github.com/WildGums/Orc.CommandLine</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.CommandLine" target="_blank">https://github.com/WildGums/Orc.CommandLine</a></p>
 
 <p>Use command line the easy way.</p>
 
@@ -556,49 +556,49 @@
 
 <p>Using this library is easy:</p>
 
-<pre><code>    public class MyContext : ContextBase
-    {
-        [Option(' ', &quot;&quot;, HelpText = &quot;The file name to start with&quot;)]
-        public string FileName { get; set; }
-    
-        [Option('b', &quot;bool&quot;, AcceptsValue = false, HelpText = &quot;Some boolean switch&quot;)]
-        public bool BooleanSwitch { get; set; }
-    
-        [Option('i', &quot;int&quot;, HelpText = &quot;Some integer switch&quot;)]
-        public int IntegerSwitch { get; set; }
-    
-        [Option('s', &quot;string&quot;, HelpText = &quot;Some string switch&quot;)]
-        public string StringSwitch { get; set; }
-    }
+<pre><code>	public class MyContext : ContextBase
+	{
+	    [Option(' ', &quot;&quot;, HelpText = &quot;The file name to start with&quot;)]
+	    public string FileName { get; set; }
+	
+	    [Option('b', &quot;bool&quot;, AcceptsValue = false, HelpText = &quot;Some boolean switch&quot;)]
+	    public bool BooleanSwitch { get; set; }
+	
+	    [Option('i', &quot;int&quot;, HelpText = &quot;Some integer switch&quot;)]
+	    public int IntegerSwitch { get; set; }
+	
+	    [Option('s', &quot;string&quot;, HelpText = &quot;Some string switch&quot;)]
+	    public string StringSwitch { get; set; }
+	}
 </code></pre>
 
 <p>Then use this code:</p>
 
-<pre><code>    // Environment.CommandLine also contains current application path, it is removed with this extension method
-    var commandLine = Environment.CommandLine.GetCommandLine(true);
-    var context = new MyContext();
-    
-    var validationContext = commandLineParser.Parse(commandLine, context);
-    if (validationContext.HasErrors)
-    {
-        // something bad happened
-        return;
-    }
-    
-    if (context.IsHelp)
-    {
-        // Use the IHelpWriterService to output the help
-        var helpContent = helpWriterService.ConvertToString(context);
-        // TODO: write to console or show as a message box
-        return;
-    }
-    
-    // Handle the context here
+<pre><code>	// Environment.CommandLine also contains current application path, it is removed with this extension method
+	var commandLine = Environment.CommandLine.GetCommandLine(true);
+	var context = new MyContext();
+	
+	var validationContext = commandLineParser.Parse(commandLine, context);
+	if (validationContext.HasErrors)
+	{
+	    // something bad happened
+	    return;
+	}
+	
+	if (context.IsHelp)
+	{
+	    // Use the IHelpWriterService to output the help
+	    var helpContent = helpWriterService.ConvertToString(context);
+	    // TODO: write to console or show as a message box
+	    return;
+	}
+	
+	// Handle the context here
 </code></pre>
 
 <p>This will successfully parse a command line like this:</p>
 
-<pre><code>    myapp.exe somefile /b -string somestring /i 42
+<pre><code>	myapp.exe somefile /b -string somestring /i 42
 </code></pre>
 
 <h2 id="allowed-switches">Allowed switches</h2>
@@ -623,8 +623,8 @@
 <p>It&rsquo;s possible to retrieve all key/value pairs passed in the command line, even when switches are not specified upfront. This is extremely useful
 in scenarios where the command line is used to override dynamic properties.</p>
 
-<pre><code>    var rawValues = context.RawValues;
-    myValue = rawValues[&quot;someswitch&quot;];
+<pre><code>	var rawValues = context.RawValues;
+	myValue = rawValues[&quot;someswitch&quot;];
 </code></pre>
 
 <p>The <code>RawValues</code> dictionary is case-insensitive.</p>

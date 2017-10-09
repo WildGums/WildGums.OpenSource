@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -523,7 +523,7 @@
 
 <p>The control is made up of two buttons side by side. The First button works as a regular button and the second one will display a customizable drop down menu under the control.</p>
 
-<p>Inherits from <a href="http://docs.catelproject.com/vnext/catel-mvvm/views/xaml/usercontrol/">Catel.Windows.Controls.UserControl</a>.</p>
+<p>Inherits from <a href="http://docs.catelproject.com/vnext/catel-mvvm/views/xaml/usercontrol/" target="_blank">Catel.Windows.Controls.UserControl</a>.</p>
 
 <p><img src="../../images/orc.controls/dropdownbutton/DropDownButton_01.png" alt="DropDownButton 01" /></p>
 
@@ -585,14 +585,14 @@
 <p>Specify <code>Header</code> and <code>DropDown</code>. If you need to handle button click itself bind to <code>Command</code> property.</p>
 
 <pre><code>&lt;orc:DropDownButton Header=&quot;Action&quot; Command=&quot;{Binding DefaultAction}&quot;&gt;
-    &lt;orc:DropDownButton.DropDown&gt;
-        &lt;ContextMenu&gt;
-            &lt;MenuItem Header=&quot;Item 1&quot;/&gt;
-            &lt;MenuItem Header=&quot;Item 2&quot;/&gt;
-            &lt;Separator/&gt;
-            &lt;MenuItem Header=&quot;Item 2&quot;/&gt;
-        &lt;/ContextMenu&gt;
-    &lt;/orc:DropDownButton.DropDown&gt;
+	&lt;orc:DropDownButton.DropDown&gt;
+		&lt;ContextMenu&gt;
+			&lt;MenuItem Header=&quot;Item 1&quot;/&gt;
+			&lt;MenuItem Header=&quot;Item 2&quot;/&gt;
+			&lt;Separator/&gt;
+			&lt;MenuItem Header=&quot;Item 2&quot;/&gt;
+		&lt;/ContextMenu&gt;
+	&lt;/orc:DropDownButton.DropDown&gt;
 &lt;/orc:DropDownButton&gt;
 </code></pre>
 

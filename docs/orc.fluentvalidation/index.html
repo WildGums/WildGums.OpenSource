@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -522,7 +522,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.FluentValidation?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FluentValidation" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.FluentValidation?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FluentValidation" /></a></td>
 </tr>
 
 <tr>
@@ -542,7 +542,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.FluentValidation">https://github.com/WildGums/Orc.FluentValidation</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FluentValidation" target="_blank">https://github.com/WildGums/Orc.FluentValidation</a></p>
 
 <p>The validation in Catel is extremely flexible, at this point you must already know it, but sometimes it is just not enough or you are forced to use external validators.</p>
 
@@ -552,19 +552,19 @@
 
 <p>The only thing you have to do is install an isolate package named <code>Orc.FluentValidation</code>, available via NuGet, then you will be able to write your view models validations using FluentValidation approach.</p>
 
-<pre><code>    public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
-    {
-        public PersonViewModelValidator()
-        {
-            RuleFor(person =&gt; person.FirstName).NotEmpty();
-            RuleFor(person =&gt; person.LastName).NotEmpty().WithMessage(&quot;Please specify the last name&quot;);
-        }
-    }
+<pre><code>	public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
+	{
+	    public PersonViewModelValidator()
+	    {
+	        RuleFor(person =&gt; person.FirstName).NotEmpty();
+	        RuleFor(person =&gt; person.LastName).NotEmpty().WithMessage(&quot;Please specify the last name&quot;);
+	    }
+	}
 </code></pre>
 
 <p>In order to retrieve the right validators, you must register the <code>FluentValidatorProvider</code>:</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IValidatorProvider, FluentValidatorProvider&gt;();
+<pre><code>	ServiceLocator.Default.RegisterType&lt;IValidatorProvider, FluentValidatorProvider&gt;();
 </code></pre>
 
 <p>The <code>FluentValidatorProvider</code> will automatically retrieve the right validators associated with the view models.</p>
@@ -573,15 +573,15 @@
 
 <p>Catel handle concepts like field or business rules errors and warnings. So, it&rsquo;s necessary map the fluent validation class to the specific Catel validation using <code>ValidationDescriptionAttribute</code>.</p>
 
-<pre><code>    [ValidatorDescription(Tag = &quot;Person&quot;, ValidationResultType = ValidationResultType.Error, ValidationType = ValidationType.Field)]
-    public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
-    {
-    }
+<pre><code>	[ValidatorDescription(Tag = &quot;Person&quot;, ValidationResultType = ValidationResultType.Error, ValidationType = ValidationType.Field)]
+	public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
+	{
+	}
 </code></pre>
 
 <p>How does the FluentValidationProvider works?</p>
 
-<p><code>FluentValidationProvider</code> is an implementation of <code>IValidationProvider</code> (see <a href="https://catelproject.atlassian.net/wiki/display/CTL/Validation+via+IValidator">Validation via IValidator</a>). It searches for all validators classes that implement <code>FluentValidation.IValidator</code> interface, that also can validate the view model type.</p>
+<p><code>FluentValidationProvider</code> is an implementation of <code>IValidationProvider</code> (see <a href="https://catelproject.atlassian.net/wiki/display/CTL/Validation+via+IValidator" target="_blank">Validation via IValidator</a>). It searches for all validators classes that implement <code>FluentValidation.IValidator</code> interface, that also can validate the view model type.</p>
 
 <p>A view model can have one or more validators, so <code>FluentValidationProvider</code> aggregates all validators in a single one using <code>CompositeValidator</code> class. For performance reasons <code>FluentValidationProvider</code> only searches for validators on the assembly which the view model belongs to. </p>
 

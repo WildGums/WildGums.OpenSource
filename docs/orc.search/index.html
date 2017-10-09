@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -527,7 +527,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Search?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Search" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Search?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Search" /></a></td>
 </tr>
 
 <tr>
@@ -547,13 +547,13 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Search">https://github.com/WildGums/Orc.Search</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Search" target="_blank">https://github.com/WildGums/Orc.Search</a></p>
 
 <p>Easily add searching to any application.</p>
 
-<p>Uses <a href="http://lucenenet.apache.org/">Lucene</a> in the background.</p>
+<p>Uses <a href="http://lucenenet.apache.org/" target="_blank">Lucene</a> in the background.</p>
 
-<p>Search Syntax: <a href="http://www.lucenetutorial.com/lucene-query-syntax.html">http://www.lucenetutorial.com/lucene-query-syntax.html</a></p>
+<p>Search Syntax: <a href="http://www.lucenetutorial.com/lucene-query-syntax.html" target="_blank">http://www.lucenetutorial.com/lucene-query-syntax.html</a></p>
 
 <h2 id="nuget-packages">Nuget Packages</h2>
 
@@ -565,7 +565,7 @@
 <h2 id="features">Features</h2>
 
 <ul>
-<li>Uses <a href="http://lucenenet.apache.org/">Lucene</a> for the indexing and searching</li>
+<li>Uses <a href="http://lucenenet.apache.org/" target="_blank">Lucene</a> for the indexing and searching</li>
 <li>Properties, which need to be indexed should be decorated with the <code>SearchablePropertyAttribute</code></li>
 <li>To support highlighting you should create your own search highlight provider, by inheriting from <code>SearchHighlightProviderBase</code></li>
 <li>You can redefine the implementation of <code>ISearchService</code>, by creating your own class which will inherit <code>SearchServiceBase</code> and register it using <code>[Catel.IoC.IServiceLocator](http://www.nudoq.org/#!/Packages/Catel.Core/Catel.Core/IServiceLocator)</code></li>
@@ -578,23 +578,23 @@
 <li>Create a POCO class to use in your search and decorate the properties with <code>SearchablePropertyAttribute</code></li>
 </ol>
 
-<pre><code>        public class Person
-        {
-            [SearchableProperty(SearchName = &quot;firstname&quot;)]
-            public string FirstName { get; set; }
-            
-            [SearchableProperty(SearchName = &quot;lastname&quot;)]
-            public string LastName { get; set; }
-            
-            public int Age { get; set; }
-        }
+<pre><code>		public class Person
+		{
+			[SearchableProperty(SearchName = &quot;firstname&quot;)]
+			public string FirstName { get; set; }
+			
+			[SearchableProperty(SearchName = &quot;lastname&quot;)]
+			public string LastName { get; set; }
+			
+			public int Age { get; set; }
+		}
 </code></pre>
 
 <ol>
 <li>Fill the <code>ISearchService</code> with the appropriate &ldquo;Person&rdquo; data using the <code>AddObjects()</code> method. The objects must be wrapped inside an <code>ISearchable</code> implementation, for example the <code>ReflectionSearchable</code>:</li>
 </ol>
 
-<pre><code>        searchService.AddObjects(persons.Select(x =&gt; new ReflectionSearchable(x));
+<pre><code>		searchService.AddObjects(persons.Select(x =&gt; new ReflectionSearchable(x));
 </code></pre>
 
 <ul>

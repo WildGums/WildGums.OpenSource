@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -540,7 +540,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.EntityFramework?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.EntityFramework" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.EntityFramework?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.EntityFramework" /></a></td>
 </tr>
 </tbody>
 </table>
@@ -601,7 +601,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.EntityFramework">https://github.com/WildGums/Orc.EntityFramework</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.EntityFramework" target="_blank">https://github.com/WildGums/Orc.EntityFramework</a></p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -617,36 +617,36 @@
 
 <p>By default the code-first models aren&rsquo;t very smart. To add additional functionality such as validation, change notifications, etc, it is best to let it derive from ModelBase. To do so, make all entities derive from ModelBase as shown in the example below:</p>
 
-<pre><code>    [Table(&quot;person&quot;)]
-    public partial class Person : ModelBase
-    {
-        [StringLength(50)]
-        public string FirstName { get; set; }
-     
-        [StringLength(50)]
-        public string lastname { get; set; }
-     
-        public long PersonId { get; set; }
-        public long FamilyId { get; set; }
-     
-        public virtual Family Family { get; set; }
-    }
+<pre><code>	[Table(&quot;person&quot;)]
+	public partial class Person : ModelBase
+	{
+	    [StringLength(50)]
+	    public string FirstName { get; set; }
+	 
+	    [StringLength(50)]
+	    public string lastname { get; set; }
+	 
+	    public long PersonId { get; set; }
+	    public long FamilyId { get; set; }
+	 
+	    public virtual Family Family { get; set; }
+	}
 </code></pre>
 
 <p>When the classes are derived from <code>ModelBase</code>, EF will try to serialize all the default Catel properties as well. To make sure that EF ignores the Catel properties, go to the <code>Context</code> class and search for the OnModelCreating method. Then add the <code>IgnoreCatelProperties</code> extension method to all entity definitions as shown in the example below:</p>
 
-<pre><code>    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity&lt;Family&gt;()
-            .IgnoreCatelProperties()
-            .Property(e =&gt; e.FamilyName)
-            .IsUnicode(false);
-     
-        modelBuilder.Entity&lt;Family&gt;()
-            .HasMany(e =&gt; e.Person)
-            .WithRequired(e =&gt; e.Family)
-            .WillCascadeOnDelete(false);
-    }
+<pre><code>	protected override void OnModelCreating(DbModelBuilder modelBuilder)
+	{
+	    modelBuilder.Entity&lt;Family&gt;()
+	        .IgnoreCatelProperties()
+	        .Property(e =&gt; e.FamilyName)
+	        .IsUnicode(false);
+	 
+	    modelBuilder.Entity&lt;Family&gt;()
+	        .HasMany(e =&gt; e.Person)
+	        .WithRequired(e =&gt; e.Family)
+	        .WillCascadeOnDelete(false);
+	}
 </code></pre>
 
 <h2 id="repositories">Repositories</h2>
@@ -655,26 +655,26 @@
 
 <p>Once the DAL is correctly set up, it&rsquo;s time to create the repositories. Creating repositories with Catel is super easy. Just create (or generate with T4) a class and interface for each entity:</p>
 
-<pre><code>    public class FamilyRepository : EntityRepositoryBase&lt;family, int&gt;, IFamilyRepository
-    {
-        public FamilyRepository(DbContext dbContext) 
-            : base(dbContext)
-        {
-        }
-    }
-     
-    public interface IFamilyRepository : IEntityRepository&lt;family, int&gt;
-    {
-    }
+<pre><code>	public class FamilyRepository : EntityRepositoryBase&lt;family, int&gt;, IFamilyRepository
+	{
+	    public FamilyRepository(DbContext dbContext) 
+	        : base(dbContext)
+	    {
+	    }
+	}
+	 
+	public interface IFamilyRepository : IEntityRepository&lt;family, int&gt;
+	{
+	}
 </code></pre>
 
 <h3 id="registering-repositories">Registering repositories</h3>
 
 <p>In order for the unit of work to find the repositories, they need to be registered in the <code>ServiceLocator</code>. This can be done as follows:</p>
 
-<pre><code>    var serviceLocator = ServiceLocator.Default;
-     
-    serviceLocator.RegisterType&lt;IFamilyRepository, FamilyRepository&gt;();
+<pre><code>	var serviceLocator = ServiceLocator.Default;
+	 
+	serviceLocator.RegisterType&lt;IFamilyRepository, FamilyRepository&gt;();
 </code></pre>
 
 <h2 id="unit-of-work">Unit of Work</h2>
@@ -683,13 +683,13 @@
 
 <p>To retrieve data inside a transaction, you can use the UnitOfWork. Inside a method / service call / view model, use the following code:</p>
 
-<pre><code>    using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
-    {
-        var familyRepository = uow.GetRepository&lt;IFamilyRepository&gt;();
-     
-        var families = new ObservableCollection&lt;family&gt;(familyRepository.GetAll());
-        // TODO: Do something with all families
-    }
+<pre><code>	using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
+	{
+	    var familyRepository = uow.GetRepository&lt;IFamilyRepository&gt;();
+	 
+	    var families = new ObservableCollection&lt;family&gt;(familyRepository.GetAll());
+	    // TODO: Do something with all families
+	}
 </code></pre>
 
 <p>@alert info
@@ -700,18 +700,18 @@ Catel will automatically take care of scoping of the DbContext when using unit o
 
 <p>To save data, the entities must be updated in the repositories and then saved in the unit of work. Below is an example, assuming the list of families contains updated entities:</p>
 
-<pre><code>    using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
-    {
-        var familyRepository = uow.GetRepository&lt;IFamilyRepository&gt;();
-        var personRepository = uow.GetRepository&lt;IPersonRepository&gt;();
-    
-        foreach (var family in families)
-        {
-            familyRepository.Update(family);
-        }
-    
-        uow.SaveChanges();
-    }
+<pre><code>	using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
+	{
+	    var familyRepository = uow.GetRepository&lt;IFamilyRepository&gt;();
+	    var personRepository = uow.GetRepository&lt;IPersonRepository&gt;();
+	
+	    foreach (var family in families)
+	    {
+	        familyRepository.Update(family);
+	    }
+	
+	    uow.SaveChanges();
+	}
 </code></pre>
 
 

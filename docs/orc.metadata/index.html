@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -539,7 +539,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Metadata?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Metadata" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Metadata?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Metadata" /></a></td>
 </tr>
 
 <tr>
@@ -559,7 +559,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Metadata">https://github.com/WildGums/Orc.Metadata</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Metadata" target="_blank">https://github.com/WildGums/Orc.Metadata</a></p>
 
 <p>This library provides classes to store metadata about objects. This metadata isn&rsquo;t necessarily stored inside the object itself, allowing the developer to keep track of additional information besides the information stored in the object.</p>
 
@@ -578,11 +578,11 @@
 
 <p>To retrieve type information about an object, the information is stored in one of the <code>IMetadataCollection</code> implementations. The developer only has to work with the <em>IMetadataCollection</em> interface. To retrieve the information, use the code below:</p>
 
-<pre><code>    var allMetadata = metadataCollection.All;
-    foreach (var metadata in allMetadata)
-    {
-        Console.WriteLine(metadata.Name);
-    }
+<pre><code>	var allMetadata = metadataCollection.All;
+	foreach (var metadata in allMetadata)
+	{
+	    Console.WriteLine(metadata.Name);
+	}
 </code></pre>
 
 <h3 id="retrieving-metadata-of-a-specific-object">Retrieving metadata of a specific object</h3>
@@ -599,7 +599,7 @@
 
 <h3 id="creating-the-metadata-collection">Creating the metadata collection</h3>
 
-<pre><code>    var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
+<pre><code>	var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
 </code></pre>
 
 <p>Now the metadata collection can be used to retrieve any properties from the <em>MyModel</em> class and use the <code>IMetadata</code> to get or set property values.</p>
@@ -612,23 +612,23 @@
 
 <p>The example below creates metadata that contains a few metadata definitions with specific types.</p>
 
-<pre><code>    var dictionary = new Dictionary&lt;string, Type&gt;();
-    dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
-    dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
+<pre><code>	var dictionary = new Dictionary&lt;string, Type&gt;();
+	dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
+	dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
 </code></pre>
 
 <h3 id="interacting-with-the-metadata">Interacting with the metadata</h3>
 
 <p>Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:</p>
 
-<pre><code>    var metadataDictionary = new Dictionary&lt;string, object&gt;();
-    dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
-    dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
+<pre><code>	var metadataDictionary = new Dictionary&lt;string, object&gt;();
+ 	dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
+	dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
 
-    var metadata = metadataCollection.GetMetadata(&quot;MyIntMetadata&quot;);
-    var value = metadata.GetValue(metadataDictionary);
+	var metadata = metadataCollection.GetMetadata(&quot;MyIntMetadata&quot;);
+	var value = metadata.GetValue(metadataDictionary);
 
-    // Now value is 42
+	// Now value is 42
 </code></pre>
 
 <h2 id="other-ways-of-storing-metadata">Other ways of storing metadata</h2>

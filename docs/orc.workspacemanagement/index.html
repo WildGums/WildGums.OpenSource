@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -537,7 +537,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.WorkspaceManagement?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.WorkspaceManagement" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.WorkspaceManagement?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.WorkspaceManagement" /></a></td>
 </tr>
 
 <tr>
@@ -557,7 +557,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.WorkspaceManagement">https://github.com/WildGums/Orc.WorkspaceManagement</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.WorkspaceManagement" target="_blank">https://github.com/WildGums/Orc.WorkspaceManagement</a></p>
 
 <p>Manage workspaces the easy way using this library.</p>
 
@@ -610,7 +610,7 @@
 
 <p>Next it can be registered in the <code>ServiceLocator</code> (so it will automatically be injected into the <code>WorkspaceManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
+<pre><code>	ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
 </code></pre>
 
 <p><strong>Make sure to register the service before instantiating the <em>IWorkspaceManager</em> because it will be injected</strong></p>
@@ -619,7 +619,7 @@
 
 <p>Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:</p>
 
-<pre><code>    await workspaceManager.InitializeAsync(); 
+<pre><code>	await workspaceManager.InitializeAsync(); 
 </code></pre>
 
 <h1 id="retrieving-a-list-of-all-workspaces">Retrieving a list of all workspaces</h1>
@@ -631,7 +631,7 @@
 
 <p>The library contains extension methods for the <code>IWorkspaceManager</code> to retrieve a typed instance:</p>
 
-<pre><code>    var myWorkspace = workspaceManager.Workspace;
+<pre><code>	var myWorkspace = workspaceManager.Workspace;
 </code></pre>
 
 <p>To customize the location where the workspaces are stored, use the <code>BaseDirectory</code> property.</p>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -530,7 +530,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.NuGetExplorer?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Prism" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.NuGetExplorer?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Prism" /></a></td>
 </tr>
 </tbody>
 </table>
@@ -591,7 +591,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Prism">https://github.com/WildGums/Orc.Prism</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Prism" target="_blank">https://github.com/WildGums/Orc.Prism</a></p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -599,12 +599,12 @@
 
 <p>If you want to use only a selected feature set of Prism (such as the regions) and don&rsquo;t want to set up a custom bootstrapper, use the following code before creating the main window:</p>
 
-<pre><code>    PrismHelper.PrepareWithoutBootstrapper();
+<pre><code>	PrismHelper.PrepareWithoutBootstrapper();
 </code></pre>
 
 <p>Then call the following code after creating the main window:</p>
 
-<pre><code>    PrismHelper.InitializeMainWindow();
+<pre><code>	PrismHelper.InitializeMainWindow();
 </code></pre>
 
 <p>The latest version of the guidance, Prism, includes a feature named &ldquo;User Interface Composition&rdquo;. Basically it allows build a mosaic like application by loading multiple views that comes from different modules into an active regions exposed by a control, also know as the shell.</p>
@@ -615,15 +615,15 @@
 
 <p>First of all, you must make available the region manager on the instance of <em>ServiceLocator</em>. A Prism based application uses MEF or Unity as primary IoC container. Therefore, you must synchronize this container with the Catel one, overriding the <em>ConfigureContainer</em> method of the application Bootstrapper class, using the following code:</p>
 
-<pre><code>    protected override void ConfigureContainer()
-    {
-        base.ConfigureContainer();
-    
-        if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
-        {
-            ServiceLocator.Instance.RegisterExternalContainer(this.Container);
-        }
-    }
+<pre><code>	protected override void ConfigureContainer()
+	{
+	    base.ConfigureContainer();
+	
+	    if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
+	    {
+	        ServiceLocator.Instance.RegisterExternalContainer(this.Container);
+	    }
+	}
 </code></pre>
 
 <p>but if you use <code>ServiceLocator</code> primary IoC contanier, and your <em>Bootstrapper</em> class inherits from <code>BootstrapperBase</code> the region manager is actually available and you don&rsquo;t have to write the synchronization container code.</p>
@@ -634,11 +634,11 @@
 
 <p>To activate a view into a specific region, use the following code:</p>
 
-<pre><code>    var viewModel = new EmployeeViewModel();
-    
-    var dependencyResolver = this.GetDependencyResolver();
-    var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;();
-    uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
+<pre><code>	var viewModel = new EmployeeViewModel();
+	
+	var dependencyResolver = this.GetDependencyResolver();
+	var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;();
+	uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
 </code></pre>
 
 <p>@alert important
@@ -654,20 +654,20 @@ uiCompositionService.Activate(viewModel, this, &ldquo;MainRegion&rdquo;);</p>
 
 <p>Actually you are able to inject views (referencing it&rsquo;s view models) in any window. Just like the previous example but in combination with the experimental extension method <em>Show</em>:</p>
 
-<pre><code>    var dependencyResolver = this.GetDependencyResolver();
-    var uiVisualizerService = dependencyResolver.Resolve&lt;IUIVisualizerService&gt;();
-    
-    var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;()
-    var windowViewModel = new WindowWithRegionViewModel();
-    
-    uiVisualizerService.Show(windowViewModel, () =&gt; { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, &quot;WindowMainRegion&quot;) });
+<pre><code>	var dependencyResolver = this.GetDependencyResolver();
+	var uiVisualizerService = dependencyResolver.Resolve&lt;IUIVisualizerService&gt;();
+	
+	var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;()
+	var windowViewModel = new WindowWithRegionViewModel();
+	
+	uiVisualizerService.Show(windowViewModel, () =&gt; { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, &quot;WindowMainRegion&quot;) });
 </code></pre>
 
 <h2 id="deactivating-a-view">Deactivating a view</h2>
 
 <p>To deactivate a view, use the following code:</p>
 
-<pre><code>    uiCompositionService.Deactivate(viewModel);
+<pre><code>	uiCompositionService.Deactivate(viewModel);
 </code></pre>
 
 <p>If you keep your view model alive (see: Keeping view models alive), you can reactivate a deactivated the view using <code>Activate</code> method without specify the region name.</p>

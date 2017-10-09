@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -544,7 +544,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Memento?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Memento" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Memento?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Memento" /></a></td>
 </tr>
 
 <tr>
@@ -564,7 +564,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Memento">https://github.com/WildGums/Orc.Memento</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Memento" target="_blank">https://github.com/WildGums/Orc.Memento</a></p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -592,16 +592,16 @@
 
 <p>To undo an action, use the code below:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.Undo();
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.Undo();
 </code></pre>
 
 <p>It is possible to check whether it is possible to undo actions by using the <code>CanUndo</code> property. This check is not required since the <code>Undo</code> method will also check this internally.</p>
 
 <p>To redo an action, use the code below:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.Redo();
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.Redo();
 </code></pre>
 
 <p>It is possible to check whether it is possible to redo actions by using the <code>CanRedo</code> property. This check is not required since the <code>Redo</code> method will also check this internally.</p>
@@ -610,10 +610,10 @@
 
 <p>The <code>MementoService</code> automatically wraps all actions in batches. Because each action is treated as a batch, it is easy to begin a batch and add several actions to a single batch. Below is the code to create a batch:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.BeginBatch(&quot;Batch title&quot;, &quot;Batch description&quot;);
-     
-    // All actions added to the memento service are added to the specified batch
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.BeginBatch(&quot;Batch title&quot;, &quot;Batch description&quot;);
+	 
+	// All actions added to the memento service are added to the specified batch
 </code></pre>
 
 <p><em>Note that the Title and Description are optional. They are however a great way to represent the batches in the user interface</em></p>
@@ -631,8 +631,8 @@
 
 <p>Ignoring specific properties or methods for the IMementoService is very easy. Just decorate them with the IgnoreMementoSupportAttribute as shown below:</p>
 
-<pre><code>    [IgnoreMementoSupport]
-    public string IgnoredProperty { get; set; }
+<pre><code>	[IgnoreMementoSupport]
+	public string IgnoredProperty { get; set; }
 </code></pre>
 
 <h1 id="memento-and-properties">Memento and properties</h1>
@@ -643,38 +643,38 @@
 
 <p>When an object implements the <code>INotifyPropertyChanged</code> interface, it is possible to register the object. The <code>IMementoService</code> will fully take care of any property changes by the object and add these automatically to the undo/redo stack. Internally, the service will create an instance of the <code>ObjectObserver</code> which will register the changes in the <code>IMementoService</code>.</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.RegisterObject(myObject);
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.RegisterObject(myObject);
 </code></pre>
 
 <h2 id="handling-property-changes-manually">Handling property changes manually</h2>
 
 <p>When an object does not support the <code>INotifyPropertyChanged</code> interface or you want more control, it is possible to instantiate the <code>PropertyChangeUndo</code> yourself. See the example below:</p>
 
-<pre><code>    public string Name
-    {
-        get { return _name; }
-        set
-        {
-            object oldValue = _name;
-            object newValue = value;
-     
-            _name = value;
-     
-            RaisePropertyChanged(&quot;Name&quot;);
-     
-            var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-            mementoService.Add(new PropertyChangeUndo(this, &quot;Name&quot;, oldValue, newValue)); 
-        }
-    }
+<pre><code>	public string Name
+	{
+	    get { return _name; }
+	    set
+	    {
+	        object oldValue = _name;
+	        object newValue = value;
+	 
+	        _name = value;
+	 
+	        RaisePropertyChanged(&quot;Name&quot;);
+	 
+	        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	        mementoService.Add(new PropertyChangeUndo(this, &quot;Name&quot;, oldValue, newValue)); 
+	    }
+	}
 </code></pre>
 
 <h2 id="removing-an-object-and-its-actions">Removing an object and its actions</h2>
 
 <p>When a model goes out of scope, it is important that the <code>IMementoService</code> does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the object:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.UnregisterObject(myObject);
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.UnregisterObject(myObject);
 </code></pre>
 
 <p><em>Note that unregistering an object will both cancel change notifications and remove the actions that belong to this object from the undo/redo stack</em></p>
@@ -687,21 +687,21 @@
 
 <p>When a collection implements the <code>INotifyCollectionChanged</code> interface, it is possible to register the collection. The <code>IMementoService</code> will fully take care of any collection changes by the collection and add these automatically to the undo/redo stack. Internally, the service will create an instance of the <code>CollectionObserver</code> which will register the changes in the <code>IMementoService</code>.</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.RegisterCollection(myCollection);
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.RegisterCollection(myCollection);
 </code></pre>
 
 <h2 id="handling-collection-changes-manually">Handling collection changes manually</h2>
 
 <p>When an object does not support the <code>INotifyCollectionChanged</code> interface or you want more control, it is possible to instantiate the <code>CollectionChangeUndo</code> yourself. See the example below:</p>
 
-<pre><code>    public void AddPerson(IPerson person)
-    {
-        var newIndex = _internalCollection.Add(person);
-         
-        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-        mementoService.Add(new CollectionChangeUndo(_internalCollection, CollectionChangeType.Add, -1, newIndex, null, item)); 
-    }
+<pre><code>	public void AddPerson(IPerson person)
+	{
+	    var newIndex = _internalCollection.Add(person);
+	     
+	    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	    mementoService.Add(new CollectionChangeUndo(_internalCollection, CollectionChangeType.Add, -1, newIndex, null, item)); 
+	}
 </code></pre>
 
 <p><em>Note that all actions should be implemented, such as adding, replacing, removing and resetting to fully support undo/redo</em></p>
@@ -710,8 +710,8 @@
 
 <p>When a collection goes out of scope, it is important that the <code>IMementoService</code> does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the collection:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.UnregisterCollection(myCollection);
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.UnregisterCollection(myCollection);
 </code></pre>
 
 <p><em>Note that unregistering a collection will both cancel change notifications and remove the actions that belong to this collection from the undo/redo stack</em></p>
@@ -724,57 +724,57 @@
 
 <p>An action can come in two flavors. One with only undo support, and one with redo support. It is always recommended to implement the one with support for redo, but the choice is always yours. For this example, let&rsquo;s assume a simple class that will increase a value (for which we are building undo/redo support):</p>
 
-<pre><code>    public class SpecialNumberContainer()
-    {
-        private int _number = 5;
-         
-        public int Number { get { return _number; } }
-         
-        public int IncreaseNumber()
-        {
-            _number++;
-        }
-    }
+<pre><code>	public class SpecialNumberContainer()
+	{
+	    private int _number = 5;
+	     
+	    public int Number { get { return _number; } }
+	     
+	    public int IncreaseNumber()
+	    {
+	        _number++;
+	    }
+	}
 </code></pre>
 
 <p>As you can see in the example, it is not possible to use the <code>PropertyChangeUndo</code> because the property has no setter and no change notification. So, we will create custom actions for undo/redo.</p>
 
 <p>First, the class with only undo support:</p>
 
-<pre><code>    public class SpecialNumberContainer()
-    {
-        private int _number = 5;
-     
-        public int Number { get { return _number; } }
-         
-        public int IncreaseNumber()
-        {
-            _number++;
-             
-            var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-            mementoService.Add(new ActionUndo(this, () =&gt; _number--)); 
-        }
-    }
+<pre><code>	public class SpecialNumberContainer()
+	{
+	    private int _number = 5;
+	 
+	    public int Number { get { return _number; } }
+	     
+	    public int IncreaseNumber()
+	    {
+	        _number++;
+	         
+	        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	        mementoService.Add(new ActionUndo(this, () =&gt; _number--)); 
+	    }
+	}
 </code></pre>
 
 <p>The code above will add a new action to the undo stack every time the <code>IncreaseNumber</code> method is called. Then, it will not add it to the redo stack because redo is not possible (we haven&rsquo;t provided a redo action).</p>
 
 <p>Below is the same class, but now with redo support:</p>
 
-<pre><code>    public class SpecialNumberContainer()
-    {
-        private int _number = 5;
-     
-        public int Number { get { return _number; } }
-         
-        public int IncreaseNumber()
-        {
-            _number++;
-             
-            var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-            mementoService.Add(new ActionUndo(this, () =&gt; _number--, () =&gt; _number++)); 
-        }
-    }
+<pre><code>	public class SpecialNumberContainer()
+	{
+	    private int _number = 5;
+	 
+	    public int Number { get { return _number; } }
+	     
+	    public int IncreaseNumber()
+	    {
+	        _number++;
+	         
+	        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	        mementoService.Add(new ActionUndo(this, () =&gt; _number--, () =&gt; _number++)); 
+	    }
+	}
 </code></pre>
 
 <p>The code above will add a new action to the undo stack every time the <code>IncreaseNumber</code> method is called. Then, when an action is undo-ed, the action is added to the redo stack and it is possible to redo the action because the redo action was provided as well.</p>
@@ -783,8 +783,8 @@
 
 <p>When an action no longer has to be in the undo/redo stack of the <code>IMementoService</code>, one should call the <code>Clear</code> method with the instance of the method as shown in the sample below:</p>
 
-<pre><code>    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
-    mementoService.Clear(myInstanceContainingTheMethod);
+<pre><code>	var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+	mementoService.Clear(myInstanceContainingTheMethod);
 </code></pre>
 
 

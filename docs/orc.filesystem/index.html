@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -529,7 +529,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.FileSystem?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FileSystem" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.FileSystem?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.FileSystem" /></a></td>
 </tr>
 
 <tr>
@@ -549,7 +549,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.FileSystem">https://github.com/WildGums/Orc.FileSystem</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FileSystem" target="_blank">https://github.com/WildGums/Orc.FileSystem</a></p>
 
 <p>This library wraps file system methods inside services. The advantages are:</p>
 
@@ -591,43 +591,43 @@
 
 <h2 id="start-watching-for-changes">Start watching for changes</h2>
 
-<pre><code>    ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
-    await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
+<pre><code>	ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
+	await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
 </code></pre>
 
 <h2 id="writing-files">Writing files</h2>
 
 <p>The writing of the files can happen in a completely different app, the services will take care of the synchronization automatically. To write files, use the following code:</p>
 
-<pre><code>    var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
-    var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
-    
-    await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x =&gt; 
-    {
-        fileService.WriteAllText(file1, &quot;sample content&quot;);
-        fileService.WriteAllText(file2, &quot;sample content&quot;);
-    
-        return true;
-    });
+<pre><code>	var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
+	var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
+	
+	await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x =&gt; 
+	{
+	    fileService.WriteAllText(file1, &quot;sample content&quot;);
+		fileService.WriteAllText(file2, &quot;sample content&quot;);
+	
+	    return true;
+	});
 </code></pre>
 
 <h2 id="reading-files">Reading files</h2>
 
 <p>To read files, use the following code:</p>
 
-<pre><code>    var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
-    var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
-    
-    var file1Contents = string.Empty;
-    var file2Contents = string.Empty;
-    
-    await ioSynchronizationService.ExecuteReadingAsync(projectDirectory, async x =&gt; 
-    {
-        file1Contents = fileService.ReadAllText(file1);
-        file2Contents = fileService.ReadAllText(file2);
-    
-        return true;
-    });
+<pre><code>	var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
+	var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
+	
+	var file1Contents = string.Empty;
+	var file2Contents = string.Empty;
+	
+	await ioSynchronizationService.ExecuteReadingAsync(projectDirectory, async x =&gt; 
+	{
+	    file1Contents = fileService.ReadAllText(file1);
+		file2Contents = fileService.ReadAllText(file2);
+	
+	    return true;
+	});
 </code></pre>
 
 

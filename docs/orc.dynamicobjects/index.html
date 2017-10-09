@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -527,7 +527,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects" /></a></td>
 </tr>
 
 <tr>
@@ -547,32 +547,32 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.DynamicObjects">https://github.com/WildGums/Orc.DynamicObjects</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.DynamicObjects" target="_blank">https://github.com/WildGums/Orc.DynamicObjects</a></p>
 
 <h1 id="introduction">Introduction</h1>
 
 <p>In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time.</p>
 
 <p>@alert info
-For more information about dynamic programming, see <a href="http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx">MSDN</a>.
+For more information about dynamic programming, see <a href="http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx" target="_blank">MSDN</a>.
 @end</p>
 
 <h2 id="creating-dynamic-objects">Creating dynamic objects</h2>
 
 <p>Creating a dynamic object with full Catel functionality is easy. Just add the <code>Orc.DynamicObjects</code> reference via NuGet and create a class that derives from <code>DynamicModelBase</code>:</p>
 
-<pre><code>    public class DynamicModel : DynamicModelBase
-    {
-        // TODO: Add custom functionality if required
-    }
+<pre><code>	public class DynamicModel : DynamicModelBase
+	{
+	    // TODO: Add custom functionality if required
+	}
 </code></pre>
 
 <p>Then the dynamic model can be used like this:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-     
-    Console.WriteLine(model.NonExistingProperty);
+<pre><code>	dynamic model = new DynamicModel();
+	model.NonExistingProperty = &quot;a dynamic value&quot;;
+	 
+	Console.WriteLine(model.NonExistingProperty);
 </code></pre>
 
 <p>@alert important
@@ -583,35 +583,35 @@ It is important to know that you must use the keyword <em>dynamic</em> to insta
 
 <p>The <code>DynamicModelBase</code> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <code>ModelBase</code> functionality, cast it to the right type:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-     
-    // Note: the Validate method is available on the ModelBase
-    var modelBase = (ModelBase)model;
-    modelBase.Validate();
+<pre><code>	dynamic model = new DynamicModel();
+	model.NonExistingProperty = &quot;a dynamic value&quot;;
+	 
+	// Note: the Validate method is available on the ModelBase
+	var modelBase = (ModelBase)model;
+	modelBase.Validate();
 </code></pre>
 
 <h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</h2>
 
 <p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-    
-    var serializer = SerializationFactory.GetXmlSerializer();
-    
-    using (var memoryStream = new MemoryStream())
-    {
-        var dynamicModel = (DynamicModel)model;
-        serializer.Serialize(dynamicModel, memoryStream);
-    
-        memoryStream.Position = 0L;
-    
-        dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
-        var deserializedDynamicModel = (DynamicModel) deserializedModel;
-    
-        // deserializedDynamicModel is now a dynamically deserialized object
-    }
+<pre><code>	dynamic model = new DynamicModel();
+	model.NonExistingProperty = &quot;a dynamic value&quot;;
+	
+	var serializer = SerializationFactory.GetXmlSerializer();
+	
+	using (var memoryStream = new MemoryStream())
+	{
+		var dynamicModel = (DynamicModel)model;
+		serializer.Serialize(dynamicModel, memoryStream);
+	
+		memoryStream.Position = 0L;
+	
+		dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
+		var deserializedDynamicModel = (DynamicModel) deserializedModel;
+	
+		// deserializedDynamicModel is now a dynamically deserialized object
+	}
 </code></pre>
 
 
