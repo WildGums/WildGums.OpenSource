@@ -36,6 +36,8 @@ Our goal is to develop standard compliant, high quality libraries that will allo
 
 To this end we also maintain and develop a WPF/XAML shell called [Orchestra](https://github.com/WildGums/Orchestra), which allows developers to focus on the business logic and less on scaffolding.
 
+All our libraries (and applications) fallow the same coding standards and structure, so once you learn how to use one library you will feel right at home with all the others.
+
 ## Release cycle
 
 - Stable: every 2 to 3 months (`master` branch).
