@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="generator" content="Hugo 0.29" />
     <meta name="description" content="">
 
 
@@ -551,7 +551,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.NuGetExplorer?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.NuGetExplorer" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.NuGetExplorer?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.NuGetExplorer" /></a></td>
 </tr>
 
 <tr>
@@ -571,7 +571,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.NuGetExplorer">https://github.com/WildGums/Orc.NuGetExplorer</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.NuGetExplorer" target="_blank">https://github.com/WildGums/Orc.NuGetExplorer</a></p>
 
 <p>This library provides everything you need to explore and download packages from the NuGet gallery as well as any private feed.</p>
 
@@ -599,8 +599,8 @@
 <p>library consists of two NuGet packages:</p>
 
 <ul>
-<li><strong><a href="http://www.nuget.org/packages/Orc.NuGetExplorer/">Orc.NuGetExplorer</a></strong> =&gt; Core logic, which can be used to work in the background.</li>
-<li><strong><a href="http://www.nuget.org/packages/Orc.NuGetExplorer.Xaml">Orc.NuGetExplorer.Xaml</a></strong> =&gt; Provides the UI for <code>Orc.NuGetExplorer</code></li>
+<li><strong><a href="http://www.nuget.org/packages/Orc.NuGetExplorer/" target="_blank">Orc.NuGetExplorer</a></strong> =&gt; Core logic, which can be used to work in the background.</li>
+<li><strong><a href="http://www.nuget.org/packages/Orc.NuGetExplorer.Xaml" target="_blank">Orc.NuGetExplorer.Xaml</a></strong> =&gt; Provides the UI for <code>Orc.NuGetExplorer</code></li>
 </ul>
 
 <h2 id="screenshots">Screenshots</h2>
@@ -655,7 +655,7 @@
     
     private async Task ShowNuGetDialog()
     {
-        await _packagesUiService.ShowPackagesExplorer();
+	    await _packagesUiService.ShowPackagesExplorer();
     }
 }
 </code></pre>
@@ -679,7 +679,7 @@
     private async Task ShowRecommenedUpdates()
     {
         var packages = await _packagesUpdatesSearcherService.SearchForUpdatesAsync(false);
-        await _packageBatchService.ShowPackagesBatchAsync(packages, PackageOperationType.Update);
+	    await _packageBatchService.ShowPackagesBatchAsync(packages, PackageOperationType.Update);
     }
 }
 </code></pre>
