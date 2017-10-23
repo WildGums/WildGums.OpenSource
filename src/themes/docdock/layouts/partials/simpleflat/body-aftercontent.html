@@ -1,0 +1,25 @@
+
+    <div id="edit-github-link">
+    {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+      {{ $File := .File }}
+      {{ $Site := .Site }}
+      {{with $File.Path }}
+      <div id="top-github-link">
+        <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+          <i class="fa fa-code-fork"></i>
+          {{T "Edit-this-page"}}
+        </a>
+      </div>
+      {{- end }}
+    {{- end -}}
+	</div>
+
+    {{ partial "custom-content-footer.html" . }}
+</div> <!-- fin de content -->
+
+{{ partial "next-prev-page.html" . }}
+
+</section>
+
+{{ partial "simpleflat/scripts.html" . }}
+

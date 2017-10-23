@@ -24,15 +24,17 @@ Comment out following line, so default `themes/` will be used:
 ```
 
 
+{{%excerpt%}}
+## Activate search
 
-## Search index generation
+If not already present, add the follow lines to the `config.toml` file.
 
-Check the following line in the same `config.toml` file.
-
-```
+```toml
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 ```
+{{% /excerpt%}}
+
 
 LUNRJS search index file will be generated on content changes.
 

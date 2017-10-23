@@ -41,32 +41,7 @@
 </script>
   </head>
   <body class="" data-url="/orc.wizard/">
-    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
-  <div id="header-wrapper">
-    <div id="header"> 
-	<p>WildGums open source center</p>
- 
-
-
-    </div><div class="searchbox">
-    <label for="search-by"><i class="fa fa-search"></i></label>
-    <input data-search-input id="search-by" type="text" placeholder="Search...">
-    <span data-search-clear=""><i class="fa fa-close"></i></span>
-</div>
-<script type="text/javascript" src="/js/lunr.min.js"></script>
-<script type="text/javascript" src="/js/auto-complete.js"></script>
-<script type="text/javascript">
-    var baseurl = "http:\/\/opensource.wildgums.com\/";
-</script>
-<script type="text/javascript" src="/js/search.js"></script>
-
-  </div>
-
-
-    <ul class="topics">
-            <li data-nav-id="/" class="dd-item">
-            <a href="/"><i class="fa fa-fw fa-home"></i></a>
-            </li>
+    
     <li data-nav-id="/orc.analytics/" class="dd-item">
       <a href="/orc.analytics/">
         <span>Orc.Analytics</span><i class="fa fa-circle-thin read-icon"></i>
@@ -450,29 +425,6 @@
         <span>Orchestra</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-        <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/wildgums/wildgums.opensource" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
-        </section>
-            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
-    </ul>
-
-
-    <section id="footer"><center>
-
-<a class="github-button" href="https://github.com/catel/catel/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Catel on GitHub">Download</a>
-
-
-<a class="github-button" href="https://github.com/catel/catel" data-icon="octicon-star" data-show-count="false" aria-label="Star Catel on GitHub">Star</a>
-
-
-<a class="github-button" href="https://github.com/catel/catel/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Catel on GitHub">Fork</a>
-
-</center>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-    </section>
-  </div>
-</nav>
 
 
 
@@ -557,7 +509,7 @@
 <tbody>
 <tr>
 <td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.Wizard?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Wizard" /></a></td>
+<td><a href="https://gitter.im/WildGums/Orc.Wizard?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/WildGums/Orc.Wizard" /></a></td>
 </tr>
 
 <tr>
@@ -577,7 +529,7 @@
 </tbody>
 </table>
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.Wizard">https://github.com/WildGums/Orc.Wizard</a></p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Wizard" target="_blank">https://github.com/WildGums/Orc.Wizard</a></p>
 
 <p>Easily create beautifully looking wizards for WPF using MVVM.</p>
 
@@ -736,7 +688,7 @@
 <pre><code>var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
 </code></pre>
 
-<p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>
+<p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup" target="_blank">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>
 
 <p>Background information: The reason for the <code>TypeNotRegisteredException</code> probably is that you are only using interfaces from this component or Catel.MVVM at this stage. For the .NET runtime, using an interface is not sufficient to load an assembly (such as this component or any of the Catel libraries) into the AppDomain. This means that the assemblies don&rsquo;t get a chance to register their services into the service locator.</p>
 
@@ -777,8 +729,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-        
-
+        <footer class=" footline" >
+	
+</footer>
       </div>
     </div>
 
@@ -811,6 +764,5 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/mermaid/mermaid.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
     
-
   </body>
 </html>

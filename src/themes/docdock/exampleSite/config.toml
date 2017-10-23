@@ -8,12 +8,13 @@ themesdir = "../.."
 
 [params]
 editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
-noHomeIcon = false # default is false
-noSearch = false # default is false
 showVisitedLinks = true # default is false
-# themeStyle = "theme" # overide base css
+themeStyle = "original" # "original" or "simpleflat" # default "original"
 themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
 ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
