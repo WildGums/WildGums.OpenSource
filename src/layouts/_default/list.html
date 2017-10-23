@@ -1,5 +1,5 @@
-{{ partial "header.html" . }}
-
+{{ define "main" }}
+{{if .Content}}
 {{ .Content }}
 
 <hr />
@@ -34,21 +34,20 @@ s.setAttribute('data-timestamp', +new Date());
 	{{end}}
 </footer>
 
+{{else }}
+{{ $paginator := .Paginator }}
 
-{{if not .Content }}
-	{{ $paginator := .Paginator }}
+<div class="extra-pagination inner">
+{{ partial "pagination.html" $paginator }}
+</div>
 
-	<div class="extra-pagination inner">
-	{{ partial "pagination.html" $paginator }}
-	</div>
+{{ range $index, $page := $paginator.Pages }}
+   {{ .Render "li" }}
+{{ end }}
 
-	{{ range $index, $page := $paginator.Pages }}
-	   {{ .Render "li" }}
-	{{ end }}
+<div style="margin-bottom:2rem"></div>
 
-	<div style="margin-bottom:2rem"></div>
+{{ partial "pagination.html" $paginator }}
 
-	{{ partial "pagination.html" $paginator }}
 {{end}}
-
-{{ partial "footer.html" . }}
+{{end}}
