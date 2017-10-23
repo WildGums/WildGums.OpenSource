@@ -47,8 +47,8 @@ The `IOSynchronizerService` can take care of synchronized blocks of reading and/
 ## Start watching for changes
 
 ```
-	ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
-	await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
+ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
+await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
 ```
 
 ## Writing files
@@ -56,16 +56,16 @@ The `IOSynchronizerService` can take care of synchronized blocks of reading and/
 The writing of the files can happen in a completely different app, the services will take care of the synchronization automatically. To write files, use the following code:
 
 ```
-	var file1 = Path.Combine(projectDirectory, "file1.txt");
-	var file2 = Path.Combine(projectDirectory, "file2.txt");
-	
-	await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x => 
-	{
-	    fileService.WriteAllText(file1, "sample content");
-		fileService.WriteAllText(file2, "sample content");
-	
-	    return true;
-	});
+var file1 = Path.Combine(projectDirectory, "file1.txt");
+var file2 = Path.Combine(projectDirectory, "file2.txt");
+
+await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x => 
+{
+	fileService.WriteAllText(file1, "sample content");
+	fileService.WriteAllText(file2, "sample content");
+
+	return true;
+});
 ```
 
 ## Reading files
@@ -73,17 +73,17 @@ The writing of the files can happen in a completely different app, the services 
 To read files, use the following code:
 
 ```
-	var file1 = Path.Combine(projectDirectory, "file1.txt");
-	var file2 = Path.Combine(projectDirectory, "file2.txt");
-	
-	var file1Contents = string.Empty;
-	var file2Contents = string.Empty;
-	
-	await ioSynchronizationService.ExecuteReadingAsync(projectDirectory, async x => 
-	{
-	    file1Contents = fileService.ReadAllText(file1);
-		file2Contents = fileService.ReadAllText(file2);
-	
-	    return true;
-	});
+var file1 = Path.Combine(projectDirectory, "file1.txt");
+var file2 = Path.Combine(projectDirectory, "file2.txt");
+
+var file1Contents = string.Empty;
+var file2Contents = string.Empty;
+
+await ioSynchronizationService.ExecuteReadingAsync(projectDirectory, async x => 
+{
+	file1Contents = fileService.ReadAllText(file1);
+	file2Contents = fileService.ReadAllText(file2);
+
+	return true;
+});
 ```

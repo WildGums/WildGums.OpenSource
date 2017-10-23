@@ -3,15 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://opensource.wildgums.com/orc.entityframework/using-stored-procedures-and-functions/</loc>
-  </url>
-  
-  <url>
     <loc>http://opensource.wildgums.com/orc.entityframework/using-the-dbcontextmanager/</loc>
   </url>
   
   <url>
-    <loc>http://opensource.wildgums.com/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/</loc>
+    <loc>http://opensource.wildgums.com/orc.prism/using-the-bootstrapper/</loc>
   </url>
   
   <url>
@@ -27,11 +23,15 @@
   </url>
   
   <url>
+    <loc>http://opensource.wildgums.com/orc.entityframework/using-stored-procedures-and-functions/</loc>
+  </url>
+  
+  <url>
     <loc>http://opensource.wildgums.com/orc.prism/translating-or-customizing/</loc>
   </url>
   
   <url>
-    <loc>http://opensource.wildgums.com/orc.prism/using-the-bootstrapper/</loc>
+    <loc>http://opensource.wildgums.com/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/</loc>
   </url>
   
   <url>
@@ -53,6 +53,10 @@
   
   <url>
     <loc>http://opensource.wildgums.com/orc.controls/colorpicker/</loc>
+  </url>
+  
+  <url>
+    <loc>http://opensource.wildgums.com/orc.prism/module-catalogs/compositemodulecatalog/</loc>
   </url>
   
   <url>
@@ -81,6 +85,10 @@
   
   <url>
     <loc>http://opensource.wildgums.com/orc.controls/directorypicker/</loc>
+  </url>
+  
+  <url>
+    <loc>http://opensource.wildgums.com/orc.prism/module-catalogs/downloadingmodulecatalog/</loc>
   </url>
   
   <url>
@@ -113,6 +121,10 @@
   
   <url>
     <loc>http://opensource.wildgums.com/orc.controls/logviewer/</loc>
+  </url>
+  
+  <url>
+    <loc>http://opensource.wildgums.com/orc.prism/module-catalogs/nugetbasedmodulecatalog/</loc>
   </url>
   
   <url>
@@ -265,6 +277,10 @@
   
   <url>
     <loc>http://opensource.wildgums.com/orc.controls/pinnabletooltips/</loc>
+  </url>
+  
+  <url>
+    <loc>http://opensource.wildgums.com/orc.prism/module-catalogs/safedirectorymodulecatalog/</loc>
   </url>
   
   <url>

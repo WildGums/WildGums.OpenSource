@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -577,8 +599,8 @@
 
 <p>Two data collection should be created: one for input and one for filtered output:</p>
 
-<pre><code>    public ObservableCollection&lt;TestEntity&gt; RawItems { get; private set; }
-    public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; }
+<pre><code>public ObservableCollection&lt;TestEntity&gt; RawItems { get; private set; }
+public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; }
 </code></pre>
 
 <h3 id="adding-component-to-your-application">Adding component to your application</h3>
@@ -590,14 +612,14 @@
 
 <p>Prior to using the component add the <code>FilterBuilder</code> namespace to your View:</p>
 
-<pre><code>    xmlns:orc=&quot;http://www.wildgums.net.au/orc&quot;
+<pre><code>xmlns:orc=&quot;http://www.wildgums.net.au/orc&quot;
 </code></pre>
 
 <p>Next include the actual component to your View using the following code:</p>
 
-<pre><code>    &lt;orc:FilterBuilderControl 
-        RawCollection=&quot;{Binding RawItems}&quot;
-        FilteredCollection=&quot;{Binding FilteredItems}&quot;/&gt;
+<pre><code>&lt;orc:FilterBuilderControl 
+    RawCollection=&quot;{Binding RawItems}&quot;
+    FilteredCollection=&quot;{Binding FilteredItems}&quot; /&gt;
 </code></pre>
 
 <p>The <code>EditFilterView</code> is located in FilterBuilder project. It will show the filtering options window to the end user.</p>
@@ -623,32 +645,32 @@ Install-Package Catel.MVVM -Pre
 
 <p>Or, through Package Manager Console using bellow commands:</p>
 
-<pre><code>    Install-Package MahApps.Metro –Pre
-    Install-Package  MahApps.Metro.Resources.Standalone
+<pre><code>Install-Package MahApps.Metro –Pre
+Install-Package  MahApps.Metro.Resources.Standalone
 </code></pre>
 
 <p>First, modify the test project (<code>Orc.FilterBuilder.Test</code>) by adding the following code to the <code>MainWindow.xaml</code> header:</p>
 
-<pre><code>    &lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Test.NET40.MainWindow&quot;
-            xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-            xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-            xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
-            xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
+<pre><code>&lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Test.NET40.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
+        xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
 </code></pre>
 
 <p>Also, reference the Styles in the <code>App.xaml</code> file:</p>
 
-<pre><code>    &lt;Application.Resources&gt;
-        &lt;ResourceDictionary&gt;
-            &lt;ResourceDictionary.MergedDictionaries&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;
-            &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;
-            &lt;/ResourceDictionary.MergedDictionaries&gt;
-        &lt;/ResourceDictionary&gt;
-    &lt;/Application.Resources&gt;
+<pre><code>&lt;Application.Resources&gt;
+    &lt;ResourceDictionary&gt;
+        &lt;ResourceDictionary.MergedDictionaries&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;
+        &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;
+        &lt;/ResourceDictionary.MergedDictionaries&gt;
+    &lt;/ResourceDictionary&gt;
+&lt;/Application.Resources&gt;
 </code></pre>
 
 <p>Compile the sample project and you should see the basic Metro UI style applied to your application.</p>
@@ -660,28 +682,28 @@ Install-Package Catel.MVVM -Pre
 <p>Add <code>Resources</code> folder along with necessary files to the Control project.
 Also, in the <code>EditFilterView.xaml</code> modify the ResourceDictionary section as follows:</p>
 
-<pre><code>    &lt;ResourceDictionary&gt;
-        &lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
-        &lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
-        &lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
-        &lt;ResourceDictionary.MergedDictionaries&gt;
-            &lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
-        &lt;/ResourceDictionary.MergedDictionaries&gt;
-    &lt;/ResourceDictionary&gt;
+<pre><code>&lt;ResourceDictionary&gt;
+    &lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
+    &lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
+    &lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
+    &lt;ResourceDictionary.MergedDictionaries&gt;
+        &lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
+    &lt;/ResourceDictionary.MergedDictionaries&gt;
+&lt;/ResourceDictionary&gt;
 </code></pre>
 
 <p>To customize the style of the buttons add the <code>MetroCircleButtonStyle</code> and appropriate icon reference from the specified StaticResource (<code>appbar_add</code>) :</p>
 
-<pre><code>    &lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
-                                        Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
-                                        CommandParameter=&quot;{Binding}&quot;
-                                        Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;
-        &lt;Rectangle Width=&quot;20&quot; Height=&quot;20&quot;&gt;
-            &lt;Rectangle.Fill&gt;
-                &lt;VisualBrush Stretch=&quot;Fill&quot; Visual=&quot;{StaticResource appbar_add}&quot; /&gt;
-            &lt;/Rectangle.Fill&gt;
-        &lt;/Rectangle&gt;
-    &lt;/Button&gt;
+<pre><code>&lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
+                                    Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
+                                    CommandParameter=&quot;{Binding}&quot;
+                                    Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;
+    &lt;Rectangle Width=&quot;20&quot; Height=&quot;20&quot;&gt;
+        &lt;Rectangle.Fill&gt;
+            &lt;VisualBrush Stretch=&quot;Fill&quot; Visual=&quot;{StaticResource appbar_add}&quot; /&gt;
+        &lt;/Rectangle.Fill&gt;
+    &lt;/Rectangle&gt;
+&lt;/Button&gt;
 </code></pre>
 
 <p><img src="../images/orc.filterbuilder/metro_2.png" alt="FilterBuilder project" /></p>

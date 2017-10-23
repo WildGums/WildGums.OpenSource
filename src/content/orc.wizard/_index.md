@@ -36,27 +36,27 @@ A wizard page contains of three parts which are explained below.
 The wizard model will hold all the information of the wizard page and return the summary (which is optional). 
 
 ```
-	public class PersonWizardPage : WizardPageBase
+public class PersonWizardPage : WizardPageBase
+{
+	public PersonWizardPage()
 	{
-	    public PersonWizardPage()
-	    {
-	        Title = "Person";
-	        Description = "Enter the details of the person";
-	    }
-	
-	    public string FirstName { get; set; }
-	
-	    public string LastName { get; set; }
-	
-	    public override ISummaryItem GetSummary()
-	    {
-	        return new SummaryItem
-	        {
-	            Title = "Person",
-	            Summary = string.Format("{0} {1}", FirstName, LastName)
-	        };
-	    }
+		Title = "Person";
+		Description = "Enter the details of the person";
 	}
+
+	public string FirstName { get; set; }
+
+	public string LastName { get; set; }
+
+	public override ISummaryItem GetSummary()
+	{
+		return new SummaryItem
+		{
+			Title = "Person",
+			Summary = string.Format("{0} {1}", FirstName, LastName)
+		};
+	}
+}
 ```
 
 ## Creating the wizard page view model
@@ -64,34 +64,34 @@ The wizard model will hold all the information of the wizard page and return the
 The view model is responsible for the actual view logic. There can be a lot of stuff in here that is view-specific, as long as the results are stored into the model. This example uses the `ViewModelToModel` feature of Catel to automatically map the values between the view model and model. As you can see this example even contains validation, so users cannot continue to the next page when the validation does not succeed.
 
 ```
-	public class PersonWizardPageViewModel : WizardPageViewModelBase<PersonWizardPage>
+public class PersonWizardPageViewModel : WizardPageViewModelBase<PersonWizardPage>
+{
+	public PersonWizardPageViewModel(PersonWizardPage wizardPage)
+		: base(wizardPage)
 	{
-	    public PersonWizardPageViewModel(PersonWizardPage wizardPage)
-	        : base(wizardPage)
-	    {
-	    }
-	
-	    [ViewModelToModel]
-	    public string FirstName { get; set; }
-	
-	    [ViewModelToModel]
-	    public string LastName { get; set; }
-	
-	    protected override void ValidateFields(List<IFieldValidationResult> validationResults)
-	    {
-	        base.ValidateFields(validationResults);
-	
-	        if (string.IsNullOrWhiteSpace(FirstName))
-	        {
-	            validationResults.Add(FieldValidationResult.CreateError("FirstName", "First name is required"));
-	        }
-	
-	        if (string.IsNullOrWhiteSpace(LastName))
-	        {
-	            validationResults.Add(FieldValidationResult.CreateError("LastName", "Last name is required"));
-	        }
-	    }
 	}
+
+	[ViewModelToModel]
+	public string FirstName { get; set; }
+
+	[ViewModelToModel]
+	public string LastName { get; set; }
+
+	protected override void ValidateFields(List<IFieldValidationResult> validationResults)
+	{
+		base.ValidateFields(validationResults);
+
+		if (string.IsNullOrWhiteSpace(FirstName))
+		{
+			validationResults.Add(FieldValidationResult.CreateError("FirstName", "First name is required"));
+		}
+
+		if (string.IsNullOrWhiteSpace(LastName))
+		{
+			validationResults.Add(FieldValidationResult.CreateError("LastName", "Last name is required"));
+		}
+	}
+}
 ```
 
 ## Creating the wizard page view
@@ -99,35 +99,35 @@ The view model is responsible for the actual view logic. There can be a lot of s
 Below is the xaml view for the wizard page. Note that it's just an ordinary Catel UserControl.
 
 ```
-	<catel:UserControl x:Class="Orc.Wizard.Example.Wizard.Views.PersonWizardPageView"
-					   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-					   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-					   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-					   xmlns:catel="http://schemas.catelproject.com"
-					   mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
-	
-		<catel:StackGrid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="*" />
-			</Grid.ColumnDefinitions>
-			
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="*" />
-			</Grid.RowDefinitions>
-	
-			<Label Content="First name" />
-			<TextBox Text="{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
-			
-			<Label Content="Last name" />
-			<TextBox Text="{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
-			
-		</catel:StackGrid>
+<catel:UserControl x:Class="Orc.Wizard.Example.Wizard.Views.PersonWizardPageView"
+				   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+				   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				   xmlns:catel="http://schemas.catelproject.com"
+				   mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+
+	<catel:StackGrid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
 		
-	</catel:UserControl>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Label Content="First name" />
+		<TextBox Text="{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
+		
+		<Label Content="Last name" />
+		<TextBox Text="{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
+		
+	</catel:StackGrid>
+	
+</catel:UserControl>
 ```
 
 # Creating the wizard
@@ -135,20 +135,20 @@ Below is the xaml view for the wizard page. Note that it's just an ordinary Cate
 Once all the wizard pages have been created, it's time to wrap it inside an actual wizard. Below is an example:
 
 ```
-	public class ExampleWizard : WizardBase
+public class ExampleWizard : WizardBase
+{
+	public ExampleWizard(ITypeFactory typeFactory)
+		: base(typeFactory)
 	{
-	    public ExampleWizard(ITypeFactory typeFactory)
-	        : base(typeFactory)
-	    {
-	        Title = "Orc.Wizard example"; 
-	
-	        this.AddPage<PersonWizardPage>();
-	        this.AddPage<AgeWizardPage>();
-	        this.AddPage<SkillsWizardPage>();
-	        this.AddPage<ComponentsWizardPage>();
-	        this.AddPage<SummaryWizardPage>();
-	    }
+		Title = "Orc.Wizard example"; 
+
+		this.AddPage<PersonWizardPage>();
+		this.AddPage<AgeWizardPage>();
+		this.AddPage<SkillsWizardPage>();
+		this.AddPage<ComponentsWizardPage>();
+		this.AddPage<SummaryWizardPage>();
 	}
+}
 ```
 
 # Using the wizard
@@ -156,7 +156,7 @@ Once all the wizard pages have been created, it's time to wrap it inside an actu
 Using the wizard can be done via the `IWizardService`. Below is an example on how to show a wizard:
 
 ```
-	await _wizardService.ShowWizardAsync<ExampleWizard>();
+await _wizardService.ShowWizardAsync<ExampleWizard>();
 ```
 
 # Enjoying the wizard
@@ -170,7 +170,7 @@ Using the wizard can be done via the `IWizardService`. Below is an example on ho
 When you obtain a service object from the service locator, you will write code such as the following:
 
 ```
-	var myService = serviceLocator.ResolveType<IMyService>();
+var myService = serviceLocator.ResolveType<IMyService>();
 ```
 
 If this causes a `TypeNotRegisteredException` to be thrown in your project, then the simplest and best solution is to add the Fody add-in [LoadAssembliesOnStartup](https://github.com/Fody/LoadAssembliesOnStartup) to your project, preferrably via NuGet.

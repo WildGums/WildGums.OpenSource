@@ -23,7 +23,7 @@ Initializing the service is really easy. It tries to get as much information as 
 Use the code to initialize the service by letting the service injected into a view model or resolve it manually from the service locator, then call this code:
 
 ```
-    googleAnalyticsService.AccountId = AccountId;
+googleAnalyticsService.AccountId = AccountId;
 ```
 
 # Customizing user ID
@@ -41,7 +41,7 @@ You can send data to Google Analytics with several calls. Below are all the call
 Use the following method:
 
 ```
-    public async Task SendView(string viewName);
+public async Task SendView(string viewName);
 ```
 
 ## SendEvent
@@ -49,7 +49,7 @@ Use the following method:
 Use the following method:
 
 ```
-    public async Task SendEvent(string category, string action, string label = null, long value = 0);
+public async Task SendEvent(string category, string action, string label = null, long value = 0);
 ```
 
 ## SendTransaction
@@ -57,7 +57,7 @@ Use the following method:
 Use the following method:
 
 ```
-    public async Task SendTransaction(string sku, string name, string transactionId, long costPerProduct, int quantity = 1);
+public async Task SendTransaction(string sku, string name, string transactionId, long costPerProduct, int quantity = 1);
 ```
 
 ## SendTiming
@@ -65,5 +65,5 @@ Use the following method:
 Use the following method:
 
 ```
-    public async Task SendTiming(TimeSpan time, string category, string variable, string label = "")
+public async Task SendTiming(TimeSpan time, string category, string variable, string label = "")
 ```

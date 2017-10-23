@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -582,123 +604,123 @@
 
 <p>The wizard model will hold all the information of the wizard page and return the summary (which is optional).</p>
 
-<pre><code>    public class PersonWizardPage : WizardPageBase
+<pre><code>public class PersonWizardPage : WizardPageBase
+{
+    public PersonWizardPage()
     {
-        public PersonWizardPage()
-        {
-            Title = &quot;Person&quot;;
-            Description = &quot;Enter the details of the person&quot;;
-        }
-    
-        public string FirstName { get; set; }
-    
-        public string LastName { get; set; }
-    
-        public override ISummaryItem GetSummary()
-        {
-            return new SummaryItem
-            {
-                Title = &quot;Person&quot;,
-                Summary = string.Format(&quot;{0} {1}&quot;, FirstName, LastName)
-            };
-        }
+        Title = &quot;Person&quot;;
+        Description = &quot;Enter the details of the person&quot;;
     }
+
+    public string FirstName { get; set; }
+
+    public string LastName { get; set; }
+
+    public override ISummaryItem GetSummary()
+    {
+        return new SummaryItem
+        {
+            Title = &quot;Person&quot;,
+            Summary = string.Format(&quot;{0} {1}&quot;, FirstName, LastName)
+        };
+    }
+}
 </code></pre>
 
 <h2 id="creating-the-wizard-page-view-model">Creating the wizard page view model</h2>
 
 <p>The view model is responsible for the actual view logic. There can be a lot of stuff in here that is view-specific, as long as the results are stored into the model. This example uses the <code>ViewModelToModel</code> feature of Catel to automatically map the values between the view model and model. As you can see this example even contains validation, so users cannot continue to the next page when the validation does not succeed.</p>
 
-<pre><code>    public class PersonWizardPageViewModel : WizardPageViewModelBase&lt;PersonWizardPage&gt;
+<pre><code>public class PersonWizardPageViewModel : WizardPageViewModelBase&lt;PersonWizardPage&gt;
+{
+    public PersonWizardPageViewModel(PersonWizardPage wizardPage)
+        : base(wizardPage)
     {
-        public PersonWizardPageViewModel(PersonWizardPage wizardPage)
-            : base(wizardPage)
+    }
+
+    [ViewModelToModel]
+    public string FirstName { get; set; }
+
+    [ViewModelToModel]
+    public string LastName { get; set; }
+
+    protected override void ValidateFields(List&lt;IFieldValidationResult&gt; validationResults)
+    {
+        base.ValidateFields(validationResults);
+
+        if (string.IsNullOrWhiteSpace(FirstName))
         {
+            validationResults.Add(FieldValidationResult.CreateError(&quot;FirstName&quot;, &quot;First name is required&quot;));
         }
-    
-        [ViewModelToModel]
-        public string FirstName { get; set; }
-    
-        [ViewModelToModel]
-        public string LastName { get; set; }
-    
-        protected override void ValidateFields(List&lt;IFieldValidationResult&gt; validationResults)
+
+        if (string.IsNullOrWhiteSpace(LastName))
         {
-            base.ValidateFields(validationResults);
-    
-            if (string.IsNullOrWhiteSpace(FirstName))
-            {
-                validationResults.Add(FieldValidationResult.CreateError(&quot;FirstName&quot;, &quot;First name is required&quot;));
-            }
-    
-            if (string.IsNullOrWhiteSpace(LastName))
-            {
-                validationResults.Add(FieldValidationResult.CreateError(&quot;LastName&quot;, &quot;Last name is required&quot;));
-            }
+            validationResults.Add(FieldValidationResult.CreateError(&quot;LastName&quot;, &quot;Last name is required&quot;));
         }
     }
+}
 </code></pre>
 
 <h2 id="creating-the-wizard-page-view">Creating the wizard page view</h2>
 
 <p>Below is the xaml view for the wizard page. Note that it&rsquo;s just an ordinary Catel UserControl.</p>
 
-<pre><code>    &lt;catel:UserControl x:Class=&quot;Orc.Wizard.Example.Wizard.Views.PersonWizardPageView&quot;
-                       xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-                       xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-                       xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; 
-                       xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
-                       xmlns:catel=&quot;http://schemas.catelproject.com&quot;
-                       mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;300&quot; d:DesignWidth=&quot;300&quot;&gt;
-    
-        &lt;catel:StackGrid&gt;
-            &lt;Grid.ColumnDefinitions&gt;
-                &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
-                &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
-            &lt;/Grid.ColumnDefinitions&gt;
-            
-            &lt;Grid.RowDefinitions&gt;
-                &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
-                &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
-                &lt;RowDefinition Height=&quot;*&quot; /&gt;
-            &lt;/Grid.RowDefinitions&gt;
-    
-            &lt;Label Content=&quot;First name&quot; /&gt;
-            &lt;TextBox Text=&quot;{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
-            
-            &lt;Label Content=&quot;Last name&quot; /&gt;
-            &lt;TextBox Text=&quot;{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
-            
-        &lt;/catel:StackGrid&gt;
+<pre><code>&lt;catel:UserControl x:Class=&quot;Orc.Wizard.Example.Wizard.Views.PersonWizardPageView&quot;
+                   xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+                   xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+                   xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; 
+                   xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+                   xmlns:catel=&quot;http://schemas.catelproject.com&quot;
+                   mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;300&quot; d:DesignWidth=&quot;300&quot;&gt;
+
+    &lt;catel:StackGrid&gt;
+        &lt;Grid.ColumnDefinitions&gt;
+            &lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
+            &lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+        &lt;/Grid.ColumnDefinitions&gt;
         
-    &lt;/catel:UserControl&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+            &lt;RowDefinition Height=&quot;*&quot; /&gt;
+        &lt;/Grid.RowDefinitions&gt;
+
+        &lt;Label Content=&quot;First name&quot; /&gt;
+        &lt;TextBox Text=&quot;{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+        
+        &lt;Label Content=&quot;Last name&quot; /&gt;
+        &lt;TextBox Text=&quot;{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+        
+    &lt;/catel:StackGrid&gt;
+    
+&lt;/catel:UserControl&gt;
 </code></pre>
 
 <h1 id="creating-the-wizard">Creating the wizard</h1>
 
 <p>Once all the wizard pages have been created, it&rsquo;s time to wrap it inside an actual wizard. Below is an example:</p>
 
-<pre><code>    public class ExampleWizard : WizardBase
+<pre><code>public class ExampleWizard : WizardBase
+{
+    public ExampleWizard(ITypeFactory typeFactory)
+        : base(typeFactory)
     {
-        public ExampleWizard(ITypeFactory typeFactory)
-            : base(typeFactory)
-        {
-            Title = &quot;Orc.Wizard example&quot;; 
-    
-            this.AddPage&lt;PersonWizardPage&gt;();
-            this.AddPage&lt;AgeWizardPage&gt;();
-            this.AddPage&lt;SkillsWizardPage&gt;();
-            this.AddPage&lt;ComponentsWizardPage&gt;();
-            this.AddPage&lt;SummaryWizardPage&gt;();
-        }
+        Title = &quot;Orc.Wizard example&quot;; 
+
+        this.AddPage&lt;PersonWizardPage&gt;();
+        this.AddPage&lt;AgeWizardPage&gt;();
+        this.AddPage&lt;SkillsWizardPage&gt;();
+        this.AddPage&lt;ComponentsWizardPage&gt;();
+        this.AddPage&lt;SummaryWizardPage&gt;();
     }
+}
 </code></pre>
 
 <h1 id="using-the-wizard">Using the wizard</h1>
 
 <p>Using the wizard can be done via the <code>IWizardService</code>. Below is an example on how to show a wizard:</p>
 
-<pre><code>    await _wizardService.ShowWizardAsync&lt;ExampleWizard&gt;();
+<pre><code>await _wizardService.ShowWizardAsync&lt;ExampleWizard&gt;();
 </code></pre>
 
 <h1 id="enjoying-the-wizard">Enjoying the wizard</h1>
@@ -711,7 +733,7 @@
 
 <p>When you obtain a service object from the service locator, you will write code such as the following:</p>
 
-<pre><code>    var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
+<pre><code>var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
 </code></pre>
 
 <p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>

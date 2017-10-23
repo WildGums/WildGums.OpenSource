@@ -28,11 +28,11 @@ There are 2 important interfaces inside this library:
 To retrieve type information about an object, the information is stored in one of the `IMetadataCollection` implementations. The developer only has to work with the *IMetadataCollection* interface. To retrieve the information, use the code below:
 
 ```
-	var allMetadata = metadataCollection.All;
-	foreach (var metadata in allMetadata)
-	{
-	    Console.WriteLine(metadata.Name);
-	}
+var allMetadata = metadataCollection.All;
+foreach (var metadata in allMetadata)
+{
+	Console.WriteLine(metadata.Name);
+}
 ```
 
 ### Retrieving metadata of a specific object
@@ -40,8 +40,8 @@ To retrieve type information about an object, the information is stored in one o
 To retrieve the metadata of a specific object, use the code below:
 
 ```
-    var metadata = metadataCollection.GetMetadata("MyMetadataName");
-    var metadataValue = metadata.GetValue(myInstance); 
+var metadata = metadataCollection.GetMetadata("MyMetadataName");
+var metadataValue = metadata.GetValue(myInstance); 
 ```
 
 ## Using reflection metadata classes
@@ -51,7 +51,7 @@ The reflection metadata classes will use reflection to retrieve metadata informa
 ### Creating the metadata collection
 
 ```
-	var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
+var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
 ```
 
 Now the metadata collection can be used to retrieve any properties from the *MyModel* class and use the `IMetadata` to get or set property values.
@@ -65,9 +65,9 @@ One way to store information separately from the actual object is to use diction
 The example below creates metadata that contains a few metadata definitions with specific types.
 
 ```
-	var dictionary = new Dictionary<string, Type>();
-	dictionary["MyStringMetadata"] = typeof(string);
-	dictionary["MyIntMetadata"] = typeof(int);
+var dictionary = new Dictionary<string, Type>();
+dictionary["MyStringMetadata"] = typeof(string);
+dictionary["MyIntMetadata"] = typeof(int);
 ```
 
 ### Interacting with the metadata
@@ -75,14 +75,14 @@ The example below creates metadata that contains a few metadata definitions with
 Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:
 
 ```
-	var metadataDictionary = new Dictionary<string, object>();
- 	dictionary["MyStringMetadata"] = "myvalue";
-	dictionary["MyIntMetadata"] = "42";
+var metadataDictionary = new Dictionary<string, object>();
+dictionary["MyStringMetadata"] = "myvalue";
+dictionary["MyIntMetadata"] = "42";
 
-	var metadata = metadataCollection.GetMetadata("MyIntMetadata");
-	var value = metadata.GetValue(metadataDictionary);
+var metadata = metadataCollection.GetMetadata("MyIntMetadata");
+var value = metadata.GetValue(metadataDictionary);
 
-	// Now value is 42
+// Now value is 42
 ```
 
 ## Other ways of storing metadata

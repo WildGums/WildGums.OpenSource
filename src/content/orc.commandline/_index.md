@@ -19,51 +19,51 @@ Use command line the easy way.
 Using this library is easy:
 
 ```
-	public class MyContext : ContextBase
-	{
-	    [Option(' ', "", HelpText = "The file name to start with")]
-	    public string FileName { get; set; }
-	
-	    [Option('b', "bool", AcceptsValue = false, HelpText = "Some boolean switch")]
-	    public bool BooleanSwitch { get; set; }
-	
-	    [Option('i', "int", HelpText = "Some integer switch")]
-	    public int IntegerSwitch { get; set; }
-	
-	    [Option('s', "string", HelpText = "Some string switch")]
-	    public string StringSwitch { get; set; }
-	}
+public class MyContext : ContextBase
+{
+	[Option(' ', "", HelpText = "The file name to start with")]
+	public string FileName { get; set; }
+
+	[Option('b', "bool", AcceptsValue = false, HelpText = "Some boolean switch")]
+	public bool BooleanSwitch { get; set; }
+
+	[Option('i', "int", HelpText = "Some integer switch")]
+	public int IntegerSwitch { get; set; }
+
+	[Option('s', "string", HelpText = "Some string switch")]
+	public string StringSwitch { get; set; }
+}
 ```
 
 Then use this code:
 
 ```
-	// Environment.CommandLine also contains current application path, it is removed with this extension method
-	var commandLine = Environment.CommandLine.GetCommandLine(true);
-	var context = new MyContext();
-	
-	var validationContext = commandLineParser.Parse(commandLine, context);
-	if (validationContext.HasErrors)
-	{
-	    // something bad happened
-	    return;
-	}
-	
-	if (context.IsHelp)
-	{
-	    // Use the IHelpWriterService to output the help
-	    var helpContent = helpWriterService.ConvertToString(context);
-	    // TODO: write to console or show as a message box
-	    return;
-	}
-	
-	// Handle the context here
+// Environment.CommandLine also contains current application path, it is removed with this extension method
+var commandLine = Environment.CommandLine.GetCommandLine(true);
+var context = new MyContext();
+
+var validationContext = commandLineParser.Parse(commandLine, context);
+if (validationContext.HasErrors)
+{
+	// something bad happened
+	return;
+}
+
+if (context.IsHelp)
+{
+	// Use the IHelpWriterService to output the help
+	var helpContent = helpWriterService.ConvertToString(context);
+	// TODO: write to console or show as a message box
+	return;
+}
+
+// Handle the context here
 ```
 
 This will successfully parse a command line like this:
 
 ```
-	myapp.exe somefile /b -string somestring /i 42
+myapp.exe somefile /b -string somestring /i 42
 ```
 
 ## Allowed switches
@@ -87,8 +87,8 @@ It's possible to retrieve all key/value pairs passed in the command line, even w
 in scenarios where the command line is used to override dynamic properties.
 
 ```
-	var rawValues = context.RawValues;
-	myValue = rawValues["someswitch"];
+var rawValues = context.RawValues;
+myValue = rawValues["someswitch"];
 ```
 
 The `RawValues` dictionary is case-insensitive.

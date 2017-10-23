@@ -35,25 +35,25 @@ The goal of this library is to make it easy to:
 ### Graph
 
 ```
-    public interface IGraph<T>
-        where T : IEquatable<T>
-    {
-        INode<T> Find(T value); 
+public interface IGraph<T>
+	where T : IEquatable<T>
+{
+	INode<T> Find(T value); 
 
-        void AddSequence(IEnumerable<T> sequence);
-        void AddSequences(IEnumerable<IEnumerable<T>> sequences);
+	void AddSequence(IEnumerable<T> sequence);
+	void AddSequences(IEnumerable<IEnumerable<T>> sequences);
 
-        IEnumerable<INode<T>> Nodes { get; }
+	IEnumerable<INode<T>> Nodes { get; }
 
-        bool CanSort();
-        bool CanSort(IEnumerable<T> sequence);
+	bool CanSort();
+	bool CanSort(IEnumerable<T> sequence);
 
-        int CountNodes { get; }
-        int CountLevels { get; }
-        IOrderedEnumerable<INode<T>> GetNodes(int level);
-        IOrderedEnumerable<INode<T>> GetNodesBetween(int levelFrom, int levelTo);
-        IOrderedEnumerable<INode<T>> Sort();
-    }
+	int CountNodes { get; }
+	int CountLevels { get; }
+	IOrderedEnumerable<INode<T>> GetNodes(int level);
+	IOrderedEnumerable<INode<T>> GetNodesBetween(int levelFrom, int levelTo);
+	IOrderedEnumerable<INode<T>> Sort();
+}
 ```
 
 **Note:**
@@ -63,28 +63,28 @@ The goal of this library is to make it easy to:
 ### Node
 
 ```
-    public interface INode<T>
-        where T: IEquatable<T>
-    {
-        T Value { get; }
-        IGraph<T> Graph { get; }
-        int Level { get; }
+public interface INode<T>
+	where T: IEquatable<T>
+{
+	T Value { get; }
+	IGraph<T> Graph { get; }
+	int Level { get; }
 
-        // relativeLevel >= relativeLevelFrom && relativeLevel <= relativeLevelTo
-        IOrderedEnumerable<INode<T>> GetNeighbours(int relativeLevelFrom, int relativeLevelTo);
-        // relativeLevel < 0
-        IOrderedEnumerable<INode<T>> Precedents { get; }
-        // relativeLevel > 0
-        IOrderedEnumerable<INode<T>> Descendants { get; }
-        // relativeLevel == relativeLevel - 1
-        IOrderedEnumerable<INode<T>> ImmediatePrecedents { get; }
-        // relativeLevel == relativeLevel + 1
-        IOrderedEnumerable<INode<T>> ImmediateDescendants { get; }
-        // Precedents of the node without precedents (roots)
-        IOrderedEnumerable<INode<T>> TerminatingPrecedents { get; }
-        // Descendants of the node without descendants (leafs)
-        IOrderedEnumerable<INode<T>> TerminatingDescendants { get; }
-    }
+	// relativeLevel >= relativeLevelFrom && relativeLevel <= relativeLevelTo
+	IOrderedEnumerable<INode<T>> GetNeighbours(int relativeLevelFrom, int relativeLevelTo);
+	// relativeLevel < 0
+	IOrderedEnumerable<INode<T>> Precedents { get; }
+	// relativeLevel > 0
+	IOrderedEnumerable<INode<T>> Descendants { get; }
+	// relativeLevel == relativeLevel - 1
+	IOrderedEnumerable<INode<T>> ImmediatePrecedents { get; }
+	// relativeLevel == relativeLevel + 1
+	IOrderedEnumerable<INode<T>> ImmediateDescendants { get; }
+	// Precedents of the node without precedents (roots)
+	IOrderedEnumerable<INode<T>> TerminatingPrecedents { get; }
+	// Descendants of the node without descendants (leafs)
+	IOrderedEnumerable<INode<T>> TerminatingDescendants { get; }
+}
 ```
 
 **Note:**
@@ -138,69 +138,69 @@ Critical path method O(V+E)
 ### Create Graph Structure
 
 ```
-	new Graph(new []
-	{
-		new[] {11, 27, 32},
-		new[] {12, 27},
-		// etc....
-	});
+new Graph(new []
+{
+	new[] {11, 27, 32},
+	new[] {12, 27},
+	// etc....
+});
 ```
 
 or
 
 ```
-    var graph = new Graph();
-    graph.AddRange(new []
-    {
-        new[] {11, 27, 32},
-        new[] {12, 27},
-		// etc....
-    });
+var graph = new Graph();
+graph.AddRange(new []
+{
+	new[] {11, 27, 32},
+	new[] {12, 27},
+	// etc....
+});
 ```
 
 ### Interaction
 
 ```
-	[Test]
-	public void BasicOperationsTest()
-	{
-		var graph = CreateExampleGraph();
+[Test]
+public void BasicOperationsTest()
+{
+	var graph = CreateExampleGraph();
 
-		Assert.IsTrue(graph.CanSort());
+	Assert.IsTrue(graph.CanSort());
 
-		Assert.AreEqual(20, graph.Count);
+	Assert.AreEqual(20, graph.Count);
 
-		Assert.IsTrue(graph.CanSort());
-			
-		Assert.AreEqual(6, graph.CountLevels);
-            
-		AssertCollectionsConsistsOfNodes(new[] {31}, graph.GetNodes(4));
+	Assert.IsTrue(graph.CanSort());
+		
+	Assert.AreEqual(6, graph.CountLevels);
+		
+	AssertCollectionsConsistsOfNodes(new[] {31}, graph.GetNodes(4));
 
-		AssertCollectionsConsistsOfNodes(new[] {51, 61, 62}, graph.GetNodesBetween(4, 5));
+	AssertCollectionsConsistsOfNodes(new[] {51, 61, 62}, graph.GetNodesBetween(4, 5));
 
-		AssertCollectionsConsistsOfNodes(new[] {11, 12, 25, 26, 27}, graph.Find(32).Precedents);
+	AssertCollectionsConsistsOfNodes(new[] {11, 12, 25, 26, 27}, graph.Find(32).Precedents);
 
-		AssertCollectionsConsistsOfNodes(new[] {51, 61, 62}, graph.Find(43).Descendants);
+	AssertCollectionsConsistsOfNodes(new[] {51, 61, 62}, graph.Find(43).Descendants);
 
-		AssertCollectionsConsistsOfNodes(new[] {25, 26, 27}, graph.Find(32).ImmediatePrecedents);
+	AssertCollectionsConsistsOfNodes(new[] {25, 26, 27}, graph.Find(32).ImmediatePrecedents);
 
-		AssertCollectionsConsistsOfNodes(new[] {51}, graph.Find(43).ImmediateDescendants);
+	AssertCollectionsConsistsOfNodes(new[] {51}, graph.Find(43).ImmediateDescendants);
 
-		AssertCollectionsConsistsOfNodes(new[] {11, 12}, graph.Find(32).TerminatingPrecedents);
+	AssertCollectionsConsistsOfNodes(new[] {11, 12}, graph.Find(32).TerminatingPrecedents);
 
-		AssertCollectionsConsistsOfNodes(new[] {61, 62}, graph.Find(43).TerminatingDescendants);
-	}
+	AssertCollectionsConsistsOfNodes(new[] {61, 62}, graph.Find(43).TerminatingDescendants);
+}
 ```
-	
+
 ## Things To Think About
 
 - How to return all nodes between two levels that relate to a certain node.
 
 ```
-	GetNodesRelatedTo(T value, int minLevel == 0, int maxLevel == max)
+GetNodesRelatedTo(T value, int minLevel == 0, int maxLevel == max)
 
-	graph.GetNodesRelatedTo(11, 1, 3) => new[]{27, 32, 46}
-	graph.GetNodesRelatedTo(32, 0, 3) => new[]{11, 12, 25, 26, 27, 32, 46}
+graph.GetNodesRelatedTo(11, 1, 3) => new[]{27, 32, 46}
+graph.GetNodesRelatedTo(32, 0, 3) => new[]{11, 12, 25, 26, 27, 32, 46}
 ```
 
 - Node.GetNext()

@@ -32,13 +32,13 @@ Orc.Prism empowers users to combine both Catel and Prism. The best way to do thi
 If you want to use only a selected feature set of Prism (such as the regions) and don't want to set up a custom bootstrapper, use the following code before creating the main window:
 
 ```
-	PrismHelper.PrepareWithoutBootstrapper();
+PrismHelper.PrepareWithoutBootstrapper();
 ```
 
 Then call the following code after creating the main window:
 
 ```
-	PrismHelper.InitializeMainWindow();
+PrismHelper.InitializeMainWindow();
 ```
 
 The latest version of the guidance, Prism, includes a feature named "User Interface Composition". Basically it allows build a mosaic like application by loading multiple views that comes from different modules into an active regions exposed by a control, also know as the shell.
@@ -50,18 +50,18 @@ But all this is about view models. Therefore, the Catel team decide to introduce
 First of all, you must make available the region manager on the instance of *ServiceLocator*. A Prism based application uses MEF or Unity as primary IoC container. Therefore, you must synchronize this container with the Catel one, overriding the *ConfigureContainer* method of the application Bootstrapper class, using the following code:
 
 ```
-	protected override void ConfigureContainer()
+protected override void ConfigureContainer()
+{
+	base.ConfigureContainer();
+
+	if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
 	{
-	    base.ConfigureContainer();
-	
-	    if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
-	    {
-	        ServiceLocator.Instance.RegisterExternalContainer(this.Container);
-	    }
+		ServiceLocator.Instance.RegisterExternalContainer(this.Container);
 	}
+}
 ```
 
-but if you use `ServiceLocator` primary IoC contanier, and your *Bootstrapper* class inherits from `BootstrapperBase` the region manager is actually available and you don't have to write the synchronization container code.
+but if you use `ServiceLocator` primary IoC contanier, and your `Bootstrapper` class inherits from `BootstrapperBase` the region manager is actually available and you don't have to write the synchronization container code.
 
 Since Catel 3.2 `ServiceLocator` support Dependency injection, therefore now you are able write Prism base application without the usage of a third party container.
 
@@ -70,11 +70,11 @@ Since Catel 3.2 `ServiceLocator` support Dependency injection, therefore now you
 To activate a view into a specific region, use the following code:
 
 ```
-	var viewModel = new EmployeeViewModel();
-	
-	var dependencyResolver = this.GetDependencyResolver();
-	var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>();
-	uiCompositionService.Activate(viewModel, "MainRegion");
+var viewModel = new EmployeeViewModel();
+
+var dependencyResolver = this.GetDependencyResolver();
+var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>();
+uiCompositionService.Activate(viewModel, "MainRegion");
 ```
 
 @alert important
@@ -88,16 +88,16 @@ Assume that this references an instance of the view-model of a view with MainReg
 
 ## Dealing with more than one and only one shell
 
-Actually you are able to inject views (referencing it's view models) in any window. Just like the previous example but in combination with the experimental extension method *Show*:
+Actually you are able to inject views (referencing it's view models) in any window. Just like the previous example but in combination with the experimental extension method `Show`:
 
 ```
-	var dependencyResolver = this.GetDependencyResolver();
-	var uiVisualizerService = dependencyResolver.Resolve<IUIVisualizerService>();
-	
-	var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>()
-	var windowViewModel = new WindowWithRegionViewModel();
-	
-	uiVisualizerService.Show(windowViewModel, () => { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, "WindowMainRegion") });
+var dependencyResolver = this.GetDependencyResolver();
+var uiVisualizerService = dependencyResolver.Resolve<IUIVisualizerService>();
+
+var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>()
+var windowViewModel = new WindowWithRegionViewModel();
+
+uiVisualizerService.Show(windowViewModel, () => { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, "WindowMainRegion") });
 ```
 
 ## Deactivating a view
@@ -105,7 +105,7 @@ Actually you are able to inject views (referencing it's view models) in any wind
 To deactivate a view, use the following code:
 
 ```
-	uiCompositionService.Deactivate(viewModel);
+uiCompositionService.Deactivate(viewModel);
 ```
 
 If you keep your view model alive (see: Keeping view models alive), you can reactivate a deactivated the view using `Activate` method without specify the region name.

@@ -68,13 +68,13 @@ The base directory will be used as repository. This means that it cannot contain
 Because the snapshot manager is using async, the initialization is a separate method. This gives the developer the option to load the snapshots whenever it is required. To load the stored snapshots from disk, use the code below:
 
 ```
-	await snapshotManager.LoadAsync(); 
+await snapshotManager.LoadAsync(); 
 ```
 
 # Retrieving a list of all snapshots
 
 ```
-    var snapshots = snapshotManager.Snapshots;
+var snapshots = snapshotManager.Snapshots;
 ```
 
 # Creating a snapshot
@@ -84,7 +84,7 @@ Storing information in a snapshot is the responsibility of every single componen
 Call the following method to create a snapshot.
 
 ```
-    await snapshotManager.CreateSnapshotAsync("My snapshot title");
+await snapshotManager.CreateSnapshotAsync("My snapshot title");
 ```
 
 **Note that a snapshot is only created, not registered in the manager or saved to disk by this method**
@@ -99,7 +99,7 @@ Create a provider as shown in the example below:
 Register the provider in the manager for it to take effect:
 
 ```
-	snapshotManager.AddProvider(myProvider);
+snapshotManager.AddProvider(myProvider);
 ```
 
 # Registering a snapshot and saving all snapshots to disk
@@ -107,11 +107,11 @@ Register the provider in the manager for it to take effect:
 To register a snapshot with the manager, use the code below:
 
 ```
-	await snapshotManager.AddAsync(snapshot);
+await snapshotManager.AddAsync(snapshot);
 ```
 
 To save all snapshots, use the code below:
 
 ```
-    snapshotManager.SaveAsync();
+snapshotManager.SaveAsync();
 ```

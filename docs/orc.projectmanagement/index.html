@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -576,17 +598,17 @@
 
 <p>A project is a model that can be implemented by the developer and must implement the <code>IProject</code> interface. The most convenient way to implement a project is by deriving from the <em>ProjectBase</em> class:</p>
 
-<pre><code>    public class MyProject : ProjectBase
+<pre><code>public class MyProject : ProjectBase
+{
+    public Project(string title)
+        : base(title)
     {
-        public Project(string title)
-            : base(title)
-        {
-        }
-        
-        public string FirstName { get; private set; }
-        
-        public string LastName { get; private set; }
     }
+    
+    public string FirstName { get; private set; }
+    
+    public string LastName { get; private set; }
+}
 </code></pre>
 
 <h1 id="creating-a-project-initializer">Creating a project initializer</h1>
@@ -605,7 +627,7 @@
 
 <p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
 </code></pre>
 
 <p><strong>Make sure to register the service before instantiating the <code>IProjectManager</code> because it will be injected</strong></p>
@@ -614,72 +636,72 @@
 
 <p>Sometimes it is possible to check on forehand if it&rsquo;s even possible to load a project. This is implemented via the <code>IProjectValidator</code> interface. By default there is no validation, but this can be implemented. For example when a project represents a folder on disk, the validator can check if the directory exists:</p>
 
-<pre><code>    public class DirectoryExistsProjectValidator : IProjectValidator
+<pre><code>public class DirectoryExistsProjectValidator : IProjectValidator
+{
+    #region IProjectValidator Members
+    public async bool CanStartLoadingProject(string location)
     {
-        #region IProjectValidator Members
-        public async bool CanStartLoadingProject(string location)
-        {
-            return Directory.Exists(location);
-        }
-        #endregion
+        return Directory.Exists(location);
     }
+    #endregion
+}
 </code></pre>
 
 <p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectValidator, DirectoryExistsProjectValidator&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectValidator, DirectoryExistsProjectValidator&gt;();
 </code></pre>
 
 <h1 id="creating-a-project-reader-service">Creating a project reader service</h1>
 
 <p>Projects must be read via the <code>IProjectReaderService</code>. The project manager automatically knows when to read a project. First, one must create a project reader as shown in the example below:</p>
 
-<pre><code>    public class ProjectReader : ProjectReaderBase
+<pre><code>public class ProjectReader : ProjectReaderBase
+{
+    protected override async Task&lt;IProject&gt; ReadAsync(string location)
     {
-        protected override async Task&lt;IProject&gt; ReadAsync(string location)
-        {
-            var project = new MyProject(location);
+        var project = new MyProject(location);
 
-            // TODO: Read from a file / directory / database / anything
+        // TODO: Read from a file / directory / database / anything
 
-            return project;
-        }
+        return project;
     }
+}
 </code></pre>
 
 <p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectReaderService, MyProjectReaderService&gt;();
 </code></pre>
 
 <h1 id="creating-a-project-writer-service">Creating a project writer service</h1>
 
-<pre><code>    public class ProjectWriter : ProjectWriterBase&lt;MyProject&gt;
+<pre><code>public class ProjectWriter : ProjectWriterBase&lt;MyProject&gt;
+{
+    protected override async Task WriteAsync(MyProject project, string location)
     {
-        protected override async Task WriteAsync(MyProject project, string location)
-        {
-            // TODO: Write to a file / directory / database / anything
-        }
+        // TODO: Write to a file / directory / database / anything
     }
+}
 </code></pre>
 
 <p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
 </code></pre>
 
 <h1 id="initializing-the-project-manager">Initializing the project manager</h1>
 
 <p>Because the project manager is using async, the initialization is a separate method. This gives the developer the option to load the project whenever it is required. To (optionally) initialize the project manager, use the code below:</p>
 
-<pre><code>    await projectManager.Initialize(); 
+<pre><code>await projectManager.Initialize(); 
 </code></pre>
 
 <h1 id="retrieving-a-typed-instance-of-the-project">Retrieving a typed instance of the project</h1>
 
 <p>The library contains extension methods for the <code>IProjectManager</code> to retrieve a typed instance:</p>
 
-<pre><code>    var myProject = projectManager.GetProject&lt;MyProject&gt;();
+<pre><code>var myProject = projectManager.GetProject&lt;MyProject&gt;();
 </code></pre>
 
 <h1 id="detecting-project-refreshes-in-the-source">Detecting project refreshes in the source</h1>
@@ -688,19 +710,19 @@
 
 <h2 id="creating-a-project-refresher-selector">Creating a project refresher selector</h2>
 
-<pre><code>    public class ProjectRefresherSelector : IProjectSelector
+<pre><code>public class ProjectRefresherSelector : IProjectSelector
+{
+    public IProjectRefresher GetProjectRefresher(string location)
     {
-        public IProjectRefresher GetProjectRefresher(string location)
-        {
-            // TODO: Determine what refresher to use, in this case a file refresher
-            return new FileProjectRefresher(location);
-        }
-    } 
+        // TODO: Determine what refresher to use, in this case a file refresher
+        return new FileProjectRefresher(location);
+    }
+} 
 </code></pre>
 
 <p>Next it can be registered in the ServiceLocator (so it will automatically be injected into the <code>ProjectManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectWriterService, MyProjectWriterService&gt;();
 </code></pre>
 
 <p><strong>Note that you can also use the <code>DefaultProjectRefresherSelector</code>, which will return the <code>IProjectRefresher</code> that is registered in the ServiceLocator</strong></p>
@@ -716,30 +738,30 @@
 
 <p>If your projects are a file or a directory of files, it should be sufficient to register it in the service locator:</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IProjectRefresher, FileProjectRefresher&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IProjectRefresher, FileProjectRefresher&gt;();
 </code></pre>
 
 <p>If a custom refresher is required, simply implement it as show in the example below:</p>
 
-<pre><code>    public class DirectoryProjectRefresher : ProjectRefresherBase
+<pre><code>public class DirectoryProjectRefresher : ProjectRefresherBase
+{
+    private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+
+    public DirectoryProjectRefresher(string location) 
+        : base(location)
     {
-        private static readonly ILog Log = LogManager.GetCurrentClassLogger();
-
-        public DirectoryProjectRefresher(string location) 
-            : base(location)
-        {
-        }
-
-        protected override void SubscribeToLocation(string location)
-        {
-            // TODO: subscribe to changes here
-        }
-
-        protected override void UnsubscribeFromLocation(string location)
-        {
-            // TODO: unsubscribe from changes here
-        }
     }
+
+    protected override void SubscribeToLocation(string location)
+    {
+        // TODO: subscribe to changes here
+    }
+
+    protected override void UnsubscribeFromLocation(string location)
+    {
+        // TODO: unsubscribe from changes here
+    }
+}
 </code></pre>
 
 <p>Then register it in the ServiceLocator or return it in the custom <code>ProjectRefresherSelector</code>.</p>

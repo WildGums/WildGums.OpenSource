@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -570,14 +592,14 @@
 
 <h2 id="starting-the-scheduler">Starting the scheduler</h2>
 
-<pre><code>    schedulingService.Start();
+<pre><code>schedulingService.Start();
 </code></pre>
 
 <p><em>Note that starting the service will immediately start tasks that are scheduled in the past</em></p>
 
 <h2 id="stopping-the-scheduler">Stopping the scheduler</h2>
 
-<pre><code>    schedulingService.Stop();
+<pre><code>schedulingService.Stop();
 </code></pre>
 
 <p><em>Note that stopping the service will actively cancel all current active tasks</em></p>
@@ -590,92 +612,92 @@
 
 <p>The following examples starts a task 5 minutes from now.</p>
 
-<pre><code>    var scheduledTask = new ScheduledTask
+<pre><code>var scheduledTask = new ScheduledTask
+{
+    Name = &quot;My task&quot;,
+    Start = DateTime.Now.AddMinutes(5),
+    Action = async () =&gt;
     {
-        Name = &quot;My task&quot;,
-        Start = DateTime.Now.AddMinutes(5),
-        Action = async () =&gt;
-        {
-            /* logic here */
-        }
-    };
+        /* logic here */
+    }
+};
 
-    schedulingService.AddScheduledTask(scheduledTask);
+schedulingService.AddScheduledTask(scheduledTask);
 </code></pre>
 
 <h2 id="recurring-tasks">Recurring tasks</h2>
 
 <p>The following examples starts a task 5 minutes from now, then restarts the task every 1 minute.</p>
 
-<pre><code>    var scheduledTask = new ScheduledTask
+<pre><code>var scheduledTask = new ScheduledTask
+{
+    Name = &quot;My task&quot;,
+    Start = DateTime.Now.AddMinutes(5),
+    Recurring = TimeSpan.FromMinutes(1),
+    Action = async () =&gt;
     {
-        Name = &quot;My task&quot;,
-        Start = DateTime.Now.AddMinutes(5),
-        Recurring = TimeSpan.FromMinutes(1),
-        Action = async () =&gt;
-        {
-            /* logic here */
-        }
-    };
+        /* logic here */
+    }
+};
 
-    schedulingService.AddScheduledTask(scheduledTask);
+schedulingService.AddScheduledTask(scheduledTask);
 </code></pre>
 
 <h2 id="canceling-a-running-task">Canceling a running task</h2>
 
 <p>To cancel a task, you need a handle to a <code>RunningTask</code> instance. This can be retrieved by the <code>TaskStarted</code> event or the <code>RunningTasks</code> property. This example uses the latter, then cancels the task.</p>
 
-<pre><code>    var runningTask = (from task in schedulingService.RunningTasks
-                       where task.ScheduledTask.Name == &quot;My task&quot;
-                       select task).FirstOrDefault();
-    if (runningTask != null)
-    {
-        runningTask.CancellationTokenSource.Cancel();
-    }
+<pre><code>var runningTask = (from task in schedulingService.RunningTasks
+                   where task.ScheduledTask.Name == &quot;My task&quot;
+                   select task).FirstOrDefault();
+if (runningTask != null)
+{
+    runningTask.CancellationTokenSource.Cancel();
+}
 </code></pre>
 
 <h2 id="creating-custom-scheduledtask-implementations">Creating custom ScheduledTask implementations</h2>
 
 <p>It&rsquo;s possible to write a custom self-containing task that can handle everything itself. Below is an example of such a self-containing task:</p>
 
-<pre><code>    public class CheckForUpdatesScheduledTask : ScheduledTaskBase
+<pre><code>public class CheckForUpdatesScheduledTask : ScheduledTaskBase
+{
+    private readonly ICommandManager _commandManager;
+
+    public CheckForUpdatesScheduledTask(TimeSpan interval, ICommandManager commandManager)
     {
-        private readonly ICommandManager _commandManager;
+        Argument.IsNotNull(() =&gt; commandManager);
 
-        public CheckForUpdatesScheduledTask(TimeSpan interval, ICommandManager commandManager)
-        {
-            Argument.IsNotNull(() =&gt; commandManager);
+        _commandManager = commandManager;
 
-            _commandManager = commandManager;
-
-            Name = &quot;Check for updates&quot;;
-            Start = DateTime.Now.Add(interval);
-            Recurring = interval;
-        }
-
-        public override Task InvokeAsync()
-        {
-            var command = _commandManager.GetCommand(AppCommands.Application.CheckForUpdates);
-            if (command != null)
-            {
-                command.Execute(null);
-            }
-
-            return TaskHelper.Completed;
-        }
-
-        public override object Clone()
-        {
-            return new CheckForUpdatesScheduledTask(Recurring ?? TimeSpan.FromMinutes(5), _commandManager);
-        }
+        Name = &quot;Check for updates&quot;;
+        Start = DateTime.Now.Add(interval);
+        Recurring = interval;
     }
+
+    public override Task InvokeAsync()
+    {
+        var command = _commandManager.GetCommand(AppCommands.Application.CheckForUpdates);
+        if (command != null)
+        {
+            command.Execute(null);
+        }
+
+        return TaskHelper.Completed;
+    }
+
+    public override object Clone()
+    {
+        return new CheckForUpdatesScheduledTask(Recurring ?? TimeSpan.FromMinutes(5), _commandManager);
+    }
+}
 </code></pre>
 
 <p>This class can be constructed and added to the scheduling service. This will invoke the check for updates 10 minutes from now and recur every 10 minutes.</p>
 
-<pre><code>    var checkForUpdatesScheduledTask = typeFactory.CreateInstanceWithParametersAndAutoCompletion&lt;CheckForUpdatesScheduledTask&gt;(TimeSpan.FromMinutes(10));
+<pre><code>var checkForUpdatesScheduledTask = typeFactory.CreateInstanceWithParametersAndAutoCompletion&lt;CheckForUpdatesScheduledTask&gt;(TimeSpan.FromMinutes(10));
 
-    schedulingService.AddScheduledTask(checkForUpdatesScheduledTask);
+schedulingService.AddScheduledTask(checkForUpdatesScheduledTask);
 </code></pre>
 
 

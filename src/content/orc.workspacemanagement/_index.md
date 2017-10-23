@@ -47,21 +47,21 @@ By default the following initializers are available:
 To create a custom workspace initializer, see the example below:
 
 ```
-    public class WorkspaceInitializer : IWorkspaceInitializer
-    {
-        public Task InitializeAsync(IWorkspace workspace)
-        {
-            workspace.SetValue("AView.Width", 200d);
-            workspace.SetValue("BView.Width", 200d);
-            return TaskHelper.Completed;
-        }
-    }
+public class WorkspaceInitializer : IWorkspaceInitializer
+{
+	public Task InitializeAsync(IWorkspace workspace)
+	{
+		workspace.SetValue("AView.Width", 200d);
+		workspace.SetValue("BView.Width", 200d);
+		return TaskHelper.Completed;
+	}
+}
 ```
 
 Next it can be registered in the `ServiceLocator` (so it will automatically be injected into the `WorkspaceManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IWorkspaceInitializer, MyWorkspaceInitializer>();
+ServiceLocator.Default.RegisterType<IWorkspaceInitializer, MyWorkspaceInitializer>();
 ```
 
 **Make sure to register the service before instantiating the *IWorkspaceManager* because it will be injected**
@@ -71,13 +71,13 @@ Next it can be registered in the `ServiceLocator` (so it will automatically be i
 Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:
 
 ```
-	await workspaceManager.InitializeAsync(); 
+await workspaceManager.InitializeAsync(); 
 ```
 
 # Retrieving a list of all workspaces
 
 ```
-    var workspaces = workspaceManager.Workspaces;
+var workspaces = workspaceManager.Workspaces;
 ```
 
 # Retrieving the current workspace
@@ -85,7 +85,7 @@ Because the workspace manager is using async, the initialization is a separate m
 The library contains extension methods for the `IWorkspaceManager` to retrieve a typed instance:
 
 ```
-	var myWorkspace = workspaceManager.Workspace;
+var myWorkspace = workspaceManager.Workspace;
 ```
 
 To customize the location where the workspaces are stored, use the `BaseDirectory` property.
@@ -97,7 +97,7 @@ Storing information in a workspace is the responsibility of every single compone
 To store information in a workspace, set the workspace to be updated as current workspace. Then let the user (or software) customize all components. Call the following method to raise the `WorkspaceInfoRequested` event to update the workspace:
 
 ```
-    await workspaceManager.StoreWorkspaceAsync();
+await workspaceManager.StoreWorkspaceAsync();
 ```
 
 **Note that a workspace is only updated, not saved to disk by this method**
@@ -107,44 +107,44 @@ To store information in a workspace, set the workspace to be updated as current 
 Create a provider as shown in the example below:
 
 ```
-    public class RibbonWorkspaceProvider : IWorkspaceProvider
-    {
-        private readonly Ribbon _ribbon;
+public class RibbonWorkspaceProvider : IWorkspaceProvider
+{
+	private readonly Ribbon _ribbon;
 
-        public RibbonWorkspaceProvider(Ribbon ribbon)
-        {
-            Argument.IsNotNull(() => ribbon);
+	public RibbonWorkspaceProvider(Ribbon ribbon)
+	{
+		Argument.IsNotNull(() => ribbon);
 
-            _ribbon = ribbon;
-        }
+		_ribbon = ribbon;
+	}
 
-        public Task ProvideInformationAsync(IWorkspace workspace)
-        {
-            workspace.SetWorkspaceValue("Ribbon.IsMinimized", _ribbon.IsMinimized);
-            return TaskHelper.Completed;
-        }
+	public Task ProvideInformationAsync(IWorkspace workspace)
+	{
+		workspace.SetWorkspaceValue("Ribbon.IsMinimized", _ribbon.IsMinimized);
+		return TaskHelper.Completed;
+	}
 
-        public Task ApplyWorkspaceAsync(IWorkspace workspace)
-        {
-            _ribbon.IsMinimized = workspace.GetWorkspaceValue("Ribbon.IsMinimized", false);
-            return TaskHelper.Completed;
-        }
-    }
+	public Task ApplyWorkspaceAsync(IWorkspace workspace)
+	{
+		_ribbon.IsMinimized = workspace.GetWorkspaceValue("Ribbon.IsMinimized", false);
+		return TaskHelper.Completed;
+	}
+}
 ```
 
 Then add it to the provider where the ribbon is available:
 
 ```
-    public RibbonView()
-    {
-        InitializeComponent();
+public RibbonView()
+{
+	InitializeComponent();
 
-        var dependencyResolver = this.GetDependencyResolver();
-        var workspaceManager = dependencyResolver.Resolve<IWorkspaceManager>();
+	var dependencyResolver = this.GetDependencyResolver();
+	var workspaceManager = dependencyResolver.Resolve<IWorkspaceManager>();
 
-        var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
-        workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
-    }
+	var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
+	workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+}
 ```
 
 ## Events
@@ -152,17 +152,17 @@ Then add it to the provider where the ribbon is available:
 Using events is a bit more work, but can accomplish the same:
 
 ```
-        public MyComponent(IWorkspaceManager workspaceManager)
-        {
-            workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
-        }
+public MyComponent(IWorkspaceManager workspaceManager)
+{
+	workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
+}
 
-        private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
-        {
-            var workspace = e.Workspace;
+private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
+{
+	var workspace = e.Workspace;
 
-            workspace.SetWorkspaceValue("somekey", "somevalue");
-        }
+	workspace.SetWorkspaceValue("somekey", "somevalue");
+}
 ```
 
 **Note that this will only be called when storing the workspace, restoring the workspace needs more events**
@@ -172,7 +172,7 @@ Using events is a bit more work, but can accomplish the same:
 To save all workspaces to disk, use the code below:
 
 ```
-    workspaceManager.Save();
+workspaceManager.Save();
 ```
 
 # Using the XAML behaviors
@@ -188,9 +188,9 @@ Using the extension methods still requires manual work by subscribing to events 
 The behavior is a wrapper around the extension methods and take away to need to manage anything. The behavior is aware of all the events and will handle everything accordingly. To use the behavior, use the code below:
 
 ```
-    <views:BView Grid.Row="2" Grid.Column="4">
-        <i:Interaction.Behaviors>
-            <behaviors:AutoWorkspace />
-        </i:Interaction.Behaviors>
-    </views:BView>
+<views:BView Grid.Row="2" Grid.Column="4">
+	<i:Interaction.Behaviors>
+		<behaviors:AutoWorkspace />
+	</i:Interaction.Behaviors>
+</views:BView>
 ```

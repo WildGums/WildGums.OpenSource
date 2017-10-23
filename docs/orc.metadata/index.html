@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -578,19 +600,19 @@
 
 <p>To retrieve type information about an object, the information is stored in one of the <code>IMetadataCollection</code> implementations. The developer only has to work with the <em>IMetadataCollection</em> interface. To retrieve the information, use the code below:</p>
 
-<pre><code>    var allMetadata = metadataCollection.All;
-    foreach (var metadata in allMetadata)
-    {
-        Console.WriteLine(metadata.Name);
-    }
+<pre><code>var allMetadata = metadataCollection.All;
+foreach (var metadata in allMetadata)
+{
+    Console.WriteLine(metadata.Name);
+}
 </code></pre>
 
 <h3 id="retrieving-metadata-of-a-specific-object">Retrieving metadata of a specific object</h3>
 
 <p>To retrieve the metadata of a specific object, use the code below:</p>
 
-<pre><code>    var metadata = metadataCollection.GetMetadata(&quot;MyMetadataName&quot;);
-    var metadataValue = metadata.GetValue(myInstance); 
+<pre><code>var metadata = metadataCollection.GetMetadata(&quot;MyMetadataName&quot;);
+var metadataValue = metadata.GetValue(myInstance); 
 </code></pre>
 
 <h2 id="using-reflection-metadata-classes">Using reflection metadata classes</h2>
@@ -599,7 +621,7 @@
 
 <h3 id="creating-the-metadata-collection">Creating the metadata collection</h3>
 
-<pre><code>    var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
+<pre><code>var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
 </code></pre>
 
 <p>Now the metadata collection can be used to retrieve any properties from the <em>MyModel</em> class and use the <code>IMetadata</code> to get or set property values.</p>
@@ -612,23 +634,23 @@
 
 <p>The example below creates metadata that contains a few metadata definitions with specific types.</p>
 
-<pre><code>    var dictionary = new Dictionary&lt;string, Type&gt;();
-    dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
-    dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
+<pre><code>var dictionary = new Dictionary&lt;string, Type&gt;();
+dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
+dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
 </code></pre>
 
 <h3 id="interacting-with-the-metadata">Interacting with the metadata</h3>
 
 <p>Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:</p>
 
-<pre><code>    var metadataDictionary = new Dictionary&lt;string, object&gt;();
-    dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
-    dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
+<pre><code>var metadataDictionary = new Dictionary&lt;string, object&gt;();
+dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
+dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
 
-    var metadata = metadataCollection.GetMetadata(&quot;MyIntMetadata&quot;);
-    var value = metadata.GetValue(metadataDictionary);
+var metadata = metadataCollection.GetMetadata(&quot;MyIntMetadata&quot;);
+var value = metadata.GetValue(metadataDictionary);
 
-    // Now value is 42
+// Now value is 42
 </code></pre>
 
 <h2 id="other-ways-of-storing-metadata">Other ways of storing metadata</h2>

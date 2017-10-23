@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -561,18 +583,18 @@ For more information about dynamic programming, see <a href="http://msdn.microso
 
 <p>Creating a dynamic object with full Catel functionality is easy. Just add the <code>Orc.DynamicObjects</code> reference via NuGet and create a class that derives from <code>DynamicModelBase</code>:</p>
 
-<pre><code>    public class DynamicModel : DynamicModelBase
-    {
-        // TODO: Add custom functionality if required
-    }
+<pre><code>public class DynamicModel : DynamicModelBase
+{
+    // TODO: Add custom functionality if required
+}
 </code></pre>
 
 <p>Then the dynamic model can be used like this:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-     
-    Console.WriteLine(model.NonExistingProperty);
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+ 
+Console.WriteLine(model.NonExistingProperty);
 </code></pre>
 
 <p>@alert important
@@ -583,35 +605,35 @@ It is important to know that you must use the keyword <em>dynamic</em> to insta
 
 <p>The <code>DynamicModelBase</code> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <code>ModelBase</code> functionality, cast it to the right type:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-     
-    // Note: the Validate method is available on the ModelBase
-    var modelBase = (ModelBase)model;
-    modelBase.Validate();
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+ 
+// Note: the Validate method is available on the ModelBase
+var modelBase = (ModelBase)model;
+modelBase.Validate();
 </code></pre>
 
 <h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</h2>
 
 <p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
 
-<pre><code>    dynamic model = new DynamicModel();
-    model.NonExistingProperty = &quot;a dynamic value&quot;;
-    
-    var serializer = SerializationFactory.GetXmlSerializer();
-    
-    using (var memoryStream = new MemoryStream())
-    {
-        var dynamicModel = (DynamicModel)model;
-        serializer.Serialize(dynamicModel, memoryStream);
-    
-        memoryStream.Position = 0L;
-    
-        dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
-        var deserializedDynamicModel = (DynamicModel) deserializedModel;
-    
-        // deserializedDynamicModel is now a dynamically deserialized object
-    }
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+
+var serializer = SerializationFactory.GetXmlSerializer();
+
+using (var memoryStream = new MemoryStream())
+{
+    var dynamicModel = (DynamicModel)model;
+    serializer.Serialize(dynamicModel, memoryStream);
+
+    memoryStream.Position = 0L;
+
+    dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
+    var deserializedDynamicModel = (DynamicModel) deserializedModel;
+
+    // deserializedDynamicModel is now a dynamically deserialized object
+}
 </code></pre>
 
 

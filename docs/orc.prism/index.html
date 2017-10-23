@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -347,24 +347,46 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -599,12 +621,12 @@
 
 <p>If you want to use only a selected feature set of Prism (such as the regions) and don&rsquo;t want to set up a custom bootstrapper, use the following code before creating the main window:</p>
 
-<pre><code>    PrismHelper.PrepareWithoutBootstrapper();
+<pre><code>PrismHelper.PrepareWithoutBootstrapper();
 </code></pre>
 
 <p>Then call the following code after creating the main window:</p>
 
-<pre><code>    PrismHelper.InitializeMainWindow();
+<pre><code>PrismHelper.InitializeMainWindow();
 </code></pre>
 
 <p>The latest version of the guidance, Prism, includes a feature named &ldquo;User Interface Composition&rdquo;. Basically it allows build a mosaic like application by loading multiple views that comes from different modules into an active regions exposed by a control, also know as the shell.</p>
@@ -615,18 +637,18 @@
 
 <p>First of all, you must make available the region manager on the instance of <em>ServiceLocator</em>. A Prism based application uses MEF or Unity as primary IoC container. Therefore, you must synchronize this container with the Catel one, overriding the <em>ConfigureContainer</em> method of the application Bootstrapper class, using the following code:</p>
 
-<pre><code>    protected override void ConfigureContainer()
+<pre><code>protected override void ConfigureContainer()
+{
+    base.ConfigureContainer();
+
+    if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
     {
-        base.ConfigureContainer();
-    
-        if (ServiceLocator.Instance.IsExternalContainerSupported(this.Container))
-        {
-            ServiceLocator.Instance.RegisterExternalContainer(this.Container);
-        }
+        ServiceLocator.Instance.RegisterExternalContainer(this.Container);
     }
+}
 </code></pre>
 
-<p>but if you use <code>ServiceLocator</code> primary IoC contanier, and your <em>Bootstrapper</em> class inherits from <code>BootstrapperBase</code> the region manager is actually available and you don&rsquo;t have to write the synchronization container code.</p>
+<p>but if you use <code>ServiceLocator</code> primary IoC contanier, and your <code>Bootstrapper</code> class inherits from <code>BootstrapperBase</code> the region manager is actually available and you don&rsquo;t have to write the synchronization container code.</p>
 
 <p>Since Catel 3.2 <code>ServiceLocator</code> support Dependency injection, therefore now you are able write Prism base application without the usage of a third party container.</p>
 
@@ -634,11 +656,11 @@
 
 <p>To activate a view into a specific region, use the following code:</p>
 
-<pre><code>    var viewModel = new EmployeeViewModel();
-    
-    var dependencyResolver = this.GetDependencyResolver();
-    var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;();
-    uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
+<pre><code>var viewModel = new EmployeeViewModel();
+
+var dependencyResolver = this.GetDependencyResolver();
+var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;();
+uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
 </code></pre>
 
 <p>@alert important
@@ -652,22 +674,22 @@ uiCompositionService.Activate(viewModel, this, &ldquo;MainRegion&rdquo;);</p>
 
 <h2 id="dealing-with-more-than-one-and-only-one-shell">Dealing with more than one and only one shell</h2>
 
-<p>Actually you are able to inject views (referencing it&rsquo;s view models) in any window. Just like the previous example but in combination with the experimental extension method <em>Show</em>:</p>
+<p>Actually you are able to inject views (referencing it&rsquo;s view models) in any window. Just like the previous example but in combination with the experimental extension method <code>Show</code>:</p>
 
-<pre><code>    var dependencyResolver = this.GetDependencyResolver();
-    var uiVisualizerService = dependencyResolver.Resolve&lt;IUIVisualizerService&gt;();
-    
-    var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;()
-    var windowViewModel = new WindowWithRegionViewModel();
-    
-    uiVisualizerService.Show(windowViewModel, () =&gt; { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, &quot;WindowMainRegion&quot;) });
+<pre><code>var dependencyResolver = this.GetDependencyResolver();
+var uiVisualizerService = dependencyResolver.Resolve&lt;IUIVisualizerService&gt;();
+
+var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;()
+var windowViewModel = new WindowWithRegionViewModel();
+
+uiVisualizerService.Show(windowViewModel, () =&gt; { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, &quot;WindowMainRegion&quot;) });
 </code></pre>
 
 <h2 id="deactivating-a-view">Deactivating a view</h2>
 
 <p>To deactivate a view, use the following code:</p>
 
-<pre><code>    uiCompositionService.Deactivate(viewModel);
+<pre><code>uiCompositionService.Deactivate(viewModel);
 </code></pre>
 
 <p>If you keep your view model alive (see: Keeping view models alive), you can reactivate a deactivated the view using <code>Activate</code> method without specify the region name.</p>

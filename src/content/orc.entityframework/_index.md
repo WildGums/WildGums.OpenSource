@@ -40,37 +40,37 @@ Create a new context with code-first models right-clicking on the solution => Ad
 By default the code-first models aren't very smart. To add additional functionality such as validation, change notifications, etc, it is best to let it derive from ModelBase. To do so, make all entities derive from ModelBase as shown in the example below:
 
 ```
-	[Table("person")]
-	public partial class Person : ModelBase
-	{
-	    [StringLength(50)]
-	    public string FirstName { get; set; }
-	 
-	    [StringLength(50)]
-	    public string lastname { get; set; }
-	 
-	    public long PersonId { get; set; }
-	    public long FamilyId { get; set; }
-	 
-	    public virtual Family Family { get; set; }
-	}
+[Table("person")]
+public partial class Person : ModelBase
+{
+	[StringLength(50)]
+	public string FirstName { get; set; }
+ 
+	[StringLength(50)]
+	public string lastname { get; set; }
+ 
+	public long PersonId { get; set; }
+	public long FamilyId { get; set; }
+ 
+	public virtual Family Family { get; set; }
+}
 ```
 
 When the classes are derived from `ModelBase`, EF will try to serialize all the default Catel properties as well. To make sure that EF ignores the Catel properties, go to the `Context` class and search for the OnModelCreating method. Then add the `IgnoreCatelProperties` extension method to all entity definitions as shown in the example below:
 
 ```
-	protected override void OnModelCreating(DbModelBuilder modelBuilder)
-	{
-	    modelBuilder.Entity<Family>()
-	        .IgnoreCatelProperties()
-	        .Property(e => e.FamilyName)
-	        .IsUnicode(false);
-	 
-	    modelBuilder.Entity<Family>()
-	        .HasMany(e => e.Person)
-	        .WithRequired(e => e.Family)
-	        .WillCascadeOnDelete(false);
-	}
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+{
+	modelBuilder.Entity<Family>()
+		.IgnoreCatelProperties()
+		.Property(e => e.FamilyName)
+		.IsUnicode(false);
+ 
+	modelBuilder.Entity<Family>()
+		.HasMany(e => e.Person)
+		.WithRequired(e => e.Family)
+		.WillCascadeOnDelete(false);
+}
 ```
 
 ## Repositories
@@ -80,17 +80,17 @@ When the classes are derived from `ModelBase`, EF will try to serialize all the
 Once the DAL is correctly set up, it's time to create the repositories. Creating repositories with Catel is super easy. Just create (or generate with T4) a class and interface for each entity:
 
 ```
-	public class FamilyRepository : EntityRepositoryBase<family, int>, IFamilyRepository
-	{
-	    public FamilyRepository(DbContext dbContext) 
-	        : base(dbContext)
-	    {
-	    }
-	}
-	 
-	public interface IFamilyRepository : IEntityRepository<family, int>
+public class FamilyRepository : EntityRepositoryBase<family, int>, IFamilyRepository
+{
+	public FamilyRepository(DbContext dbContext) 
+		: base(dbContext)
 	{
 	}
+}
+ 
+public interface IFamilyRepository : IEntityRepository<family, int>
+{
+}
 ```
 
 ### Registering repositories
@@ -98,9 +98,9 @@ Once the DAL is correctly set up, it's time to create the repositories. Creating
 In order for the unit of work to find the repositories, they need to be registered in the `ServiceLocator`. This can be done as follows:
 
 ```
-	var serviceLocator = ServiceLocator.Default;
-	 
-	serviceLocator.RegisterType<IFamilyRepository, FamilyRepository>();
+var serviceLocator = ServiceLocator.Default;
+ 
+serviceLocator.RegisterType<IFamilyRepository, FamilyRepository>();
 ```
 
 ## Unit of Work
@@ -110,13 +110,13 @@ In order for the unit of work to find the repositories, they need to be register
 To retrieve data inside a transaction, you can use the UnitOfWork. Inside a method / service call / view model, use the following code:
 
 ```
-	using (var uow = new UnitOfWork<FamilyContext>())
-	{
-	    var familyRepository = uow.GetRepository<IFamilyRepository>();
-	 
-	    var families = new ObservableCollection<family>(familyRepository.GetAll());
-	    // TODO: Do something with all families
-	}
+using (var uow = new UnitOfWork<FamilyContext>())
+{
+	var familyRepository = uow.GetRepository<IFamilyRepository>();
+ 
+	var families = new ObservableCollection<family>(familyRepository.GetAll());
+	// TODO: Do something with all families
+}
 ```
 
 @alert info
@@ -128,16 +128,16 @@ Catel will automatically take care of scoping of the DbContext when using unit o
 To save data, the entities must be updated in the repositories and then saved in the unit of work. Below is an example, assuming the list of families contains updated entities:
 
 ```
-	using (var uow = new UnitOfWork<FamilyContext>())
+using (var uow = new UnitOfWork<FamilyContext>())
+{
+	var familyRepository = uow.GetRepository<IFamilyRepository>();
+	var personRepository = uow.GetRepository<IPersonRepository>();
+
+	foreach (var family in families)
 	{
-	    var familyRepository = uow.GetRepository<IFamilyRepository>();
-	    var personRepository = uow.GetRepository<IPersonRepository>();
-	
-	    foreach (var family in families)
-	    {
-	        familyRepository.Update(family);
-	    }
-	
-	    uow.SaveChanges();
+		familyRepository.Update(family);
 	}
+
+	uow.SaveChanges();
+}
 ```

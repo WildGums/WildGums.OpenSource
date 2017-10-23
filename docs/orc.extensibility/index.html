@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -490,7 +512,20 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#configuring-the-api">Configuring the API</a></li>
+<li><a href="#configuring-the-host">Configuring the host</a>
+<ul>
+<li><a href="#pluginfinder">PluginFinder</a></li>
+<li><a href="#finding-and-loading-the-plugins">Finding and loading the plugins</a></li>
+</ul></li>
+<li><a href="#creating-a-plugin">Creating a plugin</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -501,6 +536,8 @@
           
             <h1>Orc.Extensibility</h1>
           
+
+
 
 
 
@@ -540,9 +577,102 @@
 
 <p>This library provides classes to support pluggable components inside applications (discovery, instantation, etc).</p>
 
-<p>@alert info
-This needs to be written
-@end</p>
+<h2 id="configuring-the-api">Configuring the API</h2>
+
+<p>The API library is the library that exposes the types and interfaces that can be used by any plugin to interact with the host. In most
+cases, the API will expose the interface for services which are implemented in the host. In a minimal case, the API will only expose
+a type that will be used to recognize a plugin. For example the plugin interface shown below;</p>
+
+<pre><code>public interface ICustomPlugin
+{
+    Task InitializeAsync();
+}
+</code></pre>
+
+<h2 id="configuring-the-host">Configuring the host</h2>
+
+<p>The host is responsible for finding and instantiating the plugins.</p>
+
+<h3 id="pluginfinder">PluginFinder</h3>
+
+<p>The library takes care of the hard work. The only thing that it needs to know is whether a type is a plugin. This can be configured
+by creating a class deriving from <code>PluginFinderBase</code>:</p>
+
+<pre><code>public class PluginFinder : Orc.Extensibility.PluginFinderBase
+{
+    private readonly string _pluginName = typeof(ICustomPlugin).Name;
+
+    public PluginFinder(IPluginLocationsProvider pluginLocationsProvider, IPluginInfoProvider pluginInfoProvider,
+        IPluginCleanupService pluginCleanupService, IDirectoryService directoryService, IFileService fileService)
+        : base(pluginLocationsProvider, pluginInfoProvider, pluginCleanupService, directoryService, fileService)
+    {
+    }
+
+    protected override bool IsPlugin(Type type)
+    {
+        // Note: since we are in a reflection-only context here, you can't compare actual types, but need to use string names
+        return (from iface in type.GetInterfacesEx()
+                where iface.Name.Equals(_pluginName)
+                select iface).Any();
+    }
+}
+</code></pre>
+
+<p>Note that it should also be registered in the <code>ServiceLocator</code>:</p>
+
+<pre><code>ServiceLocator.Default.RegisterType&lt;IPluginFinder, PluginFinder&gt;();
+</code></pre>
+
+<h3 id="finding-and-loading-the-plugins">Finding and loading the plugins</h3>
+
+<p>It&rsquo;s possible to allow a single plugin host or a multiple plugin host. This example shows how to use the single plugin host:</p>
+
+<pre><code>// In an Orchestra environment, this would go into the bootstrapper
+var configurationService = serviceLocator.ResolveType&lt;IConfigurationService&gt;();
+var activePlugin = configurationService.GetRoamingValue(ConfigurationKeys.ActivePlugin, ConfigurationKeys.ActivePluginDefaultValue);
+
+var singlePluginService = serviceLocator.ResolveType&lt;ISinglePluginService&gt;();
+var plugin = singlePluginService.ConfigureAndLoadPlugin(activePlugin, ConfigurationKeys.ActivePluginDefaultValue);
+if (plugin != null)
+{
+    serviceLocator.RegisterInstance(typeof(ICustomPlugin), plugin.Instance);
+}
+</code></pre>
+
+<h2 id="creating-a-plugin">Creating a plugin</h2>
+
+<p>Last but not least, plugins will need to be created, but this is extremely easy.</p>
+
+<ol>
+<li><p>Create a class library project and reference the API library</p></li>
+
+<li><p>Create a new plugin as shown below:</p>
+
+<pre><code>public class PluginA : ICustomPlugin
+{
+private readonly IMessageService _messageService;
+private readonly IHostService _hostService;
+
+public PluginA(IMessageService messageService, IHostService hostService)
+{
+    Argument.IsNotNull(() =&gt; messageService);
+    Argument.IsNotNull(() =&gt; hostService);
+
+    _messageService = messageService;
+    _hostService = hostService;
+}
+
+public async Task InitializeAsync()
+{
+    await _messageService.ShowAsync(&quot;Plugin A has been loaded, setting color to red&quot;);
+
+    _hostService.SetColor(Colors.Red);
+}
+}
+</code></pre></li>
+
+<li><p>Make sure to compile the plugin library and putting it into a location so the host can find it.</p></li>
+</ol>
 
 
 <hr />

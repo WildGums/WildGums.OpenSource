@@ -20,7 +20,7 @@ BindableDocument|Gets or sets bindable `FlowDocument`
 For binding data to the `BindableRichTextBox`, use the `BindableDocument` property  (the type is [FlowDocument][2])
 
 ```
-    <orc:BindableRichTextBox BindableDocument="{Binding FlowDoc}" />
+<orc:BindableRichTextBox BindableDocument="{Binding FlowDoc}" />
 ```
 
 Once that is done you may assign a new value to it or change the layout of the  [FlowDocument][2]. 

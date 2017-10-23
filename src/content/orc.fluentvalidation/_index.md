@@ -21,20 +21,20 @@ FluentValidation is a small validation library for .NET that uses a fluent inter
 The only thing you have to do is install an isolate package named `Orc.FluentValidation`, available via NuGet, then you will be able to write your view models validations using FluentValidation approach.
 
 ```
-	public class PersonViewModelValidator : AbstractValidator<PersonViewModel>
+public class PersonViewModelValidator : AbstractValidator<PersonViewModel>
+{
+	public PersonViewModelValidator()
 	{
-	    public PersonViewModelValidator()
-	    {
-	        RuleFor(person => person.FirstName).NotEmpty();
-	        RuleFor(person => person.LastName).NotEmpty().WithMessage("Please specify the last name");
-	    }
+		RuleFor(person => person.FirstName).NotEmpty();
+		RuleFor(person => person.LastName).NotEmpty().WithMessage("Please specify the last name");
 	}
+}
 ```
 
 In order to retrieve the right validators, you must register the `FluentValidatorProvider`:
 
 ```
-	ServiceLocator.Default.RegisterType<IValidatorProvider, FluentValidatorProvider>();
+ServiceLocator.Default.RegisterType<IValidatorProvider, FluentValidatorProvider>();
 ```
 
 The `FluentValidatorProvider` will automatically retrieve the right validators associated with the view models.
@@ -44,10 +44,10 @@ The `FluentValidatorProvider` will automatically retrieve the right validators a
 Catel handle concepts like field or business rules errors and warnings. So, it's necessary map the fluent validation class to the specific Catel validation using `ValidationDescriptionAttribute`.
 
 ```
-	[ValidatorDescription(Tag = "Person", ValidationResultType = ValidationResultType.Error, ValidationType = ValidationType.Field)]
-	public class PersonViewModelValidator : AbstractValidator<PersonViewModel>
-	{
-	}
+[ValidatorDescription(Tag = "Person", ValidationResultType = ValidationResultType.Error, ValidationType = ValidationType.Field)]
+public class PersonViewModelValidator : AbstractValidator<PersonViewModel>
+{
+}
 ```
 
 How does the FluentValidationProvider works?

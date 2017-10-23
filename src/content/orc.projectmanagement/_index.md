@@ -31,17 +31,17 @@ Below is an overview of the most important components:
 A project is a model that can be implemented by the developer and must implement the `IProject` interface. The most convenient way to implement a project is by deriving from the *ProjectBase* class:
 
 ```
-    public class MyProject : ProjectBase
-    {
-    	public Project(string title)
-    		: base(title)
-	    {
-	    }
-	    
-	    public string FirstName { get; private set; }
-	    
-	    public string LastName { get; private set; }
-    }
+public class MyProject : ProjectBase
+{
+	public Project(string title)
+		: base(title)
+	{
+	}
+	
+	public string FirstName { get; private set; }
+	
+	public string LastName { get; private set; }
+}
 ```
 
 # Creating a project initializer
@@ -59,7 +59,7 @@ To create a custom project initializer, see the example below:
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
+ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
 ```
 
 **Make sure to register the service before instantiating the `IProjectManager` because it will be injected**
@@ -69,21 +69,21 @@ Next it can be registered in the ServiceLocator (so it will automatically be inj
 Sometimes it is possible to check on forehand if it's even possible to load a project. This is implemented via the `IProjectValidator` interface. By default there is no validation, but this can be implemented. For example when a project represents a folder on disk, the validator can check if the directory exists:
 
 ```
-    public class DirectoryExistsProjectValidator : IProjectValidator
-    {
-        #region IProjectValidator Members
-        public async bool CanStartLoadingProject(string location)
-        {
-            return Directory.Exists(location);
-        }
-        #endregion
-    }
+public class DirectoryExistsProjectValidator : IProjectValidator
+{
+	#region IProjectValidator Members
+	public async bool CanStartLoadingProject(string location)
+	{
+		return Directory.Exists(location);
+	}
+	#endregion
+}
 ```
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectValidator, DirectoryExistsProjectValidator>();
+ServiceLocator.Default.RegisterType<IProjectValidator, DirectoryExistsProjectValidator>();
 ```
 
 # Creating a project reader service
@@ -91,41 +91,41 @@ Next it can be registered in the ServiceLocator (so it will automatically be inj
 Projects must be read via the `IProjectReaderService`. The project manager automatically knows when to read a project. First, one must create a project reader as shown in the example below:
 
 ```
-	public class ProjectReader : ProjectReaderBase
+public class ProjectReader : ProjectReaderBase
+{
+	protected override async Task<IProject> ReadAsync(string location)
 	{
-		protected override async Task<IProject> ReadAsync(string location)
-		{
-			var project = new MyProject(location);
+		var project = new MyProject(location);
 
-			// TODO: Read from a file / directory / database / anything
+		// TODO: Read from a file / directory / database / anything
 
-			return project;
-		}
+		return project;
 	}
+}
 ```
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
+ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
 ```
 
 # Creating a project writer service
 
 ```
-	public class ProjectWriter : ProjectWriterBase<MyProject>
+public class ProjectWriter : ProjectWriterBase<MyProject>
+{
+	protected override async Task WriteAsync(MyProject project, string location)
 	{
-	    protected override async Task WriteAsync(MyProject project, string location)
-	    {
-	        // TODO: Write to a file / directory / database / anything
-	    }
+		// TODO: Write to a file / directory / database / anything
 	}
+}
 ```
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
+ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
 ```
 
 # Initializing the project manager
@@ -133,7 +133,7 @@ Next it can be registered in the ServiceLocator (so it will automatically be inj
 Because the project manager is using async, the initialization is a separate method. This gives the developer the option to load the project whenever it is required. To (optionally) initialize the project manager, use the code below:
 
 ```
-	await projectManager.Initialize(); 
+await projectManager.Initialize(); 
 ```
 
 # Retrieving a typed instance of the project
@@ -141,7 +141,7 @@ Because the project manager is using async, the initialization is a separate met
 The library contains extension methods for the `IProjectManager` to retrieve a typed instance:
 
 ```
-	var myProject = projectManager.GetProject<MyProject>();
+var myProject = projectManager.GetProject<MyProject>();
 ```
 
 # Detecting project refreshes in the source
@@ -151,20 +151,20 @@ The library can automatically detect whether the source has changed and the proj
 ## Creating a project refresher selector
 
 ```
-	public class ProjectRefresherSelector : IProjectSelector
+public class ProjectRefresherSelector : IProjectSelector
+{
+	public IProjectRefresher GetProjectRefresher(string location)
 	{
-	    public IProjectRefresher GetProjectRefresher(string location)
-		{
-			// TODO: Determine what refresher to use, in this case a file refresher
-			return new FileProjectRefresher(location);
-		}
-	} 
+		// TODO: Determine what refresher to use, in this case a file refresher
+		return new FileProjectRefresher(location);
+	}
+} 
 ```
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
+ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
 ```
 
 **Note that you can also use the `DefaultProjectRefresherSelector`, which will return the `IProjectRefresher` that is registered in the ServiceLocator**
@@ -179,31 +179,31 @@ The library providers a few default implementations:
 If your projects are a file or a directory of files, it should be sufficient to register it in the service locator:
 
 ```
-	ServiceLocator.Default.RegisterType<IProjectRefresher, FileProjectRefresher>();
+ServiceLocator.Default.RegisterType<IProjectRefresher, FileProjectRefresher>();
 ```
 
 If a custom refresher is required, simply implement it as show in the example below:
 
 ```
-    public class DirectoryProjectRefresher : ProjectRefresherBase
-    {
-        private static readonly ILog Log = LogManager.GetCurrentClassLogger();
+public class DirectoryProjectRefresher : ProjectRefresherBase
+{
+	private static readonly ILog Log = LogManager.GetCurrentClassLogger();
 
-        public DirectoryProjectRefresher(string location) 
-            : base(location)
-        {
-        }
+	public DirectoryProjectRefresher(string location) 
+		: base(location)
+	{
+	}
 
-        protected override void SubscribeToLocation(string location)
-        {
-            // TODO: subscribe to changes here
-        }
+	protected override void SubscribeToLocation(string location)
+	{
+		// TODO: subscribe to changes here
+	}
 
-        protected override void UnsubscribeFromLocation(string location)
-        {
-            // TODO: unsubscribe from changes here
-        }
-    }
+	protected override void UnsubscribeFromLocation(string location)
+	{
+		// TODO: unsubscribe from changes here
+	}
+}
 ```
 
 Then register it in the ServiceLocator or return it in the custom `ProjectRefresherSelector`.

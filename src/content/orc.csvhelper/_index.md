@@ -25,24 +25,24 @@ Features
 - `Code generation` => Use static class `CodeGeneration` for generating C# POCO classes and their associated maps.
 
 ```
-	/// <summary>
-    /// Create CSharp files to consume CSV files.
-    /// A standard POCO cs file as well as the CsvHelper Mapping cs file will be created.
-    /// All properties in the POCO will be of type string. So please update accordingly.
-    /// </summary>
-    public static class CodeGeneration
-    {
-        public static void CreateCSharpFilesForAllCsvFiles(string inputFoler, string namespaceName, string outputFolder)
-        {
-            var csvFiles = GetCsvFiles(inputFoler);
+/// <summary>
+/// Create CSharp files to consume CSV files.
+/// A standard POCO cs file as well as the CsvHelper Mapping cs file will be created.
+/// All properties in the POCO will be of type string. So please update accordingly.
+/// </summary>
+public static class CodeGeneration
+{
+	public static void CreateCSharpFilesForAllCsvFiles(string inputFoler, string namespaceName, string outputFolder)
+	{
+		var csvFiles = GetCsvFiles(inputFoler);
 
-            foreach (var csvFile in csvFiles)
-            {
-                CreateCSharpFiles(csvFile, namespaceName, outputFolder);
-            }
-        }
-		...
+		foreach (var csvFile in csvFiles)
+		{
+			CreateCSharpFiles(csvFile, namespaceName, outputFolder);
+		}
 	}
+	...
+}
 ```
 
 - `CsvReader helper` => Use static class `CsvReaderHelper` for reading csv files with a single line of code.

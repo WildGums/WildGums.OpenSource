@@ -1,11 +1,15 @@
-# Using the repositories and unit of work
++++
+title = "Using the repositories and unit of work" 
+description = ""
+weight = 20
++++
 
-The Repository and Unit of Work (UoW) pattern are very useful patterns to create an abstraction level over the *DbContext* that is provided by Entity Framework. A much heard excuse not to use repositories is that EF itself already works with repositories (the *DbContext*) and a UoW (in the SaveChanges method). Below are a few examples why it is a good thing to create repositories:
+The Repository and Unit of Work (UoW) pattern are very useful patterns to create an abstraction level over the `DbContext` that is provided by Entity Framework. A much heard excuse not to use repositories is that EF itself already works with repositories (the `DbContext`) and a UoW (in the SaveChanges method). Below are a few examples why it is a good thing to create repositories:
 
 * Abstract away some of the more complex features of Entity Framework that the end-developer should not be bothered with
-* Hide the actual *DbContext* (make it internal) to prevent misuse
+* Hide the actual `DbContext` (make it internal) to prevent misuse
 * Keep security checks and saving and rollback in a single location
-* Force the use of the *Specification* pattern on queries
+* Force the use of the `Specification` pattern on queries
 
 @alert info
 Note that repositories and UoW should not be used to abstract away the ORM tool because that is just another abstraction layer which is not required. Use it for the advantages mentioned above
@@ -21,33 +25,37 @@ There are different interpretations of how repositories should be used in combin
 
 [image here]
 
-The image above shows that the Unit of Work is the top-level component to be used. Each UoW contains its own *DbContext* instance. The *DbContext* can either be injected or will be created on the fly. Then the UoW also contains repositories which always get the *DbContext* injected. This way, all repositories inside a UoW share the same *DbContext*.
+The image above shows that the Unit of Work is the top-level component to be used. Each UoW contains its own `DbContext` instance. The `DbContext` can either be injected or will be created on the fly. Then the UoW also contains repositories which always get the `DbContext` injected. This way, all repositories inside a UoW share the same `DbContext`.
 
 
 ## Creating a Unit of Work
 
-A UoW can be created by simply instantiating it. The end-developer has the option to either inject the *DbContext* or let the *DbContextManager* take care of it automatically.
+A UoW can be created by simply instantiating it. The end-developer has the option to either inject the `DbContext` or let the `DbContextManager` take care of it automatically.
 
-	using (var uow = new UnitOfWork<MyDbContext>())
-	{
-	    // get repositories and query away
-	}
+```
+using (var uow = new UnitOfWork<MyDbContext>())
+{
+    // get repositories and query away
+}
+```
 
 ## Creating a repository
 
-A repository can be created very easily by deriving from the *EntityRepositoryBase* class. Below is an example of a customer repository:
+A repository can be created very easily by deriving from the `EntityRepositoryBase` class. Below is an example of a customer repository:
 
-	public class CustomerRepository : EntityRepositoryBase<Customer, int>, ICustomerRepository
-	{
-	    public CustomerRepository(DbContext dbContext)
-	        : base(dbContext)
-	    {
-	    }
-	}
-	 
-	public interface ICustomerRepository : IEntityRepository<Customer, int>
-	{
-	}
+```
+public class CustomerRepository : EntityRepositoryBase<Customer, int>, ICustomerRepository
+{
+    public CustomerRepository(DbContext dbContext)
+        : base(dbContext)
+    {
+    }
+}
+ 
+public interface ICustomerRepository : IEntityRepository<Customer, int>
+{
+}
+```
 
 ## Retrieving repositories from a Unit of Work
 
@@ -58,22 +66,26 @@ Once a UoW is created, it can be used to resolve repositories. To retrieve a rep
 
 To retrieve a new repository from the UoW, use the following code:
 
-	using (var uow = new UnitOfWork<MyDbContext>())
-	{
-	    var customerRepository = uow.GetRepository<ICustomerRepository>();
-	 
-	    // all interaction with the customer repository is applied to the unit of work
-	}
+```
+using (var uow = new UnitOfWork<MyDbContext>())
+{
+    var customerRepository = uow.GetRepository<ICustomerRepository>();
+ 
+    // all interaction with the customer repository is applied to the unit of work
+}
+```
 
 ### Saving a Unit of Work
 
 It is very important to save a Unit of Work. Once the Unit of Work gets out of scope (outside the using), all changes will be discarded if not explicitly saved.
 
-	using (var uow = new UnitOfWork<MyDbContext>())
-	{
-	    var customerRepository = uow.GetRepository<ICustomerRepository>();
-	 
-	    // all interaction with the customer repository is applied to the unit of work
-	 
-	    uow.SaveChanges();
-	}
+```
+using (var uow = new UnitOfWork<MyDbContext>())
+{
+    var customerRepository = uow.GetRepository<ICustomerRepository>();
+ 
+    // all interaction with the customer repository is applied to the unit of work
+ 
+    uow.SaveChanges();
+}
+```

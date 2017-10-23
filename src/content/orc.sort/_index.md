@@ -75,12 +75,12 @@ This sort algorithm will sort a list based on the values of another list.
 *Example:*
 
 ```
-    SourceCollection = C, B, B, L, N, P, C, A, D, E, B, E
-    TemplateCollection = A, B, C, D
+SourceCollection = C, B, B, L, N, P, C, A, D, E, B, E
+TemplateCollection = A, B, C, D
 
-	SourceCollection.SortAccordingTo(TemplateCollection)
-    
-    Result = A, B, B, B, C, C, D, L, N, P, E, E
+SourceCollection.SortAccordingTo(TemplateCollection)
+
+Result = A, B, B, B, C, C, D, L, N, P, E, E
 ```
 
 If there are items in the list to be sorted that are not in the template list, they simply get appended to the end of the result in the order they are found.

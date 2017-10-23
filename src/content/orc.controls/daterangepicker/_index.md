@@ -42,7 +42,7 @@ To get/set End and Start date bind to `StartDate` and `EndDate` properties.
 ```
 
 [1]: http://docs.catelproject.com/vnext/catel-mvvm/views/xaml/usercontrol/
-[2]: ../datetimepicker.htm
-[3]: ../timespanpicker.htm
+[2]: {{< relref "orc.controls/datetimepicker/_index.md" >}}
+[3]: {{< relref "orc.controls/timespanpicker/_index.md" >}}
 [4]: ../../images/orc.controls/daterangepicker/DateRangePicker_01.png
 [5]: https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx

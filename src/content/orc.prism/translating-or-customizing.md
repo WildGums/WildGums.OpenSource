@@ -1,3 +1,9 @@
++++
+title = "Translating or customizing" 
+description = ""
+weight = 40
++++
+
 Starting with version 1.0, it is possible to fully customize the bootstrapper tasks. Orc.Prism now uses the `IBootstrapperTaskFactory` to create the tasks instead of the bootstrapper itself. To customize the logic, one has to implement his/her own version of the *IBootstrapperTaskFactory*. The easiest way to do this is to derive from the existing *BootstrapperTaskFactory* and register it in the service locator before the bootstrapper is created.
 
 ## Customizing the messages

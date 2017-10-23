@@ -259,24 +259,24 @@
         <span>Orc.EntityFramework</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
         <a href="/orc.entityframework/using-the-dbcontextmanager/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the DbContextManager</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
       <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
         <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Using the repositories and unit of work</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
+        <a href="/orc.entityframework/using-stored-procedures-and-functions/">
+          <span>Using stored procedures and functions</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
+        <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
+          <span>Using the ModelBase as base class for code-first entities</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -346,24 +346,46 @@
         <span>Orc.Prism</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <a href="/orc.prism/declaring-modules/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
+        <a href="/orc.prism/using-the-bootstrapper/">
+          <span>Using the bootstrapper</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
-        <a href="/orc.prism/module-catalogs/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
+        <a href="/orc.prism/declaring-modules/">
+          <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
+    </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
     </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <a href="/orc.prism/using-the-bootstrapper/">
-          <span></span><i class="fa fa-circle-thin read-icon"></i>
+          <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -597,20 +619,20 @@
 
 <p>To create a custom workspace initializer, see the example below:</p>
 
-<pre><code>    public class WorkspaceInitializer : IWorkspaceInitializer
+<pre><code>public class WorkspaceInitializer : IWorkspaceInitializer
+{
+    public Task InitializeAsync(IWorkspace workspace)
     {
-        public Task InitializeAsync(IWorkspace workspace)
-        {
-            workspace.SetValue(&quot;AView.Width&quot;, 200d);
-            workspace.SetValue(&quot;BView.Width&quot;, 200d);
-            return TaskHelper.Completed;
-        }
+        workspace.SetValue(&quot;AView.Width&quot;, 200d);
+        workspace.SetValue(&quot;BView.Width&quot;, 200d);
+        return TaskHelper.Completed;
     }
+}
 </code></pre>
 
 <p>Next it can be registered in the <code>ServiceLocator</code> (so it will automatically be injected into the <code>WorkspaceManager</code>):</p>
 
-<pre><code>    ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
+<pre><code>ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
 </code></pre>
 
 <p><strong>Make sure to register the service before instantiating the <em>IWorkspaceManager</em> because it will be injected</strong></p>
@@ -619,19 +641,19 @@
 
 <p>Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:</p>
 
-<pre><code>    await workspaceManager.InitializeAsync(); 
+<pre><code>await workspaceManager.InitializeAsync(); 
 </code></pre>
 
 <h1 id="retrieving-a-list-of-all-workspaces">Retrieving a list of all workspaces</h1>
 
-<pre><code>    var workspaces = workspaceManager.Workspaces;
+<pre><code>var workspaces = workspaceManager.Workspaces;
 </code></pre>
 
 <h1 id="retrieving-the-current-workspace">Retrieving the current workspace</h1>
 
 <p>The library contains extension methods for the <code>IWorkspaceManager</code> to retrieve a typed instance:</p>
 
-<pre><code>    var myWorkspace = workspaceManager.Workspace;
+<pre><code>var myWorkspace = workspaceManager.Workspace;
 </code></pre>
 
 <p>To customize the location where the workspaces are stored, use the <code>BaseDirectory</code> property.</p>
@@ -642,7 +664,7 @@
 
 <p>To store information in a workspace, set the workspace to be updated as current workspace. Then let the user (or software) customize all components. Call the following method to raise the <code>WorkspaceInfoRequested</code> event to update the workspace:</p>
 
-<pre><code>    await workspaceManager.StoreWorkspaceAsync();
+<pre><code>await workspaceManager.StoreWorkspaceAsync();
 </code></pre>
 
 <p><strong>Note that a workspace is only updated, not saved to disk by this method</strong></p>
@@ -651,60 +673,60 @@
 
 <p>Create a provider as shown in the example below:</p>
 
-<pre><code>    public class RibbonWorkspaceProvider : IWorkspaceProvider
+<pre><code>public class RibbonWorkspaceProvider : IWorkspaceProvider
+{
+    private readonly Ribbon _ribbon;
+
+    public RibbonWorkspaceProvider(Ribbon ribbon)
     {
-        private readonly Ribbon _ribbon;
+        Argument.IsNotNull(() =&gt; ribbon);
 
-        public RibbonWorkspaceProvider(Ribbon ribbon)
-        {
-            Argument.IsNotNull(() =&gt; ribbon);
-
-            _ribbon = ribbon;
-        }
-
-        public Task ProvideInformationAsync(IWorkspace workspace)
-        {
-            workspace.SetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, _ribbon.IsMinimized);
-            return TaskHelper.Completed;
-        }
-
-        public Task ApplyWorkspaceAsync(IWorkspace workspace)
-        {
-            _ribbon.IsMinimized = workspace.GetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, false);
-            return TaskHelper.Completed;
-        }
+        _ribbon = ribbon;
     }
+
+    public Task ProvideInformationAsync(IWorkspace workspace)
+    {
+        workspace.SetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, _ribbon.IsMinimized);
+        return TaskHelper.Completed;
+    }
+
+    public Task ApplyWorkspaceAsync(IWorkspace workspace)
+    {
+        _ribbon.IsMinimized = workspace.GetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, false);
+        return TaskHelper.Completed;
+    }
+}
 </code></pre>
 
 <p>Then add it to the provider where the ribbon is available:</p>
 
-<pre><code>    public RibbonView()
-    {
-        InitializeComponent();
+<pre><code>public RibbonView()
+{
+    InitializeComponent();
 
-        var dependencyResolver = this.GetDependencyResolver();
-        var workspaceManager = dependencyResolver.Resolve&lt;IWorkspaceManager&gt;();
+    var dependencyResolver = this.GetDependencyResolver();
+    var workspaceManager = dependencyResolver.Resolve&lt;IWorkspaceManager&gt;();
 
-        var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
-        workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
-    }
+    var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
+    workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+}
 </code></pre>
 
 <h2 id="events">Events</h2>
 
 <p>Using events is a bit more work, but can accomplish the same:</p>
 
-<pre><code>        public MyComponent(IWorkspaceManager workspaceManager)
-        {
-            workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
-        }
+<pre><code>public MyComponent(IWorkspaceManager workspaceManager)
+{
+    workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
+}
 
-        private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
-        {
-            var workspace = e.Workspace;
+private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
+{
+    var workspace = e.Workspace;
 
-            workspace.SetWorkspaceValue(&quot;somekey&quot;, &quot;somevalue&quot;);
-        }
+    workspace.SetWorkspaceValue(&quot;somekey&quot;, &quot;somevalue&quot;);
+}
 </code></pre>
 
 <p><strong>Note that this will only be called when storing the workspace, restoring the workspace needs more events</strong></p>
@@ -713,7 +735,7 @@
 
 <p>To save all workspaces to disk, use the code below:</p>
 
-<pre><code>    workspaceManager.Save();
+<pre><code>workspaceManager.Save();
 </code></pre>
 
 <h1 id="using-the-xaml-behaviors">Using the XAML behaviors</h1>
@@ -728,11 +750,11 @@
 
 <p>The behavior is a wrapper around the extension methods and take away to need to manage anything. The behavior is aware of all the events and will handle everything accordingly. To use the behavior, use the code below:</p>
 
-<pre><code>    &lt;views:BView Grid.Row=&quot;2&quot; Grid.Column=&quot;4&quot;&gt;
-        &lt;i:Interaction.Behaviors&gt;
-            &lt;behaviors:AutoWorkspace /&gt;
-        &lt;/i:Interaction.Behaviors&gt;
-    &lt;/views:BView&gt;
+<pre><code>&lt;views:BView Grid.Row=&quot;2&quot; Grid.Column=&quot;4&quot;&gt;
+    &lt;i:Interaction.Behaviors&gt;
+        &lt;behaviors:AutoWorkspace /&gt;
+    &lt;/i:Interaction.Behaviors&gt;
+&lt;/views:BView&gt;
 </code></pre>
 
 
