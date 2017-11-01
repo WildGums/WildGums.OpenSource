@@ -357,6 +357,33 @@
           <span>Declaring modules</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
+    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item">
+      <a href="/orc.prism/module-catalogs/">
+        <span>Module Catalogs</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
+          <span>CompositeModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
+          <span>DownloadingModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
+          <span>NuGetBasedModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
+        <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
+          <span>SafeDirectoryModuleCatalog</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
       <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
         <a href="/orc.prism/translating-or-customizing/">
           <span>Translating or customizing</span><i class="fa fa-circle-thin read-icon"></i>
@@ -521,7 +548,7 @@
     
     
     
-    
+
 
 <p>The <code>DbContextManager</code> class allows the sharing of <code>DbContext</code> (with underlying <code>ObjectContext</code>) classes in Entity Framework. The good thing about this is that the same context can be used in the same scope without having to recreate the same type of the same context over and over again.</p>
 
@@ -556,6 +583,32 @@ Scoping is all done automatically because when a <code>DbContextManager</code> i
 
 <pre><code>DbContextManagerHelper.DisposeDbContextForHttpContext&lt;MyEntities&gt;();
 </code></pre>
+
+
+<hr />
+<p>
+Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+</p>
+<hr />
+<p>
+<h2>Discussion</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+
+this.page.url = 'http://opensource.wildgums.com/\/orc.entityframework\/using-the-dbcontextmanager\/';
+
+this.page.identifier = 'orc.entityframework\\using-the-dbcontextmanager.md';
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wildgums-opensource.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
 
 
     

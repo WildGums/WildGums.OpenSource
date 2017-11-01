@@ -540,7 +540,7 @@
     
     
     
-    <p>Sometimes it&rsquo;s required to use stored procedures or functions. This is still possible with Catel. Below is an example on how to call a stored procedure:</p>
+<p>Sometimes it&rsquo;s required to use stored procedures or functions. This is still possible with Catel. Below is an example on how to call a stored procedure:</p>
 
 <pre><code>using (var dbContextManager = DbContextManager&lt;MyEntities&gt;.GetManager())
 {
@@ -548,6 +548,32 @@
     var result = dbContext.Database.SqlQuery&lt;ReturnType&gt;(&quot;storedProcedureName&quot;, params);
 }
 </code></pre>
+
+
+<hr />
+<p>
+Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+</p>
+<hr />
+<p>
+<h2>Discussion</h2>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+
+this.page.url = 'http://opensource.wildgums.com/\/orc.entityframework\/using-stored-procedures-and-functions\/';
+
+this.page.identifier = 'orc.entityframework\\using-stored-procedures-and-functions.md';
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wildgums-opensource.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
 
 
     
