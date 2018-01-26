@@ -43,19 +43,18 @@
 		{{- if and .Params.hidden (not $.showhidden) }}
 		{{- else}}
 
-
+<span>
 {{- if hasPrefix $.style "h"}}
 	{{- $num := sub ( int (trim $.style "h") ) 1 }}
 	{{- $numn := add $num $.count }}
 
-{{- (printf "<h%d>" $numn)|safeHTML}}
-	<a href="{{.URL}}" >{{ .Title }}</a>
-{{- (printf "</h%d>" $numn)|safeHTML}}
-
+	{{- (printf "<h%d>" $numn)|safeHTML}}
+		<a href="{{.URL}}" >{{ .Title }}</a>
+	{{- (printf "</h%d>" $numn)|safeHTML}}
 {{- else}}
-{{- (printf "<%s>" $.style)|safeHTML}}
-	<a href="{{.URL}}" >{{ .Title }}</a>
-{{- (printf "</%s>" $.style)|safeHTML}}
+	{{- (printf "<%s>" $.style)|safeHTML}}
+		<a href="{{.URL}}" >{{ .Title }}</a>
+	{{- (printf "</%s>" $.style)|safeHTML}}
 {{- end}}
 
 
@@ -69,7 +68,7 @@
 <p>{{.Summary}}</p>
 				{{- end}}
 			{{- end}}
-
+</span>
 
 
 			{{- if lt $.count $.depth}}

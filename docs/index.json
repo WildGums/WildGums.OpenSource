@@ -32,7 +32,7 @@
 	"title": "Module Catalogs",
 	"tags": [],
 	"description": "",
-	"content": "There are several module catalogs available in Orc.Prism.\n\rCompositeModuleCatalog\rDownloadingModuleCatalog\rNuGetBasedModuleCatalog\rSafeDirectoryModuleCatalog\r\r"
+	"content": "There are several module catalogs available in Orc.Prism.\n\rCompositeModuleCatalog\r\r\rDownloadingModuleCatalog\r\r\rNuGetBasedModuleCatalog\r\r\rSafeDirectoryModuleCatalog\r\r\r"
 },
 {
 	"uri": "http://opensource.wildgums.com/orc.entityframework/using-stored-procedures-and-functions/",
@@ -256,7 +256,7 @@
 	"title": "Orc.Controls",
 	"tags": [],
 	"description": "",
-	"content": "   Name Badge     Chat    Downloads    Stable version    Unstable version     Find the source at https://github.com/WildGums/Orc.Controls\nRun the demo project to see the controls in action:\n\rAnimatedGif\rBindableRichTextBox\rColorLegend\rColorPicker\rConnectionStringBuilder\rCulturePicker\rDatePicker\rDateRangePicker\rDateTimePicker\rDbProviderPicker\rDirectoryPicker\rDropDownButton\rExpander\rFilterBox\rFramerateCounter\rHeaderBar\rLinkLabel\rListTextBox\rLogViewer\rNumericTextBox\rOpenFilePicker\rPinnableTooltips\rSaveFilePicker\rStackGrid\rTabControl\rTimeSpanPicker\rValidationContextControl\rWatermarkTextBox\r\r"
+	"content": "   Name Badge     Chat    Downloads    Stable version    Unstable version     Find the source at https://github.com/WildGums/Orc.Controls\nRun the demo project to see the controls in action:\n\rAnimatedGif\r\r\rBindableRichTextBox\r\r\rColorLegend\r\r\rColorPicker\r\r\rConnectionStringBuilder\r\r\rCulturePicker\r\r\rDatePicker\r\r\rDateRangePicker\r\r\rDateTimePicker\r\r\rDbProviderPicker\r\r\rDirectoryPicker\r\r\rDropDownButton\r\r\rExpander\r\r\rFilterBox\r\r\rFramerateCounter\r\r\rHeaderBar\r\r\rLinkLabel\r\r\rListTextBox\r\r\rLogViewer\r\r\rNumericTextBox\r\r\rOpenFilePicker\r\r\rPinnableTooltips\r\r\rSaveFilePicker\r\r\rStackGrid\r\r\rTabControl\r\r\rTimeSpanPicker\r\r\rValidationContextControl\r\r\rWatermarkTextBox\r\r\r"
 },
 {
 	"uri": "http://opensource.wildgums.com/orc.csvhelper/",

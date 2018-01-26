@@ -16,10 +16,10 @@ themeStyle = "original"
 
 ![green docdock](/variant-gray.png)
 
-## Style "simpleflat" (work in progress)
+## Style "flex" (work in progress)
 ```
 [params]
-themeStyle = "simpleflat"
+themeStyle = "flex"
 ```
 
-![simpleflat](/style-simpleflat.png)
+![flex](/style-flex.png)

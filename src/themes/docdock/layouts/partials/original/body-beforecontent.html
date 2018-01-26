@@ -6,16 +6,7 @@
 <div class="highlightable">
   <div id="header-wrapper">
     <div id="header">
-		{{ range where .Site.Pages "Source.BaseFileName" "_header" }} 
-		{{ .Content }} 
-		{{else}}
-		<span style="font-size:smaller">
-		<a id="logo" href="{{.Site.BaseURL}}">
-		  <span class="fa fa-gears" style="font-size:large"></span>
-		</a>
-		{{ T "create-header-md" }}
-		</small>
-		{{end}}
+      {{ partial "header.html" . }}
     </div>
     {{- if not .Site.Params.disableSearch}}
         <div class="searchbox">
@@ -26,7 +17,11 @@
 		<script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}"></script>
 		<script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}"></script>
 		<script type="text/javascript">
-		    var baseurl = "{{.Site.BaseURL}}";
+        {{ if .Site.IsMultiLingual }}
+            var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+        {{ else }}
+            var baseurl = "{{.Site.BaseURL}}";
+        {{ end }}
 		</script>
 		<script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
     {{- end}}
@@ -34,8 +29,8 @@
 
       <ul class="topics">
         {{- if not .Site.Params.disableHomeIcon}}
-            <li data-nav-id="{{"/" | relURL}}" class="dd-item">
-            <a href="{{"/" | relURL}}"><i class="fa fa-fw fa-home"></i></a>
+            <li data-nav-id="{{"/" | relLangURL}}" class="dd-item">
+            <a href="{{"/" | relLangURL}}"><i class="fa fa-fw fa-home"></i></a>
             </li>
         {{- end}}
 		
@@ -56,7 +51,11 @@
             <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> {{T "Clear-History"}}</a>
         {{- end}}
 
-        {{- end}}
+		{{- end}}
+
+    <hr />
+    <li>{{- partial "language-selector.html" . }}</li>
+    
     </ul>
 
  <section id="footer">
