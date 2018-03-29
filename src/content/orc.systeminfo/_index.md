@@ -54,3 +54,14 @@ The following information will be retreived:
 - Available memory
 - Current culture
 - .Net Framework versions  
+
+A kind of code example with TextBox txtBxAboutSystem displaying info collected
+```
+txtBxAboutSystem.Text += "--- System Info ---" + Environment.NewLine;
+var sis = ServiceLocator.Default.GetServiceLocator().ResolveType<ISystemInfoService>();
+if (sis != null)
+{
+    var systemInfo = await TaskHelper.Run(() => sis.GetSystemInfo(), true);
+    txtBxAboutSystem.Text += string.Join(Environment.NewLine, systemInfo.Select(x => string.Format("{0} {1}", x.Name, x.Value)));
+}
+```
