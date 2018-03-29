@@ -55,13 +55,40 @@ The following information will be retreived:
 - Current culture
 - .Net Framework versions  
 
-A kind of code example with TextBox txtBxAboutSystem displaying info collected
+# Using the service
+
+Using the service is easy. Just resolve the service from the `ServiceLocator` or let it automatically be injected into your services or view model.
+
+## Resolving the service
+
+If dependency injection is not used, the service can be retrieved using the following code:
+
 ```
-txtBxAboutSystem.Text += "--- System Info ---" + Environment.NewLine;
-var sis = ServiceLocator.Default.GetServiceLocator().ResolveType<ISystemInfoService>();
-if (sis != null)
+var systemInfoService = ServiceLocator.Default.ResolveType<ISystemInfoService>();
+``` 
+
+## Retrieving the system info
+
+It's best to gather the information on a thread that is not the UI thread. The examples below show how to do this.
+
+### Retrieving on the current thread
+
+```
+var systemInfo = systemInfoService.GetSystemInfo();
+
+foreach (var systemInfoElement in systemInfo)
 {
-    var systemInfo = await TaskHelper.Run(() => sis.GetSystemInfo(), true);
-    txtBxAboutSystem.Text += string.Join(Environment.NewLine, systemInfo.Select(x => string.Format("{0} {1}", x.Name, x.Value)));
+    // TODO: Deal with the system info
+}
+```
+
+### Retrieving on a separate thread
+
+```
+var systemInfo = await TaskHelper.Run(() => systemInfoService.GetSystemInfo(), true);
+
+foreach (var systemInfoElement in systemInfo)
+{
+    // TODO: Deal with the system info
 }
 ```

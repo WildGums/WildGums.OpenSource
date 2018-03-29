@@ -123,6 +123,15 @@ Initializing the catalog protected override void ConfigureModuleCatalog() { base
     </item>
     
     <item>
+      <title>footer</title>
+      <link>http://opensource.wildgums.com/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://opensource.wildgums.com/_footer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>header</title>
       <link>http://opensource.wildgums.com/_header/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

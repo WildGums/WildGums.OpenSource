@@ -534,13 +534,13 @@
     </ul>
     <section><center>
 
-<a class="github-button" href="https://github.com/catel/catel/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Catel on GitHub">Download</a>
 
 
-<a class="github-button" href="https://github.com/catel/catel" data-icon="octicon-star" data-show-count="false" aria-label="Star Catel on GitHub">Star</a>
 
 
-<a class="github-button" href="https://github.com/catel/catel/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Catel on GitHub">Fork</a>
+
+
+
 
 </center>
 
@@ -651,6 +651,8 @@
     
     
 
+
+
 <table>
 <thead>
 <tr>
@@ -728,10 +730,45 @@ public class SystemInfoElement
 <li>.Net Framework versions<br /></li>
 </ul>
 
+<h1 id="using-the-service">Using the service</h1>
+
+<p>Using the service is easy. Just resolve the service from the <code>ServiceLocator</code> or let it automatically be injected into your services or view model.</p>
+
+<h2 id="resolving-the-service">Resolving the service</h2>
+
+<p>If dependency injection is not used, the service can be retrieved using the following code:</p>
+
+<pre><code>var systemInfoService = ServiceLocator.Default.ResolveType&lt;ISystemInfoService&gt;();
+</code></pre>
+
+<h2 id="retrieving-the-system-info">Retrieving the system info</h2>
+
+<p>It&rsquo;s best to gather the information on a thread that is not the UI thread. The examples below show how to do this.</p>
+
+<h3 id="retrieving-on-the-current-thread">Retrieving on the current thread</h3>
+
+<pre><code>var systemInfo = systemInfoService.GetSystemInfo();
+
+foreach (var systemInfoElement in systemInfo)
+{
+    // TODO: Deal with the system info
+}
+</code></pre>
+
+<h3 id="retrieving-on-a-separate-thread">Retrieving on a separate thread</h3>
+
+<pre><code>var systemInfo = await TaskHelper.Run(() =&gt; systemInfoService.GetSystemInfo(), true);
+
+foreach (var systemInfoElement in systemInfo)
+{
+    // TODO: Deal with the system info
+}
+</code></pre>
+
 
 <hr />
 <p>
-Have a question about WildGums projects? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
+Have a question about Catel or WildGums controls? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
 </p>
 <hr />
 <p>
@@ -787,7 +824,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 
   
-    Create a content/_footer.md file to customize the footer content
+    
   
 
 
