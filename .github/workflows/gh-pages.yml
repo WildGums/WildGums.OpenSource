@@ -24,7 +24,10 @@ jobs:
 
     - name: Copy shared files to documentation
       run: cp -r ./src/shared/* ./src
-      
+
+    - name: Remove previous output
+      run: rm -r ./docs
+
     - name: Run Hugo
       run: (cd ./src && hugo --minify)
 
@@ -32,6 +35,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git add -A
         git commit -m "Automatically generate site" -a
 
     - name: Push changes
