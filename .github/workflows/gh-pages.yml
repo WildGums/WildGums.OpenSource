@@ -28,9 +28,14 @@ jobs:
     - name: Run Hugo
       run: (cd ./src && hugo --minify)
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./docs
+   - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Automatically generate site" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: 'master'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
