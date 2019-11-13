@@ -1,4 +1,4 @@
-baseURL = "http://opensource.wildgums.com/"
+baseURL = "https://opensource.wildgums.com/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 publishDir = "../docs"
