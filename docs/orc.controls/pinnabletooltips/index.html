@@ -1,884 +1,111 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>WildGums open source center</title>
-    
-      <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.32.4" />
-<title>PinnableTooltips :: WildGums open source center</title>
-<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-<link href="/css/font-awesome.min.css" rel="stylesheet">
-<link href="/css/nucleus.css" rel="stylesheet">
-<link href="/theme-flex/style.css" rel="stylesheet">
-
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<script src="/js/jquery-2.x.min.js"></script>
-<script type="text/javascript">
-      var baseurl = "http:\/\/opensource.wildgums.com\/";
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-54671533-18', 'auto');
-  ga('send', 'pageview');
-
-</script>
-    
-  </head>
-  <body data-url="/orc.controls/pinnabletooltips/">
-    
-      <header>
-  <div class="logo">
-    
-	
-  
-    <p>WildGums open source center</p>
-
-  
-
-  </div>
-  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
-    <nav class="shortcuts">
-            <li class="" role="">
-                <a href="https://github.com/wildgums/wildgums.opensource"  rel="noopener">
-                  <i class='fa fa-github'></i> Github repo
-                </a>
-            </li>
-    </nav>
-</header>
-<article>
-  <aside>
-    <ul class="menu">
-          <li data-nav-id="/" class="dd-item">
-          <a href="/">
-            <i class="fa fa-fw fa-home"></i>
-          </a>
-          </li>
-    <li data-nav-id="/orc.analytics/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.analytics/">Orc.Analytics</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.automaticsupport/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.automaticsupport/">Orc.AutomaticSupport</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.commandline/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.commandline/">Orc.CommandLine</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/orc.controls/">Orc.Controls</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-        <ul>
-    <li data-nav-id="/orc.controls/animatedgif/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/animatedgif/">AnimatedGif</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/bindablerichtextbox/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/bindablerichtextbox/">BindableRichTextBox</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/colorlegend/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/colorlegend/">ColorLegend</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/colorpicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/colorpicker/">ColorPicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/connectionstringbuilder/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/connectionstringbuilder/">ConnectionStringBuilder</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/culturepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/culturepicker/">CulturePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/datepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/datepicker/">DatePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/daterangepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/daterangepicker/">DateRangePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/datetimepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/datetimepicker/">DateTimePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/dbproviderpicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/dbproviderpicker/">DbProviderPicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/directorypicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/directorypicker/">DirectoryPicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/dropdownbutton/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/dropdownbutton/">DropDownButton</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/expander/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/expander/">Expander</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/filterbox/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/filterbox/">FilterBox</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/frameratecounter/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/frameratecounter/">FramerateCounter</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/headerbar/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/headerbar/">HeaderBar</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/linklabel/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/linklabel/">LinkLabel</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/listtextbox/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/listtextbox/">ListTextBox</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/logviewer/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/logviewer/">LogViewer</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/numerictextbox/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/numerictextbox/">NumericTextBox</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/openfilepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/openfilepicker/">OpenFilePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/pinnabletooltips/" class="dd-item parent active
-        ">
-      <div>
-      <a href="/orc.controls/pinnabletooltips/">PinnableTooltips</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/savefilepicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/savefilepicker/">SaveFilePicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/stackgrid/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/stackgrid/">StackGrid</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/tabcontrol/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/tabcontrol/">TabControl</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/timespanpicker/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/timespanpicker/">TimeSpanPicker</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/validationcontextcontrol/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/validationcontextcontrol/">ValidationContextControl</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.controls/watermarktextbox/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.controls/watermarktextbox/">WatermarkTextBox</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/orc.csvhelper/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.csvhelper/">Orc.CsvHelper</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.csvtexteditor/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.csvtexteditor/">Orc.CsvTextEditor</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.dbtocsv/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.dbtocsv/">Orc.DbToCsv</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.dependencygraph/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.dependencygraph/">Orc.DependencyGraph</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.dynamicobjects/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.dynamicobjects/">Orc.DynamicObjects</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.entityframework/" class="dd-item haschildren
-        ">
-      <div>
-      <a href="/orc.entityframework/">Orc.EntityFramework</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/orc.entityframework/using-the-dbcontextmanager/" class="dd-item">
-        <div>
-          <a href="/orc.entityframework/using-the-dbcontextmanager/">
-            Using the DbContextManager
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-repositories-and-unit-of-work/" class="dd-item">
-        <div>
-          <a href="/orc.entityframework/using-the-repositories-and-unit-of-work/">
-            Using the repositories and unit of work
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-stored-procedures-and-functions/" class="dd-item">
-        <div>
-          <a href="/orc.entityframework/using-stored-procedures-and-functions/">
-            Using stored procedures and functions
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/" class="dd-item">
-        <div>
-          <a href="/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/">
-            Using the ModelBase as base class for code-first entities
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/orc.extensibility/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.extensibility/">Orc.Extensibility</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.feedback/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.feedback/">Orc.Feedback</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.fileassociation/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.fileassociation/">Orc.FileAssociation</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.filesystem/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.filesystem/">Orc.FileSystem</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.filterbuilder/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.filterbuilder/">Orc.FilterBuilder</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.fluentvalidation/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.fluentvalidation/">Orc.FluentValidation</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.licensemanager/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.licensemanager/">Orc.LicenseManager</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.logviewer/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.logviewer/">Orc.LogViewer</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.memento/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.memento/">Orc.Memento</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.metadata/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.metadata/">Orc.Metadata</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.notifications/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.notifications/">Orc.Notifications</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.nugetexplorer/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.nugetexplorer/">Orc.NuGetExplorer</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.prism/" class="dd-item haschildren
-        ">
-      <div>
-      <a href="/orc.prism/">Orc.Prism</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/orc.prism/using-the-bootstrapper/" class="dd-item">
-        <div>
-          <a href="/orc.prism/using-the-bootstrapper/">
-            Using the bootstrapper
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.prism/declaring-modules/" class="dd-item">
-        <div>
-          <a href="/orc.prism/declaring-modules/">
-            Declaring modules
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-    <li data-nav-id="/orc.prism/module-catalogs/" class="dd-item haschildren
-        ">
-      <div>
-      <a href="/orc.prism/module-catalogs/">Module Catalogs</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/orc.prism/module-catalogs/compositemodulecatalog/" class="dd-item">
-        <div>
-          <a href="/orc.prism/module-catalogs/compositemodulecatalog/">
-            CompositeModuleCatalog
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.prism/module-catalogs/downloadingmodulecatalog/" class="dd-item">
-        <div>
-          <a href="/orc.prism/module-catalogs/downloadingmodulecatalog/">
-            DownloadingModuleCatalog
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.prism/module-catalogs/nugetbasedmodulecatalog/" class="dd-item">
-        <div>
-          <a href="/orc.prism/module-catalogs/nugetbasedmodulecatalog/">
-            NuGetBasedModuleCatalog
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-      <li data-nav-id="/orc.prism/module-catalogs/safedirectorymodulecatalog/" class="dd-item">
-        <div>
-          <a href="/orc.prism/module-catalogs/safedirectorymodulecatalog/">
-            SafeDirectoryModuleCatalog
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-        </ul>
-    </li>
-      <li data-nav-id="/orc.prism/translating-or-customizing/" class="dd-item">
-        <div>
-          <a href="/orc.prism/translating-or-customizing/">
-            Translating or customizing
-          </a><i class="fa fa-circle-thin read-icon"></i>
-        </div>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/orc.projectmanagement/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.projectmanagement/">Orc.ProjectManagement</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.scheduling/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.scheduling/">Orc.Scheduling</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.search/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.search/">Orc.Search</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.skia/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.skia/">Orc.Skia</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.snapshots/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.snapshots/">Orc.Snapshots</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.sort/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.sort/">Orc.Sort</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.squirrel/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.squirrel/">Orc.Squirrel</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.supportpackage/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.supportpackage/">Orc.SupportPackage</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.systeminfo/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.systeminfo/">Orc.SystemInfo</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.wizard/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.wizard/">Orc.Wizard</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orc.workspacemanagement/" class="dd-item
-        ">
-      <div>
-      <a href="/orc.workspacemanagement/">Orc.WorkspaceManagement</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/orchestra/" class="dd-item
-        ">
-      <div>
-      <a href="/orchestra/">Orchestra</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-
-
-
-
-    </ul>
-    <section><center>
-
-
-
-
-
-
-
-
-
-</center>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-    </section>
-  </aside>
-  <section class="page">
-    
-    <div class="nav-select">
-      <center>Navigation : 
-        <select onchange="javascript:location.href = this.value;">
-          
-    <option value="/orc.analytics/" >
-   Orc.Analytics</option>
-    <option value="/orc.automaticsupport/" >
-   Orc.AutomaticSupport</option>
-    <option value="/orc.commandline/" >
-   Orc.CommandLine</option>
-    <option value="/orc.controls/" >
-   Orc.Controls</option> 
-    <option value="/orc.controls/animatedgif/" >
-  - 
-   AnimatedGif</option>
-    <option value="/orc.controls/bindablerichtextbox/" >
-  - 
-   BindableRichTextBox</option>
-    <option value="/orc.controls/colorlegend/" >
-  - 
-   ColorLegend</option>
-    <option value="/orc.controls/colorpicker/" >
-  - 
-   ColorPicker</option>
-    <option value="/orc.controls/connectionstringbuilder/" >
-  - 
-   ConnectionStringBuilder</option>
-    <option value="/orc.controls/culturepicker/" >
-  - 
-   CulturePicker</option>
-    <option value="/orc.controls/datepicker/" >
-  - 
-   DatePicker</option>
-    <option value="/orc.controls/daterangepicker/" >
-  - 
-   DateRangePicker</option>
-    <option value="/orc.controls/datetimepicker/" >
-  - 
-   DateTimePicker</option>
-    <option value="/orc.controls/dbproviderpicker/" >
-  - 
-   DbProviderPicker</option>
-    <option value="/orc.controls/directorypicker/" >
-  - 
-   DirectoryPicker</option>
-    <option value="/orc.controls/dropdownbutton/" >
-  - 
-   DropDownButton</option>
-    <option value="/orc.controls/expander/" >
-  - 
-   Expander</option>
-    <option value="/orc.controls/filterbox/" >
-  - 
-   FilterBox</option>
-    <option value="/orc.controls/frameratecounter/" >
-  - 
-   FramerateCounter</option>
-    <option value="/orc.controls/headerbar/" >
-  - 
-   HeaderBar</option>
-    <option value="/orc.controls/linklabel/" >
-  - 
-   LinkLabel</option>
-    <option value="/orc.controls/listtextbox/" >
-  - 
-   ListTextBox</option>
-    <option value="/orc.controls/logviewer/" >
-  - 
-   LogViewer</option>
-    <option value="/orc.controls/numerictextbox/" >
-  - 
-   NumericTextBox</option>
-    <option value="/orc.controls/openfilepicker/" >
-  - 
-   OpenFilePicker</option>
-    <option value="/orc.controls/pinnabletooltips/"  selected>
-  - 
-   PinnableTooltips</option> 
-  
-    <option value="/orc.controls/savefilepicker/" >
-  - 
-   SaveFilePicker</option>
-    <option value="/orc.controls/stackgrid/" >
-  - 
-   StackGrid</option>
-    <option value="/orc.controls/tabcontrol/" >
-  - 
-   TabControl</option>
-    <option value="/orc.controls/timespanpicker/" >
-  - 
-   TimeSpanPicker</option>
-    <option value="/orc.controls/validationcontextcontrol/" >
-  - 
-   ValidationContextControl</option>
-    <option value="/orc.controls/watermarktextbox/" >
-  - 
-   WatermarkTextBox</option>
-  
-    <option value="/orc.csvhelper/" >
-   Orc.CsvHelper</option>
-    <option value="/orc.csvtexteditor/" >
-   Orc.CsvTextEditor</option>
-    <option value="/orc.dbtocsv/" >
-   Orc.DbToCsv</option>
-    <option value="/orc.dependencygraph/" >
-   Orc.DependencyGraph</option>
-    <option value="/orc.dynamicobjects/" >
-   Orc.DynamicObjects</option>
-    <option value="/orc.entityframework/" >
-   Orc.EntityFramework</option>
-    <option value="/orc.extensibility/" >
-   Orc.Extensibility</option>
-    <option value="/orc.feedback/" >
-   Orc.Feedback</option>
-    <option value="/orc.fileassociation/" >
-   Orc.FileAssociation</option>
-    <option value="/orc.filesystem/" >
-   Orc.FileSystem</option>
-    <option value="/orc.filterbuilder/" >
-   Orc.FilterBuilder</option>
-    <option value="/orc.fluentvalidation/" >
-   Orc.FluentValidation</option>
-    <option value="/orc.licensemanager/" >
-   Orc.LicenseManager</option>
-    <option value="/orc.logviewer/" >
-   Orc.LogViewer</option>
-    <option value="/orc.memento/" >
-   Orc.Memento</option>
-    <option value="/orc.metadata/" >
-   Orc.Metadata</option>
-    <option value="/orc.notifications/" >
-   Orc.Notifications</option>
-    <option value="/orc.nugetexplorer/" >
-   Orc.NuGetExplorer</option>
-    <option value="/orc.prism/" >
-   Orc.Prism</option>
-    <option value="/orc.projectmanagement/" >
-   Orc.ProjectManagement</option>
-    <option value="/orc.scheduling/" >
-   Orc.Scheduling</option>
-    <option value="/orc.search/" >
-   Orc.Search</option>
-    <option value="/orc.skia/" >
-   Orc.Skia</option>
-    <option value="/orc.snapshots/" >
-   Orc.Snapshots</option>
-    <option value="/orc.sort/" >
-   Orc.Sort</option>
-    <option value="/orc.squirrel/" >
-   Orc.Squirrel</option>
-    <option value="/orc.supportpackage/" >
-   Orc.SupportPackage</option>
-    <option value="/orc.systeminfo/" >
-   Orc.SystemInfo</option>
-    <option value="/orc.wizard/" >
-   Orc.Wizard</option>
-    <option value="/orc.workspacemanagement/" >
-   Orc.WorkspaceManagement</option>
-    <option value="/orchestra/" >
-   Orchestra</option>
-
-
-
-        </select>
-      </center>
-    </div>
-      <div>
-        <div class="searchbox">
-          <input data-search-input id="search-by" type="text" placeholder="Search...">
-        </div>
-        <script type="text/javascript" src="/js/lunr.min.js"></script>
-        <script type="text/javascript" src="/js/auto-complete.js"></script>
-        <link href="/css/auto-complete.css" rel="stylesheet">
-        <script type="text/javascript">
-          
-              var baseurl = "http:\/\/opensource.wildgums.com\/";
-          
-        </script>
-        <script type="text/javascript" src="/js/search.js"></script>
-      </div>
-    
-
-    <h1>PinnableTooltips</h1>
-    
-    
-    
-
-
-
-<p>This is <code>ToolTip</code> that can be pinned by user.</p>
-
-<p>Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.contentcontrol(v=vs.110).aspx" target="_blank">System.Windows.Controls.ContentControl</a>.</p>
-
-<p>Hover the owner control to see the tool tips. Move tool tip to automatically pin it.
-<code>PinnableToolTip</code> works with asistance of <code>PinnableToolTipService</code> that exposes attached properties to attach tool tips to controls.</p>
-
-<p><img src="../../images/orc.controls/pinnabletooltips/PinnableToolTips_01.png" alt="PinnableTooltip 01" /></p>
-
-<h2 id="properties">Properties</h2>
-
-<p><strong>PinnableToolTipService attached properties</strong></p>
-
-<table>
-<thead>
-<tr>
-<th>Property name</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>InitialShowDelay</td>
-<td>Uses to set initial popup show delay.</td>
-</tr>
-
-<tr>
-<td>IsToolTipOwner</td>
-<td>Uses to set tool tip owner.</td>
-</tr>
-
-<tr>
-<td>Placement</td>
-<td>Uses to set tooltip <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.primitives.placementmode(v=vs.110).aspx" target="_blank">Placement</a>.</td>
-</tr>
-
-<tr>
-<td>PlacementTarget</td>
-<td>Uses to set tooltip placement target.</td>
-</tr>
-
-<tr>
-<td>ShowDuration</td>
-<td>Uses to set tooltip duration.</td>
-</tr>
-
-<tr>
-<td>ToolTip</td>
-<td>Uses to attach tooltip to parent control.</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>PinnableToolTip</strong></p>
-
-<table>
-<thead>
-<tr>
-<th>Property name</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>AccentColorBrush</td>
-<td>Gets or sets accent color.</td>
-</tr>
-
-<tr>
-<td>AllowCloseByUser</td>
-<td>Gets or sets value indicating whether tool tip can be closed by user.</td>
-</tr>
-
-<tr>
-<td>GripColor</td>
-<td>Gets or sets tool tip grip color.</td>
-</tr>
-
-<tr>
-<td>HorizontalOffset</td>
-<td>Gets or sets tool tip horizontal offset.</td>
-</tr>
-
-<tr>
-<td>IsOpen</td>
-<td>Gets value indicating whether tool tip is opened.</td>
-</tr>
-
-<tr>
-<td>IsPinned</td>
-<td>Gets or sets value whether tool tip is pinned.</td>
-</tr>
-
-<tr>
-<td>Owner</td>
-<td>Gets or sets <code>ToolTip</code> owner control.</td>
-</tr>
-
-<tr>
-<td>ResizeMode</td>
-<td>Gets or sets tool tip <a href="https://msdn.microsoft.com/en-us/library/system.windows.window.resizemode(v=vs.110).aspx" target="_blank">resize mode</a>.</td>
-</tr>
-
-<tr>
-<td>VerticalOffset</td>
-<td>Gets or sets tool tip vertical offset.</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="events">Events</h2>
-
-<table>
-<thead>
-<tr>
-<th>Event name</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>IsOpenChanged</td>
-<td>Occurs when tool tip is opened/closed.</td>
-</tr>
-
-<tr>
-<td>IsPinnedChanged</td>
-<td>Occurs when tool tip is pinned/unpinned.</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="how-to-use">How to use</h2>
-
-<p>Use <code>PinnableToolTipService</code> to attach tool tip to owner control.</p>
-
-<pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+<!doctype html><html><head><title>WildGums open source center</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=generator content="Hugo 0.58.3"><title>PinnableTooltips :: WildGums open source center</title><link rel="shortcut icon" href=/images/favicon.png type=image/x-icon><link href=/css/font-awesome.min.css rel=stylesheet><link href=/css/nucleus.css rel=stylesheet><link href=/theme-flex/style.css rel=stylesheet><link rel=stylesheet href=/css/bootstrap.min.css><script src=/js/jquery-2.x.min.js></script><script type=text/javascript>var baseurl="http:\/\/opensource.wildgums.com\/";</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-54671533-18','auto');ga('send','pageview');</script></head><body data-url=/orc.controls/pinnabletooltips/><header><div class=logo><p>WildGums open source center</p></div><div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div><nav class=shortcuts><li role><a href=https://github.com/wildgums/wildgums.opensource rel=noopener><i class="fa fa-github"></i>Github repo</a></li></nav></header><article><aside><ul class=menu><li data-nav-id=/ class=dd-item><a href=/><i class="fa fa-fw fa-home"></i></a></li><li data-nav-id=/orc.analytics/ class=dd-item><div><a href=/orc.analytics/>Orc.Analytics</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.automaticsupport/ class=dd-item><div><a href=/orc.automaticsupport/>Orc.AutomaticSupport</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.commandline/ class=dd-item><div><a href=/orc.commandline/>Orc.CommandLine</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/ class="dd-item parent haschildren"><div><a href=/orc.controls/>Orc.Controls</a>
+<i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i></div><ul><li data-nav-id=/orc.controls/animatedgif/ class=dd-item><div><a href=/orc.controls/animatedgif/>AnimatedGif</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/bindablerichtextbox/ class=dd-item><div><a href=/orc.controls/bindablerichtextbox/>BindableRichTextBox</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/colorlegend/ class=dd-item><div><a href=/orc.controls/colorlegend/>ColorLegend</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/colorpicker/ class=dd-item><div><a href=/orc.controls/colorpicker/>ColorPicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/connectionstringbuilder/ class=dd-item><div><a href=/orc.controls/connectionstringbuilder/>ConnectionStringBuilder</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/culturepicker/ class=dd-item><div><a href=/orc.controls/culturepicker/>CulturePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/datepicker/ class=dd-item><div><a href=/orc.controls/datepicker/>DatePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/daterangepicker/ class=dd-item><div><a href=/orc.controls/daterangepicker/>DateRangePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/datetimepicker/ class=dd-item><div><a href=/orc.controls/datetimepicker/>DateTimePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/dbproviderpicker/ class=dd-item><div><a href=/orc.controls/dbproviderpicker/>DbProviderPicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/directorypicker/ class=dd-item><div><a href=/orc.controls/directorypicker/>DirectoryPicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/dropdownbutton/ class=dd-item><div><a href=/orc.controls/dropdownbutton/>DropDownButton</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/expander/ class=dd-item><div><a href=/orc.controls/expander/>Expander</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/filterbox/ class=dd-item><div><a href=/orc.controls/filterbox/>FilterBox</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/frameratecounter/ class=dd-item><div><a href=/orc.controls/frameratecounter/>FramerateCounter</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/headerbar/ class=dd-item><div><a href=/orc.controls/headerbar/>HeaderBar</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/linklabel/ class=dd-item><div><a href=/orc.controls/linklabel/>LinkLabel</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/listtextbox/ class=dd-item><div><a href=/orc.controls/listtextbox/>ListTextBox</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/logviewer/ class=dd-item><div><a href=/orc.controls/logviewer/>LogViewer</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/numerictextbox/ class=dd-item><div><a href=/orc.controls/numerictextbox/>NumericTextBox</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/openfilepicker/ class=dd-item><div><a href=/orc.controls/openfilepicker/>OpenFilePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/pinnabletooltips/ class="dd-item parent active"><div><a href=/orc.controls/pinnabletooltips/>PinnableTooltips</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/savefilepicker/ class=dd-item><div><a href=/orc.controls/savefilepicker/>SaveFilePicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/stackgrid/ class=dd-item><div><a href=/orc.controls/stackgrid/>StackGrid</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/tabcontrol/ class=dd-item><div><a href=/orc.controls/tabcontrol/>TabControl</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/timespanpicker/ class=dd-item><div><a href=/orc.controls/timespanpicker/>TimeSpanPicker</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/validationcontextcontrol/ class=dd-item><div><a href=/orc.controls/validationcontextcontrol/>ValidationContextControl</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.controls/watermarktextbox/ class=dd-item><div><a href=/orc.controls/watermarktextbox/>WatermarkTextBox</a><i class="fa fa-circle-thin read-icon"></i></div></li></ul></li><li data-nav-id=/orc.csvhelper/ class=dd-item><div><a href=/orc.csvhelper/>Orc.CsvHelper</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.csvtexteditor/ class=dd-item><div><a href=/orc.csvtexteditor/>Orc.CsvTextEditor</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.dbtocsv/ class=dd-item><div><a href=/orc.dbtocsv/>Orc.DbToCsv</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.dependencygraph/ class=dd-item><div><a href=/orc.dependencygraph/>Orc.DependencyGraph</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.dynamicobjects/ class=dd-item><div><a href=/orc.dynamicobjects/>Orc.DynamicObjects</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.entityframework/ class="dd-item haschildren"><div><a href=/orc.entityframework/>Orc.EntityFramework</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i></div><ul><li data-nav-id=/orc.entityframework/using-the-dbcontextmanager/ class=dd-item><div><a href=/orc.entityframework/using-the-dbcontextmanager/>Using the DbContextManager
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.entityframework/using-the-repositories-and-unit-of-work/ class=dd-item><div><a href=/orc.entityframework/using-the-repositories-and-unit-of-work/>Using the repositories and unit of work
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.entityframework/using-stored-procedures-and-functions/ class=dd-item><div><a href=/orc.entityframework/using-stored-procedures-and-functions/>Using stored procedures and functions
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/ class=dd-item><div><a href=/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities/>Using the ModelBase as base class for code-first entities
+</a><i class="fa fa-circle-thin read-icon"></i></div></li></ul></li><li data-nav-id=/orc.extensibility/ class=dd-item><div><a href=/orc.extensibility/>Orc.Extensibility</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.feedback/ class=dd-item><div><a href=/orc.feedback/>Orc.Feedback</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.fileassociation/ class=dd-item><div><a href=/orc.fileassociation/>Orc.FileAssociation</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.filesystem/ class=dd-item><div><a href=/orc.filesystem/>Orc.FileSystem</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.filterbuilder/ class=dd-item><div><a href=/orc.filterbuilder/>Orc.FilterBuilder</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.fluentvalidation/ class=dd-item><div><a href=/orc.fluentvalidation/>Orc.FluentValidation</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.licensemanager/ class=dd-item><div><a href=/orc.licensemanager/>Orc.LicenseManager</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.logviewer/ class=dd-item><div><a href=/orc.logviewer/>Orc.LogViewer</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.memento/ class=dd-item><div><a href=/orc.memento/>Orc.Memento</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.metadata/ class=dd-item><div><a href=/orc.metadata/>Orc.Metadata</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.notifications/ class=dd-item><div><a href=/orc.notifications/>Orc.Notifications</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.nugetexplorer/ class=dd-item><div><a href=/orc.nugetexplorer/>Orc.NuGetExplorer</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.plot/ class=dd-item><div><a href=/orc.plot/>Orc.Plot</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/ class="dd-item haschildren"><div><a href=/orc.prism/>Orc.Prism</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i></div><ul><li data-nav-id=/orc.prism/using-the-bootstrapper/ class=dd-item><div><a href=/orc.prism/using-the-bootstrapper/>Using the bootstrapper
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/declaring-modules/ class=dd-item><div><a href=/orc.prism/declaring-modules/>Declaring modules
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/module-catalogs/ class="dd-item haschildren"><div><a href=/orc.prism/module-catalogs/>Module Catalogs</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i></div><ul><li data-nav-id=/orc.prism/module-catalogs/compositemodulecatalog/ class=dd-item><div><a href=/orc.prism/module-catalogs/compositemodulecatalog/>CompositeModuleCatalog
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/module-catalogs/downloadingmodulecatalog/ class=dd-item><div><a href=/orc.prism/module-catalogs/downloadingmodulecatalog/>DownloadingModuleCatalog
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/module-catalogs/nugetbasedmodulecatalog/ class=dd-item><div><a href=/orc.prism/module-catalogs/nugetbasedmodulecatalog/>NuGetBasedModuleCatalog
+</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.prism/module-catalogs/safedirectorymodulecatalog/ class=dd-item><div><a href=/orc.prism/module-catalogs/safedirectorymodulecatalog/>SafeDirectoryModuleCatalog
+</a><i class="fa fa-circle-thin read-icon"></i></div></li></ul></li><li data-nav-id=/orc.prism/translating-or-customizing/ class=dd-item><div><a href=/orc.prism/translating-or-customizing/>Translating or customizing
+</a><i class="fa fa-circle-thin read-icon"></i></div></li></ul></li><li data-nav-id=/orc.projectmanagement/ class=dd-item><div><a href=/orc.projectmanagement/>Orc.ProjectManagement</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.scheduling/ class=dd-item><div><a href=/orc.scheduling/>Orc.Scheduling</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.search/ class=dd-item><div><a href=/orc.search/>Orc.Search</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.selectionmanagement/ class=dd-item><div><a href=/orc.selectionmanagement/>Orc.SelectionManagement</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.skia/ class=dd-item><div><a href=/orc.skia/>Orc.Skia</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.snapshots/ class=dd-item><div><a href=/orc.snapshots/>Orc.Snapshots</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.sort/ class=dd-item><div><a href=/orc.sort/>Orc.Sort</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.squirrel/ class=dd-item><div><a href=/orc.squirrel/>Orc.Squirrel</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.supportpackage/ class=dd-item><div><a href=/orc.supportpackage/>Orc.SupportPackage</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.systeminfo/ class=dd-item><div><a href=/orc.systeminfo/>Orc.SystemInfo</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.wizard/ class=dd-item><div><a href=/orc.wizard/>Orc.Wizard</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orc.workspacemanagement/ class=dd-item><div><a href=/orc.workspacemanagement/>Orc.WorkspaceManagement</a><i class="fa fa-circle-thin read-icon"></i></div></li><li data-nav-id=/orchestra/ class=dd-item><div><a href=/orchestra/>Orchestra</a><i class="fa fa-circle-thin read-icon"></i></div></li></ul><section><center></center><script async defer src=https://buttons.github.io/buttons.js></script></section></aside><section class=page><div class=nav-select><center>Navigation :
+<select onchange="location.href=this.value;">
+<option value=/orc.analytics/>Orc.Analytics</option>
+<option value=/orc.automaticsupport/>Orc.AutomaticSupport</option>
+<option value=/orc.commandline/>Orc.CommandLine</option>
+<option value=/orc.controls/>Orc.Controls</option>
+<option value=/orc.controls/animatedgif/>-
+AnimatedGif</option>
+<option value=/orc.controls/bindablerichtextbox/>-
+BindableRichTextBox</option>
+<option value=/orc.controls/colorlegend/>-
+ColorLegend</option>
+<option value=/orc.controls/colorpicker/>-
+ColorPicker</option>
+<option value=/orc.controls/connectionstringbuilder/>-
+ConnectionStringBuilder</option>
+<option value=/orc.controls/culturepicker/>-
+CulturePicker</option>
+<option value=/orc.controls/datepicker/>-
+DatePicker</option>
+<option value=/orc.controls/daterangepicker/>-
+DateRangePicker</option>
+<option value=/orc.controls/datetimepicker/>-
+DateTimePicker</option>
+<option value=/orc.controls/dbproviderpicker/>-
+DbProviderPicker</option>
+<option value=/orc.controls/directorypicker/>-
+DirectoryPicker</option>
+<option value=/orc.controls/dropdownbutton/>-
+DropDownButton</option>
+<option value=/orc.controls/expander/>-
+Expander</option>
+<option value=/orc.controls/filterbox/>-
+FilterBox</option>
+<option value=/orc.controls/frameratecounter/>-
+FramerateCounter</option>
+<option value=/orc.controls/headerbar/>-
+HeaderBar</option>
+<option value=/orc.controls/linklabel/>-
+LinkLabel</option>
+<option value=/orc.controls/listtextbox/>-
+ListTextBox</option>
+<option value=/orc.controls/logviewer/>-
+LogViewer</option>
+<option value=/orc.controls/numerictextbox/>-
+NumericTextBox</option>
+<option value=/orc.controls/openfilepicker/>-
+OpenFilePicker</option>
+<option value=/orc.controls/pinnabletooltips/ selected>-
+PinnableTooltips</option>
+<option value=/orc.controls/savefilepicker/>-
+SaveFilePicker</option>
+<option value=/orc.controls/stackgrid/>-
+StackGrid</option>
+<option value=/orc.controls/tabcontrol/>-
+TabControl</option>
+<option value=/orc.controls/timespanpicker/>-
+TimeSpanPicker</option>
+<option value=/orc.controls/validationcontextcontrol/>-
+ValidationContextControl</option>
+<option value=/orc.controls/watermarktextbox/>-
+WatermarkTextBox</option>
+<option value=/orc.csvhelper/>Orc.CsvHelper</option>
+<option value=/orc.csvtexteditor/>Orc.CsvTextEditor</option>
+<option value=/orc.dbtocsv/>Orc.DbToCsv</option>
+<option value=/orc.dependencygraph/>Orc.DependencyGraph</option>
+<option value=/orc.dynamicobjects/>Orc.DynamicObjects</option>
+<option value=/orc.entityframework/>Orc.EntityFramework</option>
+<option value=/orc.extensibility/>Orc.Extensibility</option>
+<option value=/orc.feedback/>Orc.Feedback</option>
+<option value=/orc.fileassociation/>Orc.FileAssociation</option>
+<option value=/orc.filesystem/>Orc.FileSystem</option>
+<option value=/orc.filterbuilder/>Orc.FilterBuilder</option>
+<option value=/orc.fluentvalidation/>Orc.FluentValidation</option>
+<option value=/orc.licensemanager/>Orc.LicenseManager</option>
+<option value=/orc.logviewer/>Orc.LogViewer</option>
+<option value=/orc.memento/>Orc.Memento</option>
+<option value=/orc.metadata/>Orc.Metadata</option>
+<option value=/orc.notifications/>Orc.Notifications</option>
+<option value=/orc.nugetexplorer/>Orc.NuGetExplorer</option>
+<option value=/orc.plot/>Orc.Plot</option>
+<option value=/orc.prism/>Orc.Prism</option>
+<option value=/orc.projectmanagement/>Orc.ProjectManagement</option>
+<option value=/orc.scheduling/>Orc.Scheduling</option>
+<option value=/orc.search/>Orc.Search</option>
+<option value=/orc.selectionmanagement/>Orc.SelectionManagement</option>
+<option value=/orc.skia/>Orc.Skia</option>
+<option value=/orc.snapshots/>Orc.Snapshots</option>
+<option value=/orc.sort/>Orc.Sort</option>
+<option value=/orc.squirrel/>Orc.Squirrel</option>
+<option value=/orc.supportpackage/>Orc.SupportPackage</option>
+<option value=/orc.systeminfo/>Orc.SystemInfo</option>
+<option value=/orc.wizard/>Orc.Wizard</option>
+<option value=/orc.workspacemanagement/>Orc.WorkspaceManagement</option>
+<option value=/orchestra/>Orchestra</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div><script type=text/javascript src=/js/lunr.min.js></script><script type=text/javascript src=/js/auto-complete.js></script><link href=/css/auto-complete.css rel=stylesheet><script type=text/javascript>var baseurl="http:\/\/opensource.wildgums.com\/";</script><script type=text/javascript src=/js/search.js></script></div><h1>PinnableTooltips</h1><p>This is <code>ToolTip</code> that can be pinned by user.</p><p>Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.contentcontrol(v=vs.110).aspx" target=_blank>System.Windows.Controls.ContentControl</a>.</p><p>Hover the owner control to see the tool tips. Move tool tip to automatically pin it.
+<code>PinnableToolTip</code> works with asistance of <code>PinnableToolTipService</code> that exposes attached properties to attach tool tips to controls.</p><p><img src=../../images/orc.controls/pinnabletooltips/PinnableToolTips_01.png alt="PinnableTooltip 01"></p><h2 id=properties>Properties</h2><p><strong>PinnableToolTipService attached properties</strong></p><table><thead><tr><th>Property name</th><th>Description</th></tr></thead><tbody><tr><td>InitialShowDelay</td><td>Uses to set initial popup show delay.</td></tr><tr><td>IsToolTipOwner</td><td>Uses to set tool tip owner.</td></tr><tr><td>Placement</td><td>Uses to set tooltip <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.primitives.placementmode(v=vs.110).aspx" target=_blank>Placement</a>.</td></tr><tr><td>PlacementTarget</td><td>Uses to set tooltip placement target.</td></tr><tr><td>ShowDuration</td><td>Uses to set tooltip duration.</td></tr><tr><td>ToolTip</td><td>Uses to attach tooltip to parent control.</td></tr></tbody></table><p><strong>PinnableToolTip</strong></p><table><thead><tr><th>Property name</th><th>Description</th></tr></thead><tbody><tr><td>AccentColorBrush</td><td>Gets or sets accent color.</td></tr><tr><td>AllowCloseByUser</td><td>Gets or sets value indicating whether tool tip can be closed by user.</td></tr><tr><td>GripColor</td><td>Gets or sets tool tip grip color.</td></tr><tr><td>HorizontalOffset</td><td>Gets or sets tool tip horizontal offset.</td></tr><tr><td>IsOpen</td><td>Gets value indicating whether tool tip is opened.</td></tr><tr><td>IsPinned</td><td>Gets or sets value whether tool tip is pinned.</td></tr><tr><td>Owner</td><td>Gets or sets <code>ToolTip</code> owner control.</td></tr><tr><td>ResizeMode</td><td>Gets or sets tool tip <a href="https://msdn.microsoft.com/en-us/library/system.windows.window.resizemode(v=vs.110).aspx" target=_blank>resize mode</a>.</td></tr><tr><td>VerticalOffset</td><td>Gets or sets tool tip vertical offset.</td></tr></tbody></table><h2 id=events>Events</h2><table><thead><tr><th>Event name</th><th>Description</th></tr></thead><tbody><tr><td>IsOpenChanged</td><td>Occurs when tool tip is opened/closed.</td></tr><tr><td>IsPinnedChanged</td><td>Occurs when tool tip is pinned/unpinned.</td></tr></tbody></table><h2 id=how-to-use>How to use</h2><p>Use <code>PinnableToolTipService</code> to attach tool tip to owner control.</p><pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
     &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
     &lt;orc:PinnableToolTipService.ToolTip&gt;
         &lt;orc:PinnableToolTip AllowCloseByUser=&quot;True&quot; ResizeMode=&quot;CanResize&quot; MinWidth=&quot;100&quot; MinHeight=&quot;100&quot;
@@ -896,11 +123,7 @@
         &lt;/orc:PinnableToolTip&gt;
     &lt;/orc:PinnableToolTipService.ToolTip&gt;
 &lt;/Border&gt;
-</code></pre>
-
-<p>If you pass any control as <code>ToolTip</code> to <code>PinnableToolTipService</code> it will be wrapped by <code>PinnableToolTip</code>.</p>
-
-<pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+</code></pre><p>If you pass any control as <code>ToolTip</code> to <code>PinnableToolTipService</code> it will be wrapped by <code>PinnableToolTip</code>.</p><pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
     &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
     &lt;orc:PinnableToolTipService.ToolTip&gt;
         &lt;StackPanel&gt;
@@ -910,89 +133,5 @@
         &lt;/StackPanel&gt;
     &lt;/orc:PinnableToolTipService.ToolTip&gt;
 &lt;/Border&gt;
-</code></pre>
-
-
-<hr />
-<p>
-Have a question about Catel or WildGums controls? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
-</p>
-<hr />
-<p>
-<h2>Discussion</h2>
-<div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-
-this.page.url = 'http://opensource.wildgums.com/\/orc.controls\/pinnabletooltips\/';
-
-this.page.identifier = 'orc.controls\\pinnabletooltips\\_index.md';
-};
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://wildgums-opensource.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
-
-
-
-    
-    
-        <div class="chevrons">
-    <div id="navigation">
-<a class="nav nav-prev" href="/orc.controls/openfilepicker/" title="OpenFilePicker"> <i class="fa fa-chevron-left"></i><label>OpenFilePicker</label></a>
-    <a class="nav nav-next" href="/orc.controls/savefilepicker/" title="SaveFilePicker" style="margin-right: 0px;"><label>SaveFilePicker</label><i class="fa fa-chevron-right"></i></a></div>
-  </div>
-
-  </section>
-</article>
-
-<footer>
-
-<div class="footline">
-    
-
-    
-
-  
-
-    <div class="github-link">
-      <a href="https://github.com/wildgums/wildgums.opensource/edit/master/src/content/orc.controls/pinnabletooltips/_index.md" target="blank"><i class="fa fa-code-fork"></i>
-        Improve this page</a>
-    </div>
-  </div>
-
-
-	<div>
-
-
-  
-    
-  
-
-
-
-	</div>
-</footer>
-
-<script src="/js/clipboard.min.js"></script>
-
-<link href="/css/featherlight.min.css" rel="stylesheet">
-<script src="/js/featherlight.min.js"></script>
-
-
-
-<script src="/theme-flex/script.js"></script>
-
-    
-
-    
-    
-
-    
-  </body>
-</html>
+</code></pre><hr><p>Have a question about Catel or WildGums controls? Use <a href=https://stackoverflow.com/questions/tagged/catel target=_blank>StackOverflow</a> with the <i>Catel</i> tag!</p><hr><p><h2>Discussion</h2><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url='http://opensource.wildgums.com/\/orc.controls\/pinnabletooltips\/';this.page.identifier='orc.controls\/pinnabletooltips\/_index.md';};(function(){var d=document,s=d.createElement('script');s.src='https://wildgums-opensource.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></p><div class=chevrons><div id=navigation><a class="nav nav-prev" href=/orc.controls/openfilepicker/ title=OpenFilePicker><i class="fa fa-chevron-left"></i><label>OpenFilePicker</label></a>
+<a class="nav nav-next" href=/orc.controls/savefilepicker/ title=SaveFilePicker style=margin-right:0><label>SaveFilePicker</label><i class="fa fa-chevron-right"></i></a></div></div></section></article><footer><div class=footline><div class=github-link><a href=https://github.com/wildgums/wildgums.opensource/edit/master/src/content/orc.controls/pinnabletooltips/_index.md target=blank><i class="fa fa-code-fork"></i>Improve this page</a></div></div><div></div></footer><script src=/js/clipboard.min.js></script><link href=/css/featherlight.min.css rel=stylesheet><script src=/js/featherlight.min.js></script><script src=/theme-flex/script.js></script></body></html>
