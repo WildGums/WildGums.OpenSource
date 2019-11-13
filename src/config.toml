@@ -1,0 +1,31 @@
+baseURL = "http://opensource.wildgums.com/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+publishDir = "../docs"
+
+title = "WildGums open source center"
+theme = "docdock"
+
+[params]
+	editURL = "https://github.com/wildgums/wildgums.opensource/edit/master/src/content/"
+	noHomeIcon = false # default is false
+	noSearch = false # default is false
+	showVisitedLinks = true # default is false
+	# themeStyle = "theme" # overide base css
+	themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+	ordersectionsby = "weight" # ordersectionsby = "title"
+	pluralizeListTitles = false
+
+[outputs]
+	home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+	pre = "<h3>More</h3>"
+	name = "<i class='fa fa-github'></i> Github repo"
+	identifier = "ds"
+	url = "https://github.com/wildgums/wildgums.opensource"
+	weight = 10
+
+[blackfriday]
+   plainIDAnchors = true
+   hrefTargetBlank = true
