@@ -17,12 +17,13 @@ The following platforms are supported:
 - .NET 4.5
 - .NET 4.6
 - .NET 4.7
+- .NET Core 3.0
 
 ## Vision
 
 WildGums is a company that develops professional WPF and web based applications that look good. When developing software, we are constantly looking out for the best 
 frameworks and components available. A lot of components are hyped, but seem to provide very little added value when digging deeper. One framework that did deliver on its promise 
-is [Catel](http://catelproject.com/). It's a very mature, well documented, well maintained and feature-rich application development platform.
+is [Catel](https://catelproject.com/). It's a very mature, well documented, well maintained and feature-rich application development platform.
 
 Once we found the core platform to build our applications on, we were still having problems finding high-quality libraries. We have tried several commercial vendors, 
 but found the support to be slow (or lacking). This made us decide it was time for a change... We were going to develop our own components, giving us control over 
