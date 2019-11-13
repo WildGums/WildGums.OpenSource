@@ -28,7 +28,7 @@ jobs:
     - name: Run Hugo
       run: (cd ./src && hugo --minify)
 
-   - name: Commit files
+    - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
