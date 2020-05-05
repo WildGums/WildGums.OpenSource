@@ -14,7 +14,7 @@ Find the source at [https://github.com/WildGums/Orc.Snapshots](https://github.co
 
 Manage snapshots the easy way using this library.
 
-![](../images/orc.snapshots/orc_snapshots.gif)
+![](../images/orc.snapshots/example.gif)
 
 # Quick introduction
 
