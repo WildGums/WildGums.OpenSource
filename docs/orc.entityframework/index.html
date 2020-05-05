@@ -99,9 +99,7 @@ serviceLocator.RegisterType&lt;IFamilyRepository, FamilyRepository&gt;();
 	var families = new ObservableCollection&lt;family&gt;(familyRepository.GetAll());
 	// TODO: Do something with all families
 }
-</code></pre><p>@alert info
-Catel will automatically take care of scoping of the DbContext when using unit of work and repositories
-@end</p><h3 id=saving-data>Saving data</h3><p>To save data, the entities must be updated in the repositories and then saved in the unit of work. Below is an example, assuming the list of families contains updated entities:</p><pre><code>using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
+</code></pre><div class="notices info">Catel will automatically take care of scoping of the DbContext when using unit of work and repositories</div><h3 id=saving-data>Saving data</h3><p>To save data, the entities must be updated in the repositories and then saved in the unit of work. Below is an example, assuming the list of families contains updated entities:</p><pre><code>using (var uow = new UnitOfWork&lt;FamilyContext&gt;())
 {
 	var familyRepository = uow.GetRepository&lt;IFamilyRepository&gt;();
 	var personRepository = uow.GetRepository&lt;IPersonRepository&gt;();

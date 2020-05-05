@@ -58,9 +58,7 @@ Module Catalogs</option>
 <option value=/orc.systeminfo/>Orc.SystemInfo</option>
 <option value=/orc.wizard/>Orc.Wizard</option>
 <option value=/orc.workspacemanagement/>Orc.WorkspaceManagement</option>
-<option value=/orchestra/>Orchestra</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div><script type=text/javascript src=/js/lunr.min.js></script><script type=text/javascript src=/js/auto-complete.js></script><link href=/css/auto-complete.css rel=stylesheet><script type=text/javascript>var baseurl="https:\/\/opensource.wildgums.com\/";</script><script type=text/javascript src=/js/search.js></script></div><h1>NuGetBasedModuleCatalog</h1><p>The <code>NuGetBasedModuleCatalog</code> allows a user to use a NuGet package source as a module source. </p><p>@alert info
-Note that the <code>CompositeNuGetBasedModuleCatalog</code> works the same but can combine multiple NuGet sources
-@end</p><h2 id=initializing-the-catalog>Initializing the catalog</h2><p>The catalog has several options. Below is an example of a default customization:</p><pre><code>protected override void ConfigureModuleCatalog()
+<option value=/orchestra/>Orchestra</option></select></center></div><div><div class=searchbox><input data-search-input id=search-by type=text placeholder=Search...></div><script type=text/javascript src=/js/lunr.min.js></script><script type=text/javascript src=/js/auto-complete.js></script><link href=/css/auto-complete.css rel=stylesheet><script type=text/javascript>var baseurl="https:\/\/opensource.wildgums.com\/";</script><script type=text/javascript src=/js/search.js></script></div><h1>NuGetBasedModuleCatalog</h1><p>The <code>NuGetBasedModuleCatalog</code> allows a user to use a NuGet package source as a module source. </p><div class="notices info">Note that the `CompositeNuGetBasedModuleCatalog` works the same but can combine multiple NuGet sources</div><h2 id=initializing-the-catalog>Initializing the catalog</h2><p>The catalog has several options. Below is an example of a default customization:</p><pre><code>protected override void ConfigureModuleCatalog()
 {
 	base.ConfigureModuleCatalog();
 
@@ -114,9 +112,7 @@ Note that the <code>CompositeNuGetBasedModuleCatalog</code> works the same but c
 		&lt;/dependencies&gt;
 	&lt;/metadata&gt;
 &lt;/package&gt;
-</code></pre><p>@alert info
-It is possible to manually add a module, then the naming convention is not required
-@end</p><h3 id=module-vs-library-dependencies>Module vs. library dependencies</h3><p>There a two kind of dependencies that you can declare in a module <em>nuspec</em> file.
+</code></pre><div class="notices info">It is possible to manually add a module, then the naming convention is not required</div><h3 id=module-vs-library-dependencies>Module vs. library dependencies</h3><p>There a two kind of dependencies that you can declare in a module <em>nuspec</em> file.
 Module dependencies in order to identify Prism like module dependencies using the key *DependsOn* at description tag.</p><pre><code>&lt;description&gt;ModuleName=Catel.Examples.WPF.Prism.Modules.NuGetBasedModuleC.NuGetBasedModuleC; ModuleType=Catel.Examples.WPF.Prism.Modules.NuGetBasedModuleC.NuGetBasedModuleC, Catel.Examples.WPF.Prism.Modules.NuGetBasedModuleC; DependsOn={ Catel.Examples.WPF.Prism.Modules.NuGetBasedModuleB.NuGetBasedModuleB }&lt;description&gt;
 </code></pre><p>Or you can specify libraries dependencies using the dependencies section just as regular nuspec file. </p><pre><code>&lt;dependencies&gt;
 	&lt;dependency id=&quot;Newtonsoft.Json&quot; version=&quot;6.0.8&quot; /&gt;

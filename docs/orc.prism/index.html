@@ -69,16 +69,27 @@ Module Catalogs</option>
 var dependencyResolver = this.GetDependencyResolver();
 var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;();
 uiCompositionService.Activate(viewModel, &quot;MainRegion&quot;);
-</code></pre><p>@alert important
-Since Catel 4.0 <code>UICompositionService</code> is available for Prism. Use this service instead of the <code>UIVisualizerService</code> extension methods.
-@end</p><p>But if the context allows you to know the instance of the view model of the view owner of the region where you will inject a view, is strongly recommended use the Activate overload that allows you to specify the parent view-model. This call will enforce the view models parent-child relationship:
-uiCompositionService.Activate(viewModel, this, &ldquo;MainRegion&rdquo;);</p><p>Assume that this references an instance of the view-model of a view with MainRegion region specified, so this is used as parent view model reference in the previous call.</p><h2 id=dealing-with-more-than-one-and-only-one-shell>Dealing with more than one and only one shell</h2><p>Actually you are able to inject views (referencing it&rsquo;s view models) in any window. Just like the previous example but in combination with the experimental extension method <code>Show</code>:</p><pre><code>var dependencyResolver = this.GetDependencyResolver();
-var uiVisualizerService = dependencyResolver.Resolve&lt;IUIVisualizerService&gt;();
-
-var uiCompositionService = dependencyResolver.Resolve&lt;IUICompositionService&gt;()
+</code></pre><div class="notices warning">Since Catel 4.0 `UICompositionService` is available for Prism. Use this service instead of the `UIVisualizerService` extension methods.
+@end
+But if the context allows you to know the instance of the view model of the view owner of the region where you will inject a view, is strongly recommended use the Activate overload that allows you to specify the parent view-model. This call will enforce the view models parent-child relationship:
+uiCompositionService.Activate(viewModel, this, "MainRegion");
+Assume that this references an instance of the view-model of a view with MainRegion region specified, so this is used as parent view model reference in the previous call.
+## Dealing with more than one and only one shell
+Actually you are able to inject views (referencing it's view models) in any window. Just like the previous example but in combination with the experimental extension method `Show`:
+```
+var dependencyResolver = this.GetDependencyResolver();
+var uiVisualizerService = dependencyResolver.Resolve<iuivisualizerservice>();
+var uiCompositionService = dependencyResolver.Resolve<iuicompositionservice>()
 var windowViewModel = new WindowWithRegionViewModel();
-
-uiVisualizerService.Show(windowViewModel, () =&gt; { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, &quot;WindowMainRegion&quot;) });
-</code></pre><h2 id=deactivating-a-view>Deactivating a view</h2><p>To deactivate a view, use the following code:</p><pre><code>uiCompositionService.Deactivate(viewModel);
-</code></pre><p>If you keep your view model alive (see: Keeping view models alive), you can reactivate a deactivated the view using <code>Activate</code> method without specify the region name.</p><h2 id=deactivating-a-view-automatically>Deactivating a view automatically</h2><p>If you close the view model using <code>SaveAndCloseViewModelAsync</code> or <code>CancelAndCloseViewModelAsync</code> or <code>CloseViewModelasync</code> methods, the view that belongs to this view model will be automatically deactivated from the region where it is activated.</p><p>In order to start using this feature, the only thing you have to do is install an isolated package named <code>Orc.Prism</code>, available via NuGet.</p><hr><p>Have a question about Catel or WildGums controls? Use <a href=https://stackoverflow.com/questions/tagged/catel target=_blank>StackOverflow</a> with the <i>Catel</i> tag!</p><hr><p><h2>Discussion</h2><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url='http://opensource.wildgums.com/\/orc.prism\/';this.page.identifier='orc.prism\/_index.md';};(function(){var d=document,s=d.createElement('script');s.src='https://wildgums-opensource.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></p><div class=chevrons><div id=navigation><a class="nav nav-prev" href=/orc.plot/ title=Orc.Plot><i class="fa fa-chevron-left"></i><label>Orc.Plot</label></a>
+uiVisualizerService.Show(windowViewModel, () => { uiCompositionService.Activate(new EmployeeViewModel(), windowViewModel, "WindowMainRegion") });
+```
+## Deactivating a view
+To deactivate a view, use the following code:
+```
+uiCompositionService.Deactivate(viewModel);
+```
+If you keep your view model alive (see: Keeping view models alive), you can reactivate a deactivated the view using `Activate` method without specify the region name.
+## Deactivating a view automatically
+If you close the view model using `SaveAndCloseViewModelAsync` or `CancelAndCloseViewModelAsync` or `CloseViewModelasync` methods, the view that belongs to this view model will be automatically deactivated from the region where it is activated.
+In order to start using this feature, the only thing you have to do is install an isolated package named `Orc.Prism`, available via NuGet.</div><hr><p>Have a question about Catel or WildGums controls? Use <a href=https://stackoverflow.com/questions/tagged/catel target=_blank>StackOverflow</a> with the <i>Catel</i> tag!</p><hr><p><h2>Discussion</h2><div id=disqus_thread></div><script>var disqus_config=function(){this.page.url='http://opensource.wildgums.com/\/orc.prism\/';this.page.identifier='orc.prism\/_index.md';};(function(){var d=document,s=d.createElement('script');s.src='https://wildgums-opensource.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></p><div class=chevrons><div id=navigation><a class="nav nav-prev" href=/orc.plot/ title=Orc.Plot><i class="fa fa-chevron-left"></i><label>Orc.Plot</label></a>
 <a class="nav nav-next" href=/orc.prism/using-the-bootstrapper/ title="Using the bootstrapper" style=margin-right:0><label>Using the bootstrapper</label><i class="fa fa-chevron-right"></i></a></div></div></section></article><footer><div class=footline><div class=github-link><a href=https://github.com/wildgums/wildgums.opensource/edit/master/src/content/orc.prism/_index.md target=blank><i class="fa fa-code-fork"></i>Improve this page</a></div></div><div></div></footer><script src=/js/clipboard.min.js></script><link href=/css/featherlight.min.css rel=stylesheet><script src=/js/featherlight.min.js></script><script src=/theme-flex/script.js></script></body></html>
