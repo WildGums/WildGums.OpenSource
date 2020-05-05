@@ -22,8 +22,8 @@ Search Syntax: [http://www.lucenetutorial.com/lucene-query-syntax.html](http://w
 Nuget Packages
 -----------------
 
-- `[Orc.Search](https://www.nuget.org/packages/Orc.Search/)` => The core of `Orc.Search`. Contains the main services, base classes and attributes.
-- `[Orc.Search.Xaml](https://www.nuget.org/packages/Orc.Search.Xaml/)` => Contains basic Ui elements, which can be used to add seach functionality to your application.
+- **[Orc.Search](https://www.nuget.org/packages/Orc.Search/)** => The core of `Orc.Search`. Contains the main services, base classes and attributes.
+- **[Orc.Search.Xaml](https://www.nuget.org/packages/Orc.Search.Xaml/)** => Contains basic Ui elements, which can be used to add seach functionality to your application.
 
 Features
 --------
