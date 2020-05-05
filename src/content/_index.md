@@ -17,7 +17,11 @@ The following platforms are supported:
 - .NET 4.5
 - .NET 4.6
 - .NET 4.7
+- .NET 4.8
 - .NET Core 3.0
+- .NET Core 3.1
+
+We are planning to support .NET 5 later in 2020.
 
 ## Vision
 
