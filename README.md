@@ -6,7 +6,7 @@ Documentation website for WildGums projects.
 
 The documentation website uses the static site generator [Hugo](https://gohugo.io/). This allows writing the documentation in markdown.
 
-This guide will explain the basics on how to contribute to the WildGums documentation. For more information about Hugo, please visit the [Hugo documentation](https://gohugo.io/documentation/) site.
+This guide will explain the basics on how to contribute to the documentation. For more information about Hugo, please visit the [Hugo documentation](https://gohugo.io/documentation/) site.
 
 The easiest way to install Hugo is to use Chocolatey:
 
@@ -87,7 +87,7 @@ Don't forget to use images if that makes it more clear. Further down this guide 
 
 Sometimes notes can add extra weight to something important. There are different kind of notes available. Please see the examples below.
 
-**Tip**
+**Note**
 
 ```
 {{% notice note %}}
@@ -106,7 +106,7 @@ This tip can be really useful if you are working with this class
 **Info**
 
 ```
-{{% notice warning %}}
+{{% notice info %}}
 This provides more info on why something is the way it is
 {{% /notice %}}
 ```
