@@ -3,65 +3,6 @@
 {{ .Content }}
 
 <hr />
-
-<h2>Contributions</h2>
-
-<p>
-  We would like to thank the following contributors:
-</p>
-
-<div class="ghContributors"></div>
-<script>
-{{ $fileName := replace .File.Path "\\" "/" }}
-
-$(document).ready( function () {
-    var contributorsUrl = 'https://api.github.com/repos/wildgums/wildgums.opensource/commits?path=src/vnext/content/{{ $fileName }}'.replace('\/', '/');
-
-    $.getJSON(contributorsUrl, function(data) {
-        //data is the JSON string
-        var contributors = {};
-        var contributorsCount = {};
-        
-        data.forEach(function(commit) {
-            var author = commit.author.login;
-            contributors[author] = commit.author;
-            
-            if (!(author in contributorsCount)) {
-              contributorsCount[author] = 0;
-            }
-            
-            contributorsCount[author]++;
-        });
-        
-        var ghContributorsElement = $(".ghContributors");
-        
-        for (var key in contributors) {
-            var contributor = contributors[key];
-            var contributorCount = contributorsCount[key];
-        
-            var contributorContent = '';
-            contributorContent += '<div>';
-            contributorContent += '  <a href="'+ contributor.html_url + '" title="' + contributor.login + '" target="_blank">';
-            contributorContent += '    <img src="' + contributor.avatar_url + '" class="inline" width="64" height="64" style="height: 64px;height: 64px;margin-bottom:.25em; vertical-align:middle; ">';
-            //contributorContent += '    <label><a href="'+ contributor.html_url + '">' + contributor.login + '</a></label>';
-            contributorContent += '  </a>';
-            contributorContent += '  <span class="contributions">' + contributorCount + ' commits</span>';
-            contributorContent += '</div>';
-            
-            ghContributorsElement.append(contributorContent);
-        }
-    });
-});
-</script>
-
-<p>
-  <strong>Want to contribute to the documentation?</strong> We have a <a href="https://github.com/Catel/Catel.Docs/blob/master/README.md" title="Contribution guide" target="_blank">guide</a> for that!
-</p>
-
-<hr />
-
-<h2>Questions</h2>
-
 <p>
 Have a question about Catel or WildGums controls? Use <a href="https://stackoverflow.com/questions/tagged/catel" target="_blank">StackOverflow</a> with the <i>Catel</i> tag!
 </p>
