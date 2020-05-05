@@ -11,9 +11,9 @@ The Repository and Unit of Work (UoW) pattern are very useful patterns to create
 * Keep security checks and saving and rollback in a single location
 * Force the use of the `Specification` pattern on queries
 
-@alert info
+{{% notice info %}}
 Note that repositories and UoW should not be used to abstract away the ORM tool because that is just another abstraction layer which is not required. Use it for the advantages mentioned above
-@end
+{{% /notice %}}
 
 A Unit of Work (UoW) is a a combination of several actions that will be grouped into a transaction. This means that either all actions inside a UoW are committed or rolled back. The advantage of using a UoW is that multiple save actions to multiple Repositories can be grouped as a unit.
 

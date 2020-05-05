@@ -119,9 +119,9 @@ using (var uow = new UnitOfWork<FamilyContext>())
 }
 ```
 
-@alert info
+{{% notice info %}}
 Catel will automatically take care of scoping of the DbContext when using unit of work and  repositories
-@end
+{{% /notice %}}
 
 ### Saving data
 

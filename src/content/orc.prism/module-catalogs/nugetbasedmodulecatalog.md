@@ -5,9 +5,9 @@ description = ""
 
 The `NuGetBasedModuleCatalog` allows a user to use a NuGet package source as a module source. 
 
-@alert info
+{{% notice info %}}
 Note that the `CompositeNuGetBasedModuleCatalog` works the same but can combine multiple NuGet sources
-@end
+{{% /notice %}}
 
 ## Initializing the catalog
 
@@ -100,9 +100,9 @@ For example:
 </package>
 ```
 
-@alert info
+{{% notice info %}}
 It is possible to manually add a module, then the naming convention is not required
-@end
+{{% /notice %}}
 
 ### Module vs. library dependencies
 

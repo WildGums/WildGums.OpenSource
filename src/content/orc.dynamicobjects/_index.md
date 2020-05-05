@@ -16,9 +16,9 @@ Find the source at [https://github.com/WildGums/Orc.DynamicObjects](https://gith
 
 In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time. 
 
-@alert info
+{{% notice info %}}
 For more information about dynamic programming, see [MSDN](http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx).
-@end
+{{% /notice %}}
 
 ## Creating dynamic objects
 
@@ -40,9 +40,9 @@ model.NonExistingProperty = "a dynamic value";
 Console.WriteLine(model.NonExistingProperty);
 ```
 
-@alert important
+{{% notice warning %}}
 It is important to know that you must use the keyword *dynamic* to instantiate the type.
-@end
+{{% /notice %}}
 
 ## Using ModelBase functionality
 

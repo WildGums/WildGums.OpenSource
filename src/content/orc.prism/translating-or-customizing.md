@@ -20,10 +20,10 @@ public class TranslatedBootstrapperTaskFactory : BootstrapperTaskFactory
 }
 ```
 
-@alert important
+{{% notice warning %}}
 Remember to register the `TranslatedBootstrapperTaskFactory` before the bootstrapper is created
-@end
+{{% /notice %}}
 
-@alert important
+{{% notice warning %}}
 Note that this example only customizes a single action. To customize all the actions, override all methods
-@end
+{{% /notice %}}

@@ -77,7 +77,7 @@ var uiCompositionService = dependencyResolver.Resolve<IUICompositionService>();
 uiCompositionService.Activate(viewModel, "MainRegion");
 ```
 
-@alert important
+{{% notice warning %}}
 Since Catel 4.0 `UICompositionService` is available for Prism. Use this service instead of the `UIVisualizerService` extension methods.
 @end
 

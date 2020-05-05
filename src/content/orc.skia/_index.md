@@ -14,6 +14,6 @@ Find the source at [https://github.com/WildGums/Orc.Skia](https://github.com/Wil
 
 This library provides a XAML canvas for XAML platforms (WPF & UWP) to provide a DPI-aware Skia canvas.
 
-@alert important
+{{% notice warning %}}
 This documentation needs to be written
-@end
+{{% /notice %}}

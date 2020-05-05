@@ -21,9 +21,9 @@ using (var dbContextManager = DbContextManager<MyEntities>.GetManager())
 }
 ```
 
-@alert important
+{{% notice warning %}}
 It is very important to wrap the DbContextManager in a using state because it must be disposed
-@end
+{{% /notice %}}
  
 Scoping is all done automatically because when a `DbContextManager` is instantiated, a reference counter is increased. Every time an instance of the `DbContextManager` is disposed, the reference counter is decreased. When the reference count reaches zero (0), it will dispose the `DbContext` that it manages.
 
