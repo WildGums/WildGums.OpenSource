@@ -3,14 +3,7 @@ title = "Orc.DynamicObjects"
 description = ""
 +++
 
-Name|Badge
----|---
-Chat|[![Join the chat at https://gitter.im/WildGums/Orc.DynamicObjects](https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/WildGums/Orc.DynamicObjects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.dynamicobjects.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orc.dynamicobjects.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.dynamicobjects.svg?classes=inline)
-
-Find the source at [https://github.com/WildGums/Orc.DynamicObjects](https://github.com/WildGums/Orc.DynamicObjects)
+{{< header name="Orc.DynamicObjects" >}}
 
 # Introduction
 

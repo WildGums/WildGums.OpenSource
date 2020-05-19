@@ -1,0 +1,58 @@
+{{ $name := .Get "name" }}
+{{ $packageName := .Get "packageName" | default $name }}
+{{ $company := .Get "company" | default "WildGums" }}
+
+<div class="component-header">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Badge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Chat</td>
+        <td>
+          <a href="https://gitter.im/{{ $company }}/{{ $name }}" target="_blank">
+            <img src="https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/{{ $company }}/{{ $name }}?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"
+                 alt="Join the chat at https://gitter.im/{{ $company }}/{{ $name }}"
+                 class="inline" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Downloads</td>
+        <td>
+          <a href="https://img.shields.io/nuget/dt/{{ $packageName }}.svg?classes=inline" target="_blank" data-featherlight="image">
+            <img src="https://img.shields.io/nuget/dt/{{ $packageName }}.svg?classes=inline" 
+                 alt="NuGet downloads"
+                 class="inline" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Stable version</td>
+        <td>
+          <a href="https://img.shields.io/nuget/v/{{ $packageName }}.svg?classes=inline" target="_blank" data-featherlight="image">
+            <img src="https://img.shields.io/nuget/v/{{ $packageName }}.svg?classes=inline" 
+                 alt="Stable version"
+                 class="inline" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Unstable version</td>
+        <td>
+          <a href="https://img.shields.io/nuget/vpre/{{ $packageName }}.svg?classes=inline" target="_blank" data-featherlight="image">
+            <img src="https://img.shields.io/nuget/vpre/{{ $packageName }}.svg?classes=inline" 
+                 alt="Unstable version"
+                 class="inline" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  Find the source at <a target="_blank" href="https://github.com/{{ $company }}/{{ $name }}">https://github.com/{{ $company }}/{{ $name }}</a>.
+</div>

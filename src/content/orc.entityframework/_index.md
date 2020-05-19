@@ -3,27 +3,8 @@ title = "Orc.EntityFramework"
 description = ""
 +++
 
-Name|Badge
----|---
-Chat|[![Join the chat at https://gitter.im/WildGums/Orc.EntityFramework](https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/WildGums/Orc.EntityFramework?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-**EntityFramework 5**
-
-Name|Badge
----|---
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.entityframework5.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orc.entityframework5.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.entityframework5.svg?classes=inline)
-
-**EntityFramework 6**
-
-Name|Badge
----|---
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.entityframework6.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orc.entityframework6.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.entityframework6.svg?classes=inline)
-
-Find the source at [https://github.com/WildGums/Orc.EntityFramework](https://github.com/WildGums/Orc.EntityFramework)
+{{< header name="Orc.EntityFramework5" >}}
+{{< header name="Orc.EntityFramework6" >}}
 
 # Introduction
 

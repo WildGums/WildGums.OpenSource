@@ -3,16 +3,9 @@ title = "Orchestra"
 description = ""
 +++
 
-Name|Badge
----|---
-Chat|[![Join the chat at https://gitter.im/WildGums/Orchestra](https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/WildGums/Orchestra?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orchestra.core.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orchestra.core.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orchestra.core.svg?classes=inline)
+{{< header name="Orchestra" packageName="Orchestra.Core" >}}
 
-Find the source at [https://github.com/WildGums/Orchestra](https://github.com/WildGums/Orchestra)
-
-Orchestra is a composable WPF shell and framework built on top of [Catel](http://www.catelproject.com).
+Orchestra is a composable WPF shell and framework built on top of [Catel](https://www.catelproject.com).
 
 It has been in active development for over 5 years (initial commit 2012/06/18) and is used in numerous Line of Business (LoB) applications on a daily basis.
 

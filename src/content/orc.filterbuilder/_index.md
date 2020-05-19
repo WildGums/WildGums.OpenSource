@@ -3,14 +3,7 @@ title = "Orc.FilterBuilder"
 description = ""
 +++
 
-Name|Badge
----|---
-Chat|[![Join the chat at https://gitter.im/WildGums/Orc.FilterBuilder](https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/WildGums/Orc.FilterBuilder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.filterbuilder.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orc.filterbuilder.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.filterbuilder.svg?classes=inline)
-
-Find the source at [https://github.com/WildGums/Orc.FilterBuilder](https://github.com/WildGums/Orc.FilterBuilder)
+{{< header name="Orc.FilterBuilder" >}}
 
 FilterBuilder is  WPF component which can help you extract key insights from your data, by adding complex filtering functionalities to your application.
 

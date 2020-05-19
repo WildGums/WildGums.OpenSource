@@ -3,14 +3,7 @@ title = "Orc.FileSystem"
 description = ""
 +++
 
-Name|Badge
----|---
-Chat|[![Join the chat at https://gitter.im/WildGums/Orc.FileSystem](https://badges.gitter.im/Join%20Chat.svg?classes=inline)](https://gitter.im/WildGums/Orc.FileSystem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-Downloads|![NuGet downloads](https://img.shields.io/nuget/dt/orc.filesystem.svg?classes=inline)
-Stable version|![Version](https://img.shields.io/nuget/v/orc.filesystem.svg?classes=inline)
-Unstable version|![Pre-release version](https://img.shields.io/nuget/vpre/orc.filesystem.svg?classes=inline)
-
-Find the source at [https://github.com/WildGums/Orc.FileSystem](https://github.com/WildGums/Orc.FileSystem)
+{{< header name="Orc.FileSystem" >}}
 
 This library wraps file system methods inside services. The advantages are:
 
