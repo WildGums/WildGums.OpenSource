@@ -20,11 +20,11 @@ jobs:
         # extended: true
 
     - name: Copy template files
-      run: cp -r ./repositories/hugo-theme-docdock/* ./src/shared/themes/docdock
+      run: cp -r ./repositories/hugo-theme-docdock/* ./src/themes/docdock
 
-    - name: Copy shared files to documentation
-      run: cp -r ./src/shared/* ./src
-
+    - name: Copy customized template files
+      run: cp -r ./src/themes/docdock.customize/* ./src/themes/docdock
+      
     - name: Remove previous output
       run: rm -r ./docs
 
