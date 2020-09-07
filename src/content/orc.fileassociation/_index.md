@@ -35,7 +35,7 @@ When an application is being uninstalled, you need to remove all the required re
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
-_applicationRegistrationService.RegisterApplication(applicationInfo);
+_applicationRegistrationService.UnregisterApplication(applicationInfo);
 
 ```
 
@@ -47,7 +47,7 @@ To always keep the registry up to date, you can call this method at the startup 
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
-_applicationRegistrationService.UpdateApplication(applicationInfo);
+_applicationRegistrationService.UpdateRegistration(applicationInfo);
 ```
 
 ## File association
