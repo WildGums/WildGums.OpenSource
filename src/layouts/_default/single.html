@@ -14,7 +14,7 @@
 {{ $fileName := replace .File.Path "\\" "/" }}
 
 $(document).ready( function () {
-    var contributorsUrl = 'https://api.github.com/repos/wildgums/wildgums.opensource/commits?path=src/vnext/content/{{ $fileName }}'.replace('\/', '/');
+    var contributorsUrl = 'https://api.github.com/repos/wildgums/wildgums.opensource/commits?path=src/content/{{ $fileName }}'.replace('\/', '/');
 
     $.getJSON(contributorsUrl, function(data) {
         //data is the JSON string
