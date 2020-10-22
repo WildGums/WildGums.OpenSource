@@ -5,7 +5,7 @@ description = ""
 
 {{< header name="Orc.Csv" >}}
 
-Small library of extensions and helper methods for the [CsvHelper](http://joshclose.github.io/CsvHelper) library.
+Small super cool library of extensions and helper methods for the [CsvHelper](http://joshclose.github.io/CsvHelper) library.
 
 - Static methods are provided to read or write to a csv file with one line of code.
 - Sensible configuration options are provided out of the box (but can be overwritten if needed).
