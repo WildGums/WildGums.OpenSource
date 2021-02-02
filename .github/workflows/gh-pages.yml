@@ -16,7 +16,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.4.12
       with:
-        hugo-version: '0.74.3'
+        hugo-version: '0.80.0'
         # extended: true
 
     - name: Copy template files
