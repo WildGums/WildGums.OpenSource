@@ -47,7 +47,7 @@ The `IOSynchronizerService` can take care of synchronized blocks of reading and/
 
 ## Start watching for changes
 
-```
+```csharp
 ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
 await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
 ```
@@ -56,7 +56,7 @@ await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
 
 The writing of the files can happen in a completely different app, the services will take care of the synchronization automatically. To write files, use the following code:
 
-```
+```csharp
 var file1 = Path.Combine(projectDirectory, "file1.txt");
 var file2 = Path.Combine(projectDirectory, "file2.txt");
 
@@ -73,7 +73,7 @@ await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x =>
 
 To read files, use the following code:
 
-```
+```csharp
 var file1 = Path.Combine(projectDirectory, "file1.txt");
 var file2 = Path.Combine(projectDirectory, "file2.txt");
 

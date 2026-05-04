@@ -77,7 +77,7 @@ Examples
 
 Usage of `IPackagesUIService` for showing NuGetExplorer dialog box
 
-```
+```csharp
 public class NuGetManager
 {
     private readonly IPackagesUIService _packagesUiService;
@@ -98,7 +98,7 @@ public class NuGetManager
 
 Use `IPackageBatchService` and `IPackagesUpdatesSearcherService` for checking for updates
 
-```
+```csharp
 public class SmartUpdater
 {
     private readonly IPackagesUpdatesSearcherService _packagesUpdatesSearcherService;

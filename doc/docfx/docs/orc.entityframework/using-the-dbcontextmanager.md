@@ -11,7 +11,7 @@ A very good example of this scoping is an ASP.NET (MVC) application where a cont
 
 Obtaining a `DbContext` is very simple by using the `DbContextManager`.
 
-```
+```csharp
 using (var dbContextManager = DbContextManager<MyEntities>.GetManager())
 {
     var dbContext = dbContextManager.DbContext;
@@ -29,12 +29,12 @@ Scoping is all done automatically because when a `DbContextManager` is instantia
 
 When a request is started, a context can be created by calling this code:
 
-```
+```csharp
 DbContextManagerHelper.CreateDbContextForHttpContext<MyEntities>();
 ```
 
 When a request is ended, the context can be disposed by using this code:
 
-```
+```csharp
 DbContextManagerHelper.DisposeDbContextForHttpContext<MyEntities>();
 ```

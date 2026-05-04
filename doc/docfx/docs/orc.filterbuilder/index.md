@@ -36,7 +36,7 @@ Before starting using the FilterBuilder please add the `Orc.FilterBuilder` proje
 
 Two data collection should be created: one for input and one for filtered output:
 
-```
+```csharp
 public ObservableCollection<TestEntity> RawItems { get; private set; }
 public ObservableCollection<TestEntity> FilteredItems { get; private set; }
 ```
@@ -50,14 +50,14 @@ The control includes two Views (`FilterBuilderControl` and `EditFilterView`).
 
 Prior to using the component add the `FilterBuilder` namespace to your View:
 
-```
-xmlns:orc="http://www.wildgums.net.au/orc"
+```xml
+xmlns:orcfilterbuilder="http://schemas.wildgums.com/orc/filterbuilder"
 ```
 
 Next include the actual component to your View using the following code:
 
-```
-<orc:FilterBuilderControl 
+```xml
+<orcfilterbuilder:FilterBuilderControl 
 	RawCollection="{Binding RawItems}"
 	FilteredCollection="{Binding FilteredItems}" />
 ```
@@ -68,9 +68,9 @@ The `EditFilterView` is located in FilterBuilder project. It will show the filte
 
 
 **Note:**
-Before using the control please add Catel and Catel MVVM libraries to the project via nugget.
+Before using the control please add Catel and Catel MVVM libraries to the project via NuGet.
 
-```
+```powershell
 Install-Package Catel.Core -Pre
 Install-Package Catel.MVVM -Pre
 ```
@@ -81,30 +81,30 @@ The UI can easily be adjusted to any design. For example we will demonstrate how
 
 ![Filter Builder component Metro UI main screen](~/images/orc.filterbuilder/metro_1.png) 
 
-Install the appropriate packages via nugget manager.
+Install the appropriate packages via the NuGet Package Manager.
 
 ![Nuget Manager](~/images/orc.filterbuilder/mahapps_1.png)  
 
 Or, through Package Manager Console using bellow commands:
 
-```
+```powershell
 Install-Package MahApps.Metro –Pre
 Install-Package  MahApps.Metro.Resources.Standalone
 ```
 
 First, modify the test project (`Orc.FilterBuilder.Test`) by adding the following code to the `MainWindow.xaml` header:
 
-```
-<controls:MetroWindow x:Class="Orc.FilterBuilder.Test.NET40.MainWindow"
+```xml
+<controls:MetroWindow x:Class="Orc.FilterBuilder.Example.MainWindow"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:net401="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
+		xmlns:orcfilterbuilder="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
 		xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 ```
 
 Also, reference the Styles in the `App.xaml` file:
 
-```
+```xml
 <Application.Resources>
 	<ResourceDictionary>
 		<ResourceDictionary.MergedDictionaries>
@@ -127,11 +127,11 @@ To customize the FilterBuilder Controller, reference the above libraries in the 
 Add `Resources` folder along with necessary files to the Control project.
 Also, in the `EditFilterView.xaml` modify the ResourceDictionary section as follows:
 
-```
+```xml
 <ResourceDictionary>
-	<net40:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
+	<orcfilterbuilder:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
 	<BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
-	<net40:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
+	<orcfilterbuilder:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="Resources\Icons.xaml" />
 	</ResourceDictionary.MergedDictionaries>
@@ -140,7 +140,7 @@ Also, in the `EditFilterView.xaml` modify the ResourceDictionary section as foll
 
 To customize the style of the buttons add the `MetroCircleButtonStyle` and appropriate icon reference from the specified StaticResource (`appbar_add`) :
 
-```
+```xml
 <Button BorderThickness="0"  ToolTip="Add expression" Margin="3,0,0,0"
 									Command="{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}" 
 									CommandParameter="{Binding}"

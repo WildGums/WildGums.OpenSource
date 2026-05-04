@@ -40,7 +40,7 @@ Quick start
 
 1. Create a POCO class to use in your search and decorate the properties with `SearchablePropertyAttribute`
  
-```
+```csharp
 public class Person
 {
 	[SearchableProperty(SearchName = "firstname")]
@@ -55,7 +55,7 @@ public class Person
 
 2. Fill the `ISearchService` with the appropriate "Person" data using the `AddObjects()` method. The objects must be wrapped inside an `ISearchable` implementation, for example the `ReflectionSearchable`:
 
-```
+```csharp
 searchService.AddObjects(persons.Select(x => new ReflectionSearchable(x));
 ```
 

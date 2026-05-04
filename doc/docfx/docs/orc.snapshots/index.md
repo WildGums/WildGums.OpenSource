@@ -65,13 +65,13 @@ Working with snapshot always requires multiple method calls:
 
 Because the snapshot manager is using async, the initialization is a separate method. This gives the developer the option to load the snapshots whenever it is required. To load the stored snapshots from disk, use the code below:
 
-```
+```csharp
 await snapshotManager.LoadAsync(); 
 ```
 
 # Retrieving a list of all snapshots
 
-```
+```csharp
 var snapshots = snapshotManager.Snapshots;
 ```
 
@@ -81,7 +81,7 @@ Storing information in a snapshot is the responsibility of every single componen
 
 Call the following method to create a snapshot.
 
-```
+```csharp
 await snapshotManager.CreateSnapshotAsync("My snapshot title");
 ```
 
@@ -92,11 +92,37 @@ await snapshotManager.CreateSnapshotAsync("My snapshot title");
 
 Create a provider as shown in the example below:
 
-**// TODO: write an example provider**
+```csharp
+public class MySnapshotProvider : SnapshotProviderBase
+{
+    private readonly IMyService _myService;
+
+    public MySnapshotProvider(IMyService myService)
+    {
+        _myService = myService;
+        Name = "MyProvider";
+    }
+
+    public override async Task ProvideAsync(ISnapshot snapshot)
+    {
+        var data = _myService.GetCurrentState();
+        await snapshot.SetDataAsync(Name, data);
+    }
+
+    public override async Task RestoreAsync(ISnapshot snapshot)
+    {
+        var data = await snapshot.GetDataAsync<MyState>(Name);
+        if (data is not null)
+        {
+            _myService.RestoreState(data);
+        }
+    }
+}
+```
 
 Register the provider in the manager for it to take effect:
 
-```
+```csharp
 snapshotManager.AddProvider(myProvider);
 ```
 
@@ -104,12 +130,12 @@ snapshotManager.AddProvider(myProvider);
 
 To register a snapshot with the manager, use the code below:
 
-```
+```csharp
 await snapshotManager.AddAsync(snapshot);
 ```
 
 To save all snapshots, use the code below:
 
-```
+```csharp
 snapshotManager.SaveAsync();
 ```

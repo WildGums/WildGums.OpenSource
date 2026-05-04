@@ -25,7 +25,7 @@ Features
 
 - `Code generation` => Use static class `CodeGeneration` for generating C# POCO classes and their associated maps.
 
-```
+```csharp
 /// <summary>
 /// Create CSharp files to consume CSV files.
 /// A standard POCO cs file as well as the CsvHelper Mapping cs file will be created.
@@ -48,7 +48,7 @@ public static class CodeGeneration
 
 - `CsvReader helper` => Use static class `CsvReaderHelper` for reading csv files with a single line of code.
 
-```
+```csharp
 public static IEnumerable<T> ReadCsv<T>(string csvFilePath, Action<T> initializer = null, Type mapType = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 
 or
@@ -58,25 +58,25 @@ public static IEnumerable<T> ReadCsv<T>(string csvFilePath, CsvClassMap map, Act
 
 Example:
 
-```
+```csharp
 var records = CsvWriterHelper.ReadCsv<MyClass>(scvFilePath, MyClassMap);
 ```
 
 - `CsvWriter helper` => Use static class `CsvWriterHelper` for writing records into a csv file.
 
-```
+```csharp
 public static void WriteCsv<TRecord, TMap>(IEnumerable<TRecord> records, string csvFilePath, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 ```
 
 - `CsvExtensions` => for writing object collections into a csv file using the `ToCsv()` method.
 
-```
+```csharp
 public static void ToCsv<TRecord>(this IEnumerable<TRecord> records, string csvFilePath, Type csvMap = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 ```
 
 Example:
 
-```
+```csharp
 records.ToCsv<MyClass>(csvFilePath, typeof(MyClassMap));
 ```
 
@@ -88,7 +88,7 @@ Converters
 - `YesNoToBooleanConverter` - converts "yes" and "no" strings to true and false values correspondingly
 - `TypeConverter` - generic type converter which in some cases is more fluent than the default one
 
-```
+```csharp
 public class EmployeeMap : CsvClassMap<Employee>
 {
     public EmployeeMap()

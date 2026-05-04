@@ -52,5 +52,38 @@ Automation methods are defined in the application under test and can be invoked 
 var result = app.Invoke<MyResult>("MyMethod", parameter);
 ```
 
-> [!WARNING]
-> More documentation should be written in the future
+## AutomationControls
+
+AutomationControls are strongly-typed wrappers around Windows UI Automation elements. They map to WPF controls and provide a convenient API for interacting with them in tests. All AutomationControls derive from `AutomationControlBase`.
+
+Common built-in AutomationControls include:
+
+- `ButtonAutomationControl`
+- `TextBoxAutomationControl`
+- `CheckBoxAutomationControl`
+- `ComboBoxAutomationControl`
+
+## InputSimulation
+
+The `MouseHelper` and `KeyboardHelper` classes provide methods for simulating mouse and keyboard input in the application under test:
+
+```csharp
+MouseHelper.Click(element);
+KeyboardHelper.PressKey(Key.Enter);
+```
+
+## Test scenarios
+
+Automation tests can be organized into scenarios by implementing the `IAutomationTestScenario` interface. Each scenario defines a set of steps that are executed in sequence:
+
+```csharp
+public class MyTestScenario : AutomationTestScenarioBase
+{
+    public override async Task RunAsync(IAutomationHost host)
+    {
+        var window = host.MainWindow;
+        var button = window.Find<ButtonAutomationControl>("myButton");
+        button.Click();
+    }
+}
+```

@@ -53,7 +53,7 @@ Visualisation:
 - `ShowTypeNames` => boolean. Show Type names combobox if true.
 - `AccentColorBrush` => Brush. The accent color.
 
-```
+```xml
 <orc:AdvancedLogViewerControl AccentColorBrush="Orange" />
 ```
 

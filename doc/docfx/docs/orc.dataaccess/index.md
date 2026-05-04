@@ -38,6 +38,3 @@ Custom readers can be registered through the reader registry:
 ```csharp
 dataSourceReaderRegistry.Register<MyCustomReader>();
 ```
-
-> [!WARNING]
-> More documentation should be written in the future

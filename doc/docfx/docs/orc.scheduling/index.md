@@ -27,7 +27,7 @@ There are a few important methods to control the state of the scheduler. By defa
 
 ## Starting the scheduler
 
-```
+```csharp
 schedulingService.Start();
 ```
 
@@ -35,7 +35,7 @@ schedulingService.Start();
 
 ## Stopping the scheduler
 
-```
+```csharp
 schedulingService.Stop();
 ```
 
@@ -49,7 +49,7 @@ The goal of this library is to make it as easy as possible to schedule simple ta
 
 The following examples starts a task 5 minutes from now.
 
-```
+```csharp
 var scheduledTask = new ScheduledTask
 {
 	Name = "My task",
@@ -67,7 +67,7 @@ schedulingService.AddScheduledTask(scheduledTask);
 
 The following examples starts a task 5 minutes from now, then restarts the task every 1 minute.
 
-```
+```csharp
 var scheduledTask = new ScheduledTask
 {
 	Name = "My task",
@@ -86,7 +86,7 @@ schedulingService.AddScheduledTask(scheduledTask);
 
 To cancel a task, you need a handle to a `RunningTask` instance. This can be retrieved by the `TaskStarted` event or the `RunningTasks` property. This example uses the latter, then cancels the task.
 
-```
+```csharp
 var runningTask = (from task in schedulingService.RunningTasks
 				   where task.ScheduledTask.Name == "My task"
 				   select task).FirstOrDefault();
@@ -100,7 +100,7 @@ if (runningTask != null)
 
 It's possible to write a custom self-containing task that can handle everything itself. Below is an example of such a self-containing task:
 
-```
+```csharp
 public class CheckForUpdatesScheduledTask : ScheduledTaskBase
 {
 	private readonly ICommandManager _commandManager;
@@ -136,7 +136,7 @@ public class CheckForUpdatesScheduledTask : ScheduledTaskBase
 
 This class can be constructed and added to the scheduling service. This will invoke the check for updates 10 minutes from now and recur every 10 minutes.
 
-```
+```csharp
 var checkForUpdatesScheduledTask = typeFactory.CreateInstanceWithParametersAndAutoCompletion<CheckForUpdatesScheduledTask>(TimeSpan.FromMinutes(10));
 
 schedulingService.AddScheduledTask(checkForUpdatesScheduledTask);

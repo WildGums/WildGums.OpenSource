@@ -35,13 +35,24 @@ public static class Features
 ### Checking a feature toggle
 
 ```csharp
-var featureToggleService = dependencyResolver.ResolveType<IFeatureToggleService>();
-
-if (featureToggleService.IsEnabled(Features.NewDashboard))
+public class MyViewModel : ViewModelBase
 {
-    // show the new dashboard
+    private readonly IFeatureToggleService _featureToggleService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IFeatureToggleService featureToggleService)
+        : base(serviceProvider)
+    {
+        _featureToggleService = featureToggleService;
+    }
+
+    private void ShowDashboard()
+    {
+        if (_featureToggleService.IsEnabled(Features.NewDashboard))
+        {
+            // show the new dashboard
+        }
+    }
 }
-```
 
 ### Enabling or disabling a feature toggle
 
@@ -52,7 +63,39 @@ featureToggleService.Disable(Features.BetaExport);
 
 ## XAML integration
 
-The `Orc.FeatureToggles.Xaml` package provides WPF bindings and converters for controlling UI visibility based on feature toggle state.
+The `Orc.FeatureToggles.Xaml` package provides a built-in UI for managing feature toggles. It includes a `FeatureTogglesWindow` that lists all registered feature toggles and allows them to be enabled or disabled at runtime.
 
-> [!WARNING]
-> More documentation should be written in the future
+### Showing the feature toggles window
+
+Use constructor injection to get `IUIVisualizerService` and call it to show the built-in feature toggles management window:
+
+```csharp
+public class RibbonViewModel : ViewModelBase
+{
+    private readonly IUIVisualizerService _uiVisualizerService;
+
+    public RibbonViewModel(IServiceProvider serviceProvider, IUIVisualizerService uiVisualizerService)
+        : base(serviceProvider)
+    {
+        _uiVisualizerService = uiVisualizerService;
+
+        ManageFeatureToggles = new TaskCommand(serviceProvider, OnManageFeatureTogglesExecuteAsync);
+    }
+
+    public TaskCommand ManageFeatureToggles { get; }
+
+    private async Task OnManageFeatureTogglesExecuteAsync()
+    {
+        await _uiVisualizerService.ShowDialogAsync<ManageFeatureTogglesViewModel>();
+    }
+}
+
+### Using the FeatureToggleVisibilityConverter
+
+The `Orc.FeatureToggles.Xaml` package also provides a `FeatureToggleVisibilityConverter` that can be used to show or hide UI elements based on feature toggle state:
+
+```xml
+xmlns:orcfeaturetoggles="http://schemas.wildgums.com/orc/featuretoggles"
+
+<Button Visibility="{orcfeaturetoggles:FeatureToggle FeatureName=NewDashboard}" Content="Open new dashboard" />
+```

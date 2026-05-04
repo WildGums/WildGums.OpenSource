@@ -28,7 +28,7 @@ There are 2 important interfaces inside this library:
 
 To retrieve type information about an object, the information is stored in one of the `IMetadataCollection` implementations. The developer only has to work with the *IMetadataCollection* interface. To retrieve the information, use the code below:
 
-```
+```csharp
 var allMetadata = metadataCollection.All;
 foreach (var metadata in allMetadata)
 {
@@ -40,7 +40,7 @@ foreach (var metadata in allMetadata)
 
 To retrieve the metadata of a specific object, use the code below:
 
-```
+```csharp
 var metadata = metadataCollection.GetMetadata("MyMetadataName");
 var metadataValue = metadata.GetValue(myInstance); 
 ```
@@ -51,7 +51,7 @@ The reflection metadata classes will use reflection to retrieve metadata informa
 
 ### Creating the metadata collection
 
-```
+```csharp
 var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
 ```
 
@@ -65,7 +65,7 @@ One way to store information separately from the actual object is to use diction
 
 The example below creates metadata that contains a few metadata definitions with specific types.
 
-```
+```csharp
 var dictionary = new Dictionary<string, Type>();
 dictionary["MyStringMetadata"] = typeof(string);
 dictionary["MyIntMetadata"] = typeof(int);
@@ -75,7 +75,7 @@ dictionary["MyIntMetadata"] = typeof(int);
 
 Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:
 
-```
+```csharp
 var metadataDictionary = new Dictionary<string, object>();
 dictionary["MyStringMetadata"] = "myvalue";
 dictionary["MyIntMetadata"] = "42";

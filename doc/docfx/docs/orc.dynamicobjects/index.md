@@ -24,7 +24,7 @@ In .NET, it is possible to create fully dynamic objects. This makes it possible 
 
 Creating a dynamic object with full Catel functionality is easy. Just add the `Orc.DynamicObjects` reference via NuGet and create a class that derives from `DynamicModelBase`:
 
-```
+```csharp
 public class DynamicModel : DynamicModelBase
 {
 	// TODO: Add custom functionality if required
@@ -33,7 +33,7 @@ public class DynamicModel : DynamicModelBase
 
 Then the dynamic model can be used like this:
 
-```
+```csharp
 dynamic model = new DynamicModel();
 model.NonExistingProperty = "a dynamic value";
  
@@ -47,7 +47,7 @@ Console.WriteLine(model.NonExistingProperty);
 
 The `DynamicModelBase` class derives from *ModelBase*. However it must be preceded by the dynamic keyword. To use the `ModelBase` functionality, cast it to the right type:
 
-```
+```csharp
 dynamic model = new DynamicModel();
 model.NonExistingProperty = "a dynamic value";
  
@@ -60,7 +60,7 @@ modelBase.Validate();
 
 Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:
 
-```
+```csharp
 dynamic model = new DynamicModel();
 model.NonExistingProperty = "a dynamic value";
 

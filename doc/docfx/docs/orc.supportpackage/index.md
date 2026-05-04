@@ -28,7 +28,7 @@ Below is an overview of the most important components:
 
 By default the support package service gathers system info (using `Orc.SystemInfo`) and the %AppData% folder of the current user. To create a support package, use the following code:
 
-```
+```csharp
 await _supportPackageService.CreateSupportPackage(_saveFileService.FileName);
 ```
 
@@ -36,7 +36,7 @@ await _supportPackageService.CreateSupportPackage(_saveFileService.FileName);
 
 It can be very useful to add more than just the %AppData% to a support package (such as a memory dump of the application). In that case the only thing one has to do is create a type implementing the `ISupportPackageProvider` interface as shown below:
 
-```
+```csharp
 public class CustomSupportPackageProvider : SupportPackageProviderBase
 {
 	public override async Task Provide(ISupportPackageContext supportPackageContext)

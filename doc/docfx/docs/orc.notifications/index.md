@@ -23,7 +23,7 @@ In order to create notifications in your application use IoC with the `INotifica
 
 A default `Notification` class, which implements the `INotification` interface is provided.
 
-```
+```csharp
 public interface INotification
 {
         string Title { get; set; }

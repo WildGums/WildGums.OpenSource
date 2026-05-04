@@ -35,7 +35,7 @@ The `IMementoService` supports both undo and redo actions. This means that an ac
 
 To undo an action, use the code below:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.Undo();
 ```
@@ -44,7 +44,7 @@ It is possible to check whether it is possible to undo actions by using the `Can
 
 To redo an action, use the code below:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.Redo();
 ```
@@ -55,7 +55,7 @@ It is possible to check whether it is possible to redo actions by using the `Can
 
 The `MementoService` automatically wraps all actions in batches. Because each action is treated as a batch, it is easy to begin a batch and add several actions to a single batch. Below is the code to create a batch:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.BeginBatch("Batch title", "Batch description");
  
@@ -75,7 +75,7 @@ As soon as a batch is ended by one of the ways described above, it will be added
 
 Ignoring specific properties or methods for the IMementoService is very easy. Just decorate them with the IgnoreMementoSupportAttribute as shown below:
 
-```
+```csharp
 [IgnoreMementoSupport]
 public string IgnoredProperty { get; set; }
 ```
@@ -88,7 +88,7 @@ Adding the ability to undo and redo property changes on an object is very simple
 
 When an object implements the `INotifyPropertyChanged` interface, it is possible to register the object. The `IMementoService` will fully take care of any property changes by the object and add these automatically to the undo/redo stack. Internally, the service will create an instance of the `ObjectObserver` which will register the changes in the `IMementoService`.
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.RegisterObject(myObject);
 ```
@@ -97,7 +97,7 @@ mementoService.RegisterObject(myObject);
 
 When an object does not support the `INotifyPropertyChanged` interface or you want more control, it is possible to instantiate the `PropertyChangeUndo` yourself. See the example below:
 
-```
+```csharp
 public string Name
 {
     get { return _name; }
@@ -120,7 +120,7 @@ public string Name
 
 When a model goes out of scope, it is important that the `IMementoService` does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the object:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.UnregisterObject(myObject);
 ```
@@ -135,7 +135,7 @@ Adding the ability to undo and redo collection changes on a collection is very s
 
 When a collection implements the `INotifyCollectionChanged` interface, it is possible to register the collection. The `IMementoService` will fully take care of any collection changes by the collection and add these automatically to the undo/redo stack. Internally, the service will create an instance of the `CollectionObserver` which will register the changes in the `IMementoService`.
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.RegisterCollection(myCollection);
 ```
@@ -144,7 +144,7 @@ mementoService.RegisterCollection(myCollection);
 
 When an object does not support the `INotifyCollectionChanged` interface or you want more control, it is possible to instantiate the `CollectionChangeUndo` yourself. See the example below:
 
-```
+```csharp
 public void AddPerson(IPerson person)
 {
     var newIndex = _internalCollection.Add(person);
@@ -160,7 +160,7 @@ public void AddPerson(IPerson person)
 
 When a collection goes out of scope, it is important that the `IMementoService` does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the collection:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.UnregisterCollection(myCollection);
 ```
@@ -175,7 +175,7 @@ Adding the ability to undo and redo methods is the most complex, because this ca
 
 An action can come in two flavors. One with only undo support, and one with redo support. It is always recommended to implement the one with support for redo, but the choice is always yours. For this example, let's assume a simple class that will increase a value (for which we are building undo/redo support):
 
-```
+```csharp
 public class SpecialNumberContainer()
 {
     private int _number = 5;
@@ -193,7 +193,7 @@ As you can see in the example, it is not possible to use the `PropertyChangeUndo
 
 First, the class with only undo support:
 
-```
+```csharp
 public class SpecialNumberContainer()
 {
     private int _number = 5;
@@ -214,7 +214,7 @@ The code above will add a new action to the undo stack every time the `IncreaseN
 
 Below is the same class, but now with redo support:
 
-```
+```csharp
 public class SpecialNumberContainer()
 {
     private int _number = 5;
@@ -237,7 +237,7 @@ The code above will add a new action to the undo stack every time the `IncreaseN
 
 When an action no longer has to be in the undo/redo stack of the `IMementoService`, one should call the `Clear` method with the instance of the method as shown in the sample below:
 
-```
+```csharp
 var mementoService = ServiceLocator.Default.ResolveType<IMementoService>();
 mementoService.Clear(myInstanceContainingTheMethod);
 ```
