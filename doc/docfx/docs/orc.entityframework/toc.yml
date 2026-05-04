@@ -1,0 +1,8 @@
+- name: Using stored procedures and functions
+  href: using-stored-procedures-and-functions.md
+- name: Using the DbContextManager
+  href: using-the-dbcontextmanager.md
+- name: Using the ModelBase as base class for code-first entities
+  href: using-the-modelbase-as-base-class-for-code-first-entities.md
+- name: Using the repositories and unit of work
+  href: using-the-repositories-and-unit-of-work.md

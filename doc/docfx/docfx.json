@@ -1,0 +1,45 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "docs/**.md",
+          "docs/**/toc.yml",
+          "toc.yml",
+          "index.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "../site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "WildGums Open Source",
+      "_appTitle": "WildGums Open Source",
+      "_appFaviconPath": "images/favicon.png",
+      "_enableSearch": true,
+      "_appLogoPath": "images/favicon.png",
+      "_gitContribute": {
+        "repo": "https://github.com/WildGums/WildGums.OpenSource",
+        "branch": "master",
+        "apiSpecFolder": "docs"
+      }
+    },
+    "fileMetadata": {},
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}
