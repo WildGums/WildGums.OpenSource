@@ -7,9 +7,9 @@ Find the source at [https://github.com/WildGums/Orc.Serialization](https://githu
 
 | | |
 |-|-|
-| Downloads | [![NuGet downloads](https://img.shields.io/nuget/dt/Orc.Serialization.svg)](https://www.nuget.org/packages/Orc.Serialization) |
-| Stable version | [![Stable version](https://img.shields.io/nuget/v/Orc.Serialization.svg)](https://www.nuget.org/packages/Orc.Serialization) |
-| Unstable version | [![Unstable version](https://img.shields.io/nuget/vpre/Orc.Serialization.svg)](https://www.nuget.org/packages/Orc.Serialization) |
+| Downloads | [![NuGet downloads](https://img.shields.io/nuget/dt/Orc.Serialization.Json.svg)](https://www.nuget.org/packages/Orc.Serialization.Json) |
+| Stable version | [![Stable version](https://img.shields.io/nuget/v/Orc.Serialization.Json.svg)](https://www.nuget.org/packages/Orc.Serialization.Json) |
+| Unstable version | [![Unstable version](https://img.shields.io/nuget/vpre/Orc.Serialization.Json.svg)](https://www.nuget.org/packages/Orc.Serialization.Json) |
 
 
 This library provides serialization support for WildGums applications. It includes packages for JSON serialization (`Orc.Serialization.Json`) and YAML serialization (`Orc.Serialization.Yaml`).
@@ -18,7 +18,6 @@ This library provides serialization support for WildGums applications. It includ
 
 | Package | Description |
 |---------|-------------|
-| `Orc.Serialization` | Core serialization abstractions and base classes |
 | `Orc.Serialization.Json` | JSON serialization support using Newtonsoft.Json |
 | `Orc.Serialization.Yaml` | YAML serialization support |
 

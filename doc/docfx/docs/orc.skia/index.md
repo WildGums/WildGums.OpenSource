@@ -27,9 +27,9 @@ This library provides a XAML canvas for XAML platforms (WPF & UWP) to provide a 
 Add the `Orc.Skia` NuGet package to your project, then add the `SkiaCanvas` control to your XAML:
 
 ```xml
-xmlns:orc="http://www.wildgums.net.au/orc"
+xmlns:orcskia="http://schemas.wildgums.com/orc/skia"
 
-<orc:SkiaCanvas x:Name="skiaCanvas" />
+<orcskia:SkiaCanvas x:Name="skiaCanvas" />
 ```
 
 Subscribe to the `DrawSurface` event to draw on the canvas using SkiaSharp:
