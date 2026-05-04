@@ -14,3 +14,43 @@ Find the source at [https://github.com/WildGums/Orc.SelectionManagement](https:/
 
 
 Manage selection state inside applications.
+
+## Key features
+
+- Track selected items across different views or components
+- Support for single and multiple selection modes
+- Events for responding to selection changes
+
+## Getting started
+
+The main component is the `ISelectionManager`, which provides a centralized way to manage the currently selected items in an application.
+
+### Retrieving the selection manager
+
+```csharp
+var selectionManager = dependencyResolver.ResolveType<ISelectionManager>();
+```
+
+### Selecting an item
+
+```csharp
+selectionManager.Select(myItem);
+```
+
+### Retrieving the current selection
+
+```csharp
+var selectedItems = selectionManager.SelectedItems;
+```
+
+### Responding to selection changes
+
+```csharp
+selectionManager.SelectionChanged += OnSelectionChanged;
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    // e.AddedItems contains newly selected items
+    // e.RemovedItems contains items that are no longer selected
+}
+```

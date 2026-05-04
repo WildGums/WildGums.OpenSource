@@ -15,7 +15,7 @@ Find the source at [https://github.com/WildGums/Orchestra](https://github.com/Wi
 
 Orchestra is a composable WPF shell and framework built on top of [Catel](https://www.catelproject.com).
 
-It has been in active development for over 5 years (initial commit 2012/06/18) and is used in numerous Line of Business (LoB) applications on a daily basis.
+It has been in active development since 2012 and is used in numerous Line of Business (LoB) applications on a daily basis.
 
 Orchestra consists of a main shell including an SDK with services that allow developers to communicate with the shell.
 
@@ -63,9 +63,9 @@ A good working knowledge of Inversion of Control (IoC).
 We purposely designed Orchestra to be a lightweight shell. However, it can be extended with the following open source libraries:
 (We use all these libraries with Orchestra. In fact they were designed to work seamlessly with Orchestra. Hint: the libraries all start with Orc.*)
 
-- License management ([Orc.LicenseManager](https://github.com/Orcomp/Orc.LicenseManager))
-- Project management ([Orc.ProjectManagement](https://github.com/Orcomp/Orc.ProjectManagement))
-- Automatic updates ([Orc.NuGetExplorer](https://github.com/WildGums/Orc.NuGetExplorer) [Orc.Squirrel](https://github.com/Orcomp/Orc.Squirrel))
+- License management ([Orc.LicenseManager](https://github.com/WildGums/Orc.LicenseManager))
+- Project management ([Orc.ProjectManagement](https://github.com/WildGums/Orc.ProjectManagement))
+- Automatic updates ([Orc.NuGetExplorer](https://github.com/WildGums/Orc.NuGetExplorer) [Orc.Squirrel](https://github.com/WildGums/Orc.Squirrel))
 - Undo/Redo ([Orc.Memento](https://github.com/WildGums/Orc.Memento))
 
 You can find the full list [here](https://github.com/WildGums).

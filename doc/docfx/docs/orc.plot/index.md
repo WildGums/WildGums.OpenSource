@@ -14,3 +14,29 @@ Find the source at [https://github.com/WildGums/Orc.Plot](https://github.com/Wil
 
 
 Extends the functionality of [OxyPlot](http://www.oxyplot.org/).
+
+## Key features
+
+- Integrates OxyPlot with the WildGums theming system, so plots automatically match the application's accent color and light/dark theme
+- Provides helper extensions to make it easier to create and configure OxyPlot models
+- Supports automatic theme synchronization when the application theme changes at runtime
+
+## Getting started
+
+Add the `Orc.Plot` NuGet package to your project. The library automatically integrates with `Orc.Theming` when both are present.
+
+### Applying the theme to a plot model
+
+```csharp
+var plotModel = new PlotModel { Title = "My Chart" };
+
+// Apply the current application theme to the plot model
+plotModel.ApplyTheme();
+```
+
+### Listening for theme changes
+
+```csharp
+var themeManager = dependencyResolver.ResolveType<IThemeManager>();
+themeManager.ThemeChanged += (s, e) => plotModel.ApplyTheme();
+```

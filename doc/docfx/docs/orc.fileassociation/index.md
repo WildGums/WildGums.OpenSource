@@ -26,7 +26,7 @@ the file association for the current user.**
 
 It is important to register an application. This way Windows knows that the application supports specific file types. To register an application, use the following code:
 
-```
+```csharp
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
@@ -39,7 +39,7 @@ When using an assembly for the `ApplicationInfo`, the library will extract all t
 
 When an application is being uninstalled, you need to remove all the required registry entries. This can be done by using the following code:
 
-```
+```csharp
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
@@ -51,7 +51,7 @@ _applicationRegistrationService.UnregisterApplication(applicationInfo);
 
 To always keep the registry up to date, you can call this method at the startup of your app (note that this does **not require elevation or administrator rights**):
 
-```
+```csharp
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
@@ -62,7 +62,7 @@ _applicationRegistrationService.UpdateRegistration(applicationInfo);
 
 To allow a user to pick your app as the default one for a file type, you need to use the `IFileAssociationService` as shown below:
 
-```
+```csharp
 var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 

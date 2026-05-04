@@ -44,7 +44,7 @@ By default the following initializers are available:
 
 To create a custom workspace initializer, see the example below:
 
-```
+```csharp
 public class WorkspaceInitializer : IWorkspaceInitializer
 {
 	public Task InitializeAsync(IWorkspace workspace)
@@ -58,7 +58,7 @@ public class WorkspaceInitializer : IWorkspaceInitializer
 
 Next it can be registered in the `ServiceLocator` (so it will automatically be injected into the `WorkspaceManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IWorkspaceInitializer, MyWorkspaceInitializer>();
 ```
 
@@ -68,13 +68,13 @@ ServiceLocator.Default.RegisterType<IWorkspaceInitializer, MyWorkspaceInitialize
 
 Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:
 
-```
+```csharp
 await workspaceManager.InitializeAsync(); 
 ```
 
 # Retrieving a list of all workspaces
 
-```
+```csharp
 var workspaces = workspaceManager.Workspaces;
 ```
 
@@ -82,7 +82,7 @@ var workspaces = workspaceManager.Workspaces;
 
 The library contains extension methods for the `IWorkspaceManager` to retrieve a typed instance:
 
-```
+```csharp
 var myWorkspace = workspaceManager.Workspace;
 ```
 
@@ -94,7 +94,7 @@ Storing information in a workspace is the responsibility of every single compone
 
 To store information in a workspace, set the workspace to be updated as current workspace. Then let the user (or software) customize all components. Call the following method to raise the `WorkspaceInfoRequested` event to update the workspace:
 
-```
+```csharp
 await workspaceManager.StoreWorkspaceAsync();
 ```
 
@@ -104,7 +104,7 @@ await workspaceManager.StoreWorkspaceAsync();
 
 Create a provider as shown in the example below:
 
-```
+```csharp
 public class RibbonWorkspaceProvider : IWorkspaceProvider
 {
 	private readonly Ribbon _ribbon;
@@ -132,7 +132,7 @@ public class RibbonWorkspaceProvider : IWorkspaceProvider
 
 Then add it to the provider where the ribbon is available:
 
-```
+```csharp
 public RibbonView()
 {
 	InitializeComponent();
@@ -149,7 +149,7 @@ public RibbonView()
 
 Using events is a bit more work, but can accomplish the same:
 
-```
+```csharp
 public MyComponent(IWorkspaceManager workspaceManager)
 {
 	workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
@@ -169,7 +169,7 @@ private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
 
 To save all workspaces to disk, use the code below:
 
-```
+```csharp
 workspaceManager.Save();
 ```
 
@@ -185,7 +185,7 @@ Using the extension methods still requires manual work by subscribing to events 
 
 The behavior is a wrapper around the extension methods and take away to need to manage anything. The behavior is aware of all the events and will handle everything accordingly. To use the behavior, use the code below:
 
-```
+```xml
 <views:BView Grid.Row="2" Grid.Column="4">
 	<i:Interaction.Behaviors>
 		<behaviors:AutoWorkspace />

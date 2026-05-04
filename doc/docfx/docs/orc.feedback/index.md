@@ -19,9 +19,18 @@ Allows the user to easily get feedback from the end-user.
 
 It is very important to initialize the service. It can be done by retrieving it from the service locator and update the required data:
 
-```
+```csharp
 var dependencyResolver = this.GetDependencyResolver();
 var feedbackService = dependencyResolver.ResolveType<IFeedbackService>();
 
-feedbackService.SomeProperty = "http://myfeedbackwebsite";
+feedbackService.Email = "support@mycompany.com";
+```
+
+## Showing the feedback window
+
+Once initialized, show the feedback window to the user using the `IUIVisualizerService`:
+
+```csharp
+var uiVisualizerService = dependencyResolver.ResolveType<IUIVisualizerService>();
+await uiVisualizerService.ShowDialogAsync<FeedbackViewModel>();
 ```

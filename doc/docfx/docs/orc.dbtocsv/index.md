@@ -50,13 +50,13 @@ There are four important tags:
 
 Once the project file is setup you can create the csv files using the following command:
 
-```C#
+```csharp
 public static void ProcessProject(string projectFilePath, string outputFolderPath, ILogWriter logWriter)
 ```
 
 Example:
 
-```C#
+```csharp
 Importer.ProcessProject(projectFilePath, outputFolderPath, new ConsoleWriter());
 ```
 

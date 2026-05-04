@@ -31,7 +31,7 @@ Below is an overview of the most important components:
 
 A project is a model that can be implemented by the developer and must implement the `IProject` interface. The most convenient way to implement a project is by deriving from the *ProjectBase* class:
 
-```
+```csharp
 public class MyProject : ProjectBase
 {
 	public Project(string title)
@@ -59,7 +59,7 @@ To create a custom project initializer, see the example below:
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
 ```
 
@@ -69,7 +69,7 @@ ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderServic
 
 Sometimes it is possible to check on forehand if it's even possible to load a project. This is implemented via the `IProjectValidator` interface. By default there is no validation, but this can be implemented. For example when a project represents a folder on disk, the validator can check if the directory exists:
 
-```
+```csharp
 public class DirectoryExistsProjectValidator : IProjectValidator
 {
 	#region IProjectValidator Members
@@ -83,7 +83,7 @@ public class DirectoryExistsProjectValidator : IProjectValidator
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectValidator, DirectoryExistsProjectValidator>();
 ```
 
@@ -91,7 +91,7 @@ ServiceLocator.Default.RegisterType<IProjectValidator, DirectoryExistsProjectVal
 
 Projects must be read via the `IProjectReaderService`. The project manager automatically knows when to read a project. First, one must create a project reader as shown in the example below:
 
-```
+```csharp
 public class ProjectReader : ProjectReaderBase
 {
 	protected override async Task<IProject> ReadAsync(string location)
@@ -107,13 +107,13 @@ public class ProjectReader : ProjectReaderBase
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectReaderService, MyProjectReaderService>();
 ```
 
 # Creating a project writer service
 
-```
+```csharp
 public class ProjectWriter : ProjectWriterBase<MyProject>
 {
 	protected override async Task WriteAsync(MyProject project, string location)
@@ -125,7 +125,7 @@ public class ProjectWriter : ProjectWriterBase<MyProject>
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
 ```
 
@@ -133,7 +133,7 @@ ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterServic
 
 Because the project manager is using async, the initialization is a separate method. This gives the developer the option to load the project whenever it is required. To (optionally) initialize the project manager, use the code below:
 
-```
+```csharp
 await projectManager.Initialize(); 
 ```
 
@@ -141,7 +141,7 @@ await projectManager.Initialize();
 
 The library contains extension methods for the `IProjectManager` to retrieve a typed instance:
 
-```
+```csharp
 var myProject = projectManager.GetProject<MyProject>();
 ```
 
@@ -151,7 +151,7 @@ The library can automatically detect whether the source has changed and the proj
 
 ## Creating a project refresher selector
 
-```
+```csharp
 public class ProjectRefresherSelector : IProjectSelector
 {
 	public IProjectRefresher GetProjectRefresher(string location)
@@ -164,7 +164,7 @@ public class ProjectRefresherSelector : IProjectSelector
 
 Next it can be registered in the ServiceLocator (so it will automatically be injected into the `ProjectManager`):
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectWriterService, MyProjectWriterService>();
 ```
 
@@ -179,13 +179,13 @@ The library providers a few default implementations:
 
 If your projects are a file or a directory of files, it should be sufficient to register it in the service locator:
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IProjectRefresher, FileProjectRefresher>();
 ```
 
 If a custom refresher is required, simply implement it as show in the example below:
 
-```
+```csharp
 public class DirectoryProjectRefresher : ProjectRefresherBase
 {
 	private static readonly ILog Log = LogManager.GetCurrentClassLogger();

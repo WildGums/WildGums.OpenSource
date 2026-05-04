@@ -52,7 +52,23 @@ featureToggleService.Disable(Features.BetaExport);
 
 ## XAML integration
 
-The `Orc.FeatureToggles.Xaml` package provides WPF bindings and converters for controlling UI visibility based on feature toggle state.
+The `Orc.FeatureToggles.Xaml` package provides a built-in UI for managing feature toggles. It includes a `FeatureTogglesWindow` that lists all registered feature toggles and allows them to be enabled or disabled at runtime.
 
-> [!WARNING]
-> More documentation should be written in the future
+### Showing the feature toggles window
+
+Use the `IUIVisualizerService` to show the built-in feature toggles management window:
+
+```csharp
+var uiVisualizerService = dependencyResolver.ResolveType<IUIVisualizerService>();
+await uiVisualizerService.ShowDialogAsync<FeatureTogglesViewModel>();
+```
+
+### Using the FeatureToggleVisibilityConverter
+
+The `Orc.FeatureToggles.Xaml` package also provides a `FeatureToggleVisibilityConverter` that can be used to show or hide UI elements based on feature toggle state:
+
+```xml
+xmlns:orc="http://www.wildgums.net.au/orc"
+
+<Button Visibility="{orc:FeatureToggle FeatureName=NewDashboard}" Content="Open new dashboard" />
+```

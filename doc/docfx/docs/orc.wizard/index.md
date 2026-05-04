@@ -36,7 +36,7 @@ A wizard page contains of three parts which are explained below.
 
 The wizard model will hold all the information of the wizard page and return the summary (which is optional). 
 
-```
+```csharp
 public class PersonWizardPage : WizardPageBase
 {
 	public PersonWizardPage()
@@ -64,7 +64,7 @@ public class PersonWizardPage : WizardPageBase
 
 The view model is responsible for the actual view logic. There can be a lot of stuff in here that is view-specific, as long as the results are stored into the model. This example uses the `ViewModelToModel` feature of Catel to automatically map the values between the view model and model. As you can see this example even contains validation, so users cannot continue to the next page when the validation does not succeed.
 
-```
+```csharp
 public class PersonWizardPageViewModel : WizardPageViewModelBase<PersonWizardPage>
 {
 	public PersonWizardPageViewModel(PersonWizardPage wizardPage)
@@ -99,7 +99,7 @@ public class PersonWizardPageViewModel : WizardPageViewModelBase<PersonWizardPag
 
 Below is the xaml view for the wizard page. Note that it's just an ordinary Catel UserControl.
 
-```
+```xml
 <catel:UserControl x:Class="Orc.Wizard.Example.Wizard.Views.PersonWizardPageView"
 				   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 				   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -135,7 +135,7 @@ Below is the xaml view for the wizard page. Note that it's just an ordinary Cate
 
 Once all the wizard pages have been created, it's time to wrap it inside an actual wizard. Below is an example:
 
-```
+```csharp
 public class ExampleWizard : WizardBase
 {
 	public ExampleWizard(ITypeFactory typeFactory)
@@ -156,7 +156,7 @@ public class ExampleWizard : WizardBase
 
 Using the wizard can be done via the `IWizardService`. Below is an example on how to show a wizard:
 
-```
+```csharp
 await _wizardService.ShowWizardAsync<ExampleWizard>();
 ```
 
@@ -170,7 +170,7 @@ await _wizardService.ShowWizardAsync<ExampleWizard>();
 
 When you obtain a service object from the service locator, you will write code such as the following:
 
-```
+```csharp
 var myService = serviceLocator.ResolveType<IMyService>();
 ```
 

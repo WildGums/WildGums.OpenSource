@@ -25,7 +25,7 @@ To check a license on the client, we need the public key of the application. It 
 
 It is a good practice to create a `License` class to contain all this information:
 
-```
+```csharp
 public static class License
 {
 	// The public key of the product
@@ -39,7 +39,7 @@ public static class License
 
 The first thing that needs to be done is to validate locally. If the license is not valid, the software will automatically show a license dialog.
 
-```
+```csharp
 if (!await _simpleLicenseService.Validate(License.ApplicationId, "My Product", "/MyProduct;component/Resources/Images/logo_0128.png", "In order to use this software, a license is required.")())
 {
 	// License is not valid, exit software
@@ -50,7 +50,7 @@ if (!await _simpleLicenseService.Validate(License.ApplicationId, "My Product", "
 
 It is also possible to check the license on the server as well.
 
-```
+```csharp
 if (!await _simpleLicenseService.ValidateOnServer(License.LicenseServer, License.ApplicationId, "My Product", "/MyProduct;component/Resources/Images/logo_0128.png", "In order to use this software, a license is required.")())
 {
 	// License is not valid, exit software
@@ -65,14 +65,14 @@ The software can detect the number of licenses used on the current network. It d
 
 The easiest way to use the `INetworkLicenseService` is to initialize it with a polling value. Then it will automatically raise events when a validation has occurred.
 
-```
+```csharp
 _networkLicenseService.Validated += OnNetworkLicenseValidated;
 await _networkLicenseService.Initialize(TimeSpan.FromSeconds(30));
 ```
 
 Then you can handle the result of the validation in the event handler:
 
-```
+```csharp
 private async void OnNetworkLicenseValidated(object sender, NetworkValidatedEventArgs e)
 {
 	var validationResult = e.ValidationResult;
@@ -98,10 +98,12 @@ private async void OnNetworkLicenseValidated(object sender, NetworkValidatedEven
 
 To manually perform a check, use the following code:
 
-```
+```csharp
 var validationResult = await _networkLicenseService.Validate();
 ```
 
 # Server validation
 
-[server documentation must be written yet]
+Server-side license validation allows the license server to verify that a license key is valid and has not been tampered with. The server receives the license and its signature from the client and validates them using the private key.
+
+To implement server-side validation, use the `INetworkLicenseService` on the server to check the license signature. Refer to the [Portable.Licensing documentation](https://github.com/dnauck/Portable.Licensing) for details on generating license keys and setting up server validation.

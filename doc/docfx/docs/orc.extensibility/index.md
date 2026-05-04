@@ -21,7 +21,7 @@ The API library is the library that exposes the types and interfaces that can be
 cases, the API will expose the interface for services which are implemented in the host. In a minimal case, the API will only expose
 a type that will be used to recognize a plugin. For example the plugin interface shown below;
 
-```
+```csharp
 public interface ICustomPlugin
 {
 	Task InitializeAsync();
@@ -37,7 +37,7 @@ The host is responsible for finding and instantiating the plugins.
 The library takes care of the hard work. The only thing that it needs to know is whether a type is a plugin. This can be configured
 by creating a class deriving from `PluginFinderBase`:
 
-```
+```csharp
 public class PluginFinder : Orc.Extensibility.PluginFinderBase
 {
 	private readonly string _pluginName = typeof(ICustomPlugin).Name;
@@ -60,7 +60,7 @@ public class PluginFinder : Orc.Extensibility.PluginFinderBase
 
 Note that it should also be registered in the `ServiceLocator`:
 
-```
+```csharp
 ServiceLocator.Default.RegisterType<IPluginFinder, PluginFinder>();
 ```
 
@@ -68,7 +68,7 @@ ServiceLocator.Default.RegisterType<IPluginFinder, PluginFinder>();
 
 It's possible to allow a single plugin host or a multiple plugin host. This example shows how to use the single plugin host:
 
-```
+```csharp
 // In an Orchestra environment, this would go into the bootstrapper
 var configurationService = serviceLocator.ResolveType<IConfigurationService>();
 var activePlugin = configurationService.GetRoamingValue(ConfigurationKeys.ActivePlugin, ConfigurationKeys.ActivePluginDefaultValue);
@@ -79,7 +79,7 @@ if (plugin != null)
 {
     serviceLocator.RegisterInstance(typeof(ICustomPlugin), plugin.Instance);
 }
-``` 
+```
 
 ## Creating a plugin
 
@@ -88,7 +88,7 @@ Last but not least, plugins will need to be created, but this is extremely easy.
 1. Create a class library project and reference the API library
 
 2. Create a new plugin as shown below:
-```
+```csharp
 public class PluginA : ICustomPlugin
 {
 	private readonly IMessageService _messageService;

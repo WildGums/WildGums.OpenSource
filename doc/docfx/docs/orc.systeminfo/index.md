@@ -19,7 +19,7 @@ Use the `GetSystemInfo()` method or the `ISystemInfoService` to get the system i
 
 `GetSystemInfo()` returns an `IEnumerable<SystemInfoElement>`
 
-```
+```csharp
 [Serializable]
 public class SystemInfoElement
 {
@@ -64,7 +64,7 @@ Using the service is easy. Just resolve the service from the `ServiceLocator` or
 
 If dependency injection is not used, the service can be retrieved using the following code:
 
-```
+```csharp
 var systemInfoService = ServiceLocator.Default.ResolveType<ISystemInfoService>();
 ``` 
 
@@ -81,7 +81,7 @@ foreach (var systemInfoElement in systemInfo)
 {
     // TODO: Deal with the system info
 }
-```
+```csharp
 
 ### Retrieving on a separate thread
 
@@ -92,4 +92,4 @@ foreach (var systemInfoElement in systemInfo)
 {
     // TODO: Deal with the system info
 }
-```
+```csharp
