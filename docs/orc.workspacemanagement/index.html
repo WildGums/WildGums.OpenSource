@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.WorkspaceManagement | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.WorkspaceManagement | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.workspacemanagement/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.workspacemanagement">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.WorkspaceManagement">https://github.com/WildGums/Orc.WorkspaceManagement</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.WorkspaceManagement"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.WorkspaceManagement"><img src="https://img.shields.io/nuget/dt/Orc.WorkspaceManagement.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.WorkspaceManagement"><img src="https://img.shields.io/nuget/v/Orc.WorkspaceManagement.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.WorkspaceManagement"><img src="https://img.shields.io/nuget/vpre/Orc.WorkspaceManagement.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Manage workspaces the easy way using this library.</p>
+<h1 id="quick-introduction">Quick introduction</h1>
+<p>Workspaces are a combination of settings that a user can choose to configure an application. An example is the layout of all docking windows in Visual Studio. The advantage of the workspace management is that it takes away all the plumbing and you can concentrate on the actual usage of workspaces.</p>
+<p>The workspace management library makes it easy to manage workspaces. The main component is the <code>IWorkspaceManager</code> that contains the current workspace and all available workspaces and allows to load or save workspaces.</p>
+<p>Below is an overview of the most important components:</p>
+<ul>
+<li><code>IWorkspace</code> =&gt; the actual workspace object</li>
+<li><code>IWorkspaceManager</code> =&gt; the workspace manager with events and management methods</li>
+<li><code>IWorkspaceInitializer</code> =&gt; allows customization of initial settings of a workspace</li>
+</ul>
+<p><img src="../../images/orc.workspacemanagement/workspace_handling.gif" alt="Managing workspaces the easy way"></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>Important note</strong></p>
+<p>The base directory will be used as repository. This means that it cannot contain other files and all other files will be deleted from the directory</p>
+</div>
+<h1 id="creating-a-workspace-initializer">Creating a workspace initializer</h1>
+<p>When a workspace manager is created, it doesn't contain anything. The <code>IWorkspaceInitializer</code> interface allows the customization of that state.</p>
+<p>By default the following initializers are available:</p>
+<ul>
+<li><code>EmptyWorkspaceInitializer</code> =&gt; initializes nothing, this is the default</li>
+</ul>
+<p>To create a custom workspace initializer, see the example below:</p>
+<pre><code>public class WorkspaceInitializer : IWorkspaceInitializer
+{
+	public Task InitializeAsync(IWorkspace workspace)
+	{
+		workspace.SetValue(&quot;AView.Width&quot;, 200d);
+		workspace.SetValue(&quot;BView.Width&quot;, 200d);
+		return TaskHelper.Completed;
+	}
+}
+</code></pre>
+<p>Next it can be registered in the <code>ServiceLocator</code> (so it will automatically be injected into the <code>WorkspaceManager</code>):</p>
+<pre><code>ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
+</code></pre>
+<p><strong>Make sure to register the service before instantiating the <em>IWorkspaceManager</em> because it will be injected</strong></p>
+<h1 id="initializing-the-workspace-manager">Initializing the workspace manager</h1>
+<p>Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:</p>
+<pre><code>await workspaceManager.InitializeAsync(); 
+</code></pre>
+<h1 id="retrieving-a-list-of-all-workspaces">Retrieving a list of all workspaces</h1>
+<pre><code>var workspaces = workspaceManager.Workspaces;
+</code></pre>
+<h1 id="retrieving-the-current-workspace">Retrieving the current workspace</h1>
+<p>The library contains extension methods for the <code>IWorkspaceManager</code> to retrieve a typed instance:</p>
+<pre><code>var myWorkspace = workspaceManager.Workspace;
+</code></pre>
+<p>To customize the location where the workspaces are stored, use the <code>BaseDirectory</code> property.</p>
+<h1 id="storing-information-in-a-workspace">Storing information in a workspace</h1>
+<p>Storing information in a workspace is the responsibility of every single component in the application. The <code>IWorkspaceManager</code> will raise the <code>WorkspaceInfoRequested</code> event so every component can put in the required information into the workspace.</p>
+<p>To store information in a workspace, set the workspace to be updated as current workspace. Then let the user (or software) customize all components. Call the following method to raise the <code>WorkspaceInfoRequested</code> event to update the workspace:</p>
+<pre><code>await workspaceManager.StoreWorkspaceAsync();
+</code></pre>
+<p><strong>Note that a workspace is only updated, not saved to disk by this method</strong></p>
+<h2 id="providers">Providers</h2>
+<p>Create a provider as shown in the example below:</p>
+<pre><code>public class RibbonWorkspaceProvider : IWorkspaceProvider
+{
+	private readonly Ribbon _ribbon;
+
+	public RibbonWorkspaceProvider(Ribbon ribbon)
+	{
+		Argument.IsNotNull(() =&gt; ribbon);
+
+		_ribbon = ribbon;
+	}
+
+	public Task ProvideInformationAsync(IWorkspace workspace)
+	{
+		workspace.SetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, _ribbon.IsMinimized);
+		return TaskHelper.Completed;
+	}
+
+	public Task ApplyWorkspaceAsync(IWorkspace workspace)
+	{
+		_ribbon.IsMinimized = workspace.GetWorkspaceValue(&quot;Ribbon.IsMinimized&quot;, false);
+		return TaskHelper.Completed;
+	}
+}
+</code></pre>
+<p>Then add it to the provider where the ribbon is available:</p>
+<pre><code>public RibbonView()
+{
+	InitializeComponent();
+
+	var dependencyResolver = this.GetDependencyResolver();
+	var workspaceManager = dependencyResolver.Resolve&lt;IWorkspaceManager&gt;();
+
+	var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
+	workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+}
+</code></pre>
+<h2 id="events">Events</h2>
+<p>Using events is a bit more work, but can accomplish the same:</p>
+<pre><code>public MyComponent(IWorkspaceManager workspaceManager)
+{
+	workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
+}
+
+private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
+{
+	var workspace = e.Workspace;
+
+	workspace.SetWorkspaceValue(&quot;somekey&quot;, &quot;somevalue&quot;);
+}
+</code></pre>
+<p><strong>Note that this will only be called when storing the workspace, restoring the workspace needs more events</strong></p>
+<h1 id="saving-all-workspaces-to-disk">Saving all workspaces to disk</h1>
+<p>To save all workspaces to disk, use the code below:</p>
+<pre><code>workspaceManager.Save();
+</code></pre>
+<h1 id="using-the-xaml-behaviors">Using the XAML behaviors</h1>
+<p>For the developers using XAML (WPF), behaviors and extension methods are available in the <code>Orc.WorkspaceManagement.Xaml</code> library.</p>
+<h2 id="using-the-extension-methods">Using the extension methods</h2>
+<p>Using the extension methods still requires manual work by subscribing to events of both the view and workspace manager, but allow more control.</p>
+<h2 id="using-the-behaviors">Using the behaviors</h2>
+<p>The behavior is a wrapper around the extension methods and take away to need to manage anything. The behavior is aware of all the events and will handle everything accordingly. To use the behavior, use the code below:</p>
+<pre><code>&lt;views:BView Grid.Row=&quot;2&quot; Grid.Column=&quot;4&quot;&gt;
+	&lt;i:Interaction.Behaviors&gt;
+		&lt;behaviors:AutoWorkspace /&gt;
+	&lt;/i:Interaction.Behaviors&gt;
+&lt;/views:BView&gt;
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.workspacemanagement/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

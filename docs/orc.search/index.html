@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Search | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Search | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.search/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.search">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Search">https://github.com/WildGums/Orc.Search</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Search"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Search"><img src="https://img.shields.io/nuget/dt/Orc.Search.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Search"><img src="https://img.shields.io/nuget/v/Orc.Search.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Search"><img src="https://img.shields.io/nuget/vpre/Orc.Search.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Easily add searching to any application.</p>
+<p>Uses <a href="http://lucenenet.apache.org/">Lucene</a> in the background.</p>
+<p>Search Syntax: <a href="http://www.lucenetutorial.com/lucene-query-syntax.html">http://www.lucenetutorial.com/lucene-query-syntax.html</a></p>
+<h2 id="nuget-packages">Nuget Packages</h2>
+<ul>
+<li><strong><a href="https://www.nuget.org/packages/Orc.Search/">Orc.Search</a></strong> =&gt; The core of <code>Orc.Search</code>. Contains the main services, base classes and attributes.</li>
+<li><strong><a href="https://www.nuget.org/packages/Orc.Search.Xaml/">Orc.Search.Xaml</a></strong> =&gt; Contains basic Ui elements, which can be used to add seach functionality to your application.</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li>Uses <a href="http://lucenenet.apache.org/">Lucene</a> for the indexing and searching</li>
+<li>Properties, which need to be indexed should be decorated with the <code>SearchablePropertyAttribute</code></li>
+<li>To support highlighting you should create your own search highlight provider, by inheriting from <code>SearchHighlightProviderBase</code></li>
+<li>You can redefine the implementation of <code>ISearchService</code>, by creating your own class which will inherit <code>SearchServiceBase</code> and register it using <code>[Catel.IoC.IServiceLocator](http://www.nudoq.org/#!/Packages/Catel.Core/Catel.Core/IServiceLocator)</code></li>
+<li>Supports asynchronos searching (uses <code>ISearchServiceExtensions</code>)</li>
+</ul>
+<h2 id="quick-start">Quick start</h2>
+<ol>
+<li>Create a POCO class to use in your search and decorate the properties with <code>SearchablePropertyAttribute</code></li>
+</ol>
+<pre><code>public class Person
+{
+	[SearchableProperty(SearchName = &quot;firstname&quot;)]
+	public string FirstName { get; set; }
+	
+	[SearchableProperty(SearchName = &quot;lastname&quot;)]
+	public string LastName { get; set; }
+	
+	public int Age { get; set; }
+}
+</code></pre>
+<ol start="2">
+<li>Fill the <code>ISearchService</code> with the appropriate &quot;Person&quot; data using the <code>AddObjects()</code> method. The objects must be wrapped inside an <code>ISearchable</code> implementation, for example the <code>ReflectionSearchable</code>:</li>
+</ol>
+<pre><code>searchService.AddObjects(persons.Select(x =&gt; new ReflectionSearchable(x));
+</code></pre>
+<ul>
+<li>Use the <code>Search()</code> method for getting search results. Use the <code>string filter</code> as an argument. Note that you will receive the <code>ISearchable</code> instances that have a hit. This means you can still retrieve the metadata after a search has been completed.</li>
+</ul>
+<p>In order to use the asynchronous version of search. Just use the Async suffix method names (i.e. <code>SearchAsync()</code>, <code>AddObjectsAsync()</code>, <code>RemoveObjectsAsync()</code>)</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.search/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

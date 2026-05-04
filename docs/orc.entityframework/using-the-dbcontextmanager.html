@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Using the DbContextManager | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Using the DbContextManager | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.entityframework/using-the-dbcontextmanager.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="using_the_dbcontextmanager">
+
+
+<p>The <code>DbContextManager</code> class allows the sharing of <code>DbContext</code> (with underlying <code>ObjectContext</code>) classes in Entity Framework. The good thing about this is that the same context can be used in the same scope without having to recreate the same type of the same context over and over again.</p>
+<p>A very good example of this scoping is an ASP.NET (MVC) application where a context is normally shared throughout the whole thread that handles a request. A big advantage of reusing the same instance of a context is that already fetched entities don't need to be refetched over and over again.</p>
+<h2 id="obtaining-a-dbcontext">Obtaining a DbContext</h2>
+<p>Obtaining a <code>DbContext</code> is very simple by using the <code>DbContextManager</code>.</p>
+<pre><code>using (var dbContextManager = DbContextManager&lt;MyEntities&gt;.GetManager())
+{
+    var dbContext = dbContextManager.DbContext;
+ 
+    // TODO: handle logic with dbContext here
+}
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It is very important to wrap the DbContextManager in a using state because it must be disposed
+Scoping is all done automatically because when a <code>DbContextManager</code> is instantiated, a reference counter is increased. Every time an instance of the <code>DbContextManager</code> is disposed, the reference counter is decreased. When the reference count reaches zero (0), it will dispose the <code>DbContext</code> that it manages.</p>
+</div>
+<h2 id="sharing-a-single-dbcontext-per-aspnet-request">Sharing a single DbContext per ASP.NET request</h2>
+<p>When a request is started, a context can be created by calling this code:</p>
+<pre><code>DbContextManagerHelper.CreateDbContextForHttpContext&lt;MyEntities&gt;();
+</code></pre>
+<p>When a request is ended, the context can be disposed by using this code:</p>
+<pre><code>DbContextManagerHelper.DisposeDbContextForHttpContext&lt;MyEntities&gt;();
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.entityframework/using-the-dbcontextmanager.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.DbToCsv | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.DbToCsv | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dbtocsv/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.dbtocsv">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.DbToCsv">https://github.com/WildGums/Orc.DbToCsv</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.DbToCsv"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.DbToCsv"><img src="https://img.shields.io/nuget/dt/Orc.DbToCsv.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DbToCsv"><img src="https://img.shields.io/nuget/v/Orc.DbToCsv.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DbToCsv"><img src="https://img.shields.io/nuget/vpre/Orc.DbToCsv.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library's sole purpose is to extract data from a MS SQL database into csv files. Each table or view will have a corresponding csv file.</p>
+<p>The repository contains a library, a command line utility and a task runner</p>
+<h2 id="usage">Usage</h2>
+<p>In order to extract the data the library needs a project file.
+A project file is simply an xml file with an &quot;.iprj&quot; extension, and looks like:</p>
+<pre><code class="lang-xml">&lt;Project xmlns=&quot;http://wildgums/2015&quot;&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLExpress;Initial Catalog=MyDbName;Integrated Security=True;Pooling=False&lt;/ConnectionString&gt;
+  &lt;MaximumRowsInTable&gt;500&lt;/MaximumRowsInTable&gt;
+  &lt;OutputFolder&gt;C:\Temp\CustomPath&lt;/OutputFolder&gt;
+  
+  &lt;Project.Tables&gt;
+    &lt;Table Name=&quot;MyTable1&quot;/&gt;
+    &lt;Table Name=&quot;MyTable2&quot; Csv=&quot;Table2.csv&quot;/&gt;
+    &lt;Table Name=&quot;MyTable3&quot; Csv=&quot;Table3.csv&quot; Output=&quot;C:\Temp&quot;/&gt;
+  &lt;/Project.Tables&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>There are four important tags:</p>
+<ul>
+<li>ConnectionString: Standard connection string to connect to the database table.</li>
+<li>MaximumRowsInTable: Will specify the number of rows to retrieve from each table. <strong>If the tag is missing or the value is 0 or less, then all rows will be retrieved.</strong></li>
+<li>OutputFolder: Specify the folder the files will be saved to. If left blank the files will be created in the direcotry the console or task runner were executed from.</li>
+<li>Tables: Specify the name of each table (or view) you want to extract. If left emtpy, all tables will be extracted.</li>
+</ul>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>You can specify the csv file name for each table/view using the Csv attribute.</li>
+<li>If the Csv attribute is left blank or does not exist the default file name will be the table name (except white spaces will be replaced with an underscore.)</li>
+<li>You can specify a different output directory for each file. If left blank or does not exist the file will be saved in the &quot;OutputFolder&quot;.</li>
+</ul>
+<p>Once the project file is setup you can create the csv files using the following command:</p>
+<pre><code class="lang-C#">public static void ProcessProject(string projectFilePath, string outputFolderPath, ILogWriter logWriter)
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-C#">Importer.ProcessProject(projectFilePath, outputFolderPath, new ConsoleWriter());
+</code></pre>
+<p>The parameters are:</p>
+<ul>
+<li>projectFilePath: The path to the .iprj file</li>
+<li>outputFolderPath: The folder path you want to save the csv files to</li>
+<li>logWriter: A log writer object</li>
+</ul>
+<h2 id="command-line-utility-orcdbtocsvconsole">Command line utility (Orc.DbToCsv.Console)</h2>
+<p>Orc.DbToCsv.Console is a simple command line utility.</p>
+<p>There are two possible command line options:</p>
+<ul>
+<li>-p or -project path to .iprj file. If the option is not defined the utility will try and find a valid project file in the current folder.</li>
+<li>-o or -output path to the output directory where the csv files will be saved to.</li>
+</ul>
+<p>Example:</p>
+<pre><code>Orc.DbToCsv.Console.exe -p E:\sample1.iprj -o D:\output
+</code></pre>
+<h2 id="task-runner">Task Runner</h2>
+<p><img src="../../images/orc.dbtocsv/taskrunner.png" alt="TaskRunner"></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dbtocsv/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

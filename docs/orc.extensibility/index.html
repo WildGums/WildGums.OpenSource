@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Extensibility | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Extensibility | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.extensibility/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.extensibility">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Extensibility">https://github.com/WildGums/Orc.Extensibility</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Extensibility"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Extensibility"><img src="https://img.shields.io/nuget/dt/Orc.Extensibility.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Extensibility"><img src="https://img.shields.io/nuget/v/Orc.Extensibility.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Extensibility"><img src="https://img.shields.io/nuget/vpre/Orc.Extensibility.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library provides classes to support pluggable components inside applications (discovery, instantation, etc).</p>
+<h2 id="configuring-the-api">Configuring the API</h2>
+<p>The API library is the library that exposes the types and interfaces that can be used by any plugin to interact with the host. In most
+cases, the API will expose the interface for services which are implemented in the host. In a minimal case, the API will only expose
+a type that will be used to recognize a plugin. For example the plugin interface shown below;</p>
+<pre><code>public interface ICustomPlugin
+{
+	Task InitializeAsync();
+}
+</code></pre>
+<h2 id="configuring-the-host">Configuring the host</h2>
+<p>The host is responsible for finding and instantiating the plugins.</p>
+<h3 id="pluginfinder">PluginFinder</h3>
+<p>The library takes care of the hard work. The only thing that it needs to know is whether a type is a plugin. This can be configured
+by creating a class deriving from <code>PluginFinderBase</code>:</p>
+<pre><code>public class PluginFinder : Orc.Extensibility.PluginFinderBase
+{
+	private readonly string _pluginName = typeof(ICustomPlugin).Name;
+
+	public PluginFinder(IPluginLocationsProvider pluginLocationsProvider, IPluginInfoProvider pluginInfoProvider,
+		IPluginCleanupService pluginCleanupService, IDirectoryService directoryService, IFileService fileService)
+		: base(pluginLocationsProvider, pluginInfoProvider, pluginCleanupService, directoryService, fileService)
+	{
+	}
+
+	protected override bool IsPlugin(Type type)
+	{
+		// Note: since we are in a reflection-only context here, you can't compare actual types, but need to use string names
+		return (from iface in type.GetInterfacesEx()
+				where iface.Name.Equals(_pluginName)
+				select iface).Any();
+	}
+}
+</code></pre>
+<p>Note that it should also be registered in the <code>ServiceLocator</code>:</p>
+<pre><code>ServiceLocator.Default.RegisterType&lt;IPluginFinder, PluginFinder&gt;();
+</code></pre>
+<h3 id="finding-and-loading-the-plugins">Finding and loading the plugins</h3>
+<p>It's possible to allow a single plugin host or a multiple plugin host. This example shows how to use the single plugin host:</p>
+<pre><code>// In an Orchestra environment, this would go into the bootstrapper
+var configurationService = serviceLocator.ResolveType&lt;IConfigurationService&gt;();
+var activePlugin = configurationService.GetRoamingValue(ConfigurationKeys.ActivePlugin, ConfigurationKeys.ActivePluginDefaultValue);
+
+var singlePluginService = serviceLocator.ResolveType&lt;ISinglePluginService&gt;();
+var plugin = singlePluginService.ConfigureAndLoadPlugin(activePlugin, ConfigurationKeys.ActivePluginDefaultValue);
+if (plugin != null)
+{
+    serviceLocator.RegisterInstance(typeof(ICustomPlugin), plugin.Instance);
+}
+</code></pre>
+<h2 id="creating-a-plugin">Creating a plugin</h2>
+<p>Last but not least, plugins will need to be created, but this is extremely easy.</p>
+<ol>
+<li><p>Create a class library project and reference the API library</p>
+</li>
+<li><p>Create a new plugin as shown below:</p>
+</li>
+</ol>
+<pre><code>public class PluginA : ICustomPlugin
+{
+	private readonly IMessageService _messageService;
+	private readonly IHostService _hostService;
+
+	public PluginA(IMessageService messageService, IHostService hostService)
+	{
+		Argument.IsNotNull(() =&gt; messageService);
+		Argument.IsNotNull(() =&gt; hostService);
+
+		_messageService = messageService;
+		_hostService = hostService;
+	}
+
+	public async Task InitializeAsync()
+	{
+		await _messageService.ShowAsync(&quot;Plugin A has been loaded, setting color to red&quot;);
+
+		_hostService.SetColor(Colors.Red);
+	}
+}
+</code></pre>
+<ol start="3">
+<li>Make sure to compile the plugin library and putting it into a location so the host can find it.</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.extensibility/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

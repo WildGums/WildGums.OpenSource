@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Wizard | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Wizard | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.wizard/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.wizard">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Wizard">https://github.com/WildGums/Orc.Wizard</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Wizard"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Wizard"><img src="https://img.shields.io/nuget/dt/Orc.Wizard.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Wizard"><img src="https://img.shields.io/nuget/v/Orc.Wizard.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Wizard"><img src="https://img.shields.io/nuget/vpre/Orc.Wizard.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Easily create beautifully looking wizards for WPF using MVVM.</p>
+<p><img src="../../images/orc.wizard/wizard_01.png" alt="Wizard page"></p>
+<h1 id="quick-introduction">Quick introduction</h1>
+<p>A wizard is a great way to guide users through a process. Every wizard should behave the same, but there is no great out-of-the-box experience in WPF. The wizard included in this library has a few nice features:</p>
+<ol>
+<li>Automatic page management (with everything you expect from next / previous / finish, etc)</li>
+<li>Automatic (but optional) summary page that gathers all the information from each page to summarize what has been selected inside the wizard</li>
+<li>Optional pages that allow users to skip to a next page. It is also possible to enforce validation on a wizard page.</li>
+<li>Nice looking wizard header that is generated automatically based on the accent color</li>
+</ol>
+<p>In summary, this library allows you to focus on the actual wizard content (the pages), not the wizard itself which is fully taken care of for you.</p>
+<h1 id="creating-wizard-pages">Creating wizard pages</h1>
+<p>A wizard page contains of three parts which are explained below.</p>
+<h2 id="creating-the-wizard-page-model">Creating the wizard page model</h2>
+<p>The wizard model will hold all the information of the wizard page and return the summary (which is optional).</p>
+<pre><code>public class PersonWizardPage : WizardPageBase
+{
+	public PersonWizardPage()
+	{
+		Title = &quot;Person&quot;;
+		Description = &quot;Enter the details of the person&quot;;
+	}
+
+	public string FirstName { get; set; }
+
+	public string LastName { get; set; }
+
+	public override ISummaryItem GetSummary()
+	{
+		return new SummaryItem
+		{
+			Title = &quot;Person&quot;,
+			Summary = string.Format(&quot;{0} {1}&quot;, FirstName, LastName)
+		};
+	}
+}
+</code></pre>
+<h2 id="creating-the-wizard-page-view-model">Creating the wizard page view model</h2>
+<p>The view model is responsible for the actual view logic. There can be a lot of stuff in here that is view-specific, as long as the results are stored into the model. This example uses the <code>ViewModelToModel</code> feature of Catel to automatically map the values between the view model and model. As you can see this example even contains validation, so users cannot continue to the next page when the validation does not succeed.</p>
+<pre><code>public class PersonWizardPageViewModel : WizardPageViewModelBase&lt;PersonWizardPage&gt;
+{
+	public PersonWizardPageViewModel(PersonWizardPage wizardPage)
+		: base(wizardPage)
+	{
+	}
+
+	[ViewModelToModel]
+	public string FirstName { get; set; }
+
+	[ViewModelToModel]
+	public string LastName { get; set; }
+
+	protected override void ValidateFields(List&lt;IFieldValidationResult&gt; validationResults)
+	{
+		base.ValidateFields(validationResults);
+
+		if (string.IsNullOrWhiteSpace(FirstName))
+		{
+			validationResults.Add(FieldValidationResult.CreateError(&quot;FirstName&quot;, &quot;First name is required&quot;));
+		}
+
+		if (string.IsNullOrWhiteSpace(LastName))
+		{
+			validationResults.Add(FieldValidationResult.CreateError(&quot;LastName&quot;, &quot;Last name is required&quot;));
+		}
+	}
+}
+</code></pre>
+<h2 id="creating-the-wizard-page-view">Creating the wizard page view</h2>
+<p>Below is the xaml view for the wizard page. Note that it's just an ordinary Catel UserControl.</p>
+<pre><code>&lt;catel:UserControl x:Class=&quot;Orc.Wizard.Example.Wizard.Views.PersonWizardPageView&quot;
+				   xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+				   xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+				   xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; 
+				   xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+				   xmlns:catel=&quot;http://schemas.catelproject.com&quot;
+				   mc:Ignorable=&quot;d&quot; d:DesignHeight=&quot;300&quot; d:DesignWidth=&quot;300&quot;&gt;
+
+	&lt;catel:StackGrid&gt;
+		&lt;Grid.ColumnDefinitions&gt;
+			&lt;ColumnDefinition Width=&quot;Auto&quot; /&gt;
+			&lt;ColumnDefinition Width=&quot;*&quot; /&gt;
+		&lt;/Grid.ColumnDefinitions&gt;
+		
+		&lt;Grid.RowDefinitions&gt;
+			&lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+			&lt;RowDefinition Height=&quot;Auto&quot; /&gt;
+			&lt;RowDefinition Height=&quot;*&quot; /&gt;
+		&lt;/Grid.RowDefinitions&gt;
+
+		&lt;Label Content=&quot;First name&quot; /&gt;
+		&lt;TextBox Text=&quot;{Binding FirstName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+		
+		&lt;Label Content=&quot;Last name&quot; /&gt;
+		&lt;TextBox Text=&quot;{Binding LastName, ValidatesOnDataErrors=True, NotifyOnValidationError=True}&quot; /&gt;
+		
+	&lt;/catel:StackGrid&gt;
+	
+&lt;/catel:UserControl&gt;
+</code></pre>
+<h1 id="creating-the-wizard">Creating the wizard</h1>
+<p>Once all the wizard pages have been created, it's time to wrap it inside an actual wizard. Below is an example:</p>
+<pre><code>public class ExampleWizard : WizardBase
+{
+	public ExampleWizard(ITypeFactory typeFactory)
+		: base(typeFactory)
+	{
+		Title = &quot;Orc.Wizard example&quot;; 
+
+		this.AddPage&lt;PersonWizardPage&gt;();
+		this.AddPage&lt;AgeWizardPage&gt;();
+		this.AddPage&lt;SkillsWizardPage&gt;();
+		this.AddPage&lt;ComponentsWizardPage&gt;();
+		this.AddPage&lt;SummaryWizardPage&gt;();
+	}
+}
+</code></pre>
+<h1 id="using-the-wizard">Using the wizard</h1>
+<p>Using the wizard can be done via the <code>IWizardService</code>. Below is an example on how to show a wizard:</p>
+<pre><code>await _wizardService.ShowWizardAsync&lt;ExampleWizard&gt;();
+</code></pre>
+<h1 id="enjoying-the-wizard">Enjoying the wizard</h1>
+<p><img src="../../images/orc.wizard/wizard.gif" alt="Wizard page"></p>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="how-to-solve-typenotregisteredexception">How to solve TypeNotRegisteredException</h2>
+<p>When you obtain a service object from the service locator, you will write code such as the following:</p>
+<pre><code>var myService = serviceLocator.ResolveType&lt;IMyService&gt;();
+</code></pre>
+<p>If this causes a <code>TypeNotRegisteredException</code> to be thrown in your project, then the simplest and best solution is to add the Fody add-in <a href="https://github.com/Fody/LoadAssembliesOnStartup">LoadAssembliesOnStartup</a> to your project, preferrably via NuGet.</p>
+<p>Background information: The reason for the <code>TypeNotRegisteredException</code> probably is that you are only using interfaces from this component or Catel.MVVM at this stage. For the .NET runtime, using an interface is not sufficient to load an assembly (such as this component or any of the Catel libraries) into the AppDomain. This means that the assemblies don't get a chance to register their services into the service locator.</p>
+<p>If for some reason you don't want to use Fody, an alternative solution to achieve the same result is to make sure to use at least one type from this component or Catel.MVVM in your code prior to resolving a service from the service locator. You should be aware, though, that other assemblies may need the same pre-loading as Catel.MVVM, so an automated solution that uses Fody is really the best approach.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.wizard/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

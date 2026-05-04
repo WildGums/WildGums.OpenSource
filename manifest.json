@@ -1,0 +1,1607 @@
+{
+  "source_base_path": "/home/runner/work/WildGums.OpenSource/WildGums.OpenSource/doc/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.analytics/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.analytics/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.automaticsupport/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.automaticsupport/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.commandline/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.commandline/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/animatedgif/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/animatedgif/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/bindablerichtextbox/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/bindablerichtextbox/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/colorlegend/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/colorlegend/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/colorpicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/colorpicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/connectionstringbuilder/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/connectionstringbuilder/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/culturepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/culturepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/datepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/datepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/daterangepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/daterangepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/datetimepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/datetimepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/dbproviderpicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/dbproviderpicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/directorypicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/directorypicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/dropdownbutton/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/dropdownbutton/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/expander/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/expander/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/filterbox/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/filterbox/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/frameratecounter/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/frameratecounter/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/headerbar/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/headerbar/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/linklabel/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/linklabel/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/listtextbox/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/listtextbox/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/logviewer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/logviewer/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/numerictextbox/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/numerictextbox/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/openfilepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/openfilepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/pinnabletooltips/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/pinnabletooltips/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/savefilepicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/savefilepicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/stackgrid/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/stackgrid/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/tabcontrol/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/tabcontrol/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/timespanpicker/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/timespanpicker/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/orc.controls/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/orc.controls/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/validationcontextcontrol/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/validationcontextcontrol/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.controls/watermarktextbox/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.controls/watermarktextbox/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.csv/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.csv/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.csvtexteditor/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.csvtexteditor/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.dbtocsv/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.dbtocsv/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.dependencygraph/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.dependencygraph/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.dynamicobjects/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.dynamicobjects/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.entityframework/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/orc.entityframework/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/orc.entityframework/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.entityframework/using-stored-procedures-and-functions.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/using-stored-procedures-and-functions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.entityframework/using-the-dbcontextmanager.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/using-the-dbcontextmanager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/using-the-modelbase-as-base-class-for-code-first-entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.entityframework/using-the-repositories-and-unit-of-work.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.entityframework/using-the-repositories-and-unit-of-work.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.extensibility/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.extensibility/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.feedback/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.feedback/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.fileassociation/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.fileassociation/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.filesystem/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.filesystem/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.filterbuilder/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.filterbuilder/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.fluentvalidation/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.fluentvalidation/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.licensemanager/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.licensemanager/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.logviewer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.logviewer/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.memento/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.memento/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.metadata/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.metadata/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.notifications/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.notifications/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.nugetexplorer/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.nugetexplorer/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.plot/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.plot/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/declaring-modules.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/declaring-modules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/module-catalogs/compositemodulecatalog.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/compositemodulecatalog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/module-catalogs/downloadingmodulecatalog.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/downloadingmodulecatalog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/module-catalogs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/module-catalogs/nugetbasedmodulecatalog.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/nugetbasedmodulecatalog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/module-catalogs/safedirectorymodulecatalog.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/safedirectorymodulecatalog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/orc.prism/module-catalogs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/module-catalogs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/orc.prism/module-catalogs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/orc.prism/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/orc.prism/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/translating-or-customizing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/translating-or-customizing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.prism/using-the-bootstrapper.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.prism/using-the-bootstrapper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.projectmanagement/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.projectmanagement/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.scheduling/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.scheduling/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.search/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.search/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.selectionmanagement/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.selectionmanagement/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.skia/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.skia/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.snapshots/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.snapshots/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.sort/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.sort/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.squirrel/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.squirrel/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.supportpackage/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.supportpackage/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.systeminfo/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.systeminfo/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.wizard/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.wizard/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.workspacemanagement/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.workspacemanagement/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orchestra/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orchestra/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/introduction/CsvTextEditor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/introduction/CsvTextEditor.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/introduction/FlexGrid.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/introduction/FlexGrid.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/introduction/LogViewer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/introduction/LogViewer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/introduction/Rantt.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/introduction/Rantt.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.analytics/google_analytics.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.analytics/google_analytics.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/Orc.Controls.Demo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/Orc.Controls.Demo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/colorlegend/ColorLegend_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/colorlegend/ColorLegend_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/colorpicker/ColorPicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/colorpicker/ColorPicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/connectionstringbuilder/ConnectionStringBuilder_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/connectionstringbuilder/ConnectionStringBuilder_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/culturepicker/CulturePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/culturepicker/CulturePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datepicker/DatePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datepicker/DatePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/daterangepicker/DateRangePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/daterangepicker/DateRangePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datetimepicker/DateTimePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datetimepicker/DateTimePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datetimepicker/DateTimePicker_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datetimepicker/DateTimePicker_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datetimepicker/DateTimePicker_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datetimepicker/DateTimePicker_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datetimepicker/DateTimePicker_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datetimepicker/DateTimePicker_04.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/datetimepicker/DateTimePicker_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/datetimepicker/DateTimePicker_05.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/dbproviderpicker/DbProviderPicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/dbproviderpicker/DbProviderPicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/directorypicker/DirectoryPicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/directorypicker/DirectoryPicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/dropdownbutton/DropDownButton_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/dropdownbutton/DropDownButton_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/expander/Expander_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/expander/Expander_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/filterbox/FilterBox_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/filterbox/FilterBox_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/filterbox/FilterBox_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/filterbox/FilterBox_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/filterbox/FilterBox_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/filterbox/FilterBox_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/headerbar/Headerbar_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/headerbar/Headerbar_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/linklabel/LinkLabel_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/linklabel/LinkLabel_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/logviewer/LogViewer_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/logviewer/LogViewer_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/openfilepicker/OpenFilePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/openfilepicker/OpenFilePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/pinnabletooltips/PinnableToolTips_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/pinnabletooltips/PinnableToolTips_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/savefilepicker/SaveFilePicker_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/savefilepicker/SaveFilePicker_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/timespanpicker/TimeSpan_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/timespanpicker/TimeSpan_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/timespanpicker/TimeSpan_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/timespanpicker/TimeSpan_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/timespanpicker/TimeSpan_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/timespanpicker/TimeSpan_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/timespanpicker/TimeSpan_04.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/timespanpicker/TimeSpan_04.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/timespanpicker/TimeSpan_05.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/timespanpicker/TimeSpan_05.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/validationcontextcontrol/ValidationContextControl.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/validationcontextcontrol/ValidationContextControl.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/watermarktextbox/WatermarkTextBox_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/watermarktextbox/WatermarkTextBox_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.controls/watermarktextbox/WatermarkTextBox_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.controls/watermarktextbox/WatermarkTextBox_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.dependencygraph/dependencygraph.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.dependencygraph/dependencygraph.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.fileassociation/example_app.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.fileassociation/example_app.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.fileassociation/windows_10_001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.fileassociation/windows_10_001.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.fileassociation/windows_10_002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.fileassociation/windows_10_002.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/filter_builder.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/filter_builder.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/filter_builder_metro.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/filter_builder_metro.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/mahapps_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/mahapps_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/metro_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/metro_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/metro_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/metro_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.filterbuilder/solution_explorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.filterbuilder/solution_explorer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.licensemanager/server-products-page.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.licensemanager/server-products-page.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.FilterBox.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.FilterBox.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.LevelToggleButtons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.LevelToggleButtons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TimeStamps.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TimeStamps.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TypeNames.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TypeNames.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TypeNames1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.TypeNames1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.logviewer/Orc.LogViewer.Demo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.notifications/notifications.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.notifications/notifications.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.notifications/notifications.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.notifications/notifications.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.nugetexplorer/nuget1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.nugetexplorer/nuget1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.nugetexplorer/nuget2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.nugetexplorer/nuget2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.nugetexplorer/nuget3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.nugetexplorer/nuget3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.snapshots/example.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.snapshots/example.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.wizard/wizard.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.wizard/wizard.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.wizard/wizard_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.wizard/wizard_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.wizard/wizard_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.wizard/wizard_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.wizard/wizard_03.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.wizard/wizard_03.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orc.workspacemanagement/workspace_handling.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/orc.workspacemanagement/workspace_handling.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orchestra/shell_fluentribbon_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orchestra/shell_fluentribbon_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orchestra/shell_fluentribbon_02.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orchestra/shell_fluentribbon_02.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/orchestra/shell_mahapps_01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/orchestra/shell_mahapps_01.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Csv | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Csv | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.csv/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.csv">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Csv">https://github.com/WildGums/Orc.Csv</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Csv"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Csv"><img src="https://img.shields.io/nuget/dt/Orc.Csv.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Csv"><img src="https://img.shields.io/nuget/v/Orc.Csv.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Csv"><img src="https://img.shields.io/nuget/vpre/Orc.Csv.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Small super cool library of extensions and helper methods for the <a href="http://joshclose.github.io/CsvHelper">CsvHelper</a> library.</p>
+<ul>
+<li>Static methods are provided to read or write to a csv file with one line of code.</li>
+<li>Sensible configuration options are provided out of the box (but can be overwritten if needed).</li>
+<li>Reading from a csv file will not lock it.</li>
+<li>Capture a meaningful error message when an exception is thrown while reading a csv file.</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li><code>Code generation</code> =&gt; Use static class <code>CodeGeneration</code> for generating C# POCO classes and their associated maps.</li>
+</ul>
+<pre><code>/// &lt;summary&gt;
+/// Create CSharp files to consume CSV files.
+/// A standard POCO cs file as well as the CsvHelper Mapping cs file will be created.
+/// All properties in the POCO will be of type string. So please update accordingly.
+/// &lt;/summary&gt;
+public static class CodeGeneration
+{
+	public static void CreateCSharpFilesForAllCsvFiles(string inputFoler, string namespaceName, string outputFolder)
+	{
+		var csvFiles = GetCsvFiles(inputFoler);
+
+		foreach (var csvFile in csvFiles)
+		{
+			CreateCSharpFiles(csvFile, namespaceName, outputFolder);
+		}
+	}
+	...
+}
+</code></pre>
+<ul>
+<li><code>CsvReader helper</code> =&gt; Use static class <code>CsvReaderHelper</code> for reading csv files with a single line of code.</li>
+</ul>
+<pre><code>public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, Action&lt;T&gt; initializer = null, Type mapType = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+
+or
+
+public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, CsvClassMap map, Action&lt;T&gt; initializer = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+</code></pre>
+<p>Example:</p>
+<pre><code>var records = CsvWriterHelper.ReadCsv&lt;MyClass&gt;(scvFilePath, MyClassMap);
+</code></pre>
+<ul>
+<li><code>CsvWriter helper</code> =&gt; Use static class <code>CsvWriterHelper</code> for writing records into a csv file.</li>
+</ul>
+<pre><code>public static void WriteCsv&lt;TRecord, TMap&gt;(IEnumerable&lt;TRecord&gt; records, string csvFilePath, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+</code></pre>
+<ul>
+<li><code>CsvExtensions</code> =&gt; for writing object collections into a csv file using the <code>ToCsv()</code> method.</li>
+</ul>
+<pre><code>public static void ToCsv&lt;TRecord&gt;(this IEnumerable&lt;TRecord&gt; records, string csvFilePath, Type csvMap = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+</code></pre>
+<p>Example:</p>
+<pre><code>records.ToCsv&lt;MyClass&gt;(csvFilePath, typeof(MyClassMap));
+</code></pre>
+<h2 id="converters">Converters</h2>
+<ul>
+<li><code>EnumConverter</code> - generic string to enum converter</li>
+<li><code>StringToNullableDateTimeConverter</code> - converts string to DateTime? type</li>
+<li><code>YesNoToBooleanConverter</code> - converts &quot;yes&quot; and &quot;no&quot; strings to true and false values correspondingly</li>
+<li><code>TypeConverter</code> - generic type converter which in some cases is more fluent than the default one</li>
+</ul>
+<pre><code>public class EmployeeMap : CsvClassMap&lt;Employee&gt;
+{
+    public EmployeeMap()
+    {
+        Map(x =&gt; x.Name).Name(&quot;Name&quot;);
+        Map(x =&gt; x.StartDate).Name(&quot;StartDate&quot;);
+
+        // Parse the enum. Use EmployeeRate.PerHour on failure.
+        Map(x =&gt; x.Rate).Name(&quot;Rate&quot;)
+            .TypeConverter(new EnumConverter&lt;EmployeeRate&gt;(EmployeeRate.PerHour));
+
+        // Parse nullable DateTime value
+        Map(x =&gt; x.DischargeDate).Name(&quot;DischargeDate&quot;);
+            .TypeConverter(new NullableDateTimeConverter());
+
+        // Parse Yes and No string values as booleans
+        Map(x =&gt; x.Married).Name(&quot;Married&quot;);
+            .TypeConverter(new YesNoToBooleanConverter());
+
+        Map(x =&gt; x.WorkDayDuration).Name(&quot;WorkDayDuration&quot;)
+            .TypeConverter(new TypeConverter&lt;TimeSpan&gt;((hours) =&gt; return new TimeSpan(Convert.ToDouble(hours), 0, 0)));
+    }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.csv/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

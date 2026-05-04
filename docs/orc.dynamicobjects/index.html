@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.DynamicObjects | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.DynamicObjects | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dynamicobjects/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.dynamicobjects">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.DynamicObjects">https://github.com/WildGums/Orc.DynamicObjects</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.DynamicObjects"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.DynamicObjects"><img src="https://img.shields.io/nuget/dt/Orc.DynamicObjects.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DynamicObjects"><img src="https://img.shields.io/nuget/v/Orc.DynamicObjects.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DynamicObjects"><img src="https://img.shields.io/nuget/vpre/Orc.DynamicObjects.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="introduction">Introduction</h1>
+<p>In .NET, it is possible to create fully dynamic objects. This makes it possible to create types of which the members are not yet known at compile time.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For more information about dynamic programming, see <a href="http://msdn.microsoft.com/en-us/vstudio/ff800651.aspx">MSDN</a>.</p>
+</div>
+<h2 id="creating-dynamic-objects">Creating dynamic objects</h2>
+<p>Creating a dynamic object with full Catel functionality is easy. Just add the <code>Orc.DynamicObjects</code> reference via NuGet and create a class that derives from <code>DynamicModelBase</code>:</p>
+<pre><code>public class DynamicModel : DynamicModelBase
+{
+	// TODO: Add custom functionality if required
+}
+</code></pre>
+<p>Then the dynamic model can be used like this:</p>
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+ 
+Console.WriteLine(model.NonExistingProperty);
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It is important to know that you must use the keyword <em>dynamic</em> to instantiate the type.</p>
+</div>
+<h2 id="using-modelbase-functionality">Using ModelBase functionality</h2>
+<p>The <code>DynamicModelBase</code> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <code>ModelBase</code> functionality, cast it to the right type:</p>
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+ 
+// Note: the Validate method is available on the ModelBase
+var modelBase = (ModelBase)model;
+modelBase.Validate();
+</code></pre>
+<h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</h2>
+<p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
+<pre><code>dynamic model = new DynamicModel();
+model.NonExistingProperty = &quot;a dynamic value&quot;;
+
+var serializer = SerializationFactory.GetXmlSerializer();
+
+using (var memoryStream = new MemoryStream())
+{
+	var dynamicModel = (DynamicModel)model;
+	serializer.Serialize(dynamicModel, memoryStream);
+
+	memoryStream.Position = 0L;
+
+	dynamic deserializedModel = serializer.Deserialize(typeof(DynamicModel), memoryStream);
+	var deserializedDynamicModel = (DynamicModel) deserializedModel;
+
+	// deserializedDynamicModel is now a dynamically deserialized object
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dynamicobjects/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

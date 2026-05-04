@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.LicenseManager | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.LicenseManager | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.licensemanager/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.licensemanager">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.LicenseManager">https://github.com/WildGums/Orc.LicenseManager</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.LicenseManager"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.LicenseManager.Client"><img src="https://img.shields.io/nuget/dt/Orc.LicenseManager.Client.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.LicenseManager.Client"><img src="https://img.shields.io/nuget/v/Orc.LicenseManager.Client.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.LicenseManager.Client"><img src="https://img.shields.io/nuget/vpre/Orc.LicenseManager.Client.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library makes it very easy to manage licenses for commercial software.</p>
+<h1 id="client-validation">Client validation</h1>
+<p>Internally the license manager uses <a href="https://github.com/dnauck/Portable.Licensing" target="_blank">Portable.Licensing</a>. This is a wrapper around both the server and client to make it very easy to implement license validations.</p>
+<h2 id="the-basics">The basics</h2>
+<p>To check a license on the client, we need the public key of the application. It is very important to keep the private key private on the server.</p>
+<p>It is a good practice to create a <code>License</code> class to contain all this information:</p>
+<pre><code>public static class License
+{
+	// The public key of the product
+	public const string ApplicationId = &quot;MIIBKjCB4wYHKoZI.....&quot;;
+
+	public const string LicenseServer = &quot;https://www.myserver.com/api/license&quot;;
+}
+</code></pre>
+<h2 id="validating-a-license-locally">Validating a license locally</h2>
+<p>The first thing that needs to be done is to validate locally. If the license is not valid, the software will automatically show a license dialog.</p>
+<pre><code>if (!await _simpleLicenseService.Validate(License.ApplicationId, &quot;My Product&quot;, &quot;/MyProduct;component/Resources/Images/logo_0128.png&quot;, &quot;In order to use this software, a license is required.&quot;)())
+{
+	// License is not valid, exit software
+}
+</code></pre>
+<h2 id="validating-a-license-online">Validating a license online</h2>
+<p>It is also possible to check the license on the server as well.</p>
+<pre><code>if (!await _simpleLicenseService.ValidateOnServer(License.LicenseServer, License.ApplicationId, &quot;My Product&quot;, &quot;/MyProduct;component/Resources/Images/logo_0128.png&quot;, &quot;In order to use this software, a license is required.&quot;)())
+{
+	// License is not valid, exit software
+}
+</code></pre>
+<h2 id="validating-the-number-of-licenses-used-on-the-network">Validating the number of licenses used on the network</h2>
+<p>The software can detect the number of licenses used on the current network. It does this by sending UDP broadcast packages over the network with the license signature. All software using the specified license will reply with the IP and the date/time they started using the license. This way it's possible to list all usages and kick out the latest user.</p>
+<h3 id="initialize">Initialize</h3>
+<p>The easiest way to use the <code>INetworkLicenseService</code> is to initialize it with a polling value. Then it will automatically raise events when a validation has occurred.</p>
+<pre><code>_networkLicenseService.Validated += OnNetworkLicenseValidated;
+await _networkLicenseService.Initialize(TimeSpan.FromSeconds(30));
+</code></pre>
+<p>Then you can handle the result of the validation in the event handler:</p>
+<pre><code>private async void OnNetworkLicenseValidated(object sender, NetworkValidatedEventArgs e)
+{
+	var validationResult = e.ValidationResult;
+	if (!validationResult.IsValid)
+	{
+		var latestUsage = (from usage in validationResult.CurrentUsers
+							orderby usage.StartDateTime descending
+							select usage).First();
+
+		if (string.Equals(_networkLicenseService.ComputerId, latestUsage.ComputerId))
+		{
+			await _messageService.Show(string.Format(&quot;License is invalid, using '{0}' of '{1}' licenses. You are the latest user, your software will be shut down&quot;, validationResult.CurrentUsers.Count, validationResult.MaximumConcurrentUsers));                    
+		}
+		else
+		{
+			await _messageService.Show(string.Format(&quot;License is invalid, using '{0}' of '{1}' licenses. The latest user is '{2}' with ip '{3}', you can continue working&quot;, validationResult.CurrentUsers.Count, validationResult.MaximumConcurrentUsers, latestUsage.ComputerId, latestUsage.Ip));
+		}
+	}
+}
+</code></pre>
+<h3 id="manually-validating-the-network">Manually validating the network</h3>
+<p>To manually perform a check, use the following code:</p>
+<pre><code>var validationResult = await _networkLicenseService.Validate();
+</code></pre>
+<h1 id="server-validation">Server validation</h1>
+<p>[server documentation must be written yet]</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.licensemanager/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

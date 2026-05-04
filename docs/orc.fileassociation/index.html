@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.FileAssociation | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.FileAssociation | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.fileassociation/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.fileassociation">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FileAssociation">https://github.com/WildGums/Orc.FileAssociation</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.FileAssociation"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.FileAssociation"><img src="https://img.shields.io/nuget/dt/Orc.FileAssociation.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.FileAssociation"><img src="https://img.shields.io/nuget/v/Orc.FileAssociation.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.FileAssociation"><img src="https://img.shields.io/nuget/vpre/Orc.FileAssociation.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>Makes it easy to associate files with your application.</p>
+<h1 id="quick-introduction">Quick introduction</h1>
+<p>Using this library is easy. You need to register the app, then let the user associate files with it. <strong>This library does not require elevation, it only applies
+the file association for the current user.</strong></p>
+<h2 id="application-registration">Application registration</h2>
+<h3 id="registering-an-application">Registering an application</h3>
+<p>It is important to register an application. This way Windows knows that the application supports specific file types. To register an application, use the following code:</p>
+<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+var applicationInfo = new ApplicationInfo(assembly);
+
+_applicationRegistrationService.RegisterApplication(applicationInfo);
+</code></pre>
+<p>When using an assembly for the <code>ApplicationInfo</code>, the library will extract all the relevant information from the assembly directly.</p>
+<h3 id="unregistering-an-application">Unregistering an application</h3>
+<p>When an application is being uninstalled, you need to remove all the required registry entries. This can be done by using the following code:</p>
+<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+var applicationInfo = new ApplicationInfo(assembly);
+
+_applicationRegistrationService.UnregisterApplication(applicationInfo);
+
+</code></pre>
+<h3 id="updating-a-registered-application">Updating a registered application</h3>
+<p>To always keep the registry up to date, you can call this method at the startup of your app (note that this does <strong>not require elevation or administrator rights</strong>):</p>
+<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+var applicationInfo = new ApplicationInfo(assembly);
+
+_applicationRegistrationService.UpdateRegistration(applicationInfo);
+</code></pre>
+<h2 id="file-association">File association</h2>
+<p>To allow a user to pick your app as the default one for a file type, you need to use the <code>IFileAssociationService</code> as shown below:</p>
+<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+var applicationInfo = new ApplicationInfo(assembly);
+
+_fileAssociationService.AssociateFilesWithApplication(applicationInfo.Name);
+</code></pre>
+<h2 id="example-application">Example application</h2>
+<p>This repository contains an example application that allows developers to test the logic and see how the library should be used. Below are a few screenshots:</p>
+<p><img src="../../images/orc.fileassociation/example_app.png" alt="Example application"></p>
+<p><img src="../../images/orc.fileassociation/windows_10_001.png" alt="Windows 10 default apps"></p>
+<p><img src="../../images/orc.fileassociation/windows_10_002.png" alt="Windows 10 default apps"></p>
+<h1 id="additional-notes--credits">Additional notes / credits</h1>
+<p>This library is based on this StackOverflow answer:</p>
+<p><a href="http://stackoverflow.com/questions/29847034/how-to-show-set-program-associations-window-in-windows-8-8-1">http://stackoverflow.com/questions/29847034/how-to-show-set-program-associations-window-in-windows-8-8-1</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.fileassociation/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

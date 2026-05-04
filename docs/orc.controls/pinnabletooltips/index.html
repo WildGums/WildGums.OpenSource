@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PinnableTooltips | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PinnableTooltips | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.controls/pinnabletooltips/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="pinnabletooltips">
+
+
+<p>This is <code>ToolTip</code> that can be pinned by user.</p>
+<p>Inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.contentcontrol(v=vs.110).aspx">System.Windows.Controls.ContentControl</a>.</p>
+<p>Hover the owner control to see the tool tips. Move tool tip to automatically pin it.
+<code>PinnableToolTip</code> works with asistance of <code>PinnableToolTipService</code> that exposes attached properties to attach tool tips to controls.</p>
+<p><img src="../../../images/orc.controls/pinnabletooltips/PinnableToolTips_01.png" alt="PinnableTooltip 01"></p>
+<h2 id="properties">Properties</h2>
+<p><strong>PinnableToolTipService attached properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InitialShowDelay</td>
+<td>Uses to set initial popup show delay.</td>
+</tr>
+<tr>
+<td>IsToolTipOwner</td>
+<td>Uses to set tool tip owner.</td>
+</tr>
+<tr>
+<td>Placement</td>
+<td>Uses to set tooltip <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.primitives.placementmode(v=vs.110).aspx">Placement</a>.</td>
+</tr>
+<tr>
+<td>PlacementTarget</td>
+<td>Uses to set tooltip placement target.</td>
+</tr>
+<tr>
+<td>ShowDuration</td>
+<td>Uses to set tooltip duration.</td>
+</tr>
+<tr>
+<td>ToolTip</td>
+<td>Uses to attach tooltip to parent control.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PinnableToolTip</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AccentColorBrush</td>
+<td>Gets or sets accent color.</td>
+</tr>
+<tr>
+<td>AllowCloseByUser</td>
+<td>Gets or sets value indicating whether tool tip can be closed by user.</td>
+</tr>
+<tr>
+<td>GripColor</td>
+<td>Gets or sets tool tip grip color.</td>
+</tr>
+<tr>
+<td>HorizontalOffset</td>
+<td>Gets or sets tool tip horizontal offset.</td>
+</tr>
+<tr>
+<td>IsOpen</td>
+<td>Gets value indicating whether tool tip is opened.</td>
+</tr>
+<tr>
+<td>IsPinned</td>
+<td>Gets or sets value whether tool tip is pinned.</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>Gets or sets <code>ToolTip</code> owner control.</td>
+</tr>
+<tr>
+<td>ResizeMode</td>
+<td>Gets or sets tool tip <a href="https://msdn.microsoft.com/en-us/library/system.windows.window.resizemode(v=vs.110).aspx">resize mode</a>.</td>
+</tr>
+<tr>
+<td>VerticalOffset</td>
+<td>Gets or sets tool tip vertical offset.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th>Event name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IsOpenChanged</td>
+<td>Occurs when tool tip is opened/closed.</td>
+</tr>
+<tr>
+<td>IsPinnedChanged</td>
+<td>Occurs when tool tip is pinned/unpinned.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-use">How to use</h2>
+<p>Use <code>PinnableToolTipService</code> to attach tool tip to owner control.</p>
+<pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+    &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
+    &lt;orc:PinnableToolTipService.ToolTip&gt;
+        &lt;orc:PinnableToolTip AllowCloseByUser=&quot;True&quot; ResizeMode=&quot;CanResize&quot; MinWidth=&quot;100&quot; MinHeight=&quot;100&quot;
+                             HorizontalOffset=&quot;-12&quot; VerticalOffset=&quot;-12&quot;&gt;
+            &lt;!-- Using a content template allows to delay loading of the inner visual tree, which is much faster --&gt;
+            &lt;orc:PinnableToolTip.ContentTemplate&gt;
+                &lt;DataTemplate&gt;
+                    &lt;StackPanel&gt;
+                        &lt;Label Content=&quot;this is tool tip&quot; /&gt;
+                        &lt;Border Margin=&quot;5&quot; Width=&quot;50&quot; 
+                                Height=&quot;50&quot; Background=&quot;{Binding}&quot; /&gt;
+                    &lt;/StackPanel&gt;
+                 &lt;/DataTemplate&gt;
+            &lt;/orc:PinnableToolTip.ContentTemplate&gt;
+        &lt;/orc:PinnableToolTip&gt;
+    &lt;/orc:PinnableToolTipService.ToolTip&gt;
+&lt;/Border&gt;
+</code></pre>
+<p>If you pass any control as <code>ToolTip</code> to <code>PinnableToolTipService</code> it will be wrapped by <code>PinnableToolTip</code>.</p>
+<pre><code>&lt;Border BorderThickness=&quot;1&quot;  Width=&quot;150&quot;&gt;
+    &lt;TextBlock Text=&quot;{Binding}&quot; Margin=&quot;5&quot;/&gt;
+    &lt;orc:PinnableToolTipService.ToolTip&gt;
+        &lt;StackPanel&gt;
+            &lt;Label Content=&quot;this is tool tip&quot; /&gt;
+            &lt;Border Margin=&quot;5&quot; Width=&quot;50&quot;
+                    Height=&quot;50&quot; Background=&quot;{Binding}&quot; /&gt;
+        &lt;/StackPanel&gt;
+    &lt;/orc:PinnableToolTipService.ToolTip&gt;
+&lt;/Border&gt;
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.controls/pinnabletooltips/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

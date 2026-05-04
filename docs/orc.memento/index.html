@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Memento | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Memento | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.memento/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.memento">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Memento">https://github.com/WildGums/Orc.Memento</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Memento"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Memento"><img src="https://img.shields.io/nuget/dt/Orc.Memento.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Memento"><img src="https://img.shields.io/nuget/v/Orc.Memento.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Memento"><img src="https://img.shields.io/nuget/vpre/Orc.Memento.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="introduction">Introduction</h1>
+<p>Lots of real world applications need to implement undo/redo. However, most applications written in MVVM lack this feature because it is very hard to implement. Luckily, Catel solves this issue by introducing the <code>IMementoService</code>. The <code>IMementoService</code> is a service that allows a developer to register custom actions that should be undone. A few actions you can think of:</p>
+<ul>
+<li>Property change of a model</li>
+<li>Item is added or removed to/from a collection</li>
+<li>A method is executed</li>
+</ul>
+<p>One way to introduce the memento pattern is by creating a copy of the whole memory at each step (yes, some people actually do this), but in Catel it is done a bit smarter. For each possible action type, there is an implementation of the <code>UndoBase</code>. This way, each action will know by itself how to undo or redo. Catel offers the following default implementations:</p>
+<ul>
+<li>PropertyChangeUndo</li>
+<li>CollectionChangeUndo</li>
+<li>ActionUndo</li>
+</ul>
+<p>If there are more actions supported, it is possible to write a custom <code>UndoBase</code> implementation and add the specific action to the <code>IMementoService</code>. It will automatically be added to the undo/redo action stack.</p>
+<h2 id="undo-and-redo-support">Undo and redo support</h2>
+<p>The <code>IMementoService</code> supports both undo and redo actions. This means that an action that is undo-ed by a call to the <code>Undo</code> method, it is automatically added to the redo stack when redo is supported.</p>
+<p>To undo an action, use the code below:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.Undo();
+</code></pre>
+<p>It is possible to check whether it is possible to undo actions by using the <code>CanUndo</code> property. This check is not required since the <code>Undo</code> method will also check this internally.</p>
+<p>To redo an action, use the code below:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.Redo();
+</code></pre>
+<p>It is possible to check whether it is possible to redo actions by using the <code>CanRedo</code> property. This check is not required since the <code>Redo</code> method will also check this internally.</p>
+<h2 id="grouping-actions-in-batches">Grouping actions in batches</h2>
+<p>The <code>MementoService</code> automatically wraps all actions in batches. Because each action is treated as a batch, it is easy to begin a batch and add several actions to a single batch. Below is the code to create a batch:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.BeginBatch(&quot;Batch title&quot;, &quot;Batch description&quot;);
+ 
+// All actions added to the memento service are added to the specified batch
+</code></pre>
+<p><em>Note that the Title and Description are optional. They are however a great way to represent the batches in the user interface</em></p>
+<p>A batch can be ended in several ways:</p>
+<ol>
+<li>A call to EndBatch</li>
+<li>A call to BeginBatch</li>
+</ol>
+<p>As soon as a batch is ended by one of the ways described above, it will be added to the undo stack.</p>
+<h2 id="ignoring-support-for-memento">Ignoring support for memento</h2>
+<p>Ignoring specific properties or methods for the IMementoService is very easy. Just decorate them with the IgnoreMementoSupportAttribute as shown below:</p>
+<pre><code>[IgnoreMementoSupport]
+public string IgnoredProperty { get; set; }
+</code></pre>
+<h1 id="memento-and-properties">Memento and properties</h1>
+<p>Adding the ability to undo and redo property changes on an object is very simple using the <code>PropertyChangeUndo</code> class. This can be done either automatically or manually.</p>
+<h2 id="handling-property-changes-automatically">Handling property changes automatically</h2>
+<p>When an object implements the <code>INotifyPropertyChanged</code> interface, it is possible to register the object. The <code>IMementoService</code> will fully take care of any property changes by the object and add these automatically to the undo/redo stack. Internally, the service will create an instance of the <code>ObjectObserver</code> which will register the changes in the <code>IMementoService</code>.</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.RegisterObject(myObject);
+</code></pre>
+<h2 id="handling-property-changes-manually">Handling property changes manually</h2>
+<p>When an object does not support the <code>INotifyPropertyChanged</code> interface or you want more control, it is possible to instantiate the <code>PropertyChangeUndo</code> yourself. See the example below:</p>
+<pre><code>public string Name
+{
+    get { return _name; }
+    set
+    {
+        object oldValue = _name;
+        object newValue = value;
+ 
+        _name = value;
+ 
+        RaisePropertyChanged(&quot;Name&quot;);
+ 
+        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+        mementoService.Add(new PropertyChangeUndo(this, &quot;Name&quot;, oldValue, newValue)); 
+    }
+}
+</code></pre>
+<h2 id="removing-an-object-and-its-actions">Removing an object and its actions</h2>
+<p>When a model goes out of scope, it is important that the <code>IMementoService</code> does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the object:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.UnregisterObject(myObject);
+</code></pre>
+<p><em>Note that unregistering an object will both cancel change notifications and remove the actions that belong to this object from the undo/redo stack</em></p>
+<h1 id="memento-and-collections">Memento and collections</h1>
+<p>Adding the ability to undo and redo collection changes on a collection is very simple using the <code>CollectionChangeUndo</code> class. This can be done either automatically or manually.</p>
+<h2 id="handling-collection-changes-automatically">Handling collection changes automatically</h2>
+<p>When a collection implements the <code>INotifyCollectionChanged</code> interface, it is possible to register the collection. The <code>IMementoService</code> will fully take care of any collection changes by the collection and add these automatically to the undo/redo stack. Internally, the service will create an instance of the <code>CollectionObserver</code> which will register the changes in the <code>IMementoService</code>.</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.RegisterCollection(myCollection);
+</code></pre>
+<h2 id="handling-collection-changes-manually">Handling collection changes manually</h2>
+<p>When an object does not support the <code>INotifyCollectionChanged</code> interface or you want more control, it is possible to instantiate the <code>CollectionChangeUndo</code> yourself. See the example below:</p>
+<pre><code>public void AddPerson(IPerson person)
+{
+    var newIndex = _internalCollection.Add(person);
+     
+    var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+    mementoService.Add(new CollectionChangeUndo(_internalCollection, CollectionChangeType.Add, -1, newIndex, null, item)); 
+}
+</code></pre>
+<p><em>Note that all actions should be implemented, such as adding, replacing, removing and resetting to fully support undo/redo</em></p>
+<h2 id="removing-a-collection-and-its-actions">Removing a collection and its actions</h2>
+<p>When a collection goes out of scope, it is important that the <code>IMementoService</code> does not keep it in memory and keeps undoing the changes. Therefore, one should also unregister the collection:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.UnregisterCollection(myCollection);
+</code></pre>
+<p><em>Note that unregistering a collection will both cancel change notifications and remove the actions that belong to this collection from the undo/redo stack</em></p>
+<h1 id="memento-and-methods">Memento and methods</h1>
+<p>Adding the ability to undo and redo methods is the most complex, because this cannot be done automatically. However, it is possible to use the <code>ActionUndo</code> class to make it as easy as possible.</p>
+<h2 id="handling-methods-manually">Handling methods manually</h2>
+<p>An action can come in two flavors. One with only undo support, and one with redo support. It is always recommended to implement the one with support for redo, but the choice is always yours. For this example, let's assume a simple class that will increase a value (for which we are building undo/redo support):</p>
+<pre><code>public class SpecialNumberContainer()
+{
+    private int _number = 5;
+     
+    public int Number { get { return _number; } }
+     
+    public int IncreaseNumber()
+    {
+        _number++;
+    }
+}
+</code></pre>
+<p>As you can see in the example, it is not possible to use the <code>PropertyChangeUndo</code> because the property has no setter and no change notification. So, we will create custom actions for undo/redo.</p>
+<p>First, the class with only undo support:</p>
+<pre><code>public class SpecialNumberContainer()
+{
+    private int _number = 5;
+ 
+    public int Number { get { return _number; } }
+     
+    public int IncreaseNumber()
+    {
+        _number++;
+         
+        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+        mementoService.Add(new ActionUndo(this, () =&gt; _number--)); 
+    }
+}
+</code></pre>
+<p>The code above will add a new action to the undo stack every time the <code>IncreaseNumber</code> method is called. Then, it will not add it to the redo stack because redo is not possible (we haven't provided a redo action).</p>
+<p>Below is the same class, but now with redo support:</p>
+<pre><code>public class SpecialNumberContainer()
+{
+    private int _number = 5;
+ 
+    public int Number { get { return _number; } }
+     
+    public int IncreaseNumber()
+    {
+        _number++;
+         
+        var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+        mementoService.Add(new ActionUndo(this, () =&gt; _number--, () =&gt; _number++)); 
+    }
+}
+</code></pre>
+<p>The code above will add a new action to the undo stack every time the <code>IncreaseNumber</code> method is called. Then, when an action is undo-ed, the action is added to the redo stack and it is possible to redo the action because the redo action was provided as well.</p>
+<h2 id="removing-the-actions-from-the-undoredo-stack">Removing the actions from the undo/redo stack</h2>
+<p>When an action no longer has to be in the undo/redo stack of the <code>IMementoService</code>, one should call the <code>Clear</code> method with the instance of the method as shown in the sample below:</p>
+<pre><code>var mementoService = ServiceLocator.Default.ResolveType&lt;IMementoService&gt;();
+mementoService.Clear(myInstanceContainingTheMethod);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.memento/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

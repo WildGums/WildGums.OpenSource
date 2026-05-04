@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Orc.Metadata | WildGums Open Source </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Orc.Metadata | WildGums Open Source ">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.metadata/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
+            WildGums Open Source
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="orc.metadata">
+
+
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Metadata">https://github.com/WildGums/Orc.Metadata</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td><a href="https://gitter.im/WildGums/Orc.Metadata"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
+</tr>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Metadata"><img src="https://img.shields.io/nuget/dt/Orc.Metadata.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Metadata"><img src="https://img.shields.io/nuget/v/Orc.Metadata.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Metadata"><img src="https://img.shields.io/nuget/vpre/Orc.Metadata.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library provides classes to store metadata about objects. This metadata isn't necessarily stored inside the object itself, allowing the developer to keep track of additional information besides the information stored in the object.</p>
+<p>For the final interaction with the metadata, it is unknown where the information is coming from (the object itself or metadata stored somewhere else). The developer only has to work with the <code>IMetadata</code> and <code>IMetadataCollection</code> interfaces.</p>
+<h2 id="using-the-metadata-interfaces">Using the metadata interfaces</h2>
+<p>There are 2 important interfaces inside this library:</p>
+<ul>
+<li><code>IMetadataCollection</code> =&gt; definition or description of the metadata (for example, properties) collection</li>
+<li><code>IMetadata</code> =&gt; the actual interaction adapter between the generic metadata and the actual object instance</li>
+</ul>
+<h3 id="retrieving-type-information">Retrieving type information</h3>
+<p>To retrieve type information about an object, the information is stored in one of the <code>IMetadataCollection</code> implementations. The developer only has to work with the <em>IMetadataCollection</em> interface. To retrieve the information, use the code below:</p>
+<pre><code>var allMetadata = metadataCollection.All;
+foreach (var metadata in allMetadata)
+{
+	Console.WriteLine(metadata.Name);
+}
+</code></pre>
+<h3 id="retrieving-metadata-of-a-specific-object">Retrieving metadata of a specific object</h3>
+<p>To retrieve the metadata of a specific object, use the code below:</p>
+<pre><code>var metadata = metadataCollection.GetMetadata(&quot;MyMetadataName&quot;);
+var metadataValue = metadata.GetValue(myInstance); 
+</code></pre>
+<h2 id="using-reflection-metadata-classes">Using reflection metadata classes</h2>
+<p>The reflection metadata classes will use reflection to retrieve metadata information from an object.</p>
+<h3 id="creating-the-metadata-collection">Creating the metadata collection</h3>
+<pre><code>var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
+</code></pre>
+<p>Now the metadata collection can be used to retrieve any properties from the <em>MyModel</em> class and use the <code>IMetadata</code> to get or set property values.</p>
+<h2 id="using-dictionary-metadata-classes">Using dictionary metadata classes</h2>
+<p>One way to store information separately from the actual object is to use dictionaries. To use dictionaries, it is important to create the metadata collection first.</p>
+<h3 id="creating-the-metadata-collection-1">Creating the metadata collection</h3>
+<p>The example below creates metadata that contains a few metadata definitions with specific types.</p>
+<pre><code>var dictionary = new Dictionary&lt;string, Type&gt;();
+dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
+dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
+</code></pre>
+<h3 id="interacting-with-the-metadata">Interacting with the metadata</h3>
+<p>Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:</p>
+<pre><code>var metadataDictionary = new Dictionary&lt;string, object&gt;();
+dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
+dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
+
+var metadata = metadataCollection.GetMetadata(&quot;MyIntMetadata&quot;);
+var value = metadata.GetValue(metadataDictionary);
+
+// Now value is 42
+</code></pre>
+<h2 id="other-ways-of-storing-metadata">Other ways of storing metadata</h2>
+<p>Of course it's possible to store metadata in any format on any location. To support this, either create an issue to support the format or create a pull request. Another option is to implement it manually inside the final solution where <em>Orc.Metadata</em> is used.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.metadata/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
