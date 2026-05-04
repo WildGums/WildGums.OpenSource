@@ -113,7 +113,7 @@ xmlns:orctheming="http://schemas.wildgums.com/orc/theming"
 Renders a glyph from a registered font family as a WPF `ImageSource`. The brush automatically updates when the theme changes.
 
 ```xml
-<Image Source="{orctheming:FontImage ItemName='&#xE700;', FontFamily='Segoe MDL2 Assets'}" Width="16" Height="16" />
+<Image Source="{orctheming:FontImage ItemName='&#xE700;' FontFamily='Segoe MDL2 Assets'}" Width="16" Height="16" />
 ```
 
 To use a custom font, register it first in code:
@@ -127,7 +127,7 @@ FontImage.RegisterFont("My Icon Font", new FontFamily("pack://application:,,,/My
 Similar to `FontImage` but provides a `Cursor` instead of an `ImageSource`, useful for setting custom icon-based cursors.
 
 ```xml
-<Control Cursor="{orctheming:FontImageCursor ItemName='&#xE700;', FontFamily='Segoe MDL2 Assets'}" />
+<Control Cursor="{orctheming:FontImageCursor ItemName='&#xE700;' FontFamily='Segoe MDL2 Assets'}" />
 ```
 
 ### FontSize
