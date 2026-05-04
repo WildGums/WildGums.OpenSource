@@ -124,7 +124,7 @@
 </ul>
 <h3 id="retrieving-type-information">Retrieving type information</h3>
 <p>To retrieve type information about an object, the information is stored in one of the <code>IMetadataCollection</code> implementations. The developer only has to work with the <em>IMetadataCollection</em> interface. To retrieve the information, use the code below:</p>
-<pre><code>var allMetadata = metadataCollection.All;
+<pre><code class="lang-csharp">var allMetadata = metadataCollection.All;
 foreach (var metadata in allMetadata)
 {
 	Console.WriteLine(metadata.Name);
@@ -132,26 +132,26 @@ foreach (var metadata in allMetadata)
 </code></pre>
 <h3 id="retrieving-metadata-of-a-specific-object">Retrieving metadata of a specific object</h3>
 <p>To retrieve the metadata of a specific object, use the code below:</p>
-<pre><code>var metadata = metadataCollection.GetMetadata(&quot;MyMetadataName&quot;);
+<pre><code class="lang-csharp">var metadata = metadataCollection.GetMetadata(&quot;MyMetadataName&quot;);
 var metadataValue = metadata.GetValue(myInstance); 
 </code></pre>
 <h2 id="using-reflection-metadata-classes">Using reflection metadata classes</h2>
 <p>The reflection metadata classes will use reflection to retrieve metadata information from an object.</p>
 <h3 id="creating-the-metadata-collection">Creating the metadata collection</h3>
-<pre><code>var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
+<pre><code class="lang-csharp">var metadataCollection = new ReflectionMetadataCollection(typeof(MyModel));
 </code></pre>
 <p>Now the metadata collection can be used to retrieve any properties from the <em>MyModel</em> class and use the <code>IMetadata</code> to get or set property values.</p>
 <h2 id="using-dictionary-metadata-classes">Using dictionary metadata classes</h2>
 <p>One way to store information separately from the actual object is to use dictionaries. To use dictionaries, it is important to create the metadata collection first.</p>
 <h3 id="creating-the-metadata-collection-1">Creating the metadata collection</h3>
 <p>The example below creates metadata that contains a few metadata definitions with specific types.</p>
-<pre><code>var dictionary = new Dictionary&lt;string, Type&gt;();
+<pre><code class="lang-csharp">var dictionary = new Dictionary&lt;string, Type&gt;();
 dictionary[&quot;MyStringMetadata&quot;] = typeof(string);
 dictionary[&quot;MyIntMetadata&quot;] = typeof(int);
 </code></pre>
 <h3 id="interacting-with-the-metadata">Interacting with the metadata</h3>
 <p>Once a collection of metadata (the specification) is created, one can interact with it with a specific dictionary containing the actual metadata:</p>
-<pre><code>var metadataDictionary = new Dictionary&lt;string, object&gt;();
+<pre><code class="lang-csharp">var metadataDictionary = new Dictionary&lt;string, object&gt;();
 dictionary[&quot;MyStringMetadata&quot;] = &quot;myvalue&quot;;
 dictionary[&quot;MyIntMetadata&quot;] = &quot;42&quot;;
 

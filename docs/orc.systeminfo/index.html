@@ -117,7 +117,7 @@
 <p>This library is used to retrieve the system information details from a computer.</p>
 <p>Use the <code>GetSystemInfo()</code> method or the <code>ISystemInfoService</code> to get the system information details.</p>
 <p><code>GetSystemInfo()</code> returns an <code>IEnumerable&lt;SystemInfoElement&gt;</code></p>
-<pre><code>[Serializable]
+<pre><code class="lang-csharp">[Serializable]
 public class SystemInfoElement
 {
     ...
@@ -156,7 +156,7 @@ public class SystemInfoElement
 <p>Using the service is easy. Just resolve the service from the <code>ServiceLocator</code> or let it automatically be injected into your services or view model.</p>
 <h2 id="resolving-the-service">Resolving the service</h2>
 <p>If dependency injection is not used, the service can be retrieved using the following code:</p>
-<pre><code>var systemInfoService = ServiceLocator.Default.ResolveType&lt;ISystemInfoService&gt;();
+<pre><code class="lang-csharp">var systemInfoService = ServiceLocator.Default.ResolveType&lt;ISystemInfoService&gt;();
 </code></pre>
 <h2 id="retrieving-the-system-info">Retrieving the system info</h2>
 <p>It's best to gather the information on a thread that is not the UI thread. The examples below show how to do this.</p>
@@ -167,15 +167,17 @@ foreach (var systemInfoElement in systemInfo)
 {
     // TODO: Deal with the system info
 }
-</code></pre>
-<h3 id="retrieving-on-a-separate-thread">Retrieving on a separate thread</h3>
-<pre><code>var systemInfo = await TaskHelper.Run(() =&gt; systemInfoService.GetSystemInfo(), true);
+```csharp
 
-foreach (var systemInfoElement in systemInfo)
-{
-    // TODO: Deal with the system info
-}
+### Retrieving on a separate thread
+
 </code></pre>
+<p>var systemInfo = await TaskHelper.Run(() =&gt; systemInfoService.GetSystemInfo(), true);</p>
+<p>foreach (var systemInfoElement in systemInfo)
+{
+// TODO: Deal with the system info
+}</p>
+<pre><code class="lang-csharp"></code></pre>
 
 </article>
 

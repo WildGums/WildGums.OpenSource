@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>SafeDirectoryModuleCatalog | WildGums Open Source </title>
+      <title>Orc.DataAccess | WildGums Open Source </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="SafeDirectoryModuleCatalog | WildGums Open Source ">
+      <meta name="title" content="Orc.DataAccess | WildGums Open Source ">
       
       
-      <link rel="icon" href="../../../images/favicon.png">
-      <link rel="stylesheet" href="../../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../../public/main.css">
-      <meta name="docfx:navrel" content="../../../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
       
-      <meta name="docfx:rel" content="../../../">
+      <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.prism/module-catalogs/safedirectorymodulecatalog.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dataaccess/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../../public/docfx.min.js"></script>
+      <script type="module" src="./../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../../index.html">
-            <img id="logo" class="svg" src="../../../images/favicon.png" alt="WildGums Open Source">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
             WildGums Open Source
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,25 +84,54 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="safedirectorymodulecatalog">
+        <article data-uid="orc.dataaccess">
 
 
-<p>The <code>SafeDirectoryModuleCatalog</code> is a safe implementation of the <code>DirectoryModuleCatalog</code> that ships with prism.</p>
-<h2 id="initializing-the-catalog">Initializing the catalog</h2>
-<pre><code>protected override void ConfigureModuleCatalog()
-{
-    base.ConfigureModuleCatalog();
- 
-    ModulePath = @&quot;.\Modules&quot;
-}
+<p>Find the source at <a href="https://github.com/WildGums/Orc.DataAccess">https://github.com/WildGums/Orc.DataAccess</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.DataAccess"><img src="https://img.shields.io/nuget/dt/Orc.DataAccess.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DataAccess"><img src="https://img.shields.io/nuget/v/Orc.DataAccess.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.DataAccess"><img src="https://img.shields.io/nuget/vpre/Orc.DataAccess.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library provides a unified data access layer for reading data from multiple sources including CSV files, databases, and Excel spreadsheets.</p>
+<h2 id="supported-data-sources">Supported data sources</h2>
+<ul>
+<li><strong>CSV</strong> — read and write comma-separated value files</li>
+<li><strong>Database</strong> — connect to and query relational databases via ADO.NET providers</li>
+<li><strong>Excel</strong> — read data from Excel workbooks</li>
+</ul>
+<h2 id="key-concepts">Key concepts</h2>
+<p>Data sources are accessed through readers that implement a common interface, making it straightforward to swap data sources without changing the consuming code.</p>
+<h3 id="reading-from-a-data-source">Reading from a data source</h3>
+<pre><code class="lang-csharp">var reader = dataSourceReaderFactory.CreateReader(dataSource);
+var records = reader.Read();
 </code></pre>
-<h2 id="customizing-the-catalog">Customizing the catalog</h2>
-<p>No customization options documented yet - feel free to contribute</p>
+<h3 id="registering-a-custom-reader">Registering a custom reader</h3>
+<p>Custom readers can be registered through the reader registry:</p>
+<pre><code class="lang-csharp">dataSourceReaderRegistry.Register&lt;MyCustomReader&gt;();
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.prism/module-catalogs/safedirectorymodulecatalog.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.dataaccess/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

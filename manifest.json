@@ -22,16 +22,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/orc.analytics/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.analytics/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "docs/orc.automaticsupport/index.md",
       "output": {
         ".html": {
@@ -42,10 +32,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/orc.commandline/index.md",
+      "source_relative_path": "docs/orc.automation/index.md",
       "output": {
         ".html": {
-          "relative_path": "docs/orc.commandline/index.html"
+          "relative_path": "docs/orc.automation/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.calendar/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.calendar/index.html"
         }
       },
       "version": ""
@@ -375,6 +375,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/orc.dataaccess/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.dataaccess/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/orc.dbtocsv/index.md",
       "output": {
         ".html": {
@@ -478,6 +488,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/orc.featuretoggles/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.featuretoggles/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/orc.feedback/index.md",
       "output": {
         ".html": {
@@ -512,16 +532,6 @@
       "output": {
         ".html": {
           "relative_path": "docs/orc.filterbuilder/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.fluentvalidation/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.fluentvalidation/index.html"
         }
       },
       "version": ""
@@ -598,122 +608,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/declaring-modules.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/declaring-modules.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/module-catalogs/compositemodulecatalog.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/compositemodulecatalog.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/module-catalogs/downloadingmodulecatalog.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/downloadingmodulecatalog.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/module-catalogs/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/module-catalogs/nugetbasedmodulecatalog.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/nugetbasedmodulecatalog.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/module-catalogs/safedirectorymodulecatalog.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/safedirectorymodulecatalog.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "docs/orc.prism/module-catalogs/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/module-catalogs/toc.html"
-        },
-        ".json": {
-          "relative_path": "docs/orc.prism/module-catalogs/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "docs/orc.prism/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/toc.html"
-        },
-        ".json": {
-          "relative_path": "docs/orc.prism/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/translating-or-customizing.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/translating-or-customizing.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/orc.prism/using-the-bootstrapper.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/orc.prism/using-the-bootstrapper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "docs/orc.projectmanagement/index.md",
       "output": {
         ".html": {
@@ -748,6 +642,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/orc.selectionmanagement/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.serialization/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.serialization/index.html"
         }
       },
       "version": ""
@@ -808,6 +712,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/orc.systeminfo/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/orc.theming/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/orc.theming/index.html"
         }
       },
       "version": ""
@@ -901,16 +815,6 @@
       "output": {
         "resource": {
           "relative_path": "images/introduction/Rantt.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/orc.analytics/google_analytics.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/orc.analytics/google_analytics.png"
         }
       },
       "version": ""

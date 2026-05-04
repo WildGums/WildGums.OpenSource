@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Orc.FluentValidation | WildGums Open Source </title>
+      <title>Orc.FeatureToggles | WildGums Open Source </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Orc.FluentValidation | WildGums Open Source ">
+      <meta name="title" content="Orc.FeatureToggles | WildGums Open Source ">
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.fluentvalidation/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.featuretoggles/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,10 +84,10 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="orc.fluentvalidation">
+        <article data-uid="orc.featuretoggles">
 
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.FluentValidation">https://github.com/WildGums/Orc.FluentValidation</a>.</p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.FeatureToggles">https://github.com/WildGums/Orc.FeatureToggles</a>.</p>
 <table>
 <thead>
 <tr>
@@ -97,56 +97,95 @@
 </thead>
 <tbody>
 <tr>
-<td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.FluentValidation"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
-</tr>
-<tr>
 <td>Downloads</td>
-<td><a href="https://www.nuget.org/packages/Orc.FluentValidation"><img src="https://img.shields.io/nuget/dt/Orc.FluentValidation.svg" alt="NuGet downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.FeatureToggles"><img src="https://img.shields.io/nuget/dt/Orc.FeatureToggles.svg" alt="NuGet downloads"></a></td>
 </tr>
 <tr>
 <td>Stable version</td>
-<td><a href="https://www.nuget.org/packages/Orc.FluentValidation"><img src="https://img.shields.io/nuget/v/Orc.FluentValidation.svg" alt="Stable version"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.FeatureToggles"><img src="https://img.shields.io/nuget/v/Orc.FeatureToggles.svg" alt="Stable version"></a></td>
 </tr>
 <tr>
 <td>Unstable version</td>
-<td><a href="https://www.nuget.org/packages/Orc.FluentValidation"><img src="https://img.shields.io/nuget/vpre/Orc.FluentValidation.svg" alt="Unstable version"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.FeatureToggles"><img src="https://img.shields.io/nuget/vpre/Orc.FeatureToggles.svg" alt="Unstable version"></a></td>
 </tr>
 </tbody>
 </table>
-<p>The validation in Catel is extremely flexible, at this point you must already know it, but sometimes it is just not enough or you are forced to use external validators.</p>
-<p><strong>Note that the FluentValidation extension can be used in combination with Catel.Core only, so it is not required to combine it with the MVVM framework</strong></p>
-<p>FluentValidation is a small validation library for .NET that uses a fluent interface and lambda expressions for building validation rules for your business objects. Catel provides an extension in order to use FluentValidation as a validation library.</p>
-<p>The only thing you have to do is install an isolate package named <code>Orc.FluentValidation</code>, available via NuGet, then you will be able to write your view models validations using FluentValidation approach.</p>
-<pre><code>public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
+<p>This library provides a WPF component for managing feature toggles (feature flags) inside applications. Feature toggles allow parts of an application to be enabled or disabled without deploying new code.</p>
+<h2 id="key-concepts">Key concepts</h2>
+<p>A feature toggle is identified by a unique name and has an enabled/disabled state. The state can be controlled at runtime, making it possible to roll out features gradually or disable problematic features without a new release.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="defining-feature-toggles">Defining feature toggles</h3>
+<p>Feature toggles are defined as simple named flags:</p>
+<pre><code class="lang-csharp">public static class Features
 {
-	public PersonViewModelValidator()
-	{
-		RuleFor(person =&gt; person.FirstName).NotEmpty();
-		RuleFor(person =&gt; person.LastName).NotEmpty().WithMessage(&quot;Please specify the last name&quot;);
-	}
+    public const string NewDashboard = &quot;NewDashboard&quot;;
+    public const string BetaExport = &quot;BetaExport&quot;;
 }
 </code></pre>
-<p>In order to retrieve the right validators, you must register the <code>FluentValidatorProvider</code>:</p>
-<pre><code>ServiceLocator.Default.RegisterType&lt;IValidatorProvider, FluentValidatorProvider&gt;();
-</code></pre>
-<p>The <code>FluentValidatorProvider</code> will automatically retrieve the right validators associated with the view models.</p>
-<h1 id="how-to-handle-all-catel-validation-concepts-with-fluent-validation-classes">How to handle all Catel validation concepts with fluent validation classes?</h1>
-<p>Catel handle concepts like field or business rules errors and warnings. So, it's necessary map the fluent validation class to the specific Catel validation using <code>ValidationDescriptionAttribute</code>.</p>
-<pre><code>[ValidatorDescription(Tag = &quot;Person&quot;, ValidationResultType = ValidationResultType.Error, ValidationType = ValidationType.Field)]
-public class PersonViewModelValidator : AbstractValidator&lt;PersonViewModel&gt;
+<h3 id="checking-a-feature-toggle">Checking a feature toggle</h3>
+<pre><code class="lang-csharp">public class MyViewModel : ViewModelBase
 {
+    private readonly IFeatureToggleService _featureToggleService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IFeatureToggleService featureToggleService)
+        : base(serviceProvider)
+    {
+        _featureToggleService = featureToggleService;
+    }
+
+    private void ShowDashboard()
+    {
+        if (_featureToggleService.IsEnabled(Features.NewDashboard))
+        {
+            // show the new dashboard
+        }
+    }
 }
+
+### Enabling or disabling a feature toggle
+
+```csharp
+featureToggleService.Enable(Features.BetaExport);
+featureToggleService.Disable(Features.BetaExport);
 </code></pre>
-<p>How does the FluentValidationProvider works?</p>
-<p><code>FluentValidationProvider</code> is an implementation of <code>IValidationProvider</code> (see <a href="https://catelproject.atlassian.net/wiki/display/CTL/Validation+via+IValidator">Validation via IValidator</a>). It searches for all validators classes that implement <code>FluentValidation.IValidator</code> interface, that also can validate the view model type.</p>
-<p>A view model can have one or more validators, so <code>FluentValidationProvider</code> aggregates all validators in a single one using <code>CompositeValidator</code> class. For performance reasons <code>FluentValidationProvider</code> only searches for validators on the assembly which the view model belongs to.</p>
-<p><strong>Note that FluentValidationProvider does not use NamingConventions</strong></p>
+<h2 id="xaml-integration">XAML integration</h2>
+<p>The <code>Orc.FeatureToggles.Xaml</code> package provides a built-in UI for managing feature toggles. It includes a <code>FeatureTogglesWindow</code> that lists all registered feature toggles and allows them to be enabled or disabled at runtime.</p>
+<h3 id="showing-the-feature-toggles-window">Showing the feature toggles window</h3>
+<p>Use constructor injection to get <code>IUIVisualizerService</code> and call it to show the built-in feature toggles management window:</p>
+<pre><code class="lang-csharp">public class RibbonViewModel : ViewModelBase
+{
+    private readonly IUIVisualizerService _uiVisualizerService;
+
+    public RibbonViewModel(IServiceProvider serviceProvider, IUIVisualizerService uiVisualizerService)
+        : base(serviceProvider)
+    {
+        _uiVisualizerService = uiVisualizerService;
+
+        ManageFeatureToggles = new TaskCommand(serviceProvider, OnManageFeatureTogglesExecuteAsync);
+    }
+
+    public TaskCommand ManageFeatureToggles { get; }
+
+    private async Task OnManageFeatureTogglesExecuteAsync()
+    {
+        await _uiVisualizerService.ShowDialogAsync&lt;ManageFeatureTogglesViewModel&gt;();
+    }
+}
+
+### Using the FeatureToggleVisibilityConverter
+
+The `Orc.FeatureToggles.Xaml` package also provides a `FeatureToggleVisibilityConverter` that can be used to show or hide UI elements based on feature toggle state:
+
+```xml
+xmlns:orcfeaturetoggles=&quot;http://schemas.wildgums.com/orc/featuretoggles&quot;
+
+&lt;Button Visibility=&quot;{orcfeaturetoggles:FeatureToggle FeatureName=NewDashboard}&quot; Content=&quot;Open new dashboard&quot; /&gt;
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.fluentvalidation/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.featuretoggles/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

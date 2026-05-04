@@ -115,6 +115,42 @@
 </tbody>
 </table>
 <p>Manage selection state inside applications.</p>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li>Track selected items across different views or components</li>
+<li>Support for single and multiple selection modes</li>
+<li>Events for responding to selection changes</li>
+</ul>
+<h3 id="getting-started-with-the-selection-manager">Getting started with the selection manager</h3>
+<p>The main component is the <code>ISelectionManager</code>, which provides a centralized way to manage the currently selected items in an application. Use constructor injection to receive the service:</p>
+<pre><code class="lang-csharp">public class MyViewModel : ViewModelBase
+{
+    private readonly ISelectionManager _selectionManager;
+
+    public MyViewModel(IServiceProvider serviceProvider, ISelectionManager selectionManager)
+        : base(serviceProvider)
+    {
+        _selectionManager = selectionManager;
+    }
+}
+
+### Selecting an item
+
+```csharp
+selectionManager.Select(myItem);
+</code></pre>
+<h3 id="retrieving-the-current-selection">Retrieving the current selection</h3>
+<pre><code class="lang-csharp">var selectedItems = selectionManager.SelectedItems;
+</code></pre>
+<h3 id="responding-to-selection-changes">Responding to selection changes</h3>
+<pre><code class="lang-csharp">selectionManager.SelectionChanged += OnSelectionChanged;
+
+private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    // e.AddedItems contains newly selected items
+    // e.RemovedItems contains items that are no longer selected
+}
+</code></pre>
 
 </article>
 

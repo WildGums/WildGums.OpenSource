@@ -128,7 +128,7 @@
 <p>Before starting using the FilterBuilder please add the <code>Orc.FilterBuilder</code> project to your application.</p>
 <h3 id="create-data-collections">Create data collections</h3>
 <p>Two data collection should be created: one for input and one for filtered output:</p>
-<pre><code>public ObservableCollection&lt;TestEntity&gt; RawItems { get; private set; }
+<pre><code class="lang-csharp">public ObservableCollection&lt;TestEntity&gt; RawItems { get; private set; }
 public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; }
 </code></pre>
 <h3 id="adding-component-to-your-application">Adding component to your application</h3>
@@ -136,38 +136,38 @@ public ObservableCollection&lt;TestEntity&gt; FilteredItems { get; private set; 
 <code>FilterBuilderControl</code> is responsible for invocation of <code>EditFilter</code> window and for implementing filtering of the main collection.</p>
 <p><img src="../../images/orc.filterbuilder/filter_builder.png" alt="Filter Builder window"></p>
 <p>Prior to using the component add the <code>FilterBuilder</code> namespace to your View:</p>
-<pre><code>xmlns:orc=&quot;http://www.wildgums.net.au/orc&quot;
+<pre><code class="lang-xml">xmlns:orcfilterbuilder=&quot;http://schemas.wildgums.com/orc/filterbuilder&quot;
 </code></pre>
 <p>Next include the actual component to your View using the following code:</p>
-<pre><code>&lt;orc:FilterBuilderControl 
+<pre><code class="lang-xml">&lt;orcfilterbuilder:FilterBuilderControl 
 	RawCollection=&quot;{Binding RawItems}&quot;
 	FilteredCollection=&quot;{Binding FilteredItems}&quot; /&gt;
 </code></pre>
 <p>The <code>EditFilterView</code> is located in FilterBuilder project. It will show the filtering options window to the end user.</p>
 <p><img src="../../images/orc.filterbuilder/2.png" alt="Filter Builder component filter screen"></p>
 <p><strong>Note:</strong>
-Before using the control please add Catel and Catel MVVM libraries to the project via nugget.</p>
-<pre><code>Install-Package Catel.Core -Pre
+Before using the control please add Catel and Catel MVVM libraries to the project via NuGet.</p>
+<pre><code class="lang-powershell">Install-Package Catel.Core -Pre
 Install-Package Catel.MVVM -Pre
 </code></pre>
 <h3 id="customizing-component-ui">Customizing component UI</h3>
 <p>The UI can easily be adjusted to any design. For example we will demonstrate how to apply the Metro UI theme.</p>
 <p><img src="../../images/orc.filterbuilder/metro_1.png" alt="Filter Builder component Metro UI main screen"></p>
-<p>Install the appropriate packages via nugget manager.</p>
+<p>Install the appropriate packages via the NuGet Package Manager.</p>
 <p><img src="../../images/orc.filterbuilder/mahapps_1.png" alt="Nuget Manager"></p>
 <p>Or, through Package Manager Console using bellow commands:</p>
-<pre><code>Install-Package MahApps.Metro –Pre
+<pre><code class="lang-powershell">Install-Package MahApps.Metro –Pre
 Install-Package  MahApps.Metro.Resources.Standalone
 </code></pre>
 <p>First, modify the test project (<code>Orc.FilterBuilder.Test</code>) by adding the following code to the <code>MainWindow.xaml</code> header:</p>
-<pre><code>&lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Test.NET40.MainWindow&quot;
+<pre><code class="lang-xml">&lt;controls:MetroWindow x:Class=&quot;Orc.FilterBuilder.Example.MainWindow&quot;
 		xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
 		xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-		xmlns:net401=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
+		xmlns:orcfilterbuilder=&quot;clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder&quot;
 		xmlns:controls=&quot;clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro&quot;
 </code></pre>
 <p>Also, reference the Styles in the <code>App.xaml</code> file:</p>
-<pre><code>&lt;Application.Resources&gt;
+<pre><code class="lang-xml">&lt;Application.Resources&gt;
 	&lt;ResourceDictionary&gt;
 		&lt;ResourceDictionary.MergedDictionaries&gt;
 		&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;
@@ -184,17 +184,17 @@ Install-Package  MahApps.Metro.Resources.Standalone
 <p><img src="../../images/orc.filterbuilder/solution_explorer.png" alt="FilterBuilder project"></p>
 <p>Add <code>Resources</code> folder along with necessary files to the Control project.
 Also, in the <code>EditFilterView.xaml</code> modify the ResourceDictionary section as follows:</p>
-<pre><code>&lt;ResourceDictionary&gt;
-	&lt;net40:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
+<pre><code class="lang-xml">&lt;ResourceDictionary&gt;
+	&lt;orcfilterbuilder:ConditionTreeItemConverter x:Key=&quot;ConditionTreeItemConverter&quot; /&gt;
 	&lt;BooleanToVisibilityConverter x:Key=&quot;VisibilityConverter&quot;/&gt;
-	&lt;net40:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
+	&lt;orcfilterbuilder:ValueControlTypeVisibilityConverter x:Key=&quot;ValueControlTypeVisibilityConverter&quot;/&gt;
 	&lt;ResourceDictionary.MergedDictionaries&gt;
 		&lt;ResourceDictionary Source=&quot;Resources\Icons.xaml&quot; /&gt;
 	&lt;/ResourceDictionary.MergedDictionaries&gt;
 &lt;/ResourceDictionary&gt;
 </code></pre>
 <p>To customize the style of the buttons add the <code>MetroCircleButtonStyle</code> and appropriate icon reference from the specified StaticResource (<code>appbar_add</code>) :</p>
-<pre><code>&lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
+<pre><code class="lang-xml">&lt;Button BorderThickness=&quot;0&quot;  ToolTip=&quot;Add expression&quot; Margin=&quot;3,0,0,0&quot;
 									Command=&quot;{Binding DataContext.AddExpressionCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeView}}&quot; 
 									CommandParameter=&quot;{Binding}&quot;
 									Style=&quot;{DynamicResource MetroCircleButtonStyle}&quot;&gt;

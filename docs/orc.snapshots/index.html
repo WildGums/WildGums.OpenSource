@@ -161,29 +161,54 @@
 </div>
 <h1 id="initializing-the-snapshot-manager">Initializing the snapshot manager</h1>
 <p>Because the snapshot manager is using async, the initialization is a separate method. This gives the developer the option to load the snapshots whenever it is required. To load the stored snapshots from disk, use the code below:</p>
-<pre><code>await snapshotManager.LoadAsync(); 
+<pre><code class="lang-csharp">await snapshotManager.LoadAsync(); 
 </code></pre>
 <h1 id="retrieving-a-list-of-all-snapshots">Retrieving a list of all snapshots</h1>
-<pre><code>var snapshots = snapshotManager.Snapshots;
+<pre><code class="lang-csharp">var snapshots = snapshotManager.Snapshots;
 </code></pre>
 <h1 id="creating-a-snapshot">Creating a snapshot</h1>
 <p>Storing information in a snapshot is the responsibility of every single component in the application. The <code>ISnapshotManager</code> will gather all the information for the snapshot providers.</p>
 <p>Call the following method to create a snapshot.</p>
-<pre><code>await snapshotManager.CreateSnapshotAsync(&quot;My snapshot title&quot;);
+<pre><code class="lang-csharp">await snapshotManager.CreateSnapshotAsync(&quot;My snapshot title&quot;);
 </code></pre>
 <p><strong>Note that a snapshot is only created, not registered in the manager or saved to disk by this method</strong></p>
 <h2 id="providers">Providers</h2>
 <p>Create a provider as shown in the example below:</p>
-<p><strong>// TODO: write an example provider</strong></p>
+<pre><code class="lang-csharp">public class MySnapshotProvider : SnapshotProviderBase
+{
+    private readonly IMyService _myService;
+
+    public MySnapshotProvider(IMyService myService)
+    {
+        _myService = myService;
+        Name = &quot;MyProvider&quot;;
+    }
+
+    public override async Task ProvideAsync(ISnapshot snapshot)
+    {
+        var data = _myService.GetCurrentState();
+        await snapshot.SetDataAsync(Name, data);
+    }
+
+    public override async Task RestoreAsync(ISnapshot snapshot)
+    {
+        var data = await snapshot.GetDataAsync&lt;MyState&gt;(Name);
+        if (data is not null)
+        {
+            _myService.RestoreState(data);
+        }
+    }
+}
+</code></pre>
 <p>Register the provider in the manager for it to take effect:</p>
-<pre><code>snapshotManager.AddProvider(myProvider);
+<pre><code class="lang-csharp">snapshotManager.AddProvider(myProvider);
 </code></pre>
 <h1 id="registering-a-snapshot-and-saving-all-snapshots-to-disk">Registering a snapshot and saving all snapshots to disk</h1>
 <p>To register a snapshot with the manager, use the code below:</p>
-<pre><code>await snapshotManager.AddAsync(snapshot);
+<pre><code class="lang-csharp">await snapshotManager.AddAsync(snapshot);
 </code></pre>
 <p>To save all snapshots, use the code below:</p>
-<pre><code>snapshotManager.SaveAsync();
+<pre><code class="lang-csharp">snapshotManager.SaveAsync();
 </code></pre>
 
 </article>

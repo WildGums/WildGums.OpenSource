@@ -145,10 +145,10 @@ A project file is simply an xml file with an &quot;.iprj&quot; extension, and lo
 <li>You can specify a different output directory for each file. If left blank or does not exist the file will be saved in the &quot;OutputFolder&quot;.</li>
 </ul>
 <p>Once the project file is setup you can create the csv files using the following command:</p>
-<pre><code class="lang-C#">public static void ProcessProject(string projectFilePath, string outputFolderPath, ILogWriter logWriter)
+<pre><code class="lang-csharp">public static void ProcessProject(string projectFilePath, string outputFolderPath, ILogWriter logWriter)
 </code></pre>
 <p>Example:</p>
-<pre><code class="lang-C#">Importer.ProcessProject(projectFilePath, outputFolderPath, new ConsoleWriter());
+<pre><code class="lang-csharp">Importer.ProcessProject(projectFilePath, outputFolderPath, new ConsoleWriter());
 </code></pre>
 <p>The parameters are:</p>
 <ul>

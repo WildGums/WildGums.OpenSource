@@ -122,13 +122,13 @@
 </div>
 <h2 id="creating-dynamic-objects">Creating dynamic objects</h2>
 <p>Creating a dynamic object with full Catel functionality is easy. Just add the <code>Orc.DynamicObjects</code> reference via NuGet and create a class that derives from <code>DynamicModelBase</code>:</p>
-<pre><code>public class DynamicModel : DynamicModelBase
+<pre><code class="lang-csharp">public class DynamicModel : DynamicModelBase
 {
 	// TODO: Add custom functionality if required
 }
 </code></pre>
 <p>Then the dynamic model can be used like this:</p>
-<pre><code>dynamic model = new DynamicModel();
+<pre><code class="lang-csharp">dynamic model = new DynamicModel();
 model.NonExistingProperty = &quot;a dynamic value&quot;;
  
 Console.WriteLine(model.NonExistingProperty);
@@ -139,7 +139,7 @@ Console.WriteLine(model.NonExistingProperty);
 </div>
 <h2 id="using-modelbase-functionality">Using ModelBase functionality</h2>
 <p>The <code>DynamicModelBase</code> class derives from <em>ModelBase</em>. However it must be preceded by the dynamic keyword. To use the <code>ModelBase</code> functionality, cast it to the right type:</p>
-<pre><code>dynamic model = new DynamicModel();
+<pre><code class="lang-csharp">dynamic model = new DynamicModel();
 model.NonExistingProperty = &quot;a dynamic value&quot;;
  
 // Note: the Validate method is available on the ModelBase
@@ -148,7 +148,7 @@ modelBase.Validate();
 </code></pre>
 <h2 id="supporting-serialization-of-dynamic-objects">Supporting serialization of dynamic objects</h2>
 <p>Dynamic objects in Catel fully support the default serialization that Catel provides. To example below shows how to serialize a dynamic object:</p>
-<pre><code>dynamic model = new DynamicModel();
+<pre><code class="lang-csharp">dynamic model = new DynamicModel();
 model.NonExistingProperty = &quot;a dynamic value&quot;;
 
 var serializer = SerializationFactory.GetXmlSerializer();

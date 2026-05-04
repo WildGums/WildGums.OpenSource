@@ -119,7 +119,7 @@
 <p>The API library is the library that exposes the types and interfaces that can be used by any plugin to interact with the host. In most
 cases, the API will expose the interface for services which are implemented in the host. In a minimal case, the API will only expose
 a type that will be used to recognize a plugin. For example the plugin interface shown below;</p>
-<pre><code>public interface ICustomPlugin
+<pre><code class="lang-csharp">public interface ICustomPlugin
 {
 	Task InitializeAsync();
 }
@@ -129,7 +129,7 @@ a type that will be used to recognize a plugin. For example the plugin interface
 <h3 id="pluginfinder">PluginFinder</h3>
 <p>The library takes care of the hard work. The only thing that it needs to know is whether a type is a plugin. This can be configured
 by creating a class deriving from <code>PluginFinderBase</code>:</p>
-<pre><code>public class PluginFinder : Orc.Extensibility.PluginFinderBase
+<pre><code class="lang-csharp">public class PluginFinder : Orc.Extensibility.PluginFinderBase
 {
 	private readonly string _pluginName = typeof(ICustomPlugin).Name;
 
@@ -149,11 +149,11 @@ by creating a class deriving from <code>PluginFinderBase</code>:</p>
 }
 </code></pre>
 <p>Note that it should also be registered in the <code>ServiceLocator</code>:</p>
-<pre><code>ServiceLocator.Default.RegisterType&lt;IPluginFinder, PluginFinder&gt;();
+<pre><code class="lang-csharp">ServiceLocator.Default.RegisterType&lt;IPluginFinder, PluginFinder&gt;();
 </code></pre>
 <h3 id="finding-and-loading-the-plugins">Finding and loading the plugins</h3>
 <p>It's possible to allow a single plugin host or a multiple plugin host. This example shows how to use the single plugin host:</p>
-<pre><code>// In an Orchestra environment, this would go into the bootstrapper
+<pre><code class="lang-csharp">// In an Orchestra environment, this would go into the bootstrapper
 var configurationService = serviceLocator.ResolveType&lt;IConfigurationService&gt;();
 var activePlugin = configurationService.GetRoamingValue(ConfigurationKeys.ActivePlugin, ConfigurationKeys.ActivePluginDefaultValue);
 
@@ -172,7 +172,7 @@ if (plugin != null)
 <li><p>Create a new plugin as shown below:</p>
 </li>
 </ol>
-<pre><code>public class PluginA : ICustomPlugin
+<pre><code class="lang-csharp">public class PluginA : ICustomPlugin
 {
 	private readonly IMessageService _messageService;
 	private readonly IHostService _hostService;

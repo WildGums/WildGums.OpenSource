@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Orc.CommandLine | WildGums Open Source </title>
+      <title>Orc.Automation | WildGums Open Source </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Orc.CommandLine | WildGums Open Source ">
+      <meta name="title" content="Orc.Automation | WildGums Open Source ">
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.commandline/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.automation/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,10 +84,10 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="orc.commandline">
+        <article data-uid="orc.automation">
 
 
-<p>Find the source at <a href="https://github.com/WildGums/Orc.CommandLine">https://github.com/WildGums/Orc.CommandLine</a>.</p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Automation">https://github.com/WildGums/Orc.Automation</a>.</p>
 <table>
 <thead>
 <tr>
@@ -97,89 +97,75 @@
 </thead>
 <tbody>
 <tr>
-<td>Chat</td>
-<td><a href="https://gitter.im/WildGums/Orc.CommandLine"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat"></a></td>
-</tr>
-<tr>
 <td>Downloads</td>
-<td><a href="https://www.nuget.org/packages/Orc.CommandLine"><img src="https://img.shields.io/nuget/dt/Orc.CommandLine.svg" alt="NuGet downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.Automation"><img src="https://img.shields.io/nuget/dt/Orc.Automation.svg" alt="NuGet downloads"></a></td>
 </tr>
 <tr>
 <td>Stable version</td>
-<td><a href="https://www.nuget.org/packages/Orc.CommandLine"><img src="https://img.shields.io/nuget/v/Orc.CommandLine.svg" alt="Stable version"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.Automation"><img src="https://img.shields.io/nuget/v/Orc.Automation.svg" alt="Stable version"></a></td>
 </tr>
 <tr>
 <td>Unstable version</td>
-<td><a href="https://www.nuget.org/packages/Orc.CommandLine"><img src="https://img.shields.io/nuget/vpre/Orc.CommandLine.svg" alt="Unstable version"></a></td>
+<td><a href="https://www.nuget.org/packages/Orc.Automation"><img src="https://img.shields.io/nuget/vpre/Orc.Automation.svg" alt="Unstable version"></a></td>
 </tr>
 </tbody>
 </table>
-<p>Use command line the easy way.</p>
-<h2 id="quick-introduction">Quick introduction</h2>
-<p>Using this library is easy:</p>
-<pre><code>public class MyContext : ContextBase
-{
-	[Option(' ', &quot;&quot;, HelpText = &quot;The file name to start with&quot;)]
-	public string FileName { get; set; }
-
-	[Option('b', &quot;bool&quot;, AcceptsValue = false, HelpText = &quot;Some boolean switch&quot;)]
-	public bool BooleanSwitch { get; set; }
-
-	[Option('i', &quot;int&quot;, HelpText = &quot;Some integer switch&quot;)]
-	public int IntegerSwitch { get; set; }
-
-	[Option('s', &quot;string&quot;, HelpText = &quot;Some string switch&quot;)]
-	public string StringSwitch { get; set; }
-}
-</code></pre>
-<p>Then use this code:</p>
-<pre><code>// Environment.CommandLine also contains current application path, it is removed with this extension method
-var commandLine = Environment.CommandLine.GetCommandLine(true);
-var context = new MyContext();
-
-var validationContext = commandLineParser.Parse(commandLine, context);
-if (validationContext.HasErrors)
-{
-	// something bad happened
-	return;
-}
-
-if (context.IsHelp)
-{
-	// Use the IHelpWriterService to output the help
-	var helpContent = helpWriterService.ConvertToString(context);
-	// TODO: write to console or show as a message box
-	return;
-}
-
-// Handle the context here
-</code></pre>
-<p>This will successfully parse a command line like this:</p>
-<pre><code>myapp.exe somefile /b -string somestring /i 42
-</code></pre>
-<h2 id="allowed-switches">Allowed switches</h2>
-<p>The library supports 2 types of switches, / and -. For example:</p>
+<p>This library provides a framework for UI automation testing of WPF applications. It is built on top of the Windows UI Automation infrastructure and provides a higher-level abstraction for writing automated UI tests.</p>
+<h2 id="key-features">Key features</h2>
 <ul>
-<li>-b</li>
-<li>-string</li>
-<li>/b</li>
-<li>/string</li>
+<li><strong>AutomationControls</strong> — strongly-typed wrappers around UI Automation elements that map to WPF controls</li>
+<li><strong>AutomationMethods</strong> — a mechanism for invoking methods on the application under test from the test process</li>
+<li><strong>InputSimulation</strong> — keyboard and mouse input simulation helpers</li>
+<li><strong>Recording</strong> — record and replay user interactions for creating automation scripts</li>
+<li><strong>ScenarioManagement</strong> — organize and run automation test scenarios</li>
 </ul>
-<p>An option definition has a short and long name. Both can be used as a switch.</p>
-<h2 id="accepts-value">Accepts value</h2>
-<p>The <code>AcceptsValue</code> property should only be used on boolean properties. When they are specified, they are assumed to be <code>true</code> (defaulting to <code>false</code>).</p>
-<h2 id="processing-raw-values">Processing raw values</h2>
-<p>It's possible to retrieve all key/value pairs passed in the command line, even when switches are not specified upfront. This is extremely useful
-in scenarios where the command line is used to override dynamic properties.</p>
-<pre><code>var rawValues = context.RawValues;
-myValue = rawValues[&quot;someswitch&quot;];
+<h2 id="getting-started">Getting started</h2>
+<p>Reference the <code>Orc.Automation</code> NuGet package from your test project.</p>
+<h3 id="launching-an-application">Launching an application</h3>
+<p>Use <code>AutomationHost</code> to launch the target application process and connect to it:</p>
+<pre><code class="lang-csharp">var app = AutomationHost.Launch(&quot;MyApp.exe&quot;);
 </code></pre>
-<p>The <code>RawValues</code> dictionary is case-insensitive.</p>
+<h3 id="accessing-controls">Accessing controls</h3>
+<p>AutomationControls are discovered by automation ID or control type:</p>
+<pre><code class="lang-csharp">var window = app.MainWindow;
+var button = window.Find&lt;ButtonAutomationControl&gt;(&quot;myButton&quot;);
+button.Click();
+</code></pre>
+<h3 id="invoking-automation-methods">Invoking automation methods</h3>
+<p>Automation methods are defined in the application under test and can be invoked remotely from tests:</p>
+<pre><code class="lang-csharp">var result = app.Invoke&lt;MyResult&gt;(&quot;MyMethod&quot;, parameter);
+</code></pre>
+<h2 id="automationcontrols">AutomationControls</h2>
+<p>AutomationControls are strongly-typed wrappers around Windows UI Automation elements. They map to WPF controls and provide a convenient API for interacting with them in tests. All AutomationControls derive from <code>AutomationControlBase</code>.</p>
+<p>Common built-in AutomationControls include:</p>
+<ul>
+<li><code>ButtonAutomationControl</code></li>
+<li><code>TextBoxAutomationControl</code></li>
+<li><code>CheckBoxAutomationControl</code></li>
+<li><code>ComboBoxAutomationControl</code></li>
+</ul>
+<h2 id="inputsimulation">InputSimulation</h2>
+<p>The <code>MouseHelper</code> and <code>KeyboardHelper</code> classes provide methods for simulating mouse and keyboard input in the application under test:</p>
+<pre><code class="lang-csharp">MouseHelper.Click(element);
+KeyboardHelper.PressKey(Key.Enter);
+</code></pre>
+<h2 id="test-scenarios">Test scenarios</h2>
+<p>Automation tests can be organized into scenarios by implementing the <code>IAutomationTestScenario</code> interface. Each scenario defines a set of steps that are executed in sequence:</p>
+<pre><code class="lang-csharp">public class MyTestScenario : AutomationTestScenarioBase
+{
+    public override async Task RunAsync(IAutomationHost host)
+    {
+        var window = host.MainWindow;
+        var button = window.Find&lt;ButtonAutomationControl&gt;(&quot;myButton&quot;);
+        button.Click();
+    }
+}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.commandline/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.automation/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

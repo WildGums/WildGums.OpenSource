@@ -114,7 +114,7 @@
 </tr>
 </tbody>
 </table>
-<p>Small super cool library of extensions and helper methods for the <a href="http://joshclose.github.io/CsvHelper">CsvHelper</a> library.</p>
+<p>A lightweight library of extensions and helper methods for the <a href="http://joshclose.github.io/CsvHelper">CsvHelper</a> library.</p>
 <ul>
 <li>Static methods are provided to read or write to a csv file with one line of code.</li>
 <li>Sensible configuration options are provided out of the box (but can be overwritten if needed).</li>
@@ -125,7 +125,7 @@
 <ul>
 <li><code>Code generation</code> =&gt; Use static class <code>CodeGeneration</code> for generating C# POCO classes and their associated maps.</li>
 </ul>
-<pre><code>/// &lt;summary&gt;
+<pre><code class="lang-csharp">/// &lt;summary&gt;
 /// Create CSharp files to consume CSV files.
 /// A standard POCO cs file as well as the CsvHelper Mapping cs file will be created.
 /// All properties in the POCO will be of type string. So please update accordingly.
@@ -147,27 +147,27 @@ public static class CodeGeneration
 <ul>
 <li><code>CsvReader helper</code> =&gt; Use static class <code>CsvReaderHelper</code> for reading csv files with a single line of code.</li>
 </ul>
-<pre><code>public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, Action&lt;T&gt; initializer = null, Type mapType = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+<pre><code class="lang-csharp">public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, Action&lt;T&gt; initializer = null, Type mapType = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 
 or
 
 public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, CsvClassMap map, Action&lt;T&gt; initializer = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 </code></pre>
 <p>Example:</p>
-<pre><code>var records = CsvWriterHelper.ReadCsv&lt;MyClass&gt;(scvFilePath, MyClassMap);
+<pre><code class="lang-csharp">var records = CsvWriterHelper.ReadCsv&lt;MyClass&gt;(scvFilePath, MyClassMap);
 </code></pre>
 <ul>
 <li><code>CsvWriter helper</code> =&gt; Use static class <code>CsvWriterHelper</code> for writing records into a csv file.</li>
 </ul>
-<pre><code>public static void WriteCsv&lt;TRecord, TMap&gt;(IEnumerable&lt;TRecord&gt; records, string csvFilePath, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+<pre><code class="lang-csharp">public static void WriteCsv&lt;TRecord, TMap&gt;(IEnumerable&lt;TRecord&gt; records, string csvFilePath, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 </code></pre>
 <ul>
 <li><code>CsvExtensions</code> =&gt; for writing object collections into a csv file using the <code>ToCsv()</code> method.</li>
 </ul>
-<pre><code>public static void ToCsv&lt;TRecord&gt;(this IEnumerable&lt;TRecord&gt; records, string csvFilePath, Type csvMap = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
+<pre><code class="lang-csharp">public static void ToCsv&lt;TRecord&gt;(this IEnumerable&lt;TRecord&gt; records, string csvFilePath, Type csvMap = null, CsvConfiguration csvConfiguration = null, bool throwOnError = false)
 </code></pre>
 <p>Example:</p>
-<pre><code>records.ToCsv&lt;MyClass&gt;(csvFilePath, typeof(MyClassMap));
+<pre><code class="lang-csharp">records.ToCsv&lt;MyClass&gt;(csvFilePath, typeof(MyClassMap));
 </code></pre>
 <h2 id="converters">Converters</h2>
 <ul>
@@ -176,7 +176,7 @@ public static IEnumerable&lt;T&gt; ReadCsv&lt;T&gt;(string csvFilePath, CsvClass
 <li><code>YesNoToBooleanConverter</code> - converts &quot;yes&quot; and &quot;no&quot; strings to true and false values correspondingly</li>
 <li><code>TypeConverter</code> - generic type converter which in some cases is more fluent than the default one</li>
 </ul>
-<pre><code>public class EmployeeMap : CsvClassMap&lt;Employee&gt;
+<pre><code class="lang-csharp">public class EmployeeMap : CsvClassMap&lt;Employee&gt;
 {
     public EmployeeMap()
     {

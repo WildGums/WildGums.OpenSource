@@ -179,7 +179,7 @@ public partial class Person : ModelBase
 </code></pre>
 <h2 id="repositories">Repositories</h2>
 <h3 id="creating-repositories">Creating repositories</h3>
-<p>Once the DAL is correctly set up, it's time to create the repositories. Creating repositories with Catel is super easy. Just create (or generate with T4) a class and interface for each entity:</p>
+<p>Once the DAL is correctly set up, it's time to create the repositories. Creating repositories with Catel is straightforward. Create (or generate with T4) a class and interface for each entity:</p>
 <pre><code>public class FamilyRepository : EntityRepositoryBase&lt;family, int&gt;, IFamilyRepository
 {
 	public FamilyRepository(DbContext dbContext) 

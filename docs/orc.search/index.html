@@ -134,7 +134,7 @@
 <ol>
 <li>Create a POCO class to use in your search and decorate the properties with <code>SearchablePropertyAttribute</code></li>
 </ol>
-<pre><code>public class Person
+<pre><code class="lang-csharp">public class Person
 {
 	[SearchableProperty(SearchName = &quot;firstname&quot;)]
 	public string FirstName { get; set; }
@@ -148,7 +148,7 @@
 <ol start="2">
 <li>Fill the <code>ISearchService</code> with the appropriate &quot;Person&quot; data using the <code>AddObjects()</code> method. The objects must be wrapped inside an <code>ISearchable</code> implementation, for example the <code>ReflectionSearchable</code>:</li>
 </ol>
-<pre><code>searchService.AddObjects(persons.Select(x =&gt; new ReflectionSearchable(x));
+<pre><code class="lang-csharp">searchService.AddObjects(persons.Select(x =&gt; new ReflectionSearchable(x));
 </code></pre>
 <ul>
 <li>Use the <code>Search()</code> method for getting search results. Use the <code>string filter</code> as an argument. Note that you will receive the <code>ISearchable</code> instances that have a hit. This means you can still retrieve the metadata after a search has been completed.</li>

@@ -115,6 +115,33 @@
 </tbody>
 </table>
 <p>Extends the functionality of <a href="http://www.oxyplot.org/">OxyPlot</a>.</p>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li>Integrates OxyPlot with the WildGums theming system, so plots automatically match the application's accent color and light/dark theme</li>
+<li>Provides helper extensions to make it easier to create and configure OxyPlot models</li>
+<li>Supports automatic theme synchronization when the application theme changes at runtime</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>Add the <code>Orc.Plot</code> NuGet package to your project. The library automatically integrates with <code>Orc.Theming</code> when both are present.</p>
+<h3 id="applying-the-theme-to-a-plot-model">Applying the theme to a plot model</h3>
+<pre><code class="lang-csharp">plotModel.ApplyTheme();
+</code></pre>
+<h3 id="listening-for-theme-changes">Listening for theme changes</h3>
+<pre><code class="lang-csharp">public class MyViewModel : ViewModelBase
+{
+    private readonly IThemeManager _themeManager;
+    private readonly PlotModel _plotModel;
+
+    public MyViewModel(IServiceProvider serviceProvider, IThemeManager themeManager)
+        : base(serviceProvider)
+    {
+        _themeManager = themeManager;
+        _plotModel = new PlotModel { Title = &quot;My Chart&quot; };
+
+        _themeManager.ThemeChanged += (s, e) =&gt; _plotModel.ApplyTheme();
+    }
+}
+</code></pre>
 
 </article>
 

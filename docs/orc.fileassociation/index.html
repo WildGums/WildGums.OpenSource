@@ -121,7 +121,7 @@ the file association for the current user.</strong></p>
 <h2 id="application-registration">Application registration</h2>
 <h3 id="registering-an-application">Registering an application</h3>
 <p>It is important to register an application. This way Windows knows that the application supports specific file types. To register an application, use the following code:</p>
-<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+<pre><code class="lang-csharp">var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
 _applicationRegistrationService.RegisterApplication(applicationInfo);
@@ -129,7 +129,7 @@ _applicationRegistrationService.RegisterApplication(applicationInfo);
 <p>When using an assembly for the <code>ApplicationInfo</code>, the library will extract all the relevant information from the assembly directly.</p>
 <h3 id="unregistering-an-application">Unregistering an application</h3>
 <p>When an application is being uninstalled, you need to remove all the required registry entries. This can be done by using the following code:</p>
-<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+<pre><code class="lang-csharp">var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
 _applicationRegistrationService.UnregisterApplication(applicationInfo);
@@ -137,14 +137,14 @@ _applicationRegistrationService.UnregisterApplication(applicationInfo);
 </code></pre>
 <h3 id="updating-a-registered-application">Updating a registered application</h3>
 <p>To always keep the registry up to date, you can call this method at the startup of your app (note that this does <strong>not require elevation or administrator rights</strong>):</p>
-<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+<pre><code class="lang-csharp">var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
 _applicationRegistrationService.UpdateRegistration(applicationInfo);
 </code></pre>
 <h2 id="file-association">File association</h2>
 <p>To allow a user to pick your app as the default one for a file type, you need to use the <code>IFileAssociationService</code> as shown below:</p>
-<pre><code>var assembly = AssemblyHelper.GetEntryAssembly();
+<pre><code class="lang-csharp">var assembly = AssemblyHelper.GetEntryAssembly();
 var applicationInfo = new ApplicationInfo(assembly);
 
 _fileAssociationService.AssociateFilesWithApplication(applicationInfo.Name);

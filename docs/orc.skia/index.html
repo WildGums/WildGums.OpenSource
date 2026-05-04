@@ -115,10 +115,39 @@
 </tbody>
 </table>
 <p>This library provides a XAML canvas for XAML platforms (WPF &amp; UWP) to provide a DPI-aware Skia canvas.</p>
-<div class="WARNING">
-<h5>Warning</h5>
-<p>This documentation needs to be written</p>
-</div>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li>DPI-aware rendering using <a href="https://github.com/mono/SkiaSharp">SkiaSharp</a></li>
+<li>Supports both WPF and UWP platforms</li>
+<li>Provides a <code>SkiaCanvas</code> control that integrates seamlessly with XAML layouts</li>
+<li>Handles HiDPI and multi-monitor scenarios automatically</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>Add the <code>Orc.Skia</code> NuGet package to your project, then add the <code>SkiaCanvas</code> control to your XAML:</p>
+<pre><code class="lang-xml">xmlns:orcskia=&quot;http://schemas.wildgums.com/orc/skia&quot;
+
+&lt;orcskia:SkiaCanvas x:Name=&quot;skiaCanvas&quot; /&gt;
+</code></pre>
+<p>Subscribe to the <code>DrawSurface</code> event to draw on the canvas using SkiaSharp:</p>
+<pre><code class="lang-csharp">skiaCanvas.DrawSurface += OnDrawSurface;
+
+private void OnDrawSurface(object sender, SKPaintSurfaceEventArgs e)
+{
+    var canvas = e.Surface.Canvas;
+    canvas.Clear(SKColors.White);
+
+    using var paint = new SKPaint
+    {
+        Color = SKColors.Blue,
+        IsAntialias = true,
+        StrokeWidth = 2,
+        Style = SKPaintStyle.Stroke
+    };
+
+    canvas.DrawCircle(100, 100, 50, paint);
+}
+</code></pre>
+<p>Call <code>InvalidateVisual()</code> on the canvas to trigger a redraw when your data changes.</p>
 
 </article>
 

@@ -137,7 +137,7 @@
 <li><code>EmptyWorkspaceInitializer</code> =&gt; initializes nothing, this is the default</li>
 </ul>
 <p>To create a custom workspace initializer, see the example below:</p>
-<pre><code>public class WorkspaceInitializer : IWorkspaceInitializer
+<pre><code class="lang-csharp">public class WorkspaceInitializer : IWorkspaceInitializer
 {
 	public Task InitializeAsync(IWorkspace workspace)
 	{
@@ -148,30 +148,30 @@
 }
 </code></pre>
 <p>Next it can be registered in the <code>ServiceLocator</code> (so it will automatically be injected into the <code>WorkspaceManager</code>):</p>
-<pre><code>ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
+<pre><code class="lang-csharp">ServiceLocator.Default.RegisterType&lt;IWorkspaceInitializer, MyWorkspaceInitializer&gt;();
 </code></pre>
 <p><strong>Make sure to register the service before instantiating the <em>IWorkspaceManager</em> because it will be injected</strong></p>
 <h1 id="initializing-the-workspace-manager">Initializing the workspace manager</h1>
 <p>Because the workspace manager is using async, the initialization is a separate method. This gives the developer the option to load the workspaces whenever it is required. To read the stored workspaces from disk, use the code below:</p>
-<pre><code>await workspaceManager.InitializeAsync(); 
+<pre><code class="lang-csharp">await workspaceManager.InitializeAsync(); 
 </code></pre>
 <h1 id="retrieving-a-list-of-all-workspaces">Retrieving a list of all workspaces</h1>
-<pre><code>var workspaces = workspaceManager.Workspaces;
+<pre><code class="lang-csharp">var workspaces = workspaceManager.Workspaces;
 </code></pre>
 <h1 id="retrieving-the-current-workspace">Retrieving the current workspace</h1>
 <p>The library contains extension methods for the <code>IWorkspaceManager</code> to retrieve a typed instance:</p>
-<pre><code>var myWorkspace = workspaceManager.Workspace;
+<pre><code class="lang-csharp">var myWorkspace = workspaceManager.Workspace;
 </code></pre>
 <p>To customize the location where the workspaces are stored, use the <code>BaseDirectory</code> property.</p>
 <h1 id="storing-information-in-a-workspace">Storing information in a workspace</h1>
 <p>Storing information in a workspace is the responsibility of every single component in the application. The <code>IWorkspaceManager</code> will raise the <code>WorkspaceInfoRequested</code> event so every component can put in the required information into the workspace.</p>
 <p>To store information in a workspace, set the workspace to be updated as current workspace. Then let the user (or software) customize all components. Call the following method to raise the <code>WorkspaceInfoRequested</code> event to update the workspace:</p>
-<pre><code>await workspaceManager.StoreWorkspaceAsync();
+<pre><code class="lang-csharp">await workspaceManager.StoreWorkspaceAsync();
 </code></pre>
 <p><strong>Note that a workspace is only updated, not saved to disk by this method</strong></p>
 <h2 id="providers">Providers</h2>
 <p>Create a provider as shown in the example below:</p>
-<pre><code>public class RibbonWorkspaceProvider : IWorkspaceProvider
+<pre><code class="lang-csharp">public class RibbonWorkspaceProvider : IWorkspaceProvider
 {
 	private readonly Ribbon _ribbon;
 
@@ -195,21 +195,29 @@
 	}
 }
 </code></pre>
-<p>Then add it to the provider where the ribbon is available:</p>
-<pre><code>public RibbonView()
+<p>Then add it to the provider where the ribbon is available. Use constructor injection to receive <code>IWorkspaceManager</code>:</p>
+<pre><code class="lang-csharp">public class RibbonView
 {
-	InitializeComponent();
+    private readonly IWorkspaceManager _workspaceManager;
 
-	var dependencyResolver = this.GetDependencyResolver();
-	var workspaceManager = dependencyResolver.Resolve&lt;IWorkspaceManager&gt;();
+    public RibbonView(IWorkspaceManager workspaceManager)
+    {
+        _workspaceManager = workspaceManager;
+    }
 
-	var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
-	workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+    public void InitializeRibbon(RibbonControl ribbon)
+    {
+        var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
+        _workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+    }
 }
-</code></pre>
-<h2 id="events">Events</h2>
-<p>Using events is a bit more work, but can accomplish the same:</p>
-<pre><code>public MyComponent(IWorkspaceManager workspaceManager)
+
+## Events
+
+Using events is a bit more work, but can accomplish the same:
+
+```csharp
+public MyComponent(IWorkspaceManager workspaceManager)
 {
 	workspaceManager.WorkspaceInfoRequested += OnWorkspaceInfoRequested;
 }
@@ -224,7 +232,7 @@ private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
 <p><strong>Note that this will only be called when storing the workspace, restoring the workspace needs more events</strong></p>
 <h1 id="saving-all-workspaces-to-disk">Saving all workspaces to disk</h1>
 <p>To save all workspaces to disk, use the code below:</p>
-<pre><code>workspaceManager.Save();
+<pre><code class="lang-csharp">workspaceManager.Save();
 </code></pre>
 <h1 id="using-the-xaml-behaviors">Using the XAML behaviors</h1>
 <p>For the developers using XAML (WPF), behaviors and extension methods are available in the <code>Orc.WorkspaceManagement.Xaml</code> library.</p>
@@ -232,7 +240,7 @@ private void OnWorkspaceInfoRequested(object sender, WorkspaceEventArgs e)
 <p>Using the extension methods still requires manual work by subscribing to events of both the view and workspace manager, but allow more control.</p>
 <h2 id="using-the-behaviors">Using the behaviors</h2>
 <p>The behavior is a wrapper around the extension methods and take away to need to manage anything. The behavior is aware of all the events and will handle everything accordingly. To use the behavior, use the code below:</p>
-<pre><code>&lt;views:BView Grid.Row=&quot;2&quot; Grid.Column=&quot;4&quot;&gt;
+<pre><code class="lang-xml">&lt;views:BView Grid.Row=&quot;2&quot; Grid.Column=&quot;4&quot;&gt;
 	&lt;i:Interaction.Behaviors&gt;
 		&lt;behaviors:AutoWorkspace /&gt;
 	&lt;/i:Interaction.Behaviors&gt;

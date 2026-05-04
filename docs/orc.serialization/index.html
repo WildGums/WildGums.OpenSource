@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Module Catalogs | WildGums Open Source </title>
+      <title>Orc.Serialization | WildGums Open Source </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Module Catalogs | WildGums Open Source ">
+      <meta name="title" content="Orc.Serialization | WildGums Open Source ">
       
       
-      <link rel="icon" href="../../../images/favicon.png">
-      <link rel="stylesheet" href="../../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../../public/main.css">
-      <meta name="docfx:navrel" content="../../../toc.html">
+      <link rel="icon" href="../../images/favicon.png">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
       <meta name="docfx:tocrel" content="../toc.html">
       
-      <meta name="docfx:rel" content="../../../">
+      <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.prism/module-catalogs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.serialization/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../../public/docfx.min.js"></script>
+      <script type="module" src="./../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../../index.html">
-            <img id="logo" class="svg" src="../../../images/favicon.png" alt="WildGums Open Source">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/favicon.png" alt="WildGums Open Source">
             WildGums Open Source
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,15 +84,89 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="module_catalogs">
+        <article data-uid="orc.serialization">
 
 
-<p>There are several module catalogs available in Orc.Prism.</p>
+<p>Find the source at <a href="https://github.com/WildGums/Orc.Serialization">https://github.com/WildGums/Orc.Serialization</a>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Downloads</td>
+<td><a href="https://www.nuget.org/packages/Orc.Serialization.Json"><img src="https://img.shields.io/nuget/dt/Orc.Serialization.Json.svg" alt="NuGet downloads"></a></td>
+</tr>
+<tr>
+<td>Stable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Serialization.Json"><img src="https://img.shields.io/nuget/v/Orc.Serialization.Json.svg" alt="Stable version"></a></td>
+</tr>
+<tr>
+<td>Unstable version</td>
+<td><a href="https://www.nuget.org/packages/Orc.Serialization.Json"><img src="https://img.shields.io/nuget/vpre/Orc.Serialization.Json.svg" alt="Unstable version"></a></td>
+</tr>
+</tbody>
+</table>
+<p>This library provides serialization support for WildGums applications. It includes packages for JSON serialization (<code>Orc.Serialization.Json</code>) and YAML serialization (<code>Orc.Serialization.Yaml</code>).</p>
+<h2 id="available-packages">Available packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Orc.Serialization.Json</code></td>
+<td>JSON serialization support using System.Text.Json</td>
+</tr>
+<tr>
+<td><code>Orc.Serialization.Yaml</code></td>
+<td>YAML serialization support</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-concepts">Key concepts</h2>
+<p>The library is built around the <code>ISerializer</code> interface, which provides a consistent API for both serializing and deserializing objects. Each package provides a concrete implementation of <code>ISerializer</code> for its respective format.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="json-serialization">JSON serialization</h3>
+<p>Use constructor injection to receive <code>ISerializer</code>:</p>
+<pre><code class="lang-csharp">public class MyService
+{
+    private readonly ISerializer _serializer;
+
+    public MyService(ISerializer serializer)
+    {
+        _serializer = serializer;
+    }
+
+    public string Serialize(MyClass obj) =&gt; _serializer.SerializeToString(obj);
+    public MyClass Deserialize(string json) =&gt; _serializer.Deserialize&lt;MyClass&gt;(json);
+}
+</code></pre>
+<h3 id="yaml-serialization">YAML serialization</h3>
+<pre><code class="lang-csharp">public class MyService
+{
+    private readonly IYamlSerializer _yamlSerializer;
+
+    public MyService(IYamlSerializer yamlSerializer)
+    {
+        _yamlSerializer = yamlSerializer;
+    }
+
+    public string Serialize(MyClass obj) =&gt; _yamlSerializer.SerializeToString(obj);
+    public MyClass Deserialize(string yaml) =&gt; _yamlSerializer.Deserialize&lt;MyClass&gt;(yaml);
+}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.prism/module-catalogs/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/WildGums/WildGums.OpenSource/blob/master/doc/docfx/docs/orc.serialization/index.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

@@ -143,12 +143,12 @@
 <h1 id="iosynchronizationservice">IOSynchronizationService</h1>
 <p>The <code>IOSynchronizerService</code> can take care of synchronized blocks of reading and/or write to a specific directory or file. This provides an easy way to &quot;lock&quot; a directory or file until the director/file has been released. For example, when writing several files that need to lock a directory until all files are written, this class can come in handy. The examples below all use a <code>projectDirectory</code> variable to use as base path. This will also be the path to be locked.</p>
 <h2 id="start-watching-for-changes">Start watching for changes</h2>
-<pre><code>ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
+<pre><code class="lang-csharp">ioSynchronizationService.RefreshRequired += OnIoSynchronizationServiceRefreshRequired;
 await ioSynchronizationService.StartWatchingForChangesAsync(projectDirectory);
 </code></pre>
 <h2 id="writing-files">Writing files</h2>
 <p>The writing of the files can happen in a completely different app, the services will take care of the synchronization automatically. To write files, use the following code:</p>
-<pre><code>var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
+<pre><code class="lang-csharp">var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
 var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
 
 await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x =&gt; 
@@ -161,7 +161,7 @@ await ioSynchronizationService.ExecuteWritingAsync(projectDirectory, async x =&g
 </code></pre>
 <h2 id="reading-files">Reading files</h2>
 <p>To read files, use the following code:</p>
-<pre><code>var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
+<pre><code class="lang-csharp">var file1 = Path.Combine(projectDirectory, &quot;file1.txt&quot;);
 var file2 = Path.Combine(projectDirectory, &quot;file2.txt&quot;);
 
 var file1Contents = string.Empty;

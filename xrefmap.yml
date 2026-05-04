@@ -13,9 +13,6 @@ references:
 - uid: colorpicker
   name: ColorPicker
   href: docs/orc.controls/colorpicker/index.html
-- uid: compositemodulecatalog
-  name: CompositeModuleCatalog
-  href: docs/orc.prism/module-catalogs/compositemodulecatalog.html
 - uid: connectionstringbuilder
   name: ConnectionStringBuilder
   href: docs/orc.controls/connectionstringbuilder/index.html
@@ -34,15 +31,9 @@ references:
 - uid: dbproviderpicker
   name: DbProviderPicker
   href: docs/orc.controls/dbproviderpicker/index.html
-- uid: declaring_modules
-  name: Declaring modules
-  href: docs/orc.prism/declaring-modules.html
 - uid: directorypicker
   name: DirectoryPicker
   href: docs/orc.controls/directorypicker/index.html
-- uid: downloadingmodulecatalog
-  name: DownloadingModuleCatalog
-  href: docs/orc.prism/module-catalogs/downloadingmodulecatalog.html
 - uid: dropdownbutton
   name: DropDownButton
   href: docs/orc.controls/dropdownbutton/index.html
@@ -70,27 +61,21 @@ references:
 - uid: logviewer
   name: LogViewer
   href: docs/orc.controls/logviewer/index.html
-- uid: module_catalogs
-  name: Module Catalogs
-  href: docs/orc.prism/module-catalogs/index.html
-- uid: nugetbasedmodulecatalog
-  name: NuGetBasedModuleCatalog
-  href: docs/orc.prism/module-catalogs/nugetbasedmodulecatalog.html
 - uid: numerictextbox
   name: NumericTextBox
   href: docs/orc.controls/numerictextbox/index.html
 - uid: openfilepicker
   name: OpenFilePicker
   href: docs/orc.controls/openfilepicker/index.html
-- uid: orc.analytics
-  name: Orc.Analytics
-  href: docs/orc.analytics/index.html
 - uid: orc.automaticsupport
   name: Orc.AutomaticSupport
   href: docs/orc.automaticsupport/index.html
-- uid: orc.commandline
-  name: Orc.CommandLine
-  href: docs/orc.commandline/index.html
+- uid: orc.automation
+  name: Orc.Automation
+  href: docs/orc.automation/index.html
+- uid: orc.calendar
+  name: Orc.Calendar
+  href: docs/orc.calendar/index.html
 - uid: orc.controls
   name: Orc.Controls
   href: docs/orc.controls/index.html
@@ -100,6 +85,9 @@ references:
 - uid: orc.csvtexteditor
   name: Orc.CsvTextEditor
   href: docs/orc.csvtexteditor/index.html
+- uid: orc.dataaccess
+  name: Orc.DataAccess
+  href: docs/orc.dataaccess/index.html
 - uid: orc.dbtocsv
   name: Orc.DbToCsv
   href: docs/orc.dbtocsv/index.html
@@ -115,6 +103,9 @@ references:
 - uid: orc.extensibility
   name: Orc.Extensibility
   href: docs/orc.extensibility/index.html
+- uid: orc.featuretoggles
+  name: Orc.FeatureToggles
+  href: docs/orc.featuretoggles/index.html
 - uid: orc.feedback
   name: Orc.Feedback
   href: docs/orc.feedback/index.html
@@ -127,9 +118,6 @@ references:
 - uid: orc.filterbuilder
   name: Orc.FilterBuilder
   href: docs/orc.filterbuilder/index.html
-- uid: orc.fluentvalidation
-  name: Orc.FluentValidation
-  href: docs/orc.fluentvalidation/index.html
 - uid: orc.licensemanager
   name: Orc.LicenseManager
   href: docs/orc.licensemanager/index.html
@@ -151,9 +139,6 @@ references:
 - uid: orc.plot
   name: Orc.Plot
   href: docs/orc.plot/index.html
-- uid: orc.prism
-  name: Orc.Prism
-  href: docs/orc.prism/index.html
 - uid: orc.projectmanagement
   name: Orc.ProjectManagement
   href: docs/orc.projectmanagement/index.html
@@ -166,6 +151,9 @@ references:
 - uid: orc.selectionmanagement
   name: Orc.SelectionManagement
   href: docs/orc.selectionmanagement/index.html
+- uid: orc.serialization
+  name: Orc.Serialization
+  href: docs/orc.serialization/index.html
 - uid: orc.skia
   name: Orc.Skia
   href: docs/orc.skia/index.html
@@ -184,6 +172,9 @@ references:
 - uid: orc.systeminfo
   name: Orc.SystemInfo
   href: docs/orc.systeminfo/index.html
+- uid: orc.theming
+  name: Orc.Theming
+  href: docs/orc.theming/index.html
 - uid: orc.wizard
   name: Orc.Wizard
   href: docs/orc.wizard/index.html
@@ -196,9 +187,6 @@ references:
 - uid: pinnabletooltips
   name: PinnableTooltips
   href: docs/orc.controls/pinnabletooltips/index.html
-- uid: safedirectorymodulecatalog
-  name: SafeDirectoryModuleCatalog
-  href: docs/orc.prism/module-catalogs/safedirectorymodulecatalog.html
 - uid: savefilepicker
   name: SaveFilePicker
   href: docs/orc.controls/savefilepicker/index.html
@@ -211,15 +199,9 @@ references:
 - uid: timespanpicker
   name: TimeSpanPicker
   href: docs/orc.controls/timespanpicker/index.html
-- uid: translating_or_customizing
-  name: Translating or customizing
-  href: docs/orc.prism/translating-or-customizing.html
 - uid: using_stored_procedures_and_functions
   name: Using stored procedures and functions
   href: docs/orc.entityframework/using-stored-procedures-and-functions.html
-- uid: using_the_bootstrapper
-  name: Using the bootstrapper
-  href: docs/orc.prism/using-the-bootstrapper.html
 - uid: using_the_dbcontextmanager
   name: Using the DbContextManager
   href: docs/orc.entityframework/using-the-dbcontextmanager.html

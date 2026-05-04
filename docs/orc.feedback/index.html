@@ -116,11 +116,43 @@
 </table>
 <p>Allows the user to easily get feedback from the end-user.</p>
 <h2 id="initializing-the-service">Initializing the service</h2>
-<p>It is very important to initialize the service. It can be done by retrieving it from the service locator and update the required data:</p>
-<pre><code>var dependencyResolver = this.GetDependencyResolver();
-var feedbackService = dependencyResolver.ResolveType&lt;IFeedbackService&gt;();
+<p>It is very important to initialize the service. The recommended approach is to use constructor injection and set the <code>Url</code> property to your feedback page:</p>
+<pre><code class="lang-csharp">public class MyApplicationBootstrapper
+{
+    private readonly IFeedbackService _feedbackService;
 
-feedbackService.SomeProperty = &quot;http://myfeedbackwebsite&quot;;
+    public MyApplicationBootstrapper(IFeedbackService feedbackService)
+    {
+        _feedbackService = feedbackService;
+    }
+
+    public void Initialize()
+    {
+        _feedbackService.Url = &quot;https://mycompany.com/feedback&quot;;
+    }
+}
+</code></pre>
+<h2 id="providing-feedback">Providing feedback</h2>
+<p>Once initialized, feedback can be triggered programmatically:</p>
+<pre><code class="lang-csharp">await _feedbackService.ProvideFeedbackAsync();
+</code></pre>
+<h2 id="showing-the-feedback-window">Showing the feedback window</h2>
+<p>If the <code>Orc.Feedback</code> package includes a UI component, use <code>IUIVisualizerService</code> to show the feedback window:</p>
+<pre><code class="lang-csharp">public class MyViewModel : ViewModelBase
+{
+    private readonly IUIVisualizerService _uiVisualizerService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IUIVisualizerService uiVisualizerService)
+        : base(serviceProvider)
+    {
+        _uiVisualizerService = uiVisualizerService;
+    }
+
+    public async Task ShowFeedbackAsync()
+    {
+        await _uiVisualizerService.ShowDialogAsync&lt;FeedbackViewModel&gt;();
+    }
+}
 </code></pre>
 
 </article>
