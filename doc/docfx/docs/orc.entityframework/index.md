@@ -74,7 +74,7 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 
 ### Creating repositories
 
-Once the DAL is correctly set up, it's time to create the repositories. Creating repositories with Catel is super easy. Just create (or generate with T4) a class and interface for each entity:
+Once the DAL is correctly set up, it's time to create the repositories. Creating repositories with Catel is straightforward. Create (or generate with T4) a class and interface for each entity:
 
 ```
 public class FamilyRepository : EntityRepositoryBase<family, int>, IFamilyRepository

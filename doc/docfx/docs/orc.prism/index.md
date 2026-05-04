@@ -38,9 +38,9 @@ Then call the following code after creating the main window:
 PrismHelper.InitializeMainWindow();
 ```
 
-The latest version of the guidance, Prism, includes a feature named "User Interface Composition". Basically it allows build a mosaic like application by loading multiple views that comes from different modules into an active regions exposed by a control, also know as the shell.
+The latest version of the guidance, Prism, includes a feature named "User Interface Composition". It allows building a mosaic-like application by loading multiple views that come from different modules into active regions exposed by a control, also known as the shell.
 
-But all this is about view models. Therefore, the Catel team decide to introduce an extension that implements a good starting point in order create a composite user interface without actually referencing any view. At this point, you must have heared about of the *UIVisualizerService*, and the way it can resolve a view from an instance of a view model. So, we are please to introduce you the *UICompositionService*.
+But all this is about view models. Therefore, the Catel team decided to introduce an extension that implements a good starting point in order to create a composite user interface without actually referencing any view. At this point, you must have heard about the *UIVisualizerService*, and the way it can resolve a view from an instance of a view model. So, we are pleased to introduce the *UICompositionService*.
 
 ## Making the region manager available
 

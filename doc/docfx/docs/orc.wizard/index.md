@@ -19,12 +19,12 @@ Easily create beautifully looking wizards for WPF using MVVM.
 
 # Quick introduction
 
-A wizard is a great way to guide users through a process. Every wizard should behave the same, but there is no great out-of-the-box experience in WPF. The wizard included in this library has a few nice features:
+A wizard is an effective way to guide users through a process. Every wizard should behave the same, but there is no out-of-the-box experience in WPF. The wizard included in this library has a few notable features:
 
 1. Automatic page management (with everything you expect from next / previous / finish, etc)
 2. Automatic (but optional) summary page that gathers all the information from each page to summarize what has been selected inside the wizard
 3. Optional pages that allow users to skip to a next page. It is also possible to enforce validation on a wizard page.
-4. Nice looking wizard header that is generated automatically based on the accent color  
+4. Visually styled wizard header that is generated automatically based on the accent color  
 
 In summary, this library allows you to focus on the actual wizard content (the pages), not the wizard itself which is fully taken care of for you.
 
@@ -178,4 +178,4 @@ If this causes a `TypeNotRegisteredException` to be thrown in your project, then
 
 Background information: The reason for the `TypeNotRegisteredException` probably is that you are only using interfaces from this component or Catel.MVVM at this stage. For the .NET runtime, using an interface is not sufficient to load an assembly (such as this component or any of the Catel libraries) into the AppDomain. This means that the assemblies don't get a chance to register their services into the service locator.
 
-If for some reason you don't want to use Fody, an alternative solution to achieve the same result is to make sure to use at least one type from this component or Catel.MVVM in your code prior to resolving a service from the service locator. You should be aware, though, that other assemblies may need the same pre-loading as Catel.MVVM, so an automated solution that uses Fody is really the best approach.
+If for some reason you don't want to use Fody, an alternative solution to achieve the same result is to make sure to use at least one type from this component or Catel.MVVM in your code prior to resolving a service from the service locator. You should be aware, though, that other assemblies may need the same pre-loading as Catel.MVVM, so an automated solution that uses Fody is the recommended approach.
