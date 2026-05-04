@@ -14,11 +14,9 @@ The libraries are actively maintained and developed (new pre-releases on a daily
 
 The following platforms are supported:
 
-- .NET 4.6
-- .NET 4.7
-- .NET Core 3.1
-
-We are planning to support .NET 5 later in 2020.
+- .NET 8
+- .NET 9
+- .NET 10
 
 ## Vision
 
