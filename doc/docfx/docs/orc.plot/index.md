@@ -28,15 +28,23 @@ Add the `Orc.Plot` NuGet package to your project. The library automatically inte
 ### Applying the theme to a plot model
 
 ```csharp
-var plotModel = new PlotModel { Title = "My Chart" };
-
-// Apply the current application theme to the plot model
 plotModel.ApplyTheme();
 ```
 
 ### Listening for theme changes
 
 ```csharp
-var themeManager = dependencyResolver.ResolveType<IThemeManager>();
-themeManager.ThemeChanged += (s, e) => plotModel.ApplyTheme();
-```
+public class MyViewModel : ViewModelBase
+{
+    private readonly IThemeManager _themeManager;
+    private readonly PlotModel _plotModel;
+
+    public MyViewModel(IServiceProvider serviceProvider, IThemeManager themeManager)
+        : base(serviceProvider)
+    {
+        _themeManager = themeManager;
+        _plotModel = new PlotModel { Title = "My Chart" };
+
+        _themeManager.ThemeChanged += (s, e) => _plotModel.ApplyTheme();
+    }
+}

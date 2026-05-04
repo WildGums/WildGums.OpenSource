@@ -30,16 +30,35 @@ The library is built around the `ISerializer` interface, which provides a consis
 
 ### JSON serialization
 
+Use constructor injection to receive `ISerializer`:
+
 ```csharp
-var serializer = dependencyResolver.ResolveType<ISerializer>();
-var json = serializer.SerializeToString(myObject);
-var myObject = serializer.Deserialize<MyClass>(json);
+public class MyService
+{
+    private readonly ISerializer _serializer;
+
+    public MyService(ISerializer serializer)
+    {
+        _serializer = serializer;
+    }
+
+    public string Serialize(MyClass obj) => _serializer.SerializeToString(obj);
+    public MyClass Deserialize(string json) => _serializer.Deserialize<MyClass>(json);
+}
 ```
 
 ### YAML serialization
 
 ```csharp
-var serializer = dependencyResolver.ResolveType<IYamlSerializer>();
-var yaml = serializer.SerializeToString(myObject);
-var myObject = serializer.Deserialize<MyClass>(yaml);
-```
+public class MyService
+{
+    private readonly IYamlSerializer _yamlSerializer;
+
+    public MyService(IYamlSerializer yamlSerializer)
+    {
+        _yamlSerializer = yamlSerializer;
+    }
+
+    public string Serialize(MyClass obj) => _yamlSerializer.SerializeToString(obj);
+    public MyClass Deserialize(string yaml) => _yamlSerializer.Deserialize<MyClass>(yaml);
+}

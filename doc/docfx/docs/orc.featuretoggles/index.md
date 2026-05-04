@@ -35,13 +35,24 @@ public static class Features
 ### Checking a feature toggle
 
 ```csharp
-var featureToggleService = dependencyResolver.ResolveType<IFeatureToggleService>();
-
-if (featureToggleService.IsEnabled(Features.NewDashboard))
+public class MyViewModel : ViewModelBase
 {
-    // show the new dashboard
+    private readonly IFeatureToggleService _featureToggleService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IFeatureToggleService featureToggleService)
+        : base(serviceProvider)
+    {
+        _featureToggleService = featureToggleService;
+    }
+
+    private void ShowDashboard()
+    {
+        if (_featureToggleService.IsEnabled(Features.NewDashboard))
+        {
+            // show the new dashboard
+        }
+    }
 }
-```
 
 ### Enabling or disabling a feature toggle
 
@@ -56,12 +67,28 @@ The `Orc.FeatureToggles.Xaml` package provides a built-in UI for managing featur
 
 ### Showing the feature toggles window
 
-Use the `IUIVisualizerService` to show the built-in feature toggles management window:
+Use constructor injection to get `IUIVisualizerService` and call it to show the built-in feature toggles management window:
 
 ```csharp
-var uiVisualizerService = dependencyResolver.ResolveType<IUIVisualizerService>();
-await uiVisualizerService.ShowDialogAsync<FeatureTogglesViewModel>();
-```
+public class RibbonViewModel : ViewModelBase
+{
+    private readonly IUIVisualizerService _uiVisualizerService;
+
+    public RibbonViewModel(IServiceProvider serviceProvider, IUIVisualizerService uiVisualizerService)
+        : base(serviceProvider)
+    {
+        _uiVisualizerService = uiVisualizerService;
+
+        ManageFeatureToggles = new TaskCommand(serviceProvider, OnManageFeatureTogglesExecuteAsync);
+    }
+
+    public TaskCommand ManageFeatureToggles { get; }
+
+    private async Task OnManageFeatureTogglesExecuteAsync()
+    {
+        await _uiVisualizerService.ShowDialogAsync<ManageFeatureTogglesViewModel>();
+    }
+}
 
 ### Using the FeatureToggleVisibilityConverter
 

@@ -24,7 +24,7 @@ Run the demo project to see the controls in action:
 Add the `Orc.Controls` NuGet package to your project, then add the XML namespace declaration to your XAML:
 
 ```xml
-xmlns:orc="http://www.wildgums.net.au/orc"
+xmlns:orccontrols="http://schemas.wildgums.com/orc/controls"
 ```
 
 ## Available controls
@@ -39,7 +39,7 @@ The library includes a wide range of controls. Each control has its own document
 - **FilterBox** — a text box with built-in clear button for filtering collections
 - **FontImage** — renders icon fonts (e.g., FontAwesome) as images
 - **LinkLabel** — a label that acts as a hyperlink
-- **LogViewer** — embeds the log viewer from [Orc.LogViewer](https://github.com/WildGums/Orc.LogViewer)
+- **LogViewer** — a lightweight log viewer control (extended by [Orc.LogViewer](https://github.com/WildGums/Orc.LogViewer))
 - **NumericTextBox** — a text box that only accepts numeric input
 - **OpenFileButton** / **SaveFileButton** — buttons that open file dialogs
 - **PinnableToolTip** — a tooltip that can be pinned to stay open

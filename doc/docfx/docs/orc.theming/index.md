@@ -36,16 +36,41 @@ serviceLocator.RegisterType<IAccentColorService, AccentColorService>();
 ### Applying a theme
 
 ```csharp
-var themeManager = dependencyResolver.ResolveType<IThemeManager>();
-themeManager.SynchronizeTheme();
+public class MyViewModel : ViewModelBase
+{
+    private readonly IThemeManager _themeManager;
+
+    public MyViewModel(IServiceProvider serviceProvider, IThemeManager themeManager)
+        : base(serviceProvider)
+    {
+        _themeManager = themeManager;
+    }
+
+    public void SynchronizeTheme()
+    {
+        _themeManager.SynchronizeTheme();
+    }
+}
 ```
 
 ### Changing the accent color
 
 ```csharp
-var accentColorService = dependencyResolver.ResolveType<IAccentColorService>();
-accentColorService.SetAccentColor(Colors.Blue);
-```
+public class MyViewModel : ViewModelBase
+{
+    private readonly IAccentColorService _accentColorService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IAccentColorService accentColorService)
+        : base(serviceProvider)
+    {
+        _accentColorService = accentColorService;
+    }
+
+    public void SetBlueAccent()
+    {
+        _accentColorService.SetAccentColor(Colors.Blue);
+    }
+}
 
 ## NuGet packages
 

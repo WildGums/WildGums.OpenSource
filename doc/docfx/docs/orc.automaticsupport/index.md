@@ -17,14 +17,23 @@ Allows the user to easily download a remote file that will validate and provide 
 
 ## Initializing the service
 
-It is very important to initialize the service. It can be done by retrieving it from the service locator and update the support url:
+It is very important to initialize the service. Use constructor injection to receive `IAutomaticSupportService` and set the support URL:
 
 ```csharp
-var dependencyResolver = this.GetDependencyResolver();
-var automaticSupportService = dependencyResolver.ResolveType<IAutomaticSupportService>();
+public class MyApplicationBootstrapper
+{
+    private readonly IAutomaticSupportService _automaticSupportService;
 
-automaticSupportService.SupportUrl = "http://mywebsite/support/supportapp.exe";
-```
+    public MyApplicationBootstrapper(IAutomaticSupportService automaticSupportService)
+    {
+        _automaticSupportService = automaticSupportService;
+    }
+
+    public void Initialize()
+    {
+        _automaticSupportService.SupportUrl = "http://mywebsite/support/supportapp.exe";
+    }
+}
 
 ## Automatic support support with UI
 

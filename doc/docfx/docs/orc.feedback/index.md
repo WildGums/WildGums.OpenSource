@@ -17,20 +17,50 @@ Allows the user to easily get feedback from the end-user.
 
 ## Initializing the service
 
-It is very important to initialize the service. It can be done by retrieving it from the service locator and update the required data:
+It is very important to initialize the service. The recommended approach is to use constructor injection and set the `Url` property to your feedback page:
 
 ```csharp
-var dependencyResolver = this.GetDependencyResolver();
-var feedbackService = dependencyResolver.ResolveType<IFeedbackService>();
+public class MyApplicationBootstrapper
+{
+    private readonly IFeedbackService _feedbackService;
 
-feedbackService.Email = "support@mycompany.com";
+    public MyApplicationBootstrapper(IFeedbackService feedbackService)
+    {
+        _feedbackService = feedbackService;
+    }
+
+    public void Initialize()
+    {
+        _feedbackService.Url = "https://mycompany.com/feedback";
+    }
+}
+```
+
+## Providing feedback
+
+Once initialized, feedback can be triggered programmatically:
+
+```csharp
+await _feedbackService.ProvideFeedbackAsync();
 ```
 
 ## Showing the feedback window
 
-Once initialized, show the feedback window to the user using the `IUIVisualizerService`:
+If the `Orc.Feedback` package includes a UI component, use `IUIVisualizerService` to show the feedback window:
 
 ```csharp
-var uiVisualizerService = dependencyResolver.ResolveType<IUIVisualizerService>();
-await uiVisualizerService.ShowDialogAsync<FeedbackViewModel>();
-```
+public class MyViewModel : ViewModelBase
+{
+    private readonly IUIVisualizerService _uiVisualizerService;
+
+    public MyViewModel(IServiceProvider serviceProvider, IUIVisualizerService uiVisualizerService)
+        : base(serviceProvider)
+    {
+        _uiVisualizerService = uiVisualizerService;
+    }
+
+    public async Task ShowFeedbackAsync()
+    {
+        await _uiVisualizerService.ShowDialogAsync<FeedbackViewModel>();
+    }
+}

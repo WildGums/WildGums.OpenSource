@@ -130,20 +130,24 @@ public class RibbonWorkspaceProvider : IWorkspaceProvider
 }
 ```
 
-Then add it to the provider where the ribbon is available:
+Then add it to the provider where the ribbon is available. Use constructor injection to receive `IWorkspaceManager`:
 
 ```csharp
-public RibbonView()
+public class RibbonView
 {
-	InitializeComponent();
+    private readonly IWorkspaceManager _workspaceManager;
 
-	var dependencyResolver = this.GetDependencyResolver();
-	var workspaceManager = dependencyResolver.Resolve<IWorkspaceManager>();
+    public RibbonView(IWorkspaceManager workspaceManager)
+    {
+        _workspaceManager = workspaceManager;
+    }
 
-	var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
-	workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+    public void InitializeRibbon(RibbonControl ribbon)
+    {
+        var ribbonWorkspaceProvider = new RibbonWorkspaceProvider(ribbon);
+        _workspaceManager.AddProvider(ribbonWorkspaceProvider, true);
+    }
 }
-```
 
 ## Events
 

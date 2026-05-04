@@ -21,15 +21,21 @@ Manage selection state inside applications.
 - Support for single and multiple selection modes
 - Events for responding to selection changes
 
-## Getting started
+### Getting started with the selection manager
 
-The main component is the `ISelectionManager`, which provides a centralized way to manage the currently selected items in an application.
-
-### Retrieving the selection manager
+The main component is the `ISelectionManager`, which provides a centralized way to manage the currently selected items in an application. Use constructor injection to receive the service:
 
 ```csharp
-var selectionManager = dependencyResolver.ResolveType<ISelectionManager>();
-```
+public class MyViewModel : ViewModelBase
+{
+    private readonly ISelectionManager _selectionManager;
+
+    public MyViewModel(IServiceProvider serviceProvider, ISelectionManager selectionManager)
+        : base(serviceProvider)
+    {
+        _selectionManager = selectionManager;
+    }
+}
 
 ### Selecting an item
 

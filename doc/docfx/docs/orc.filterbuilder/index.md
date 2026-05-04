@@ -95,10 +95,10 @@ Install-Package  MahApps.Metro.Resources.Standalone
 First, modify the test project (`Orc.FilterBuilder.Test`) by adding the following code to the `MainWindow.xaml` header:
 
 ```xml
-<controls:MetroWindow x:Class="Orc.FilterBuilder.Test.NET40.MainWindow"
+<controls:MetroWindow x:Class="Orc.FilterBuilder.Example.MainWindow"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:net401="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
+		xmlns:filterBuilder="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
 		xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 ```
 
@@ -129,9 +129,9 @@ Also, in the `EditFilterView.xaml` modify the ResourceDictionary section as foll
 
 ```xml
 <ResourceDictionary>
-	<net40:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
+	<filterBuilder:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
 	<BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
-	<net40:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
+	<filterBuilder:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="Resources\Icons.xaml" />
 	</ResourceDictionary.MergedDictionaries>
