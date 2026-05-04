@@ -95,7 +95,7 @@ public class RibbonViewModel : ViewModelBase
 The `Orc.FeatureToggles.Xaml` package also provides a `FeatureToggleVisibilityConverter` that can be used to show or hide UI elements based on feature toggle state:
 
 ```xml
-xmlns:orc="http://www.wildgums.net.au/orc"
+xmlns:orcfeaturetoggles="http://schemas.wildgums.com/orc/featuretoggles"
 
-<Button Visibility="{orc:FeatureToggle FeatureName=NewDashboard}" Content="Open new dashboard" />
+<Button Visibility="{orcfeaturetoggles:FeatureToggle FeatureName=NewDashboard}" Content="Open new dashboard" />
 ```

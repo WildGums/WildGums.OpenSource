@@ -51,13 +51,13 @@ The control includes two Views (`FilterBuilderControl` and `EditFilterView`).
 Prior to using the component add the `FilterBuilder` namespace to your View:
 
 ```xml
-xmlns:orc="http://www.wildgums.net.au/orc"
+xmlns:filterBuilder="http://schemas.wildgums.com/orc/filterbuilder"
 ```
 
 Next include the actual component to your View using the following code:
 
 ```xml
-<orc:FilterBuilderControl 
+<filterBuilder:FilterBuilderControl 
 	RawCollection="{Binding RawItems}"
 	FilteredCollection="{Binding FilteredItems}" />
 ```
