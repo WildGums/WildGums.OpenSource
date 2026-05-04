@@ -51,13 +51,13 @@ The control includes two Views (`FilterBuilderControl` and `EditFilterView`).
 Prior to using the component add the `FilterBuilder` namespace to your View:
 
 ```xml
-xmlns:filterBuilder="http://schemas.wildgums.com/orc/filterbuilder"
+xmlns:orcfilterbuilder="http://schemas.wildgums.com/orc/filterbuilder"
 ```
 
 Next include the actual component to your View using the following code:
 
 ```xml
-<filterBuilder:FilterBuilderControl 
+<orcfilterbuilder:FilterBuilderControl 
 	RawCollection="{Binding RawItems}"
 	FilteredCollection="{Binding FilteredItems}" />
 ```
@@ -98,7 +98,7 @@ First, modify the test project (`Orc.FilterBuilder.Test`) by adding the followin
 <controls:MetroWindow x:Class="Orc.FilterBuilder.Example.MainWindow"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:filterBuilder="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
+		xmlns:orcfilterbuilder="clr-namespace:Orc.FilterBuilder;assembly=Orc.FilterBuilder"
 		xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
 ```
 
@@ -129,9 +129,9 @@ Also, in the `EditFilterView.xaml` modify the ResourceDictionary section as foll
 
 ```xml
 <ResourceDictionary>
-	<filterBuilder:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
+	<orcfilterbuilder:ConditionTreeItemConverter x:Key="ConditionTreeItemConverter" />
 	<BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
-	<filterBuilder:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
+	<orcfilterbuilder:ValueControlTypeVisibilityConverter x:Key="ValueControlTypeVisibilityConverter"/>
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="Resources\Icons.xaml" />
 	</ResourceDictionary.MergedDictionaries>
