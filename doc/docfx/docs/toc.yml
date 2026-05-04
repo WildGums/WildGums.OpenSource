@@ -4,6 +4,10 @@
   href: orchestra/index.md
 - name: Orc.AutomaticSupport
   href: orc.automaticsupport/index.md
+- name: Orc.Automation
+  href: orc.automation/index.md
+- name: Orc.Calendar
+  href: orc.calendar/index.md
 - name: Orc.Controls
   href: orc.controls/index.md
   items:
@@ -67,6 +71,8 @@
   href: orc.csv/index.md
 - name: Orc.CsvTextEditor
   href: orc.csvtexteditor/index.md
+- name: Orc.DataAccess
+  href: orc.dataaccess/index.md
 - name: Orc.DbToCsv
   href: orc.dbtocsv/index.md
 - name: Orc.DependencyGraph
@@ -88,6 +94,8 @@
   href: orc.extensibility/index.md
 - name: Orc.Feedback
   href: orc.feedback/index.md
+- name: Orc.FeatureToggles
+  href: orc.featuretoggles/index.md
 - name: Orc.FileAssociation
   href: orc.fileassociation/index.md
 - name: Orc.FileSystem
@@ -116,6 +124,8 @@
   href: orc.search/index.md
 - name: Orc.SelectionManagement
   href: orc.selectionmanagement/index.md
+- name: Orc.Serialization
+  href: orc.serialization/index.md
 - name: Orc.Skia
   href: orc.skia/index.md
 - name: Orc.Snapshots
@@ -128,6 +138,8 @@
   href: orc.supportpackage/index.md
 - name: Orc.SystemInfo
   href: orc.systeminfo/index.md
+- name: Orc.Theming
+  href: orc.theming/index.md
 - name: Orc.Wizard
   href: orc.wizard/index.md
 - name: Orc.WorkspaceManagement
