@@ -1,42 +1,38 @@
-name: Deploy docfx documentation
-
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
+name: Build and Publish DocFX
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: write      # required to push to gh-pages
+  
+on:
+  # Automatically 
+  push:
+    branches: [ develop ]
+    paths:
+      - 'doc/docfx/**'
+  
+  # Allow to run manually
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@3e891b0cb619bf60e2c25674b222b8940e2c1c25 # v4.1.0
-        with:
-          dotnet-version: '10.x'
+    - name: Install DocFX
+      run: dotnet tool install -g docfx
 
-      - name: Install docfx
-        run: dotnet tool update -g docfx
+    - name: Build documentation
+      working-directory: doc/docfx
+      run: docfx build
+      
+    - name: Add CNAME to output
+      run: cp doc/docfx/CNAME doc/site/CNAME
 
-      - name: Build documentation
-        run: docfx doc/docfx/docfx.json
-
-      - name: Copy CNAME file
-        run: cp doc/docfx/CNAME doc/docfx/_site/CNAME
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d231e62369c1bc400 # v4.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: doc/site
-          publish_branch: gh-pages
-          force_orphan: true
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # 4.0.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: doc/site
+        publish_branch: gh-pages
