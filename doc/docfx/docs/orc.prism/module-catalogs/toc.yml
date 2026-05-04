@@ -1,8 +1,0 @@
-- name: CompositeModuleCatalog
-  href: compositemodulecatalog.md
-- name: DownloadingModuleCatalog
-  href: downloadingmodulecatalog.md
-- name: NuGetBasedModuleCatalog
-  href: nugetbasedmodulecatalog.md
-- name: SafeDirectoryModuleCatalog
-  href: safedirectorymodulecatalog.md

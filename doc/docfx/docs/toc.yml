@@ -2,12 +2,8 @@
   href: index.md
 - name: Orchestra
   href: orchestra/index.md
-- name: Orc.Analytics
-  href: orc.analytics/index.md
 - name: Orc.AutomaticSupport
   href: orc.automaticsupport/index.md
-- name: Orc.CommandLine
-  href: orc.commandline/index.md
 - name: Orc.Controls
   href: orc.controls/index.md
   items:
@@ -98,8 +94,6 @@
   href: orc.filesystem/index.md
 - name: Orc.FilterBuilder
   href: orc.filterbuilder/index.md
-- name: Orc.FluentValidation
-  href: orc.fluentvalidation/index.md
 - name: Orc.LicenseManager
   href: orc.licensemanager/index.md
 - name: Orc.LogViewer
@@ -114,26 +108,6 @@
   href: orc.nugetexplorer/index.md
 - name: Orc.Plot
   href: orc.plot/index.md
-- name: Orc.Prism
-  href: orc.prism/index.md
-  items:
-  - name: Using the bootstrapper
-    href: orc.prism/using-the-bootstrapper.md
-  - name: Declaring modules
-    href: orc.prism/declaring-modules.md
-  - name: Module Catalogs
-    href: orc.prism/module-catalogs/index.md
-    items:
-    - name: CompositeModuleCatalog
-      href: orc.prism/module-catalogs/compositemodulecatalog.md
-    - name: DownloadingModuleCatalog
-      href: orc.prism/module-catalogs/downloadingmodulecatalog.md
-    - name: NuGetBasedModuleCatalog
-      href: orc.prism/module-catalogs/nugetbasedmodulecatalog.md
-    - name: SafeDirectoryModuleCatalog
-      href: orc.prism/module-catalogs/safedirectorymodulecatalog.md
-  - name: Translating or customizing
-    href: orc.prism/translating-or-customizing.md
 - name: Orc.ProjectManagement
   href: orc.projectmanagement/index.md
 - name: Orc.Scheduling
