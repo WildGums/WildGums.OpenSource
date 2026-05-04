@@ -1,0 +1,42 @@
+name: Deploy docfx documentation
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Install docfx
+        run: dotnet tool update -g docfx
+
+      - name: Build documentation
+        run: docfx doc/docfx/docfx.json
+
+      - name: Copy CNAME file
+        run: cp doc/docfx/CNAME doc/docfx/_site/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: doc/docfx/_site
+          publish_branch: gh-pages
+          force_orphan: true
