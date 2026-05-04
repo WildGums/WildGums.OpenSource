@@ -3,7 +3,7 @@ uid: using_the_bootstrapper
 title: Using the bootstrapper
 ---
 
-Orc.Prism offers a basic bootstrapper that uses the `ServiceLocator` as IoC container. This way, it is really simple to create a prism application using Catel and prism.
+Orc.Prism offers a basic bootstrapper that uses the `ServiceLocator` as IoC container. This way, it is straightforward to create a prism application using Catel and prism.
 
 The bootstrapper takes lots of work out of hands, and this way a developer can simply focus on what must be done in the bootstrapper (such as registering the right module catalog).
 
@@ -53,7 +53,7 @@ public class MyApplicationBootstrapper : BootstrapperBase
 
 ## Using the bootstrapper with generic shell definition
 
-Most of the time, the `CreateShell` method simple defines the main window, creates it and returns it. This can be automated using Catel as well by using the generic bootstrapper. This way, the bootstrapper stays really small and can be kept very simple.
+Most of the time, the `CreateShell` method simply defines the main window, creates it and returns it. This can be automated using Catel as well by using the generic bootstrapper. This way, the bootstrapper stays compact and can be kept simple.
 
 ```
 /// <summary>

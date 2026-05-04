@@ -8,7 +8,7 @@ does the counting for you and takes away this pain.
 
 Inherits from [System.Windows.Controls.Grid][1].
 
-The Grid is an excellent control to show several controls in a nice layout on the screen. However, it happens a lot that a grid 
+The Grid is an excellent control to show several controls in an organized layout on the screen. However, it happens a lot that a grid 
 consists of only 2 or 3 columns, and the first column is for all the labels, and the second one is for controls such as textboxes. 
 You correctly implement all the windows and controls of your application based on user requirements, and then the user decides that 
 he/she wants a row inserted into a grid containing about 20 rows. When this happens, you need to re-define all the row attributes 

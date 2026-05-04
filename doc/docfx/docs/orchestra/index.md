@@ -60,7 +60,7 @@ A good working knowledge of Inversion of Control (IoC).
 
 ## Orchestra + module features
 
-We purposely designed Orchestra to be a lightweight shell. However you can 'super charge' it with the following open source libraries:
+We purposely designed Orchestra to be a lightweight shell. However, it can be extended with the following open source libraries:
 (We use all these libraries with Orchestra. In fact they were designed to work seamlessly with Orchestra. Hint: the libraries all start with Orc.*)
 
 - License management ([Orc.LicenseManager](https://github.com/Orcomp/Orc.LicenseManager))

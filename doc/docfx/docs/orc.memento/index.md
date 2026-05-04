@@ -62,7 +62,7 @@ mementoService.BeginBatch("Batch title", "Batch description");
 // All actions added to the memento service are added to the specified batch
 ```
 
-*Note that the Title and Description are optional. They are however a great way to represent the batches in the user interface*
+*Note that the Title and Description are optional. They are however useful for representing the batches in the user interface*
 
 A batch can be ended in several ways:
 

@@ -19,7 +19,7 @@ This library makes it very easy to integration Google Analytics with Catel proje
 
 # Initializing the service
 
-Initializing the service is really easy. It tries to get as much information as possible, but all properties can be changed accordingly. The service is automatically registered in the Catel service locator. 
+Initializing the service is straightforward. It tries to get as much information as possible, but all properties can be changed accordingly. The service is automatically registered in the Catel service locator.
 
 Use the code to initialize the service by letting the service injected into a view model or resolve it manually from the service locator, then call this code:
 

@@ -13,7 +13,7 @@ Find the source at [https://github.com/WildGums/Orc.Csv](https://github.com/Wild
 | Unstable version | [![Unstable version](https://img.shields.io/nuget/vpre/Orc.Csv.svg)](https://www.nuget.org/packages/Orc.Csv) |
 
 
-Small super cool library of extensions and helper methods for the [CsvHelper](http://joshclose.github.io/CsvHelper) library.
+A lightweight library of extensions and helper methods for the [CsvHelper](http://joshclose.github.io/CsvHelper) library.
 
 - Static methods are provided to read or write to a csv file with one line of code.
 - Sensible configuration options are provided out of the box (but can be overwritten if needed).

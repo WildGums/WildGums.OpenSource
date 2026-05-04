@@ -7,8 +7,7 @@ title: WildGums open source center
 
 Welcome to the WildGums open-source center!
 
-Imagine being in a candy shop. Everywhere you look, there is candy you have been looking for! That's what this centre aims to be for WPF developers.
-A list of mature, high-quality, free and open source components. Each library can be used on its own, but were designed to work seamlessly together as well.
+This center provides a curated list of mature, high-quality, free, and open source components for WPF developers. Each library can be used on its own, but all were designed to work seamlessly together as well.
 
 The libraries are actively maintained and developed (new pre-releases on a daily basis, stable versions on a monthly basis).
 
@@ -28,7 +27,7 @@ Once we found the core platform to build our applications on, we were still havi
 but found the support to be slow (or lacking). This made us decide it was time for a change... We were going to develop our own components, giving us control over 
 the quality and throughput.
 
-Since we started development, it has only confirmed our belief in open source software. It's a great way to get feedback from other developers, allow them to contribute and improve the components in ways we might not even have thought of.
+Since we started development, it has only confirmed our belief in open source software. It is an effective way to get feedback from other developers, allow them to contribute and improve the components in ways we might not even have thought of.
 
 ## Goal
 
