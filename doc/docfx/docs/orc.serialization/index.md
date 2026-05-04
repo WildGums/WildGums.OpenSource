@@ -18,7 +18,7 @@ This library provides serialization support for WildGums applications. It includ
 
 | Package | Description |
 |---------|-------------|
-| `Orc.Serialization.Json` | JSON serialization support using Newtonsoft.Json |
+| `Orc.Serialization.Json` | JSON serialization support using System.Text.Json |
 | `Orc.Serialization.Yaml` | YAML serialization support |
 
 ## Key concepts
