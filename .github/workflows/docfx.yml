@@ -6,7 +6,7 @@ permissions:
 on:
   # Automatically 
   push:
-    branches: [ develop ]
+    branches: [ master ]
     paths:
       - 'doc/docfx/**'
   
