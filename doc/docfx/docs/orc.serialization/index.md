@@ -18,12 +18,18 @@ This library provides serialization support for WildGums applications. It includ
 
 | Package | Description |
 |---------|-------------|
-| `Orc.Serialization.Json` | JSON serialization support using System.Text.Json |
+| `Orc.Serialization.Json` | JSON serialization support using System.Text.Json, including resolver-chain polymorphism and optional type-info metadata conversion |
 | `Orc.Serialization.Yaml` | YAML serialization support |
 
 ## Key concepts
 
 The library is built around the `ISerializer` interface, which provides a consistent API for both serializing and deserializing objects. Each package provides a concrete implementation of `ISerializer` for its respective format.
+
+`Orc.Serialization.Json` also offers `JsonSerializerSettings` for advanced scenarios:
+
+- `TypeInfoResolverChain` to register custom `IJsonTypeInfoResolver` instances for polymorphic type handling
+- `SerializerBinder` (for example `AllowedTypesSerializerBinder`) to allow-list runtime types during serialization and deserialization
+- `UseTypeInfoConverter` to enable `__type` / `__object` metadata payloads for abstract, interface, and `object` targets
 
 ## Getting started
 
@@ -44,6 +50,20 @@ public class MyService
     public string Serialize(MyClass obj) => _serializer.SerializeToString(obj);
     public MyClass Deserialize(string json) => _serializer.Deserialize<MyClass>(json);
 }
+```
+
+For advanced JSON scenarios, configure the serializer settings:
+
+```csharp
+var settings = new JsonSerializerSettings
+{
+    SerializerBinder = new AllowedTypesSerializerBinder([typeof(MyAllowedType)]),
+    UseTypeInfoConverter = true
+};
+
+settings.TypeInfoResolverChain.Add(myPolymorphicResolver);
+
+var serializer = new JsonSerializer(settings);
 ```
 
 ### YAML serialization
