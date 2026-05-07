@@ -122,7 +122,7 @@
 <tbody>
 <tr>
 <td><code>Orc.Serialization.Json</code></td>
-<td>JSON serialization support using System.Text.Json</td>
+<td>JSON serialization support using System.Text.Json, including resolver-chain polymorphism and optional type-info metadata conversion</td>
 </tr>
 <tr>
 <td><code>Orc.Serialization.Yaml</code></td>
@@ -132,6 +132,12 @@
 </table>
 <h2 id="key-concepts">Key concepts</h2>
 <p>The library is built around the <code>ISerializer</code> interface, which provides a consistent API for both serializing and deserializing objects. Each package provides a concrete implementation of <code>ISerializer</code> for its respective format.</p>
+<p><code>Orc.Serialization.Json</code> also offers <code>JsonSerializerSettings</code> for advanced scenarios:</p>
+<ul>
+<li><code>TypeInfoResolverChain</code> to register custom <code>IJsonTypeInfoResolver</code> instances for polymorphic type handling</li>
+<li><code>SerializerBinder</code> (for example <code>AllowedTypesSerializerBinder</code>) to allow-list runtime types during serialization and deserialization</li>
+<li><code>UseTypeInfoConverter</code> to enable <code>$type</code> metadata payloads for abstract, interface, and <code>object</code> targets</li>
+</ul>
 <h2 id="getting-started">Getting started</h2>
 <h3 id="json-serialization">JSON serialization</h3>
 <p>Use constructor injection to receive <code>ISerializer</code>:</p>
@@ -147,6 +153,17 @@
     public string Serialize(MyClass obj) =&gt; _serializer.SerializeToString(obj);
     public MyClass Deserialize(string json) =&gt; _serializer.Deserialize&lt;MyClass&gt;(json);
 }
+</code></pre>
+<p>For advanced JSON scenarios, configure the serializer settings:</p>
+<pre><code class="lang-csharp">var settings = new JsonSerializerSettings
+{
+    SerializerBinder = new AllowedTypesSerializerBinder([typeof(MyAllowedType)]),
+    UseTypeInfoConverter = true
+};
+
+settings.TypeInfoResolverChain.Add(myPolymorphicResolver);
+
+var serializer = new JsonSerializer(settings);
 </code></pre>
 <h3 id="yaml-serialization">YAML serialization</h3>
 <pre><code class="lang-csharp">public class MyService
