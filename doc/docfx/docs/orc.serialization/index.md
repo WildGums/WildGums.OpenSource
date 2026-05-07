@@ -29,7 +29,7 @@ The library is built around the `ISerializer` interface, which provides a consis
 
 - `TypeInfoResolverChain` to register custom `IJsonTypeInfoResolver` instances for polymorphic type handling
 - `SerializerBinder` (for example `AllowedTypesSerializerBinder`) to allow-list runtime types during serialization and deserialization
-- `UseTypeInfoConverter` to enable `__type` / `__object` metadata payloads for abstract, interface, and `object` targets
+- `UseTypeInfoConverter` to enable `$type` metadata payloads for abstract, interface, and `object` targets
 
 ## Getting started
 
